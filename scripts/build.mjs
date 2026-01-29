@@ -39,7 +39,7 @@ async function build() {
   rmDirSafe(DIST);
   ensureDir(DIST);
 
-  // Assets 1:1 kopieren
+  // Assets 1:1 kopieren (src/assets -> dist/assets)
   const assetsSrc = path.join(SRC, "assets");
   const assetsDist = path.join(DIST, "assets");
   if (fs.existsSync(assetsSrc)) copyDir(assetsSrc, assetsDist);
@@ -53,10 +53,15 @@ async function build() {
     ensureDir(path.dirname(outPath));
 
     const html = fs.readFileSync(file, "utf8");
+
     const result = await posthtml([
       include({
-        // include-Pfade relativ zu src/pages
-        root: PAGES
+        // Wir nutzen <include src="..."></include>
+        tag: "include",
+        attribute: "src",
+
+        // Root soll src sein, damit ../components/... zuverlässig aufgelöst wird
+        root: SRC
       })
     ]).process(html);
 
@@ -70,4 +75,5 @@ build().catch((err) => {
   console.error(err);
   process.exit(1);
 });
+
 
