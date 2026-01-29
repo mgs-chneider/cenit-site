@@ -26,10 +26,6 @@ p, li{
   color:var(--muted-foreground);
 }
 
-
-p{ color:#4a4a4a; font-weight:400; }
-
-
 /* --- CENIT TOPBAR (aus deinem Header) --- */
 .cenit-topbar{
   display:flex !important;
