@@ -106,3 +106,43 @@ body { margin:0; padding:0; background:#ffffff; }
 .cenit-footer a{ color:#6b14b8; text-decoration:none; }
 .cenit-footer a:hover{ text-decoration:underline; }
 
+/* =========================
+   RESPONSIVE HELPERS (CENIT)
+   ========================= */
+
+/* ABOUT – Team Grid */
+@media (max-width: 980px){
+  .cenit-about-team{
+    grid-template-columns:repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 540px){
+  .cenit-about-team{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* EXPERTISE – Main Grid */
+@media (max-width: 980px){
+  .cenit-expertise-main{
+    grid-template-columns:1fr !important;
+  }
+  .cenit-expertise-cards{
+    grid-template-columns:1fr 1fr !important;
+  }
+}
+@media (max-width: 540px){
+  .cenit-expertise-cards{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* CONTACT – Two Column */
+@media (max-width: 980px){
+  .cenit-contact-grid{
+    grid-template-columns:1fr !important;
+  }
+  .cenit-contact-image{
+    min-height:240px;
+  }
+}
