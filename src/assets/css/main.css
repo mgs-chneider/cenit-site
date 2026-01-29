@@ -26,6 +26,10 @@ p, li{
   color:var(--muted-foreground);
 }
 
+p, li{
+  color: var(--muted-foreground);
+}
+
 /* --- CENIT TOPBAR (aus deinem Header) --- */
 .cenit-topbar{
   display:flex !important;
