@@ -1,1 +1,148 @@
+/* Base */
+body { margin:0; padding:0; background:#ffffff; }
 
+/* --- CENIT TOPBAR (aus deinem Header) --- */
+.cenit-topbar{
+  display:flex !important;
+  flex-direction:row !important;
+  flex-wrap:nowrap !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:1.4rem !important;
+  width:100%;
+  background:#fafafa;
+  padding:0.7rem 1rem;
+  box-sizing:border-box;
+  position:relative;
+  z-index:1000;
+  overflow:visible;
+  font-family:'Lato', Arial, sans-serif;
+}
+
+.cenit-langswitch{ display:flex; align-items:center; gap:0.35rem; }
+.cenit-langbtn{
+  appearance:none;
+  background:none;
+  border:0;
+  padding:0;
+  margin:0;
+  cursor:pointer;
+  color:#6b14b8;
+  font-size:0.85rem;
+  font-weight:600;
+}
+.cenit-langbtn.is-active{ text-decoration:underline; text-underline-offset:3px; }
+.cenit-langsep{ color:#6b14b8; font-size:0.85rem; font-weight:500; }
+
+.cenit-social{ display:flex; align-items:center; gap:0.9rem; }
+.cenit-socialicon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+  color:#6b14b8;
+  text-decoration:none;
+  line-height:0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.cenit-socialicon svg{ width:18px; height:18px; display:block; }
+.cenit-socialicon:hover{ color:#C9A44E; transform: translateY(-1px); }
+
+.cenit-menutoggle{
+  font-size:1.3rem;
+  cursor:pointer;
+  background:none;
+  border:none;
+  color:#6b14b8;
+  display:inline-flex;
+  align-items:center;
+  gap:0.95rem;
+  padding:0.1rem 0.3rem;
+}
+.cenit-menulabel{ font-size:1.3rem; font-weight:500; }
+
+.cenit-menu{
+  position:absolute;
+  right:1rem;
+  top:2.6rem;
+  background:#f5f5f5;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.25);
+  padding:0 1rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.6rem;
+  max-height:0;
+  overflow:hidden;
+  box-sizing:border-box;
+  transition:max-height 0.35s ease, padding 0.35s ease;
+  width:190px;
+  z-index:1200;
+}
+.cenit-menu.show{ max-height:520px; padding:0.85rem 1rem; }
+.cenit-menu a{
+  color:#6b14b8;
+  text-decoration:none;
+  font-size:0.95rem;
+  padding:0.3rem 0.2rem;
+  border-radius:4px;
+}
+.cenit-menu a:hover{ background:#ffffff; }
+
+@media (max-width: 600px){
+  .cenit-topbar{ justify-content:space-between !important; gap:1rem !important; padding:0.5rem 0.6rem; }
+  .cenit-menu{ right:0.5rem; }
+}
+
+/* Footer basic */
+.cenit-footer{
+  padding:28px 16px;
+  background:#fafafa;
+  border-top:1px solid #eee;
+  text-align:center;
+  font-family:'Lato', Arial, sans-serif;
+  color:#2e2e2e;
+}
+.cenit-footer a{ color:#6b14b8; text-decoration:none; }
+.cenit-footer a:hover{ text-decoration:underline; }
+
+/* =========================
+   RESPONSIVE HELPERS (CENIT)
+   ========================= */
+
+/* ABOUT – Team Grid */
+@media (max-width: 980px){
+  .cenit-about-team{
+    grid-template-columns:repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 540px){
+  .cenit-about-team{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* EXPERTISE – Main Grid */
+@media (max-width: 980px){
+  .cenit-expertise-main{
+    grid-template-columns:1fr !important;
+  }
+  .cenit-expertise-cards{
+    grid-template-columns:1fr 1fr !important;
+  }
+}
+@media (max-width: 540px){
+  .cenit-expertise-cards{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* CONTACT – Two Column */
+@media (max-width: 980px){
+  .cenit-contact-grid{
+    grid-template-columns:1fr !important;
+  }
+  .cenit-contact-image{
+    min-height:240px;
+  }
+}
