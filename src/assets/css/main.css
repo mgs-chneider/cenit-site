@@ -1,18 +1,31 @@
 /* Base (clean + elegant) */
 html { font-size:16px; }
 
+:root{
+  --foreground: #2e2e2e;
+  --muted-foreground: #6b7280; /* weich, unaufdringlich */
+}
+
+/* Base */
+html { font-size:16px; }
+
 body{
   margin:0;
   padding:0;
   background:#ffffff;
-
   font-family:'Lato', Arial, sans-serif;
-  font-weight:400;                 /* leichter, weniger "kompakt" */
-  color:#3f3f3f;                    /* softer als #2e2e2e */
-  line-height:1.75;                /* mehr Luft */
+  font-weight:400;
+  color:var(--foreground);
+  line-height:1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Default Fließtext = muted */
+p, li{
+  color:var(--muted-foreground);
+}
+
 
 p{ color:#4a4a4a; font-weight:400; }
 
