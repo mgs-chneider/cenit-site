@@ -1,34 +1,42 @@
-/* Base (clean + elegant) */
-html { font-size:16px; }
+/* =========================
+   BASE TYPO (light + elegant)
+   ========================= */
 
 :root{
+  /* Typography tokens (like muted-foreground) */
   --foreground: #2e2e2e;
-  --muted-foreground: #6b7280; /* weich, unaufdringlich */
+  --muted-foreground: #6b7280;   /* weich, unaufdringlich */
+
+  /* Brand / UI tokens */
+  --cenit-purple:#6b14b8;
+  --cenit-gold:#C9A44E;
+
+  /* Surfaces */
+  --cenit-soft:#f6f3ff;
+  --cenit-surface:#ffffff;
+  --cenit-shadow:0 8px 25px rgba(0,0,0,0.06);
+  --cenit-radius:20px;
 }
 
-/* Base */
 html { font-size:16px; }
 
 body{
   margin:0;
   padding:0;
   background:#ffffff;
+
   font-family:'Lato', Arial, sans-serif;
   font-weight:400;
   color:var(--foreground);
   line-height:1.75;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Default Fließtext = muted */
-p, li{
-  color:var(--muted-foreground);
-}
+/* Default Fließtext = muted (wie text-muted-foreground) */
+p, li{ color:var(--muted-foreground); }
 
-p, li{
-  color: var(--muted-foreground);
-}
 
 /* --- CENIT TOPBAR (aus deinem Header) --- */
 .cenit-topbar{
@@ -216,22 +224,6 @@ p, li{
    CENIT CONSISTENT LAYOUT (light modernization)
    ========================= */
 
-:root{
-  --cenit-purple:#6b14b8;
-  --cenit-gold:#C9A44E;
-  --cenit-text:#2e2e2e;
-  --cenit-soft:#f6f3ff;
-  --cenit-surface:#ffffff;
-  --cenit-shadow:0 8px 25px rgba(0,0,0,0.06);
-  --cenit-radius:20px;
-}
-
-/* global type baseline */
-body{
-  font-family:'Lato', Arial, sans-serif;
-  color:var(--cenit-text);
-}
-
 /* Sections */
 .cenit-section{
   padding:72px 16px;
@@ -248,18 +240,20 @@ body{
   text-align:center;
   font-family:'EB Garamond', serif;
   font-style:italic;
-  font-weight:600;
+  font-weight:500;
   font-size:44px;
   color:var(--cenit-purple);
 }
+
 .cenit-lead{
   margin:0 auto 26px auto;
   text-align:center;
   max-width:760px;
   font-size:15px;
-  line-height:1.7;
-  color:var(--cenit-text);
+  line-height:1.8;
+  color:var(--muted-foreground);
 }
+
 
 /* Surface cards */
 .cenit-card{
