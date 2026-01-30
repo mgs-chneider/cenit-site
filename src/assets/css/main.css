@@ -287,25 +287,28 @@ p, li{ color:var(--muted-foreground); }
   .cenit-card{ padding:18px; }
 }
 
-/* ===== HERO LOGO ===== */
-
+/* ===== HERO LOGO (balanced) ===== */
 .cenit-hero-logo{
   display:flex;
   justify-content:center;
-  margin; 4px 0 26px 0;
+  margin: 6px 0 34px 0;   /* mehr Abstand zur Quote */
 }
 
 .cenit-hero-logo img{
-  height:120px;          /* bewusst zurückhaltend */
+  height:86px;            /* weniger dominant, aber lesbar */
   width:auto;
-  max-width:min(520px, 92vw);  /* verhindert Überbreite */
+  max-width:min(420px, 88vw);
   object-fit:contain;
+  opacity:0.92;           /* ruhiger */
 }
 
 @media (max-width: 600px){
+  .cenit-hero-logo{
+    margin: 4px 0 26px 0;
+  }
   .cenit-hero-logo img{
-    height:90px;
-    max-width:92vw;
+    height:68px;
+    max-width:88vw;
   }
 }
 
