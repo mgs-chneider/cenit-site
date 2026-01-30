@@ -38,17 +38,15 @@ body{
 p, li{ color:var(--muted-foreground); }
 
 
-/* --- CENIT TOPBAR (aus deinem Header) --- */
+/* --- CENIT TOPBAR (refined: less dominant + perfectly centered) --- */
 .cenit-topbar{
-  display:flex !important;
-  flex-direction:row !important;
-  flex-wrap:nowrap !important;
-  justify-content:space-between !important;
+  display:grid !important;
+  grid-template-columns: 1fr auto 1fr; /* links | mitte | rechts */
   align-items:center !important;
-  gap:1.4rem !important;
+  gap:1rem !important;
   width:100%;
   background:#fafafa;
-  padding:0.7rem 1rem;
+  padding:0.65rem 1rem;
   box-sizing:border-box;
   position:relative;
   z-index:1000;
@@ -56,7 +54,14 @@ p, li{ color:var(--muted-foreground); }
   font-family:'Lato', Arial, sans-serif;
 }
 
-.cenit-langswitch{ display:flex; align-items:center; gap:0.35rem; }
+/* LEFT */
+.cenit-langswitch{
+  justify-self:start;
+  display:flex;
+  align-items:center;
+  gap:0.4rem;
+}
+
 .cenit-langbtn{
   appearance:none;
   background:none;
@@ -64,67 +69,102 @@ p, li{ color:var(--muted-foreground); }
   padding:0;
   margin:0;
   cursor:pointer;
-  color:#6b14b8;
-  font-size:0.85rem;
-  font-weight:600;
+  color:rgba(107,20,184,0.78);      /* weniger dominant */
+  font-size:0.82rem;
+  font-weight:500;
+  letter-spacing:0.02em;
 }
-.cenit-langbtn.is-active{ text-decoration:underline; text-underline-offset:3px; }
-.cenit-langsep{ color:#6b14b8; font-size:0.85rem; font-weight:500; }
+.cenit-langbtn.is-active{
+  color:#6b14b8;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.cenit-langsep{
+  color:rgba(107,20,184,0.55);
+  font-size:0.82rem;
+  font-weight:400;
+}
 
-.cenit-social{ display:flex; align-items:center; gap:0.9rem; }
+/* CENTER */
+.cenit-social{
+  justify-self:center;
+  display:flex;
+  align-items:center;
+  gap:0.85rem;
+}
+
 .cenit-socialicon{
   display:inline-flex;
   align-items:center;
   justify-content:center;
   padding:0;
-  color:#6b14b8;
+  color:rgba(107,20,184,0.78);      /* weniger dominant */
   text-decoration:none;
   line-height:0;
-  transition: color 0.3s ease, transform 0.2s ease;
+  transition: color 0.25s ease, transform 0.2s ease;
 }
 .cenit-socialicon svg{ width:18px; height:18px; display:block; }
 .cenit-socialicon:hover{ color:#C9A44E; transform: translateY(-1px); }
 
+/* RIGHT */
 .cenit-menutoggle{
-  font-size:1.3rem;
+  justify-self:end;
+  font-size:1.05rem;                /* weniger dominant */
   cursor:pointer;
   background:none;
   border:none;
-  color:#6b14b8;
+  color:rgba(107,20,184,0.78);
   display:inline-flex;
   align-items:center;
-  gap:0.95rem;
-  padding:0.1rem 0.3rem;
+  gap:0.6rem;
+  padding:0.1rem 0.2rem;
+  font-weight:500;
 }
-.cenit-menulabel{ font-size:1.3rem; font-weight:500; }
+.cenit-menutoggle:hover{ color:#6b14b8; }
 
+.cenit-menulabel{
+  font-size:1.02rem;
+  font-weight:500;
+}
+
+/* Dropdown */
 .cenit-menu{
   position:absolute;
   right:1rem;
   top:2.6rem;
   background:#f5f5f5;
-  border-radius:8px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.25);
+  border-radius:10px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.14);
   padding:0 1rem;
   display:flex;
   flex-direction:column;
-  gap:0.6rem;
+  gap:0.55rem;
   max-height:0;
   overflow:hidden;
   box-sizing:border-box;
   transition:max-height 0.35s ease, padding 0.35s ease;
-  width:190px;
+  width:210px;
   z-index:1200;
 }
-.cenit-menu.show{ max-height:520px; padding:0.85rem 1rem; }
+.cenit-menu.show{ max-height:520px; padding:0.9rem 1rem; }
+
 .cenit-menu a{
-  color:#6b14b8;
+  color:rgba(107,20,184,0.86);
   text-decoration:none;
   font-size:0.95rem;
-  padding:0.3rem 0.2rem;
-  border-radius:4px;
+  padding:0.34rem 0.25rem;
+  border-radius:6px;
 }
-.cenit-menu a:hover{ background:#ffffff; }
+.cenit-menu a:hover{ background:#ffffff; color:#6b14b8; }
+
+@media (max-width: 600px){
+  .cenit-topbar{
+    padding:0.55rem 0.7rem;
+    gap:0.8rem !important;
+  }
+  .cenit-menu{ right:0.7rem; }
+}
+
 
 @media (max-width: 600px){
   .cenit-topbar{ justify-content:space-between !important; gap:1rem !important; padding:0.5rem 0.6rem; }
