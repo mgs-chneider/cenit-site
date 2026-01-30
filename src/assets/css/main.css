@@ -352,3 +352,34 @@ p, li{ color:var(--muted-foreground); }
   }
 }
 
+/* =========================
+   CENIT BUTTONS (clean, elegant)
+   ========================= */
+
+.cenit-btn{
+  display:inline-block;
+  padding:10px 22px;
+  border-radius:999px;
+  font-family:'Lato', Arial, sans-serif;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+  cursor:pointer;
+  transition:all 0.25s ease;
+
+  border:1px solid var(--cenit-gold);
+  color:var(--cenit-purple);
+  background:transparent;
+  opacity:0.86;
+}
+
+.cenit-btn:hover{
+  opacity:1;
+  background:rgba(201,164,78,0.10);
+}
+
+.cenit-btn:focus-visible{
+  outline:2px solid var(--cenit-gold);
+  outline-offset:3px;
+}
+
