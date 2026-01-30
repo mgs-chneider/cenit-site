@@ -292,18 +292,19 @@ p, li{ color:var(--muted-foreground); }
 .cenit-hero-logo{
   display:flex;
   justify-content:center;
-  margin-bottom:22px;   /* Luft zur Headline */
+  margin-bottom:28px;   /* Luft zur Headline */
 }
 
 .cenit-hero-logo img{
-  height:80px;          /* bewusst zurückhaltend */
+  height:76px;          /* bewusst zurückhaltend */
   width:auto;
+  max-width:90%;
   opacity:0.95;
 }
 
 @media (max-width: 600px){
   .cenit-hero-logo img{
-    height:38px;
+    height:58px;
   }
 }
 
