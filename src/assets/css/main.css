@@ -296,7 +296,7 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .cenit-hero-logo img{
-  height:60px;          /* bewusst zurückhaltend */
+  height:80px;          /* bewusst zurückhaltend */
   width:auto;
   opacity:0.95;
 }
