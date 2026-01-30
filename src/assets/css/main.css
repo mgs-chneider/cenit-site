@@ -291,11 +291,11 @@ p, li{ color:var(--muted-foreground); }
 .cenit-hero-logo{
   display:flex;
   justify-content:center;
-  margin: 6px 0 34px 0;   /* mehr Abstand zur Quote */
+  margin: 6px 0 40px 0;   /* mehr Abstand zur Quote */
 }
 
 .cenit-hero-logo img{
-  height:86px;            /* weniger dominant, aber lesbar */
+  height:90px;            /* weniger dominant, aber lesbar */
   width:auto;
   max-width:min(420px, 88vw);
   object-fit:contain;
