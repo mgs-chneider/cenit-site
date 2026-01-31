@@ -514,7 +514,7 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .cenit-vm-podcast-card{
-  background: #ffffff
+  background: #fafafa
   border-radius: 18px;
   padding: 18px;
   box-shadow: var(--cenit-shadow);
