@@ -429,204 +429,167 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* =========================
-   VISION & MISSION – section heading like Webador
+   VISION & MISSION (Webador-nah, minimal)
    ========================= */
 
-.cenit-section-title{
-  margin:0 0 10px 0;
-  text-align:center;
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-weight:500;             /* Webador wirkt leichter */
-  font-size:44px;
-  color:var(--cenit-purple);
+.cenit-container--narrow{
+  max-width: 950px;
 }
 
-.cenit-section-sub{
-  margin:0 auto 26px auto;
-  text-align:center;
-  max-width:760px;
-  font-size:15px;
-  line-height:1.7;
-  color:var(--muted-foreground);
-}
-
-/* =========================
-   VISION & MISSION (clean + Webador-like)
-   ========================= */
-
+/* Whitecard ruhiger: mehr Luft, weniger "Show" */
 .cenit-vm-card{
-  text-align:center;
+  padding: 34px 32px;
 }
 
-.cenit-vm-vision{
-  margin:0;
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-weight:600;
-  font-size:22px;
-  line-height:1.45;
-  color:var(--cenit-purple);
+/* Quote: nicht violett, nicht italic – ruhig aber präsent */
+.cenit-vm-quote{
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--cenit-text);
+  font-weight: 400;
 }
 
-.cenit-vm-mission{
-  margin:0;
-  font-size:14px;
-  line-height:1.75;
-  color:var(--muted-foreground);
+/* Mission-Text: muted (wie Webador) */
+.cenit-vm-body{
+  margin: 14px auto 0 auto;
+  text-align: center;
+  max-width: 760px;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--muted-foreground);
 }
 
-.cenit-divider{
-  width:78px;
-  height:1px;
-  background:var(--cenit-gold);
-  margin:16px auto;
-  opacity:0.9;
+/* CTA als "Puffer" zwischen Whitecard und Grid */
+.cenit-vm-cta{
+  margin: 18px auto 34px auto;
+  text-align: center;
 }
 
-.cenit-body{
-  margin:0;
-  font-size:14px;
-  line-height:1.75;
-  color:var(--muted-foreground);
+.cenit-vm-cta-note{
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted-foreground);
 }
 
-/* CTA block (Button + Begleittext) als Puffer */
-.cenit-cta-block{
-  text-align:center;
-  margin:22px 0 46px 0;
-}
-
-.cenit-cta-hint{
-  margin:10px 0 0 0;
-  font-size:12px;
-  color:var(--muted-foreground);
-}
-
-/* Buttons – leicht, schmal, muted (Webador-like) */
+/* Button: leicht, kleiner, muted-foreground */
 .cenit-btn{
-  display:inline-block;
-  text-decoration:none;
-  border-radius:999px;
-  font-family:'Lato', Arial, sans-serif;
-  font-weight:500;
-  letter-spacing:0.02em;
+  display: inline-block;
+  padding: 0.42rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 164, 78, 0.65);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: transform .15s ease, background-color .2s ease, border-color .2s ease, color .2s ease;
 }
 
-.cenit-btn--ghost{
-  padding:0.42rem 1.05rem;
-  border:1px solid rgba(201,164,78,0.85);
-  color:var(--muted-foreground);
-  background:transparent;
-  font-size:0.75rem;
-  opacity:0.95;
-  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+.cenit-btn--light{
+  color: var(--muted-foreground);
+  background: transparent;
 }
 
-.cenit-btn--ghost:hover{
-  opacity:1;
-  border-color:var(--cenit-gold);
-  background:rgba(201,164,78,0.08);
-  transform:translateY(-1px);
+.cenit-btn--light:hover{
+  color: var(--cenit-purple);
+  border-color: var(--cenit-gold);
+  background: rgba(201, 164, 78, 0.08);
+  transform: translateY(-1px);
 }
 
-.cenit-btn:active{
-  transform:translateY(0);
-}
-
+/* (bleibt!) dein Focus-Style kann so stehen */
 .cenit-btn:focus-visible{
-  outline:2px solid var(--cenit-gold);
-  outline-offset:3px;
+  outline: 2px solid var(--cenit-gold);
+  outline-offset: 3px;
 }
 
-/* Podcast + pillars: Cover + 4 tiles top-aligned on one line */
-.cenit-podcast-wrap{
-  margin-top:22px;
+/* Podcast + Tiles: eine Linie oben, Audio darunter */
+.cenit-vm-grid{
+  display: grid;
+  grid-template-columns: 1.05fr 1.95fr;
+  gap: 18px;
+  align-items: start;
 }
 
-.cenit-podcast-grid{
-  display:grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap:22px;
-  align-items:start; /* ensures top alignment */
+.cenit-vm-podcast-card{
+  background: linear-gradient(135deg, rgba(107,20,184,0.10), rgba(201,164,78,0.06));
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--cenit-shadow);
 }
 
-/* Cover card (colored) */
-.cenit-podcast-covercard{
-  background:linear-gradient(135deg, rgba(107,20,184,0.14), rgba(201,164,78,0.12));
-  border-radius:18px;
-  padding:18px;
-  box-sizing:border-box;
+.cenit-vm-podcast-title{
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--cenit-purple);
+  margin: 2px 0 14px 0;
 }
 
-.cenit-podcast-kicker{
-  margin:0 0 12px 0;
-  text-align:center;
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-weight:700;
-  letter-spacing:0.06em;
-  text-transform:uppercase;
-  color:var(--cenit-purple);
-  font-size:18px;
+.cenit-vm-podcast-cover{
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  object-fit: cover;
 }
 
-.cenit-podcast-cover{
-  border-radius:14px;
-  overflow:hidden;
-  background:#fff;
-  box-shadow:0 8px 22px rgba(0,0,0,0.08);
+.cenit-vm-podcast-meta{
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--cenit-purple);
+  opacity: 0.85;
 }
 
-.cenit-podcast-meta{
-  margin:10px 0 0 0;
-  font-size:12px;
-  color:var(--cenit-purple);
-  opacity:0.9;
-  text-align:left;
+/* Audio-Bar: bewusst neutral, außerhalb der Kachel */
+.cenit-vm-audio{
+  width: 100%;
+  margin-top: 12px;
 }
 
-/* Pillars (4 tiles) */
-.cenit-pillars{
-  display:grid;
+/* 4 Tiles Grid */
+.cenit-vm-tiles{
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap:14px;
+  gap: 14px;
 }
 
-.cenit-pillar{
-  min-height:132px;
+.cenit-vm-tile{
+  padding: 18px 16px;
 }
 
-.cenit-pillar-title{
-  margin:0 0 8px 0;
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-weight:600;
-  font-size:18px;
-  color:var(--cenit-purple);
+.cenit-vm-tile-title{
+  margin: 0 0 8px 0;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--cenit-purple);
 }
 
-/* Audio bar (outside colored cover card) */
-.cenit-audio-bar{
-  margin-top:14px;
-}
-
-.cenit-audio{
-  width:100%;
+.cenit-vm-tile-text{
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--muted-foreground);
 }
 
 /* Responsive */
 @media (max-width: 980px){
-  .cenit-podcast-grid{
-    grid-template-columns:1fr;
+  .cenit-vm-grid{
+    grid-template-columns: 1fr;
+  }
+  .cenit-vm-tiles{
+    grid-template-columns: 1fr 1fr;
   }
 }
-
-@media (max-width: 540px){
-  .cenit-pillars{
-    grid-template-columns:1fr;
+@media (max-width: 560px){
+  .cenit-vm-card{
+    padding: 22px 18px;
   }
-  .cenit-vm-vision{
-    font-size:20px;
+  .cenit-vm-tiles{
+    grid-template-columns: 1fr;
   }
 }
