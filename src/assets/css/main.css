@@ -463,7 +463,7 @@ p, li{ color:var(--muted-foreground); }
 
 /* CTA als "Puffer" zwischen Whitecard und Grid */
 .cenit-vm-cta{
-  margin: 28px auto 52px auto;
+  margin: 32px auto 64px auto;
   text-align: center;
 }
 
@@ -566,7 +566,7 @@ p, li{ color:var(--muted-foreground); }
   margin: 0 0 8px 0;
   font-family: 'EB Garamond', serif;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
   color: var(--cenit-purple);
 }
