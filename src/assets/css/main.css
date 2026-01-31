@@ -294,6 +294,17 @@ p, li{ color:var(--muted-foreground); }
   color:var(--muted-foreground);
 }
 
+/* Webador-like: Whitecard = Raumteiler (breit), Text innen = narrow */
+.cenit-card--wide{
+  max-width: 950px;        /* dein gewünschter Raumteiler-Standard */
+  margin: 0 auto;
+}
+
+/* Text innerhalb breiter Cards bewusst schmal halten */
+.cenit-card__narrow{
+  max-width: 720px;
+  margin: 0 auto;
+}
 
 /* Surface cards */
 .cenit-card{
