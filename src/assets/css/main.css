@@ -382,4 +382,10 @@ p, li{ color:var(--muted-foreground); }
   outline:2px solid var(--cenit-gold);
   outline-offset:3px;
 }
+/* Hero CTA wrapper */
+.cenit-hero-cta{
+  max-width:720px;              /* bewusst schmaler als Content */
+  margin:2.8rem auto 0 auto;    /* Luft zur Headline */
+  text-align:center;
+}
 
