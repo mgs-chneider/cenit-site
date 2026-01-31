@@ -356,26 +356,31 @@ p, li{ color:var(--muted-foreground); }
    CENIT BUTTONS (clean, elegant)
    ========================= */
 
+/* Subtle editorial button (Webador-like) */
 .cenit-btn{
   display:inline-block;
-  padding:10px 22px;
+  padding:0.35rem 0.9rem;
   border-radius:999px;
-  font-family:'Lato', Arial, sans-serif;
-  font-size:14px;
-  font-weight:500;
-  text-decoration:none;
-  cursor:pointer;
-  transition:all 0.25s ease;
 
-  border:1px solid var(--cenit-gold);
-  color:var(--cenit-purple);
+  font-size:0.75rem;
+  font-weight:400;
+  letter-spacing:0.02em;
+
+  color:var(--muted-foreground);
+  border:1px solid rgba(201,164,78,0.55);
   background:transparent;
-  opacity:0.86;
+  text-decoration:none;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .cenit-btn:hover{
-  opacity:1;
-  background:rgba(201,164,78,0.10);
+  color:var(--cenit-purple);
+  border-color:var(--cenit-gold);
+  opacity:0.9;
 }
 
 .cenit-btn:focus-visible{
