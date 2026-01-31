@@ -538,9 +538,10 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .cenit-vm-podcast-meta{
-  margin-top: 10px;
+  margin-top: 6px;
   font-size: 12px;
-  color: var(--cenit-purple);
+  color: var(--muted-foreground);
+  text-align: left;
   opacity: 0.85;
 }
 
