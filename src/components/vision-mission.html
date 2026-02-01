@@ -33,14 +33,20 @@
       <div class="cenit-vm-grid">
         <!-- links: Podcast Cover = Card -->
         <div class="cenit-vm-podcast">
-          <div class="cenit-vm-podcast-title">TANZKARRIEREN RETTEN</div>
-
           <img
             class="cenit-vm-podcast-cover"
             src="/assets/img/podcastcover.png"
             alt="Podcast cover"
             loading="lazy"
           />
+          <audio class="cenit-vm-audio" controls preload="none">
+            <source src="/assets/audio/cenit-podcast.mp3" type="audio/mpeg" />
+          </audio>
+
+          <div class="cenit-vm-podcast-meta">
+            <span data-lang="de">Podcastdauer: ca. 20 Minuten</span>
+            <span data-lang="en" style="display:none;">Duration: approx. 20 minutes</span>
+          </div>
         </div>
 
         <!-- rechts: 4 Kacheln -->
@@ -90,17 +96,5 @@
           </div>
         </div>
       </div>
-
-      <!-- Audio-Bar OUTSIDE der Cover-Kachel -->
-      <audio class="cenit-vm-audio" controls preload="none">
-        <source src="/assets/audio/cenit-podcast.mp3" type="audio/mpeg" />
-      </audio>
-
-      <!-- Meta unter der Audio-Bar -->
-      <div class="cenit-vm-podcast-meta">
-        <span data-lang="de">Podcastdauer: ca. 20 Minuten</span>
-        <span data-lang="en" style="display:none;">Duration: approx. 20 minutes</span>
-      </div>
     </div>
-  </div>
 </section>
