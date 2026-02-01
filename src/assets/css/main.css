@@ -802,3 +802,34 @@ p, li{ color:var(--muted-foreground); }
 .cenit-about-intro{
   margin-top: 0;
 }
+
+/* =========================
+   EXPERTISE – Mini Cards
+   ========================= */
+
+.cenit-expertise-mini{
+  background: #f6f3ff;
+  border-radius: 16px;
+  padding: 16px 16px 14px 16px;
+  box-sizing: border-box;
+}
+
+/* Titel: filigran, tänzerisch */
+.cenit-expertise-mini-title{
+  margin: 0 0 8px 0;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #6b14b8;
+}
+
+/* Text: ruhig, gut lesbar */
+.cenit-expertise-mini-text{
+  margin: 0;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--cenit-text);
+}
