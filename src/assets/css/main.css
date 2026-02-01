@@ -1168,3 +1168,23 @@ p, li{ color:var(--muted-foreground); }
 .cenit-contact-box{
   overflow: hidden;
 }
+
+/* CONTACT: Card 2 soll exakt wie die anderen 950px-Cards wirken */
+.cenit-contact-card2{
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0;              /* <-- wichtig: kein "Einziehen" mehr */
+  box-sizing: border-box;
+}
+
+/* Padding kommt auf den Grid-Wrapper, nicht auf die Card */
+.cenit-contact-main{
+  padding: 22px;           /* vorher war das auf der Card */
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  align-items: stretch;
+}
