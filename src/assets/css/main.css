@@ -833,3 +833,22 @@ p, li{ color:var(--muted-foreground); }
   line-height: 1.55;
   color: var(--cenit-text);
 }
+
+/* =========================
+   EXPERTISE – Vertikale Rhythmik
+   ========================= */
+
+/* Titel -> Lead mehr Luft */
+.cenit-expertise .cenit-h2{
+  margin-bottom: 64px;
+}
+
+/* Lead zieht nicht nach oben */
+.cenit-expertise .cenit-lead{
+  margin-top: 0;
+}
+
+/* Main-Block -> Quote mehr Abstand */
+.cenit-expertise-quote{
+  margin-top: 56px;
+}
