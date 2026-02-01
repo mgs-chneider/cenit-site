@@ -880,15 +880,14 @@ p, li{ color:var(--muted-foreground); }
 /* Hero-Whitecard: eher 950px Raumteiler (wie VM/About) */
 .cenit-contact-hero{
   max-width: 950px;
-  margin: 0 auto 24px auto;
+  margin: 0 auto 32px auto;
   padding: 28px 32px 32px 32px;
   text-align: center;
 }
 
-/* Titel in Contact: etwas kleiner als H2-Section-Titel, aber filigran */
-.cenit-contact-title{
-  font-size: 32px;          /* statt 26pt */
-  margin: 0 0 10px 0;
+/* CONTACT: Titel -> Whitecard Abstand wie VM */
+.cenit-contact .cenit-h2{
+  margin-bottom: 72px;
 }
 
 /* Lead + Body */
