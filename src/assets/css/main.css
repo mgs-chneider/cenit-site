@@ -852,3 +852,19 @@ p, li{ color:var(--muted-foreground); }
 .cenit-expertise-quote{
   margin-top: 56px;
 }
+
+/* EXPERTISE: Quote-Band Abstand & Typo */
+.cenit-expertise-quote{
+  margin-top: 56px;   /* Abstand zur Main Whitecard */
+  text-align: center;
+}
+
+.cenit-expertise-quote-text{
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #6b14b8;
+}
