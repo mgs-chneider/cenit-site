@@ -451,8 +451,11 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* Kapitel-Überschrift: mehr Luft zur Whitecard (nur innerhalb VM) */
-.cenit-vm .cenit-h2{
-  margin-bottom: 56px;
+
+/* Intro direkt nach H2: keine zusätzliche Nähe */
+.cenit-about-intro{
+  margin-top: 0;        /* wichtig */
+  margin-bottom: 34px;  /* wie bereits gesetzt */
 }
 
 /* Whitecard ruhiger: mehr Luft, weniger "Show" */
