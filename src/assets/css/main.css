@@ -276,13 +276,16 @@ p, li{ color:var(--muted-foreground); }
 
 /* Headings (optional, but helps consistency) */
 .cenit-h2{
-  margin:0 0 10px 0;
-  text-align:center;
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-weight:300;
-  font-size:44px;
-  color:var(--cenit-purple);
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 400;          /* filigraner als 500/600 */
+  font-size: 40px;           /* exakt Webador */
+  line-height: 1.15;
+  letter-spacing: 0.01em;    /* sehr subtil */
+  color: #6b14b8;            /* Webador-Lila */
+  text-align: center;
+
+  margin: 40px 0 12px 0;     /* exakt Webador-Rhythmus */
 }
 
 .cenit-lead{
@@ -484,7 +487,7 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .cenit-vm-cta-note{
-  margin-top: 12px;
+  margin-bottom: 10px;
   font-size: 12px;
   color: var(--muted-foreground);
   text-align: center;
