@@ -1129,3 +1129,42 @@ p, li{ color:var(--muted-foreground); }
     min-height: 240px;
   }
 }
+
+/* =========================
+   CONTACT – Fix: 950px cards + button overflow
+   ========================= */
+
+/* Cards wirklich 950px (und zentriert) */
+.cenit-contact-hero,
+.cenit-contact-card2{
+  width: 100%;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Falls .cenit-card irgendwo width/overflow setzt: Kontakt gewinnt */
+.cenit-contact .cenit-card{
+  box-sizing: border-box;
+}
+
+/* Button: NICHT full width (Webador-nah) */
+.cenit-contact-btn{
+  display: inline-block;   /* statt block */
+  width: auto;             /* statt 100% */
+  max-width: 100%;
+  white-space: nowrap;     /* verhindert hässliche Umbrüche */
+  padding: 0.55rem 1.2rem; /* wie eure leichten Pills */
+  margin: 6px 0 12px 0;
+}
+
+/* Falls irgendwo global "a { display:block }" oder ähnliches wirkt */
+.cenit-contact-box a{
+  max-width: 100%;
+}
+
+/* Sicherheit: nichts darf aus der Box ragen */
+.cenit-contact-box{
+  overflow: hidden;
+}
