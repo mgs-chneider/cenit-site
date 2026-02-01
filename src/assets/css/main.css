@@ -790,12 +790,12 @@ p, li{ color:var(--muted-foreground); }
 
 /* VM: Titel -> Whitecard bewusst luftig lassen */
 .cenit-section--vision-mission .cenit-h2{
-  margin-bottom: 88px;
+  margin-bottom: 96px;
 }
 
 /* ABOUT: Titel -> Intro mehr Luft (leichter, eleganter) */
 .cenit-about .cenit-h2{
-  margin-bottom: 56px;
+  margin-bottom: 48px;
 }
 
 /* Intro direkt nach Titel darf keinen Gegenzug erzeugen */
