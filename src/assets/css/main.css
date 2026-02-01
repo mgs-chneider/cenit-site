@@ -787,3 +787,18 @@ p, li{ color:var(--muted-foreground); }
     grid-template-columns: 1fr;
   }
 }
+
+/* VM: Titel -> Whitecard bewusst luftig lassen */
+.cenit-section--vision-mission .cenit-h2{
+  margin-bottom: 72px;
+}
+
+/* ABOUT: Titel -> Intro mehr Luft (leichter, eleganter) */
+.cenit-about .cenit-h2{
+  margin-bottom: 72px;
+}
+
+/* Intro direkt nach Titel darf keinen Gegenzug erzeugen */
+.cenit-about-intro{
+  margin-top: 0;
+}
