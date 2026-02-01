@@ -797,29 +797,3 @@ p, li{ color:var(--muted-foreground); }
   .cenit-contact-media .cenit-img{ min-height:240px; }
 }
 
-/* =========================
-   HARD ALIGN: Raumteiler-Kanten (950px) in allen Sections
-   ========================= */
-
-/* Container bleibt 1100 (für normale Inhalte) */
-.cenit-container{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 16px;
-  box-sizing: border-box;
-}
-
-/* Alle "Raumteiler" explizit 950px – so wie du es definiert hast */
-.cenit-vm-card,
-.cenit-about-quote-card,
-.cenit-about-team,
-.cenit-expertise .cenit-card,
-.cenit-expertise .cenit-softcard,
-.cenit-contact .cenit-card.cenit-contact-hero,
-.cenit-contact .cenit-card.cenit-contact-card2{
-  width: 100%;
-  max-width: 950px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-}
