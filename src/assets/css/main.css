@@ -643,6 +643,11 @@ p, li{ color:var(--muted-foreground); }
    ABOUT US (Webador-nah)
    ========================= */
 
+/* Übergang VM → Über uns: Top-Abstand neutralisieren */
+.cenit-about.cenit-section{
+  padding-top: 32px;   /* statt 88px */
+}
+
 .cenit-container{
   max-width: 1100px;
   margin: 0 auto;
