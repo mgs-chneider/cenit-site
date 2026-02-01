@@ -522,7 +522,10 @@ p, li{ color:var(--muted-foreground); }
   outline-offset: 3px;
 }
 
-/* Podcast + Tiles: eine Linie oben, Audio darunter */
+/* =========================
+   VISION & MISSION – GRID (Podcast links, 4 Tiles rechts)
+   ========================= */
+
 .cenit-vm-grid{
   display: grid;
   grid-template-columns: 1.05fr 1.95fr;
@@ -530,32 +533,37 @@ p, li{ color:var(--muted-foreground); }
   align-items: start;
 }
 
+/* LINKES ELEMENT: Podcast-Cover = Card (keine extra Titel-Kachel) */
 .cenit-vm-podcast-card{
-  background: #fafafa;             /* FIX: Semikolon fehlte */
+  background: #fafafa;
   border-radius: 18px;
-  padding: 24px;                   /* etwas mehr Raum */
+  padding: 18px;
   box-shadow: var(--cenit-shadow);
 }
 
+/* Falls im HTML noch vorhanden: Titel "Tanzkarrieren retten" NICHT anzeigen */
 .cenit-vm-podcast-title{
-  text-align: center;
-  font-family: 'EB Garamond', serif;
-  font-style: italic;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--cenit-purple);
-  margin: 2px 0 14px 0;
+  display: none;
 }
 
+/* Podcast Cover */
 .cenit-vm-podcast-cover{
   width: 100%;
   height: 260px;
-  object-fit: cover;               /* FIX: Tippfehler */
+  object-fit: cover;
   border-radius: 18px;
   box-shadow: var(--cenit-shadow);
   display: block;
 }
 
+/* Audio-Bar: nur so breit wie das Podcast-Cover (also 100% der Podcast-Card) */
+.cenit-vm-audio{
+  width: 100%;
+  margin-top: 14px;
+  display: block;
+}
+
+/* Meta-Text unter der Audio-Bar */
 .cenit-vm-podcast-meta{
   margin-top: 10px;
   font-size: 12px;
@@ -564,28 +572,29 @@ p, li{ color:var(--muted-foreground); }
   opacity: 0.85;
 }
 
-/* Audio-Bar: bewusst neutral, außerhalb der Kachel */
-.cenit-vm-audio{
-  width: 100%;
-  margin-top: 24px;                /* eigener Block */
-}
-
-.cenit-vm-audio + .cenit-vm-podcast-meta{
-  margin-top: 12px;                /* Meta-Text klar unter Bar */
-}
-
-/* 4 Tiles Grid */
+/* RECHTES ELEMENT: 4 Tiles */
 .cenit-vm-tiles{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
 
+/* Tile Base */
 .cenit-vm-tile{
-  background: #fafafa;             /* Webador-Kacheln */
   border-radius: 18px;
-  padding: 24px 22px;              /* mehr Luft */
+  padding: 24px 22px;
   box-shadow: var(--cenit-shadow);
+}
+
+/* Farbregeln: Tile 1 & 4 / Tile 2 & 3 */
+.cenit-vm-tile:nth-child(1),
+.cenit-vm-tile:nth-child(4){
+  background: #f5f3f9;
+}
+
+.cenit-vm-tile:nth-child(2),
+.cenit-vm-tile:nth-child(3){
+  background: #edebf5;
 }
 
 .cenit-vm-tile-title{
@@ -615,11 +624,7 @@ p, li{ color:var(--muted-foreground); }
 }
 
 @media (max-width: 560px){
-  .cenit-vm-card{
-    padding: 28px 20px;            /* etwas luftiger als vorher */
-  }
-  .cenit-vm-tile{
-    padding: 20px 18px;
-  }
   .cenit-vm-tiles{
-    gr
+    grid-template-columns: 1fr;
+  }
+}
