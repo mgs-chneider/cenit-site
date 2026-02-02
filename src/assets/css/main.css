@@ -321,6 +321,11 @@ p, li{ color:var(--muted-foreground); }
   justify-content: center;
 }
 
+/* Logo */
+.cenit-hero-logo{
+  display: flex;
+  justify-content: center;
+}
 /* Logo selbst */
 .cenit-hero-logo img{
   height: 72px;              /* <- bewusst kleiner */
