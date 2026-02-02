@@ -505,6 +505,8 @@ p, li{ color:var(--muted-foreground); }
   box-shadow:var(--cenit-shadow);
   padding:38px 34px;
   margin:0 auto 34px auto;
+  max-width:950px;
+  width:100%;
   box-sizing: border-box;
 }
 
@@ -541,6 +543,8 @@ p, li{ color:var(--muted-foreground); }
   grid-template-columns:repeat(4, 1fr);
   gap:26px;
   align-items:start;
+  width:100%;
+  max-width:950px;
   margin:0 auto 24px auto;
   box-sizing: border-box;
 }
