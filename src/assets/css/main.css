@@ -685,12 +685,21 @@ p, li{ color:var(--muted-foreground); }
   margin-bottom:48px;
 }
 
-/* Whitecard 1 (950 Raumteiler) */
-.cenit-card.cenit-contact-hero{
-  max-width:950px;
-  margin:0 auto 22px auto;
-  padding:26px 32px 30px 32px;
-  text-align:center;
+/* Expertise: Raumteiler-Breite fest */
+.cenit-expertise-card{
+  width: 100%;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Rechte Bildbox: gleiche Softbox-Ästhetik wie Mini-cards */
+.cenit-expertise-media{
+  background: #f6f3ff;
+  border-radius: 18px;
+  padding: 14px;
+  box-sizing: border-box;
 }
 
 .cenit-contact-lead,
