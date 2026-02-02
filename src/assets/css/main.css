@@ -352,7 +352,7 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .cenit-section--vision-mission .cenit-h2{
-  margin-bottom: 72px;
+  margin-bottom: 88px;
 }
 
 .cenit-vm-cta{
@@ -361,6 +361,10 @@ p, li{ color:var(--muted-foreground); }
   max-width: 720px;
 }
 
+ /* VM – Abstand Begleittext → Button */
+ .cenit-vm-cta .cenit-btn{
+  margin-top: 10px;
+}
 
 /* =========================
    VM – Grid in Whitecard (like Expertise)
