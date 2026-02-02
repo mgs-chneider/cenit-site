@@ -185,6 +185,16 @@ p, li{ color:var(--muted-foreground); }
 .cenit-footer a{ color:var(--cenit-purple); text-decoration:none; }
 .cenit-footer a:hover{ text-decoration:underline; }
 
+/* Footer – editorial note */
+.cenit-footer-note{
+  margin: 12px auto 0 auto;
+  max-width: 720px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+  text-align: center;
+}
+
 
 /* =========================
    CONSISTENT LAYOUT
