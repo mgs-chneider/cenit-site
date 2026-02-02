@@ -622,7 +622,7 @@ p, li{ color:var(--muted-foreground); }
 /* FIX: Cards-Container als Grid definieren (sonst "klebt" alles zusammen) */
 .cenit-expertise-cards{
   display:grid;
-  grid-template-columns: 1fr; /* Webador: gestapelt */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap:14px;
   align-content:start;
 }
