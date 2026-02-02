@@ -313,6 +313,23 @@ p, li{ color:var(--muted-foreground); }
   /* bleibt 1100px wie global */
 }
 
+/* äußere Begrenzung – das fehlte */
+.cenit-hero-logo-wrap{
+  max-width: 950px;          /* gleiche Raumteiler-Logik */
+  margin: 0 auto 32px auto;  /* Abstand zur Whitecard */
+  display: flex;
+  justify-content: center;
+}
+
+/* Logo selbst */
+.cenit-hero-logo img{
+  height: 72px;              /* <- bewusst kleiner */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
 .cenit-hero-card{
   width:100%;
   max-width:950px;
