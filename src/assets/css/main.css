@@ -505,7 +505,7 @@ p, li{ color:var(--muted-foreground); }
   box-shadow:var(--cenit-shadow);
   padding:38px 34px;
   margin:0 auto 34px auto;
-  max-width:950px;
+  box-sizing: border-box;
 }
 
 .cenit-about-quote{
@@ -542,7 +542,7 @@ p, li{ color:var(--muted-foreground); }
   gap:26px;
   align-items:start;
   margin:0 auto 24px auto;
-  max-width:950px;
+  box-sizing: border-box;
 }
 
 .cenit-about-person{ text-align:center; }
