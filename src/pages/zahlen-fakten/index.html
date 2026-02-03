@@ -299,6 +299,16 @@
     </script>
   </footer>
 
+  <!-- Infogram embed loader (once per page) -->
+  <script async src="https://e.infogram.com/js/dist/embed-loader-min.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (window.InfogramEmbeds && window.InfogramEmbeds.process) {
+        window.InfogramEmbeds.process();
+      }
+    });
+  </script>
+
 </body>
 </html>
 
