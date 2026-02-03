@@ -299,6 +299,20 @@
     </script>
   </footer>
 
+  <script>
+  !function(e,n,i,s){
+    var d="InfogramEmbeds";
+    var o=e.getElementsByTagName(n)[0];
+    if(window[d] && window[d].initialized){
+      window[d].process && window[d].process();
+    } else if(!e.getElementById(i)){
+      var r=e.createElement(n);
+      r.async=1; r.id=i; r.src=s;
+      o.parentNode.insertBefore(r,o);
+    }
+  }(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");
+  </script>
+
 </body>
 </html>
 
