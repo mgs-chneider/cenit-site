@@ -1,99 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zahlen & Fakten – CENIT e.V.</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Lato:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Main CSS (Pfad prüfen!) -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
   <!-- Header / Topbar -->
-  <!-- CENIT TOP-BAR: Language | Social | Menu -->
   <section style="margin:0; padding:0;">
     <div class="cenit-topbar">
 
-      <!-- Language Switch (no navigation) -->
       <div class="cenit-langswitch" aria-label="Language switch">
         <button type="button" class="cenit-langbtn" data-set-lang="de">DE</button>
         <span class="cenit-langsep">|</span>
         <button type="button" class="cenit-langbtn" data-set-lang="en">EN</button>
       </div>
 
-      <!-- Social Icons -->
       <div class="cenit-social">
-
-        <!-- YouTube -->
-        <a href="https://www.youtube.com/@CENITe.V"
-           target="_blank" rel="noopener"
-           aria-label="YouTube"
-           class="cenit-socialicon"
+        <a href="https://www.youtube.com/@CENITe.V" target="_blank" rel="noopener"
+           aria-label="YouTube" class="cenit-socialicon"
            style="width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;aspect-ratio:1/1;border-radius:6px;">
-          <svg viewBox="0 0 24 24"
-               xmlns="http://www.w3.org/2000/svg"
-               aria-hidden="true"
-               style="width:100%; height:100%; display:block;">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%; height:100%; display:block;">
             <path fill="currentColor"
-                  d="M23.499 6.203a3.007 3.007 0 0 0-2.12-2.13C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.379.573A3.007 3.007 0 0 0 .501 6.203C0 8.093 0 12 0 12s0 3.907.501 5.797a3.007 3.007 0 0 0 2.12 2.13c1.874.573 9.379.573 9.379.573s7.505 0 9.379-.573a3.007 3.007 0 0 0 2.12-2.13C24 15.907 24 12 24 12s0-3.907-.501-5.797ZM9.75 15.27V8.73L15.52 12l-5.77 3.27Z"/>
+              d="M23.499 6.203a3.007 3.007 0 0 0-2.12-2.13C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.379.573A3.007 3.007 0 0 0 .501 6.203C0 8.093 0 12 0 12s0 3.907.501 5.797a3.007 3.007 0 0 0 2.12 2.13c1.874.573 9.379.573 9.379.573s7.505 0 9.379-.573a3.007 3.007 0 0 0 2.12-2.13C24 15.907 24 12 24 12s0-3.907-.501-5.797ZM9.75 15.27V8.73L15.52 12l-5.77 3.27Z"/>
           </svg>
         </a>
 
-        <!-- LinkedIn -->
         <a href="https://www.linkedin.com/company/cenit-verein-zur-f%C3%B6rderung-interdisziplin%C3%A4rer-tanzmedizin-e-v/?viewAsMember=true"
-           target="_blank" rel="noopener"
-           aria-label="LinkedIn"
-           class="cenit-socialicon">
+           target="_blank" rel="noopener" aria-label="LinkedIn" class="cenit-socialicon">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path fill="currentColor"
-                  d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7 19H4V9h3zM5.5 7.5C4.12 7.5 3 6.38 3 5s1.12-2.5 2.5-2.5S8 3.62 8 5 6.88 7.5 5.5 7.5zM20 19h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97V19h-3V9h2.88v1.37h.04c.4-.75 1.37-1.54 2.82-1.54 3.02 0 3.58 1.99 3.58 4.58V19z"/>
+              d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7 19H4V9h3zM5.5 7.5C4.12 7.5 3 6.38 3 5s1.12-2.5 2.5-2.5S8 3.62 8 5 6.88 7.5 5.5 7.5zM20 19h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97V19h-3V9h2.88v1.37h.04c.4-.75 1.37-1.54 2.82-1.54 3.02 0 3.58 1.99 3.58 4.58V19z"/>
           </svg>
         </a>
-
       </div>
 
-      <!-- Hamburger -->
       <button class="cenit-menutoggle" aria-expanded="false" aria-label="Menu">
         ☰ <span class="cenit-menulabel" data-i18n="menuLabel">Menü</span>
       </button>
 
-      <!-- Dropdown -->
       <nav class="cenit-menu" aria-label="Site navigation">
-        <a href="/#vision"     data-i18n="vision">Vision</a>
-        <a href="/#ueber-uns"  data-i18n="about">Über uns</a>
-        <a href="/#expertise"  data-i18n="expertise">Expertise</a>
-        <a href="/einblicke-entwicklungen"  data-i18n="insights">Einblicke & Entwicklungen</a>
-        <a href="/faqs"       data-i18n="faqs">FAQs</a>
-        <a href="/#kontakt"    data-i18n="contact">Kontakt</a>
-        <a href="/satzung"    data-i18n="statutes">Satzung</a>
+        <a href="/#vision" data-i18n="vision">Vision</a>
+        <a href="/#ueber-uns" data-i18n="about">Über uns</a>
+        <a href="/#expertise" data-i18n="expertise">Expertise</a>
+        <a href="/einblicke-entwicklungen" data-i18n="insights">Einblicke & Entwicklungen</a>
+        <a href="/faqs" data-i18n="faqs">FAQs</a>
+        <a href="/#kontakt" data-i18n="contact">Kontakt</a>
+        <a href="/satzung" data-i18n="statutes">Satzung</a>
       </nav>
 
     </div>
   </section>
 
-
   <!-- Zahlen & Fakten -->
- 
-  <!--"components/intro.html" -->
   <section class="cenit-section">
     <div class="cenit-container">
 
       <h2 class="cenit-h2">Zahlen &amp; Fakten</h2>
 
       <div class="cenit-card" style="max-width:950px; margin:0 auto;">
-        <p style="
-          font-family:'EB Garamond', serif;
-          font-style:italic;
-          font-size:26px;
-          line-height:1.4;
-          color:var(--cenit-purple);
-          text-align:center;
-          margin:0 0 14px 0;">
+        <p style="font-family:'EB Garamond', serif; font-style:italic; font-size:26px; line-height:1.4; color:var(--cenit-purple); text-align:center; margin:0 0 14px 0;">
           „Wenn Bewegung zur Belastung wird – warum Prävention im Tanz zählt“
         </p>
 
-        <div style="
-          width:140px;
-          height:1px;
-          background:var(--cenit-gold);
-          margin:14px auto 20px auto;">
-        </div>
+        <div style="width:140px; height:1px; background:var(--cenit-gold); margin:14px auto 20px auto;"></div>
 
-        <p style="
-          max-width:760px;
-          margin:0 auto;
-          font-size:15px;
-          line-height:1.7;
-          text-align:center;">
+        <p style="max-width:760px; margin:0 auto; font-size:15px; line-height:1.7; text-align:center;">
           Tanz lebt von Bewegung – doch hinter jeder Perfektion steht tägliche Belastung.
           Viele Tänzer:innen trainieren über ihre Grenzen hinaus, weil Prävention im Tanz
           noch immer kein selbstverständlicher Teil der Ausbildung ist.
@@ -103,30 +85,19 @@
     </div>
   </section>
 
-  <!--"components/video.html" -->
- 
   <section class="cenit-section">
     <div class="cenit-container">
 
       <div class="cenit-card" style="max-width:950px; margin:0 auto; padding:18px;">
-        <div style="
-          position:relative;
-          padding-bottom:56.25%;
-          height:0;
-          overflow:hidden;
-          border-radius:16px;">
+        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px;">
           <iframe
             src="https://www.youtube.com/embed/DEIN_VIDEO_ID?controls=1&rel=0"
             style="position:absolute; inset:0; width:100%; height:100%; border:0;"
-            allowfullscreen>
-          </iframe>
+            allowfullscreen
+            title="CENIT Zahlen & Fakten"></iframe>
         </div>
 
-        <p style="
-          font-size:13px;
-          color:var(--muted-foreground);
-          margin:12px 0 0 0;
-          text-align:center;">
+        <p style="font-size:13px; color:var(--muted-foreground); margin:12px 0 0 0; text-align:center;">
           Ein Film über Verantwortung, Bewegung und Zukunft.
         </p>
       </div>
@@ -134,63 +105,33 @@
     </div>
   </section>
 
-  <!--"components/charts.html" -->
- 
   <section class="cenit-section">
     <div class="cenit-container">
 
-      <div style="
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:26px;
-        max-width:950px;
-        margin:0 auto;">
-
-        <!-- Chart 1 -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:26px; max-width:950px; margin:0 auto;">
         <div class="cenit-card">
-          <!-- Infogram Embed -->
-          <!-- DEIN INFOGRAM CODE -->
+          <!-- Infogram Embed 1 -->
         </div>
-
-        <!-- Chart 2 -->
         <div class="cenit-card">
-          <!-- Infogram Embed -->
-          <!-- DEIN INFOGRAM CODE -->
+          <!-- Infogram Embed 2 -->
         </div>
-
       </div>
 
     </div>
   </section>
 
-  <!--"components/outro.html" -->
-
   <section class="cenit-section">
     <div class="cenit-container">
-
       <div class="cenit-softcard" style="max-width:950px; margin:0 auto; text-align:center;">
-        <p style="
-          font-family:'EB Garamond', serif;
-          font-style:italic;
-          font-size:24px;
-          color:var(--cenit-purple);
-          margin:0 0 10px 0;">
+        <p style="font-family:'EB Garamond', serif; font-style:italic; font-size:24px; color:var(--cenit-purple); margin:0 0 10px 0;">
           „Gesund tanzen ist kein Zufall – sondern eine Entscheidung“
         </p>
-
-        <p style="
-          font-size:14px;
-          color:var(--muted-foreground);
-          margin:0;">
+        <p style="font-size:14px; color:var(--muted-foreground); margin:0;">
           We move knowledge – together
         </p>
       </div>
-
     </div>
   </section>
-
-
-  <!-- Footer -->
 
   <footer class="cenit-footer">
     <div style="max-width:1100px; margin:0 auto;">
@@ -199,22 +140,22 @@
         <span style="margin:0 10px; color:#999;">|</span>
         <a href="https://itrk.legal/p/privacy/cenit-ev" target="_blank" rel="noopener">Datenschutz</a>
       </div>
+
       <div style="font-size:13px; color:#666;">
         © <span id="cenit-year"></span> CENIT Verein zur Förderung interdisziplinärer Tanzmedizin e.V.
       </div>
+
+      <p class="cenit-footer-note">
+        Website concept and editorial responsibility: Manfred G. Schneider, Board Member and Treasurer, CENIT e.V.<br>
+        All presented content is based on publicly accessible sources and peer-reviewed research.
+      </p>
     </div>
 
     <script>
-      // kleines, harmloses Inline (nur Jahr)
       document.getElementById("cenit-year").textContent = new Date().getFullYear();
     </script>
   </footer>
-  <p class="cenit-footer-note">
-    Website concept and editorial responsibility: Manfred G. Schneider, Board Member and Treasurer, CENIT e.V.<br>
-    All presented content is based on publicly accessible sources and peer-reviewed research.
-  </p>
 
 </body>
 </html>
-
 
