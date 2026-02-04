@@ -1,4 +1,7 @@
 <script>
+  window.__cenitNavLoaded = true;
+  console.log("CENIT nav loaded");
+
   // ===== Dropdown menu =====
   (function () {
     const btn = document.querySelector(".cenit-menutoggle");
