@@ -51,5 +51,30 @@ console.log("MAIN.JS LOADED");
       document.documentElement.setAttribute("lang", L);
 
       langButtons.forEach((btn) =>
-        btn.classLi
+        btn.classList.toggle(
+          "is-active",
+          btn.getAttribute("data-set-lang") === L
+        )
+      );
+
+      try {
+        localStorage.setItem("cenit-lang", L);
+      } catch (_) {}
+    };
+
+    langButtons.forEach((btn) =>
+      btn.addEventListener("click", () =>
+        applyLang(btn.getAttribute("data-set-lang"))
+      )
+    );
+
+    let initial = "de";
+    try {
+      initial = localStorage.getItem("cenit-lang") || "de";
+    } catch (_) {}
+
+    applyLang(initial);
+  }
+
+})();
 
