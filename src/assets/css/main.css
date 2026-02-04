@@ -972,6 +972,7 @@ p, li{ color:var(--muted-foreground); }
   max-width:950px;
   margin-left:auto;
   margin-right:auto;
+   width: 100%;
   box-sizing:border-box;
 }
 
