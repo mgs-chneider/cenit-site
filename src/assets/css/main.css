@@ -980,6 +980,16 @@ p, li{ color:var(--muted-foreground); }
   margin-bottom:48px;
 }
 
+/* Hero: unten mehr Raum, damit Whitecard optisch „sinkt“ */
+.cenit-zf-hero{
+  padding-bottom:44px;
+}
+
+/* Video: oben weniger Abstand, damit Whitecard näher ranrückt */
+.cenit-zf-video{
+  padding-top:18px;
+}
+
 .cenit-facts-title{
   font-family:'EB Garamond', serif;
   font-size:30px;
