@@ -50,47 +50,9 @@
       if (!menu.id) menu.id = "cenit-menu";
     }
 
-    // -----------------------------
-    // LANGUAGE SWITCH
-    // -----------------------------
-    var langButtons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
-    var allLangNodes = document.querySelectorAll("[data-lang]");
-
-    function setLang(lang) {
-      allLangNodes.forEach(function (node) {
-        node.style.display = node.getAttribute("data-lang") === lang ? "" : "none";
-      });
-
-      langButtons.forEach(function (btn) {
-        btn.classList.toggle("is-active", btn.getAttribute("data-set-lang") === lang);
-      });
-
-      try {
-        localStorage.setItem("cenit-lang", lang);
-      } catch (_) {}
-
-      document.documentElement.setAttribute("lang", lang);
-    }
-
-    if (langButtons.length && allLangNodes.length) {
-      langButtons.forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          var lang = btn.getAttribute("data-set-lang");
-          setLang(lang);
-        });
-      });
-
-      var initial = "de";
-      try {
-        initial = localStorage.getItem("cenit-lang") || "de";
-      } catch (_) {}
-
-      setLang(initial);
-    }
-  });
-})();
-
+  
 // ===== Language Switch (DE/EN) + i18n for menu labels =====
+    
 (function () {
   const buttons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
   if (!buttons.length) return;
@@ -122,36 +84,36 @@
 
   const applyLang = (lang) => {
     const L = dict[lang] ? lang : "de";
-    document.documentElement.lang = L;
+    document.documentElement.setAttribute("lang", L);
 
-    // Toggle data-lang blocks (you already use these in sources)
+    // Toggle data-lang blocks (if any)
     document.querySelectorAll("[data-lang]").forEach((el) => {
       el.style.display = (el.getAttribute("data-lang") === L) ? "" : "none";
     });
 
-    // Translate all elements with data-i18n (menu + labels)
+    // Translate all elements with data-i18n
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       if (dict[L][key]) el.textContent = dict[L][key];
     });
 
-    // Optional: translate "Quellen:" labels if you keep them as plain spans
+    // If you keep Quellen/Sources as spans without data-i18n:
     document.querySelectorAll(".cenit-zf-sources span").forEach((el) => {
-      if (el.textContent.trim().toLowerCase().startsWith("quellen")) el.textContent = dict[L].sources;
-      if (el.textContent.trim().toLowerCase().startsWith("sources")) el.textContent = dict[L].sources;
+      const t = el.textContent.trim().toLowerCase();
+      if (t.startsWith("quellen") || t.startsWith("sources")) el.textContent = dict[L].sources;
     });
 
     // Active state
-    buttons.forEach((b) => b.classList.toggle("is-active", b.dataset.setLang === L));
+    buttons.forEach((b) => b.classList.toggle("is-active", b.getAttribute("data-set-lang") === L));
 
     // Remember
-    try { localStorage.setItem("cenit_lang", L); } catch(e) {}
+    try { localStorage.setItem("cenit-lang", L); } catch(_) {}
   };
 
-  buttons.forEach((btn) => btn.addEventListener("click", () => applyLang(btn.dataset.setLang)));
+  buttons.forEach((btn) => btn.addEventListener("click", () => applyLang(btn.getAttribute("data-set-lang"))));
 
   let initial = "de";
-  try { initial = localStorage.getItem("cenit_lang") || initial; } catch(e) {}
+  try { initial = localStorage.getItem("cenit-lang") || initial; } catch(_) {}
   applyLang(initial);
 })();
 
