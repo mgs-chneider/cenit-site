@@ -90,3 +90,68 @@
   });
 })();
 
+// ===== Language Switch (DE/EN) + i18n for menu labels =====
+(function () {
+  const buttons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
+  if (!buttons.length) return;
+
+  const dict = {
+    de: {
+      menuLabel: "Menü",
+      vision: "Vision",
+      about: "Über uns",
+      expertise: "Expertise",
+      insights: "Einblicke & Entwicklungen",
+      faqs: "FAQs",
+      contact: "Kontakt",
+      statutes: "Satzung",
+      sources: "Quellen:"
+    },
+    en: {
+      menuLabel: "Menu",
+      vision: "Vision",
+      about: "About us",
+      expertise: "Expertise",
+      insights: "Insights & Updates",
+      faqs: "FAQs",
+      contact: "Contact",
+      statutes: "Statutes",
+      sources: "Sources:"
+    }
+  };
+
+  const applyLang = (lang) => {
+    const L = dict[lang] ? lang : "de";
+    document.documentElement.lang = L;
+
+    // Toggle data-lang blocks (you already use these in sources)
+    document.querySelectorAll("[data-lang]").forEach((el) => {
+      el.style.display = (el.getAttribute("data-lang") === L) ? "" : "none";
+    });
+
+    // Translate all elements with data-i18n (menu + labels)
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (dict[L][key]) el.textContent = dict[L][key];
+    });
+
+    // Optional: translate "Quellen:" labels if you keep them as plain spans
+    document.querySelectorAll(".cenit-zf-sources span").forEach((el) => {
+      if (el.textContent.trim().toLowerCase().startsWith("quellen")) el.textContent = dict[L].sources;
+      if (el.textContent.trim().toLowerCase().startsWith("sources")) el.textContent = dict[L].sources;
+    });
+
+    // Active state
+    buttons.forEach((b) => b.classList.toggle("is-active", b.dataset.setLang === L));
+
+    // Remember
+    try { localStorage.setItem("cenit_lang", L); } catch(e) {}
+  };
+
+  buttons.forEach((btn) => btn.addEventListener("click", () => applyLang(btn.dataset.setLang)));
+
+  let initial = "de";
+  try { initial = localStorage.getItem("cenit_lang") || initial; } catch(e) {}
+  applyLang(initial);
+})();
+
