@@ -1078,7 +1078,6 @@ p, li{ color:var(--muted-foreground); }
   font-weight:500;
 }
 
-
 @media (max-width: 980px){
   .cenit-facts-grid{ grid-template-columns:1fr; }
   .cenit-embed{ height:540px; }
@@ -1096,3 +1095,10 @@ p, li{ color:var(--muted-foreground); }
   margin: 0;
 }
 
+/* Zahlen & Fakten: Container wirklich zentrieren */
+.page-zahlen-fakten .cenit-container{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
