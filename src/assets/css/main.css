@@ -1083,4 +1083,15 @@ p, li{ color:var(--muted-foreground); }
   .cenit-embed{ height:540px; }
 }
 
+/* ===== Zahlen & Fakten: gleiche „Landingpage-Rhythmik“ ===== */
+.page-zahlen-fakten .cenit-section{
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* verhindert „zufällige“ Extra-Abstände durch Cards */
+.page-zahlen-fakten .cenit-card,
+.page-zahlen-fakten .cenit-softcard{
+  margin: 0;
+}
 
