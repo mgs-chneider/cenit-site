@@ -40,39 +40,38 @@ console.log("MAIN.JS LOADED");
     if (!menu.id) menu.id = "cenit-menu";
   }
 
-// -----------------------------
-// LANGUAGE SWITCH (data-lang="de|en")
-// -----------------------------
-const langButtons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
+// LANGUAGE SWITCH (Topbar i18n + Page data-lang)
+const buttons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
 
-if (langButtons.length) {
+if (buttons.length) {
   const applyLang = (lang) => {
     const L = (lang === "en") ? "en" : "de";
-    document.documentElement.setAttribute("lang", L);
+    document.documentElement.lang = L;
 
-    // Toggle all data-lang nodes
+    // 1) Topbar / UI via data-i18n
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (window.CENIT_I18N && window.CENIT_I18N[L]?.[key]) {
+        el.textContent = window.CENIT_I18N[L][key];
+      }
+    });
+
+    // 2) Page Content via data-lang
     document.querySelectorAll("[data-lang]").forEach((el) => {
       el.style.display = (el.getAttribute("data-lang") === L) ? "" : "none";
     });
 
-    // Active underline
-    langButtons.forEach((btn) =>
-      btn.classList.toggle("is-active", btn.getAttribute("data-set-lang") === L)
+    // underline
+    buttons.forEach((b) =>
+      b.classList.toggle("is-active", b.getAttribute("data-set-lang") === L)
     );
 
-    // Optional: page title from body attributes
-    const body = document.body;
-    const title = body ? body.getAttribute(`data-title-${L}`) : "";
-    if (title) document.title = title;
-
-    try { localStorage.setItem("cenit-lang", L); } catch (_) {}
+    try { localStorage.setItem("cenit-lang", L); } catch(_) {}
   };
 
-  langButtons.forEach((btn) =>
-    btn.addEventListener("click", () => applyLang(btn.getAttribute("data-set-lang")))
+  buttons.forEach((b) =>
+    b.addEventListener("click", () => applyLang(b.getAttribute("data-set-lang")))
   );
 
-  let initial = "de";
-  try { initial = localStorage.getItem("cenit-lang") || "de"; } catch (_) {}
-  applyLang(initial);
+  applyLang(localStorage.getItem("cenit-lang") || "de");
 }
