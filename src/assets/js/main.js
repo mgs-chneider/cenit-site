@@ -53,69 +53,55 @@ console.log("MAIN.JS LOADED");
     }
 
   
-// ===== Language Switch (DE/EN) + i18n for menu labels =====
-    
+// ===== CENIT: Menu + Language (safe block) =====
 (function () {
+  // MENU
+  const btn = document.querySelector(".cenit-menutoggle");
+  const menu = document.querySelector(".cenit-menu");
+  if (btn && menu) {
+    const close = () => {
+      menu.classList.remove("show");
+      btn.setAttribute("aria-expanded", "false");
+    };
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const willOpen = !menu.classList.contains("show");
+      menu.classList.toggle("show", willOpen);
+      btn.setAttribute("aria-expanded", String(willOpen));
+    });
+
+    document.addEventListener("click", (e) => {
+      if (menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") close();
+    });
+
+    menu.addEventListener("click", (e) => e.stopPropagation());
+  }
+
+  // LANGUAGE (underline + store)
   const buttons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
-  if (!buttons.length) return;
+  if (buttons.length) {
+    const applyLang = (lang) => {
+      const L = (lang === "en") ? "en" : "de";
+      document.documentElement.setAttribute("lang", L);
+      buttons.forEach((b) =>
+        b.classList.toggle("is-active", b.getAttribute("data-set-lang") === L)
+      );
+      try { localStorage.setItem("cenit-lang", L); } catch (_) {}
+    };
 
-  const dict = {
-    de: {
-      menuLabel: "Menü",
-      vision: "Vision",
-      about: "Über uns",
-      expertise: "Expertise",
-      insights: "Einblicke & Entwicklungen",
-      faqs: "FAQs",
-      contact: "Kontakt",
-      statutes: "Satzung",
-      sources: "Quellen:"
-    },
-    en: {
-      menuLabel: "Menu",
-      vision: "Vision",
-      about: "About us",
-      expertise: "Expertise",
-      insights: "Insights & Updates",
-      faqs: "FAQs",
-      contact: "Contact",
-      statutes: "Statutes",
-      sources: "Sources:"
-    }
-  };
+    buttons.forEach((b) =>
+      b.addEventListener("click", () => applyLang(b.getAttribute("data-set-lang")))
+    );
 
-  const applyLang = (lang) => {
-    const L = dict[lang] ? lang : "de";
-    document.documentElement.setAttribute("lang", L);
-
-    // Toggle data-lang blocks (if any)
-    document.querySelectorAll("[data-lang]").forEach((el) => {
-      el.style.display = (el.getAttribute("data-lang") === L) ? "" : "none";
-    });
-
-    // Translate all elements with data-i18n
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-      const key = el.getAttribute("data-i18n");
-      if (dict[L][key]) el.textContent = dict[L][key];
-    });
-
-    // If you keep Quellen/Sources as spans without data-i18n:
-    document.querySelectorAll(".cenit-zf-sources span").forEach((el) => {
-      const t = el.textContent.trim().toLowerCase();
-      if (t.startsWith("quellen") || t.startsWith("sources")) el.textContent = dict[L].sources;
-    });
-
-    // Active state
-    buttons.forEach((b) => b.classList.toggle("is-active", b.getAttribute("data-set-lang") === L));
-
-    // Remember
-    try { localStorage.setItem("cenit-lang", L); } catch(_) {}
-  };
-
-  buttons.forEach((btn) => btn.addEventListener("click", () => applyLang(btn.getAttribute("data-set-lang"))));
-
-  let initial = "de";
-  try { initial = localStorage.getItem("cenit-lang") || initial; } catch(_) {}
-  applyLang(initial);
+    let initial = "de";
+    try { initial = localStorage.getItem("cenit-lang") || "de"; } catch (_) {}
+    applyLang(initial);
+  }
 })();
-
