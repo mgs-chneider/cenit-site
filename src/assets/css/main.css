@@ -230,6 +230,19 @@ p, li{ color:var(--muted-foreground); }
   margin:40px 0 12px 0;
 }
 
+/* Subheadline (h3) – abgeleitet von h2 */
+.cenit-zf-headline{
+  font-family:'EB Garamond', serif;
+  font-style:italic;
+  font-weight:300;
+  font-size:26px;
+  line-height:1.35;
+  letter-spacing:0.01em;
+  color:var(--cenit-purple);
+  text-align:center;
+  margin:0 0 16px 0;
+}
+
 .cenit-lead{
   margin:0 auto 26px auto;
   text-align:center;
