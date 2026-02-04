@@ -1120,3 +1120,7 @@ p, li{ color:var(--muted-foreground); }
   margin-right:auto;
 }
 
+/* Zahlen & Fakten: mehr Luft zwischen Titel und Hero-Card */
+.page-zahlen-fakten .cenit-h2{
+  margin-bottom: 32px;
+}
