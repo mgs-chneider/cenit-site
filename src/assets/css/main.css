@@ -189,6 +189,13 @@ p, li{ color:var(--muted-foreground); }
 .cenit-footer a{ color:var(--cenit-purple); text-decoration:none; }
 .cenit-footer a:hover{ text-decoration:underline; }
 
+.cenit-footer-copy{
+  margin: 10px 0 6px 0;
+  font-size: 13px;
+  color: var(--muted-foreground);
+  text-align: center;
+}
+
 /* Footer – editorial note */
 .cenit-footer-note{
   margin: 12px auto 0 auto;
