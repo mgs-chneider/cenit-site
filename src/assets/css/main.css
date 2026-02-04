@@ -1009,6 +1009,10 @@ p, li{ color:var(--muted-foreground); }
   display:block;
 }
 
+.cenit-zf-video-subtitle{
+  text-align:center;
+}
+
 .cenit-facts-title{
   font-family:'EB Garamond', serif;
   font-size:30px;
