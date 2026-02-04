@@ -43,6 +43,10 @@ p, li{ color:var(--muted-foreground); }
    TOPBAR
    ========================= */
 
+.cenit-topbar{ position:relative; z-index:1000; }
+.cenit-menutoggle{ position:relative; z-index:1300; }
+.cenit-menu{ z-index:1200; }
+
 .cenit-topbar{
   display:grid;
   grid-template-columns: 1fr auto 1fr;
