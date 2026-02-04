@@ -986,7 +986,7 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* Video: oben weniger Abstand, damit Whitecard näher ranrückt */
-.cenit-zf-video{
+.cenit-zf-video-card{
   padding-top:18px;
 }
 
@@ -1011,6 +1011,11 @@ p, li{ color:var(--muted-foreground); }
 
 .cenit-zf-video-subtitle{
   text-align:center;
+}
+
+.cenit-zf-video{
+  padding-top:32px;
+  padding-bottom:32px;
 }
 
 .cenit-facts-title{
