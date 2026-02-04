@@ -975,6 +975,25 @@ p, li{ color:var(--muted-foreground); }
   box-sizing:border-box;
 }
 
+.cenit-facts-header{
+  text-align:center;
+  margin-bottom:28px;
+}
+
+.cenit-facts-title{
+  font-family:'EB Garamond', serif;
+  font-size:30px;
+  font-weight:400;
+  color:var(--cenit-purple);
+  margin:0 0 6px 0;
+}
+
+.cenit-facts-subline{
+  font-size:15px;
+  color:var(--muted-foreground);
+  margin:0;
+}
+
 .cenit-facts-grid{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -999,19 +1018,27 @@ p, li{ color:var(--muted-foreground); }
   background:#fff;
 }
 
-.cenit-embed-sources{
-  margin:12px 0 0 0;
+.cenit-zf-sources{
+  margin-top:14px;
   font-size:13px;
-  line-height:1.6;
+  line-height:1.5;
   text-align:center;
   color:var(--muted-foreground);
 }
 
-.cenit-embed-sources a{
-  color:rgba(107,20,184,0.86);
+.cenit-zf-sources a{
+  color:var(--muted-foreground);
   text-decoration:none;
 }
-.cenit-embed-sources a:hover{ text-decoration:underline; }
+
+.cenit-zf-sources a:hover{
+  text-decoration:underline;
+}
+
+.cenit-zf-sources-label{
+  font-weight:500;
+}
+
 
 @media (max-width: 980px){
   .cenit-facts-grid{ grid-template-columns:1fr; }
