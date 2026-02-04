@@ -1,3 +1,5 @@
+console.log("MAIN.JS LOADED");
+
 // CENIT main.js
 // - Language switch (data-lang="de|en")
 // - Hamburger menu toggle
