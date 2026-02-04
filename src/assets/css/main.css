@@ -990,6 +990,25 @@ p, li{ color:var(--muted-foreground); }
   padding-top:18px;
 }
 
+.cenit-video-frame{
+  width:100%;
+  max-width:100%;
+  position:relative;
+  padding-bottom:56.25%;
+  height:0;
+  overflow:hidden;
+  border-radius:16px;
+}
+
+.cenit-video-frame iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
+
 .cenit-facts-title{
   font-family:'EB Garamond', serif;
   font-size:30px;
