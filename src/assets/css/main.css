@@ -1153,3 +1153,12 @@ p, li{ color:var(--muted-foreground); }
   margin-top: 0;
   margin-bottom: 0;
 }
+
+/* ===== Landingpage: Expertise wieder in den Section-Rhythmus bringen ===== */
+.page-home .cenit-expertise .cenit-h2{
+  margin-bottom: 24px;
+}
+
+.page-home .cenit-expertise .cenit-expertise-quote{
+  margin-top: 24px;
+}
