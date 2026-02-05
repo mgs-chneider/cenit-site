@@ -47,8 +47,8 @@ async function main() {
 
     const html = await fs.readFile(file, "utf8");
     const merged = html
-      .replace("<!-- @@HEADER@@ -->", header)
-      .replace("<!-- @@FOOTER@@ -->", footer);
+     .replace(/<!--\s*@@HEADER@@\s*-->/g, header)
+     .replace(/<!--\s*@@FOOTER@@\s*-->/g, footer);
 
     await ensureDir(path.dirname(outPath));
     await fs.writeFile(outPath, merged, "utf8");
