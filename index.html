@@ -71,7 +71,89 @@
 
     </header>
     <section id="hero">
-        <!-- Hero component -->
+       <!-- =========================
+     HERO (Logo outside card)
+     ========================= -->
+
+<section class="cenit-section cenit-hero">
+  <div class="cenit-container">
+
+    <!-- LOGO (outside the whitecard) -->
+    <div class="cenit-hero-logo-wrap">
+       <div class="cenit-hero-logo">
+         <img src="/assets/img/FotoLogo.png" alt="CENIT e.V.">
+       </div>
+    </div>
+
+    <!-- HERO CLAIM CARD (950px) -->
+    <div class="cenit-card cenit-hero-card">
+
+      <!-- CLAIM -->
+      <p class="cenit-hero-claim" data-lang="de">
+        „Von der Idee zur Wirkung – Prävention beginnt mit Bewegung“
+      </p>
+      <p class="cenit-hero-claim" data-lang="en" style="display:none;">
+        “From idea to impact – prevention starts with movement”
+      </p>
+
+      <!-- GOLD LINE -->
+      <div class="cenit-hero-divider"></div>
+
+      <!-- SUBTEXT -->
+      <p class="cenit-hero-sub" data-lang="de">
+        CENIT e.V. – Forschung. Förderung. Bewegung.
+      </p>
+      <p class="cenit-hero-sub" data-lang="en" style="display:none;">
+        CENIT e.V. – Research. Advancement. Movement.
+      </p>
+
+    </div>
+
+    <!-- VIDEO (aligned to 950px rhythm) -->
+    <div class="cenit-hero-video">
+      <div class="cenit-hero-video-inner">
+        <iframe
+          id="promoVideo"
+          src="https://www.youtube.com/embed/kSqYtMHOwPg?autoplay=1&mute=1&controls=1&modestbranding=1&rel=0&showinfo=0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          title="CENIT Video"></iframe>
+      </div>
+
+      <!-- SOUND BUTTON -->
+      <button id="soundButton" data-lang="de" onclick="unmuteVideo()" class="cenit-hero-soundbtn">
+        🔊 Sound einschalten
+      </button>
+
+      <button id="soundButtonEn" data-lang="en" onclick="unmuteVideo()" class="cenit-hero-soundbtn" style="display:none;">
+        🔊 Enable sound
+      </button>
+    </div>
+
+    <!-- QUOTE + TRANSITION -->
+    <div class="cenit-hero-transition">
+      <p class="cenit-hero-quote">„Movement is the visible form of intention“</p>
+      <p class="cenit-hero-quote-author">— Martha Graham</p>
+      <div class="cenit-hero-divider cenit-hero-divider--small"></div>
+
+      <p class="cenit-hero-transition-text" data-lang="de">
+        Doch wie steht es um die Belastungen, die mit diesen Bewegungen einhergehen?<br>
+        Die Zahlen geben eine klare Antwort.
+      </p>
+      <p class="cenit-hero-transition-text" data-lang="en" style="display:none;">
+        But what about the physical demands that come with these movements?<br>
+        The numbers provide a clear answer.
+      </p>
+
+      <div class="cenit-hero-cta">
+        <a href="/zahlen-fakten" data-lang="de" class="cenit-btn">Zahlen &amp; Fakten</a>
+        <a href="/zahlen-fakten" data-lang="en" class="cenit-btn" style="display:none;">Facts &amp; Figures</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
     </section>
     <section id="vision-mission">
         <!-- Vision & Mission component -->
