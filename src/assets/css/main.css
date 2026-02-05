@@ -1162,3 +1162,32 @@ p, li{ color:var(--muted-foreground); }
 .page-home .cenit-expertise .cenit-expertise-quote{
   margin-top: 24px;
 }
+
+/* ===== Scroll to Top ===== */
+#scrollTopBtn{
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.03);
+  color: var(--muted-foreground);
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 1400;
+}
+
+#scrollTopBtn.show{
+  opacity: 0.85;
+  pointer-events: auto;
+}
+
+#scrollTopBtn:hover{
+  opacity: 1;
+  transform: translateY(-2px);
+}
