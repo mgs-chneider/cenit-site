@@ -38,80 +38,63 @@ console.log("MAIN.JS LOADED");
     toggleBtn.setAttribute("aria-expanded", "false");
   }
 
-  // -----------------------------
-  // LANGUAGE SWITCH
-  // -----------------------------
-  const langButtons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
+// ===== Language Switch + i18n (FINAL) =====
+(function () {
+  const buttons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
+  if (!buttons.length) return;
 
-  if (langButtons.length) {
-    const applyLang = (lang) => {
-      const L = (lang === "en") ? "en" : "de";
-      document.documentElement.lang = L;
+  const dict = {
+    de: {
+      menuLabel: "Menü",
+      vision: "Vision",
+      about: "Über uns",
+      expertise: "Expertise",
+      insights: "Einblicke & Entwicklungen",
+      faqs: "FAQs",
+      contact: "Kontakt",
+      statutes: "Satzung"
+    },
+    en: {
+      menuLabel: "Menu",
+      vision: "Vision",
+      about: "About us",
+      expertise: "Expertise",
+      insights: "Insights & Updates",
+      faqs: "FAQs",
+      contact: "Contact",
+      statutes: "Statutes"
+    }
+  };
 
-      // underline
-      langButtons.forEach((btn) =>
-        btn.classList.toggle(
-          "is-active",
-          btn.getAttribute("data-set-lang") === L
-        )
-      );
+  function applyLang(lang){
+    const L = dict[lang] ? lang : "de";
+    document.documentElement.lang = L;
 
-      // Topbar labels (data-i18n)
-      if (window.CENIT_I18N && window.CENIT_I18N[L]) {
-        document.querySelectorAll("[data-i18n]").forEach((el) => {
-          const key = el.getAttribute("data-i18n");
-          if (window.CENIT_I18N[L][key]) {
-            el.textContent = window.CENIT_I18N[L][key];
-          }
-        });
-      }
+    // 1) Content (data-lang)
+    document.querySelectorAll("[data-lang]").forEach(el => {
+      el.style.display = el.getAttribute("data-lang") === L ? "" : "none";
+    });
 
-      // Page content (data-lang)
-      document.querySelectorAll("[data-lang]").forEach((el) => {
-        el.style.display =
-          el.getAttribute("data-lang") === L ? "" : "none";
-      });
+    // 2) UI labels (data-i18n)
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (dict[L][key]) el.textContent = dict[L][key];
+    });
 
-      try {
-        localStorage.setItem("cenit-lang", L);
-      } catch (_) {}
-    };
+    // 3) Active state
+    buttons.forEach(btn => {
+      btn.classList.toggle("is-active", btn.dataset.setLang === L);
+    });
 
-    langButtons.forEach((btn) =>
-      btn.addEventListener("click", () =>
-        applyLang(btn.getAttribute("data-set-lang"))
-      )
-    );
-
-    let initial = "de";
-    try {
-      initial = localStorage.getItem("cenit-lang") || "de";
-    } catch (_) {}
-
-    applyLang(initial);
+    // 4) Persist
+    try { localStorage.setItem("cenit-lang", L); } catch(e){}
   }
 
+  buttons.forEach(btn =>
+    btn.addEventListener("click", () => applyLang(btn.dataset.setLang))
+  );
+
+  let initial = "de";
+  try { initial = localStorage.getItem("cenit-lang") || initial; } catch(e){}
+  applyLang(initial);
 })();
-
-const dict = {
-  de: {
-    menuLabel: "Menü",
-    vision: "Vision",
-    about: "Über uns",
-    expertise: "Expertise",
-    insights: "Einblicke & Entwicklungen",
-    faqs: "FAQs",
-    contact: "Kontakt",
-    statutes: "Satzung"
-  },
-  en: {
-    menuLabel: "Menu",
-    vision: "Vision",
-    about: "About us",
-    expertise: "Expertise",
-    insights: "Insights & Updates",
-    faqs: "FAQs",
-    contact: "Contact",
-    statutes: "Statutes"
-  }
-};
