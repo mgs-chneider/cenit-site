@@ -36,6 +36,7 @@ const langButtons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
 
 const dict = {
   de: {
+    home: "Startseite",
     menuLabel: "Menü",
     vision: "Vision",
     about: "Über uns",
@@ -46,6 +47,7 @@ const dict = {
     statutes: "Satzung"
   },
   en: {
+    home: "Home",
     menuLabel: "Menu",
     vision: "Vision",
     about: "About us",
