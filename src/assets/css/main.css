@@ -1191,3 +1191,12 @@ p, li{ color:var(--muted-foreground); }
   opacity: 1;
   transform: translateY(-2px);
 }
+
+/* ===== Landingpage: Abstand Whitecard (Hero) ↔ Video wiederherstellen ===== */
+.page-home .cenit-hero-card{
+  margin-bottom: 28px;  /* wie im ursprünglichen Design */
+}
+
+.page-home .cenit-hero-video{
+  margin-top: 0;        /* Sicherheit: Abstand kommt von der Card */
+}
