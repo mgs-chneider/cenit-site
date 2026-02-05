@@ -88,3 +88,22 @@ langButtons.forEach(btn =>
 let initialLang = "de";
 try { initialLang = localStorage.getItem("cenit-lang") || "de"; } catch(e){}
 applyLang(initialLang);
+
+/* =====================================================
+   SCROLL TO TOP
+===================================================== */
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+if (scrollBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
