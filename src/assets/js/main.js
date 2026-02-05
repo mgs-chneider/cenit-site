@@ -1,100 +1,90 @@
-console.log("MAIN.JS LOADED");
+console.log("CENIT main.js loaded");
 
-// ==================================
-// CENIT main.js
-// - Hamburger menu
-// - Language switch (data-i18n + data-lang)
-// ==================================
-(function () {
+/* =====================================================
+   MENU TOGGLE
+===================================================== */
+const menuBtn = document.querySelector(".cenit-menutoggle");
+const menu = document.querySelector(".cenit-menu");
 
-  // -----------------------------
-  // MENU TOGGLE
-  // -----------------------------
-  const toggleBtn = document.querySelector(".cenit-menutoggle");
-  const menu = document.querySelector(".cenit-menu");
+if (menuBtn && menu) {
+  menuBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const open = menu.classList.toggle("show");
+    menuBtn.setAttribute("aria-expanded", String(open));
+  });
 
-  if (toggleBtn && menu) {
-    const closeMenu = () => {
+  document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
       menu.classList.remove("show");
-      toggleBtn.setAttribute("aria-expanded", "false");
-    };
-
-    toggleBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const isOpen = menu.classList.toggle("show");
-      toggleBtn.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    document.addEventListener("click", (e) => {
-      if (menu.contains(e.target) || toggleBtn.contains(e.target)) return;
-      closeMenu();
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-
-    toggleBtn.setAttribute("aria-expanded", "false");
-  }
-
-// ===== Language Switch + i18n (FINAL) =====
-(function () {
-  const buttons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
-  if (!buttons.length) return;
-
-  const dict = {
-    de: {
-      menuLabel: "Menü",
-      vision: "Vision",
-      about: "Über uns",
-      expertise: "Expertise",
-      insights: "Einblicke & Entwicklungen",
-      faqs: "FAQs",
-      contact: "Kontakt",
-      statutes: "Satzung"
-    },
-    en: {
-      menuLabel: "Menu",
-      vision: "Vision",
-      about: "About us",
-      expertise: "Expertise",
-      insights: "Insights & Updates",
-      faqs: "FAQs",
-      contact: "Contact",
-      statutes: "Statutes"
+      menuBtn.setAttribute("aria-expanded", "false");
     }
-  };
+  });
 
-  function applyLang(lang){
-    const L = dict[lang] ? lang : "de";
-    document.documentElement.lang = L;
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      menu.classList.remove("show");
+      menuBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+}
 
-    // 1) Content (data-lang)
-    document.querySelectorAll("[data-lang]").forEach(el => {
-      el.style.display = el.getAttribute("data-lang") === L ? "" : "none";
-    });
+/* =====================================================
+   LANGUAGE SWITCH + i18n
+===================================================== */
+const langButtons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
 
-    // 2) UI labels (data-i18n)
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (dict[L][key]) el.textContent = dict[L][key];
-    });
-
-    // 3) Active state
-    buttons.forEach(btn => {
-      btn.classList.toggle("is-active", btn.dataset.setLang === L);
-    });
-
-    // 4) Persist
-    try { localStorage.setItem("cenit-lang", L); } catch(e){}
+const dict = {
+  de: {
+    menuLabel: "Menü",
+    vision: "Vision",
+    about: "Über uns",
+    expertise: "Expertise",
+    insights: "Einblicke & Entwicklungen",
+    faqs: "FAQs",
+    contact: "Kontakt",
+    statutes: "Satzung"
+  },
+  en: {
+    menuLabel: "Menu",
+    vision: "Vision",
+    about: "About us",
+    expertise: "Expertise",
+    insights: "Insights & Updates",
+    faqs: "FAQs",
+    contact: "Contact",
+    statutes: "Statutes"
   }
+};
 
-  buttons.forEach(btn =>
-    btn.addEventListener("click", () => applyLang(btn.dataset.setLang))
+function applyLang(lang) {
+  const L = dict[lang] ? lang : "de";
+  document.documentElement.lang = L;
+
+  // Content
+  document.querySelectorAll("[data-lang]").forEach(el => {
+    el.style.display = el.getAttribute("data-lang") === L ? "" : "none";
+  });
+
+  // UI labels
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[L][key]) el.textContent = dict[L][key];
+  });
+
+  // Button state
+  langButtons.forEach(btn =>
+    btn.classList.toggle("is-active", btn.dataset.setLang === L)
   );
 
-  let initial = "de";
-  try { initial = localStorage.getItem("cenit-lang") || initial; } catch(e){}
-  applyLang(initial);
-})();
+  try { localStorage.setItem("cenit-lang", L); } catch(e){}
+}
+
+langButtons.forEach(btn =>
+  btn.addEventListener("click", () => applyLang(btn.dataset.setLang))
+);
+
+// Init
+let initialLang = "de";
+try { initialLang = localStorage.getItem("cenit-lang") || "de"; } catch(e){}
+applyLang(initialLang);
