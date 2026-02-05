@@ -1135,3 +1135,21 @@ p, li{ color:var(--muted-foreground); }
 .page-zahlen-fakten .cenit-h2{
   margin-bottom: 32px;
 }
+
+/* ===== Landingpage: gleiche Section-Rhythmik wie Zahlen & Fakten ===== */
+.page-home .cenit-section{
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* Hero darf oben etwas Luft behalten */
+.page-home .cenit-hero{
+  padding-top: 64px;
+}
+
+/* verhindert alte Extra-Abstände */
+.page-home .cenit-card,
+.page-home .cenit-softcard{
+  margin-top: 0;
+  margin-bottom: 0;
+}
