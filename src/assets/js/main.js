@@ -93,3 +93,25 @@ console.log("MAIN.JS LOADED");
 
 })();
 
+const dict = {
+  de: {
+    menuLabel: "Menü",
+    vision: "Vision",
+    about: "Über uns",
+    expertise: "Expertise",
+    insights: "Einblicke & Entwicklungen",
+    faqs: "FAQs",
+    contact: "Kontakt",
+    statutes: "Satzung"
+  },
+  en: {
+    menuLabel: "Menu",
+    vision: "Vision",
+    about: "About us",
+    expertise: "Expertise",
+    insights: "Insights & Updates",
+    faqs: "FAQs",
+    contact: "Contact",
+    statutes: "Statutes"
+  }
+};
