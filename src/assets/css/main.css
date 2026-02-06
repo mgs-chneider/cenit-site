@@ -1202,137 +1202,118 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* =========================
-   FAQS (luftiger + 950px + Webador-Feeling)
+   FAQS – Grid wie Podcast-Kacheln
 ========================= */
 
-/* Text unter Titel auf 760px */
-.cenit-faq-lead{
-  max-width: 760px;
-  margin: 0 auto 28px auto;
+.page-faqs .cenit-section{
+  padding-top: 56px; /* falls du im Rest ähnliche Section-Paddings hast */
 }
 
-/* Grid: 950px, 2 Spalten, gleichmäßige Kacheln */
-.cenit-faq-grid{
+/* Lead unter Titel: 760px, mittig */
+.page-faqs .cenit-faq-lead{
+  max-width: 760px;
+  margin: 0 auto 22px auto;
+}
+
+/* Whitecard-Panel (wie VM/Podcast-Card) */
+.page-faqs .cenit-faq-panel{
   max-width: 950px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;       /* ✅ 18–24px Rhythmus */
+  background: #ffffff;            /* ✅ White background */
+  border-radius: 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+  padding: 22px;                  /* Luft wie im Screenshot */
+}
+
+/* Grid innerhalb des Panels */
+.page-faqs .cenit-faq-grid{
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* FIX: Klammer zu */
-  gap: 18px;
-  align-items: stretch; /* wichtig: Items sollen volle Höhe annehmen */
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;                      /* ✅ wie gewünscht */
+  align-items: stretch;
 }
 
 @media (max-width: 860px){
-  .cenit-faq-grid{ grid-template-columns: 1fr; }
+  .page-faqs .cenit-faq-grid{ grid-template-columns: 1fr; }
 }
 
-/* FAQ Cards: quadratisch + mehr Luft + kleinere Typo */
-.cenit-faq-card{
-  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+/* FAQ-Kacheln: kompakter, luftiger */
+.page-faqs .cenit-faq-card{
   border-radius: 18px;
-  padding: 22px 28px;      /* mehr Innenabstand seitlich */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  aspect-ratio: 1 / 1;     /* ✅ macht die Kacheln quadratisch */
-  overflow: hidden;        /* verhindert „Ausbeulen“ */
+  padding: 20px 24px;             /* ✅ mehr Innenabstand seitlich */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
 }
 
-/* Wenn Text zu lang ist: Inhalt scrollt innerhalb der Kachel (sauberer als kaputte Höhen) */
-.cenit-faq-card > *:last-child{
-  overflow: auto;
-  padding-right: 6px;      /* Platz für Scrollbar */
-}
+/* Alternierende Farben (2 Pastelltöne) */
+.page-faqs .cenit-faq-card{ background:#f5f3f9; }
+.page-faqs .cenit-faq-card:nth-child(even){ background:#edebf5; }
 
-/* Typo: Frage kleiner, mehr Luft */
-.cenit-faq-q{
-  margin: 0;
+/* Frage-Titel: etwas kleiner als bisher */
+.page-faqs .cenit-faq-q{
+  margin: 0 0 10px 0;
   font-family: "EB Garamond", serif;
   font-style: italic;
   font-weight: 400;
   color: var(--cenit-purple);
-  font-size: 18px;
+  font-size: 17px;                /* ✅ kleiner */
   line-height: 1.25;
 }
 
-/* Body-Text etwas leichter */
-.cenit-faq-card p,
-.cenit-faq-card li{
-  font-size: 14.5px;
+/* Text insgesamt kleiner + leichter */
+.page-faqs .cenit-faq-card p,
+.page-faqs .cenit-faq-card li{
+  font-size: 14px;
   line-height: 1.55;
+  color: rgba(20,20,26,0.72);
 }
 
-/* Listen luftiger */
-.cenit-faq-list{
-  margin: 8px 0 0 0;
+.page-faqs .cenit-faq-list{
+  margin: 10px 0 0 0;
   padding-left: 16px;
 }
-.cenit-faq-list li{ margin: 6px 0; }
 
-/* FARBSPIEL (wie Podcast-Grid) – interpretiert nach deinem Hinweis:
-   Childs 1,4,5:   #f5f3f9
-   Die anderen:    #f6f3ff
-   (Kein #fafafa, bleibt Background)
-*/
-.cenit-faq-grid .cenit-faq-card{ background: #f6f3ff; }
-.cenit-faq-grid .cenit-faq-card:nth-child(1),
-.cenit-faq-grid .cenit-faq-card:nth-child(4),
-.cenit-faq-grid .cenit-faq-card:nth-child(5),{
-  background: #f5f3f9;
+.page-faqs .cenit-faq-list li{
+  margin: 6px 0;
 }
 
-/* Wide Card (wenn du eine quer über beide Spalten hast) */
-.cenit-faq-wide{
+/* Optional: wenn du einen Full-Width Block willst (z.B. „Was CENIT nicht macht“) */
+.page-faqs .cenit-faq-wide{
   grid-column: 1 / -1;
-  aspect-ratio: auto;      /* Wide darf nicht quadratisch sein */
 }
 
-/* FINAL SPLIT als „Band“ (nicht wie weitere Kachel) */
-.cenit-faq-final{
+/* Final Split: als eigenes Whitecard-Band */
+.page-faqs .cenit-faq-final{
   max-width: 950px;
-  margin: 18px auto 0 auto;
+  margin: 0 auto 20px auto;       /* ✅ Rhythmus */
+  background:#ffffff;
+  border-radius: 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+  padding: 18px;
+
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 18px;
   align-items: center;
-
-  /* Band-Optik */
-  background: #ffffff;
-  border-radius: 22px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-  padding: 18px;
 }
 
 @media (max-width: 860px){
-  .cenit-faq-final{ grid-template-columns: 1fr; }
+  .page-faqs .cenit-faq-final{ grid-template-columns: 1fr; }
 }
 
-/* Bild wie „Hero“-Weichheit */
-.cenit-faq-final-media img{
-  width: 100%;
-  height: 100%;
-  display: block;
+.page-faqs .cenit-faq-final-media img{
+  width:100%;
+  height:100%;
+  display:block;
   object-fit: cover;
   border-radius: 16px;
 }
 
-/* Content luftiger */
-.cenit-faq-final-content{
-  padding: 6px 6px 6px 10px;
-}
-
-.cenit-faq-final-title{
+.page-faqs .cenit-faq-final-title{
   margin: 0 0 8px 0;
   font-family: "EB Garamond", serif;
   font-style: italic;
   font-weight: 400;
   color: var(--cenit-purple);
-  font-size: 22px;
+  font-size: 20px;                /* etwas kleiner */
   line-height: 1.2;
-}
-
-.cenit-faq-final-actions{
-  margin-top: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
