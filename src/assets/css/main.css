@@ -1215,10 +1215,9 @@ p, li{ color:var(--muted-foreground); }
   max-width: 950px;          /* wichtig: Grid bleibt auf 950 */
   margin: 0 auto;            /* zentriert */
   display: grid;
-  grid-template-columns: repeat(2, 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;                 /* kleiner als 26 */
   grid-auto-rows: 1fr;
-  align-items: start;
 }
 
 @media (max-width: 860px){
