@@ -1207,7 +1207,7 @@ p, li{ color:var(--muted-foreground); }
 
 .cenit-faq-lead{
   max-width: 760px;
-  margin: 0 auto 28px auto;
+  margin: 0 auto 42px auto;
 }
 
 /* Grid enger */
@@ -1226,12 +1226,13 @@ p, li{ color:var(--muted-foreground); }
 
 /* FAQ Cards – Typo + Luft */
 .cenit-faq-card{
-  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-  padding: 22px 28px;        /* mehr Innenabstand seitlich */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  padding: 26px 32px 30px 32px;        /* mehr Innenabstand seitlich */
   border-radius: 18px;
   height: 100%;
   display: flex;
   flex-direction: column;
+   line-height: 1.55;
 }
 
 /* Farben: 1,4,5,7 = #f5f3f9 | Rest = #fff (kein #fafafa) */
@@ -1241,16 +1242,16 @@ p, li{ color:var(--muted-foreground); }
 .page-faqs .cenit-faq-card:nth-child(4),
 .page-faqs .cenit-faq-card:nth-child(5),
 .page-faqs .cenit-faq-card:nth-child(7){
-  background: #f5f3f9;
+    background: rgba(245,243,249,0.65);
 }
 
 .cenit-faq-q{
-  margin: 0 0 10px 0;
+  margin: 0 0 14px 0;
   font-family: "EB Garamond", serif;
   font-style: italic;
   font-weight: 400;
   color: var(--cenit-purple);
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.25;
 }
 
@@ -1273,7 +1274,7 @@ p, li{ color:var(--muted-foreground); }
 /* Final Split-Card auch auf 950 begrenzen + enger */
 .cenit-faq-final{
   max-width: 950px;
-  margin: 18px auto 0 auto;  /* vorher 26 */
+  margin: 48px auto 0 auto;  /* vorher 26 */
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 18px;                 /* kleiner */
