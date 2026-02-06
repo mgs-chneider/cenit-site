@@ -1207,13 +1207,16 @@ p, li{ color:var(--muted-foreground); }
 
 .cenit-faq-lead{
   max-width: 950px;
-  margin: 0 auto 26px auto;
+  margin: 0 auto 18px auto;
 }
 
+/* Grid enger */
 .cenit-faq-grid{
+  max-width: 950px;          /* wichtig: Grid bleibt auf 950 */
+  margin: 0 auto;            /* zentriert */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 26px;
+  gap: 18px;                 /* kleiner als 26 */
   align-items: start;
 }
 
@@ -1222,7 +1225,8 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .cenit-faq-card{
-  padding: 26px 26px;
+  padding: 18px 18px;
+  border-radius: 16px
 }
 
 .cenit-faq-q{
@@ -1236,24 +1240,27 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .cenit-faq-list{
-  margin: 12px 0 0 0;
-  padding-left: 18px;
+  margin: 10px 0 0 0;
+  padding-left: 16px;
 }
 
 .cenit-faq-list li{
-  margin: 6px 0;
+  margin: 5px 0;
 }
 
 .cenit-faq-wide{
   grid-column: 1 / -1;
 }
 
+/* Final Split-Card auch auf 950 begrenzen + enger */
 .cenit-faq-final{
-  margin-top: 26px;
+  max-width: 950px;
+  margin: 18px auto 0 auto;  /* vorher 26 */
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 26px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;                 /* kleiner */
   align-items: stretch;
+  padding: 18px;             /* falls cenit-card global viel Padding hat */
 }
 
 @media (max-width: 860px){
@@ -1265,7 +1272,7 @@ p, li{ color:var(--muted-foreground); }
   height: 100%;
   display: block;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 16px;
 }
 
 .cenit-faq-final-content{
@@ -1273,12 +1280,12 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .cenit-faq-final-title{
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
   font-family: "EB Garamond", serif;
   font-style: italic;
   font-weight: 400;
   color: var(--cenit-purple);
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.2;
 }
 
