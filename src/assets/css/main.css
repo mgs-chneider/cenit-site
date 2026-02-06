@@ -1224,17 +1224,21 @@ p, li{ color:var(--muted-foreground); }
   .cenit-faq-grid{ grid-template-columns: 1fr; }
 }
 
-/* FAQ – alternierende Kartenfarben */
+/* FAQ Cards – Typo + Luft */
 .page-faqs .cenit-faq-card{
-  background: #f6f3ff; /* helles Lila */
-}
-
-.cenit-faq-card:nth-child(even){
-  background: #fafafa; /* off-white */
-}
-
-.cenit-faq-card{
   box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  padding: 22px 28px;        /* mehr Innenabstand seitlich */
+  border-radius: 18px;
+}
+
+/* Farben: 1,4,5,7 = #f5f3f9 | Rest = #fff (kein #fafafa) */
+.page-faqs .cenit-faq-card{ background: #edebf5; }
+
+.page-faqs .cenit-faq-card:nth-child(1),
+.page-faqs .cenit-faq-card:nth-child(4),
+.page-faqs .cenit-faq-card:nth-child(5),
+.page-faqs .cenit-faq-card:nth-child(7){
+  background: #f5f3f9;
 }
 
 .cenit-faq-q{
@@ -1247,13 +1251,16 @@ p, li{ color:var(--muted-foreground); }
   line-height: 1.25;
 }
 
+/* Antwort-Text kompakter & ruhiger */
 .cenit-faq-list{
   margin: 10px 0 0 0;
-  padding-left: 16px;
+  padding-left: 18px;        /* etwas mehr Luft */
+  font-size: 15px;           /* kleiner */
+  line-height: 1.55;
 }
 
 .cenit-faq-list li{
-  margin: 5px 0;
+  margin: 6px 0;
 }
 
 .cenit-faq-wide{
@@ -1313,3 +1320,4 @@ p, li{ color:var(--muted-foreground); }
 .cenit-faq-final-link:hover{
   text-decoration: underline;
 }
+
