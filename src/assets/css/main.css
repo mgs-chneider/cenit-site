@@ -956,7 +956,7 @@ p, li{ color:var(--muted-foreground); }
   font-family:'Lato', Arial, sans-serif;
   font-size:16px;
   line-height:1.7;
-  color:var(--cenit-text);
+  color:var(--muted-foreground);
 }
 
 .cenit-contact-btn{
@@ -1215,8 +1215,9 @@ p, li{ color:var(--muted-foreground); }
   max-width: 950px;          /* wichtig: Grid bleibt auf 950 */
   margin: 0 auto;            /* zentriert */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr;
   gap: 18px;                 /* kleiner als 26 */
+  grid-auto-rows: 1fr;
   align-items: start;
 }
 
@@ -1225,10 +1226,13 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* FAQ Cards – Typo + Luft */
-.page-faqs .cenit-faq-card{
+.cenit-faq-card{
   box-shadow: 0 8px 24px rgba(0,0,0,0.04);
   padding: 22px 28px;        /* mehr Innenabstand seitlich */
   border-radius: 18px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Farben: 1,4,5,7 = #f5f3f9 | Rest = #fff (kein #fafafa) */
