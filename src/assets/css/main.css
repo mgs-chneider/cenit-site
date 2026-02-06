@@ -1206,8 +1206,8 @@ p, li{ color:var(--muted-foreground); }
 ========================= */
 
 .cenit-faq-lead{
-  max-width: 950px;
-  margin: 0 auto 18px auto;
+  max-width: 760px;
+  margin: 0 auto 28px auto;
 }
 
 /* Grid enger */
@@ -1224,9 +1224,17 @@ p, li{ color:var(--muted-foreground); }
   .cenit-faq-grid{ grid-template-columns: 1fr; }
 }
 
+/* FAQ – alternierende Kartenfarben */
+.page-faqs .cenit-faq-card{
+  background: #f6f3ff; /* helles Lila */
+}
+
+.cenit-faq-card:nth-child(even){
+  background: #fafafa; /* off-white */
+}
+
 .cenit-faq-card{
-  padding: 18px 18px;
-  border-radius: 16px
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
 }
 
 .cenit-faq-q{
@@ -1235,7 +1243,7 @@ p, li{ color:var(--muted-foreground); }
   font-style: italic;
   font-weight: 400;
   color: var(--cenit-purple);
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.25;
 }
 
