@@ -1202,70 +1202,56 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* =========================
-   FAQS – Grid wie Podcast-Kacheln
+   FAQ – Grid wie Landingpage
 ========================= */
 
-.page-faqs .cenit-section{
-  padding-top: 56px; /* falls du im Rest ähnliche Section-Paddings hast */
-}
-
-/* Lead unter Titel: 760px, mittig */
-.page-faqs .cenit-faq-lead{
-  max-width: 760px;
-  margin: 0 auto 22px auto;
-}
-
-/* Whitecard-Panel (wie VM/Podcast-Card) */
+/* White panel wie Podcast-/Vision-Grid */
 .page-faqs .cenit-faq-panel{
   max-width: 950px;
-  margin: 0 auto 20px auto;       /* ✅ 18–24px Rhythmus */
-  background: #ffffff;            /* ✅ White background */
+  margin: 0 auto;
+  background: #ffffff;
   border-radius: 22px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-  padding: 22px;                  /* Luft wie im Screenshot */
+  padding: 24px;
 }
 
-/* Grid innerhalb des Panels */
+/* 2-spaltiges Grid */
 .page-faqs .cenit-faq-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;                      /* ✅ wie gewünscht */
-  align-items: stretch;
+  gap: 18px;
 }
 
 @media (max-width: 860px){
-  .page-faqs .cenit-faq-grid{ grid-template-columns: 1fr; }
+  .page-faqs .cenit-faq-grid{
+    grid-template-columns: 1fr;
+  }
 }
 
-/* FAQ-Kacheln: kompakter, luftiger */
-.page-faqs .cenit-faq-card{
+/* FAQ-Kacheln – soft, leicht, kleiner */
+.page-faqs .cenit-softcard.cenit-faq-card{
+  background: #f5f3f9;
+  padding: 20px 24px;
   border-radius: 18px;
-  padding: 20px 24px;             /* ✅ mehr Innenabstand seitlich */
-  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  box-shadow: none;              /* wichtig für Leichtigkeit */
 }
 
-/* Alternierende Farben (2 Pastelltöne) */
-.page-faqs .cenit-faq-card{ background:#f5f3f9; }
-.page-faqs .cenit-faq-card:nth-child(even){ background:#edebf5; }
+/* Farbwechsel wie gewünscht */
+.page-faqs .cenit-softcard.cenit-faq-card:nth-child(even){
+  background: #edebf5;
+}
 
-/* Frage-Titel: etwas kleiner als bisher */
+/* Typo feiner */
 .page-faqs .cenit-faq-q{
-  margin: 0 0 10px 0;
-  font-family: "EB Garamond", serif;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--cenit-purple);
-  font-size: 17px;                /* ✅ kleiner */
-  line-height: 1.25;
+  font-size: 17px;
+  line-height: 1.3;
 }
 
-/* Text insgesamt kleiner + leichter */
 .page-faqs .cenit-faq-card p,
 .page-faqs .cenit-faq-card li{
-  font-size: 14px;
+  font-size: 14.5px;
   line-height: 1.55;
-  color: rgba(20,20,26,0.72);
 }
+
 
 .page-faqs .cenit-faq-list{
   margin: 10px 0 0 0;
