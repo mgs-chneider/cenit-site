@@ -1208,12 +1208,14 @@ p, li{ color:var(--muted-foreground); }
 .page-faqs .cenit-faq-lead{
   max-width: 760px;
   margin: 0 auto 28px auto;
+  color: var(--cenit-text);
 }
 
 /* Whitecard = Reihe */
 .page-faqs .cenit-faq-row{
   max-width: 950px;
   margin: 0 auto 20px auto;      /* Abstand zwischen Whitecards */
+  box-sizing: border-box;
   background: #ffffff;
   border-radius: 22px;
   padding: 18px;
