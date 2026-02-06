@@ -816,7 +816,7 @@ p, li{ color:var(--muted-foreground); }
   font-family:'Lato', Arial, sans-serif;
   font-size:13px;
   line-height:1.55;
-  color:var(--cenit-text);
+  color:var(--muted-foreground);
 }
 
 /* Rechte Bildbox (wenn du sie als Klasse nutzt) */
@@ -1255,7 +1255,7 @@ p, li{ color:var(--muted-foreground); }
 .cenit-faq-list{
   margin: 10px 0 0 0;
   padding-left: 18px;        /* etwas mehr Luft */
-  font-size: 15px;           /* kleiner */
+  font-size: 13px;           /* kleiner */
   line-height: 1.55;
 }
 
