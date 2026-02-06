@@ -1269,15 +1269,14 @@ p, li{ color:var(--muted-foreground); }
 .cenit-faq-list li{ margin: 6px 0; }
 
 /* FARBSPIEL (wie Podcast-Grid) – interpretiert nach deinem Hinweis:
-   Childs 1,4,5,7: #f5f3f9
-   Die anderen:    #f6f3ff
+   Childs 1,4,5:   #f5f3f9
+   Die anderen:    #ffffff
    (Kein #fafafa, bleibt Background)
 */
-.cenit-faq-grid .cenit-faq-card{ background: #f6f3ff; }
+.cenit-faq-grid .cenit-faq-card{ background: #ffffff; }
 .cenit-faq-grid .cenit-faq-card:nth-child(1),
 .cenit-faq-grid .cenit-faq-card:nth-child(4),
-.cenit-faq-grid .cenit-faq-card:nth-child(5),
-.cenit-faq-grid .cenit-faq-card:nth-child(7){
+.cenit-faq-grid .cenit-faq-card:nth-child(5),{
   background: #f5f3f9;
 }
 
