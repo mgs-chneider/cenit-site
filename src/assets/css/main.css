@@ -1201,158 +1201,139 @@ p, li{ color:var(--muted-foreground); }
   margin-top: 0;        /* Sicherheit: Abstand kommt von der Card */
 }
 
-/* =========================================================
-   FAQ — Minimal Refactor (luftiger + CI-consistent)
-   Ziel:
-   - 950px Grid bleibt
-   - Lead max 760px
-   - Cards leichter (mehr Luft, kleinere Typo)
-   - Alternierende Farben (deutlich, aber subtil)
-   - Gleiche Reihen-Höhen im Grid (ohne Quadratisch-Zwang)
-   - Final-Card weniger "Speisekarte"
-========================================================= */
+/* =========================
+   FAQS (luftiger + 950px + Webador-Feeling)
+========================= */
 
-/* 1) Lead sauber begrenzen */
-.page-faqs .cenit-faq-lead{
+/* Text unter Titel auf 760px */
+.cenit-faq-lead{
   max-width: 760px;
-  margin: 0 auto 32px auto;
+  margin: 0 auto 28px auto;
 }
 
-/* 2) Grid: 950px + gleiche Reihenhöhe */
-.page-faqs .cenit-faq-grid{
+/* Grid: 950px, 2 Spalten, gleichmäßige Kacheln */
+.cenit-faq-grid{
   max-width: 950px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* FIX: Klammer zu */
   gap: 18px;
-  align-items: stretch;     /* wichtig: Cards dürfen "strecken" */
-  grid-auto-rows: 1fr;      /* gleiche Reihenhöhe */
+  align-items: stretch; /* wichtig: Items sollen volle Höhe annehmen */
 }
 
 @media (max-width: 860px){
-  .page-faqs .cenit-faq-grid{ grid-template-columns: 1fr; }
+  .cenit-faq-grid{ grid-template-columns: 1fr; }
 }
 
-/* 3) Cards: leichter, mehr Innenabstand, kleinere Typo */
-.page-faqs .cenit-faq-card{
+/* FAQ Cards: quadratisch + mehr Luft + kleinere Typo */
+.cenit-faq-card{
   box-shadow: 0 8px 24px rgba(0,0,0,0.04);
   border-radius: 18px;
-
-  padding: 26px 34px;       /* mehr seitliche Luft */
-  height: 100%;
+  padding: 22px 28px;      /* mehr Innenabstand seitlich */
   display: flex;
   flex-direction: column;
-
-  background: #f5f3f9;      /* Default (dein Wunsch) */
+  gap: 10px;
+  aspect-ratio: 1 / 1;     /* ✅ macht die Kacheln quadratisch */
+  overflow: hidden;        /* verhindert „Ausbeulen“ */
 }
 
-/* 4) Alternierende Farben — jetzt sichtbar aber ruhig
-   Hinweis: du wolltest "Childs 1,4,5,7" gleich färben; das ist NICHT "alternierend".
-   Ich setze hier: odd = #f5f3f9, even = #ffffff (nicht #fafafa) */
-.page-faqs .cenit-faq-card:nth-child(even){
-  background: #ffffff;
+/* Wenn Text zu lang ist: Inhalt scrollt innerhalb der Kachel (sauberer als kaputte Höhen) */
+.cenit-faq-card > *:last-child{
+  overflow: auto;
+  padding-right: 6px;      /* Platz für Scrollbar */
 }
 
-/* Optional (wenn du wirklich 1,4,5,7 anders willst):
-.page-faqs .cenit-faq-card{ background:#ffffff; }
-.page-faqs .cenit-faq-card:nth-child(1),
-.page-faqs .cenit-faq-card:nth-child(4),
-.page-faqs .cenit-faq-card:nth-child(5),
-.page-faqs .cenit-faq-card:nth-child(7){ background:#f5f3f9; }
-*/
-
-/* 5) Frage-Typo: weniger "Drama", mehr Eleganz */
-.page-faqs .cenit-faq-q{
-  margin: 0 0 14px 0;
+/* Typo: Frage kleiner, mehr Luft */
+.cenit-faq-q{
+  margin: 0;
   font-family: "EB Garamond", serif;
   font-style: italic;
   font-weight: 400;
   color: var(--cenit-purple);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.25;
 }
 
-/* 6) Body Typo in Cards */
-.page-faqs .cenit-faq-card p,
-.page-faqs .cenit-faq-card li{
-  font-size: 15px;
+/* Body-Text etwas leichter */
+.cenit-faq-card p,
+.cenit-faq-card li{
+  font-size: 14.5px;
   line-height: 1.55;
 }
 
-/* 7) Listen etwas luftiger */
-.page-faqs .cenit-faq-list{
-  margin: 12px 0 0 0;
-  padding-left: 18px;
+/* Listen luftiger */
+.cenit-faq-list{
+  margin: 8px 0 0 0;
+  padding-left: 16px;
+}
+.cenit-faq-list li{ margin: 6px 0; }
+
+/* FARBSPIEL (wie Podcast-Grid) – interpretiert nach deinem Hinweis:
+   Childs 1,4,5,7: #f5f3f9
+   Die anderen:    #f6f3ff
+   (Kein #fafafa, bleibt Background)
+*/
+.cenit-faq-grid .cenit-faq-card{ background: #f6f3ff; }
+.cenit-faq-grid .cenit-faq-card:nth-child(1),
+.cenit-faq-grid .cenit-faq-card:nth-child(4),
+.cenit-faq-grid .cenit-faq-card:nth-child(5),
+.cenit-faq-grid .cenit-faq-card:nth-child(7){
+  background: #f5f3f9;
 }
 
-.page-faqs .cenit-faq-list li{
-  margin: 6px 0;
-}
-
-/* 8) Wide Card bleibt wide */
-.page-faqs .cenit-faq-wide{
+/* Wide Card (wenn du eine quer über beide Spalten hast) */
+.cenit-faq-wide{
   grid-column: 1 / -1;
+  aspect-ratio: auto;      /* Wide darf nicht quadratisch sein */
 }
 
-/* 9) Final Split-Card: weniger Speisekarte, mehr Landingpage-Feeling */
-.page-faqs .cenit-faq-final{
+/* FINAL SPLIT als „Band“ (nicht wie weitere Kachel) */
+.cenit-faq-final{
   max-width: 950px;
   margin: 18px auto 0 auto;
-
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 18px;
-  align-items: stretch;
+  align-items: center;
 
+  /* Band-Optik */
+  background: #ffffff;
   border-radius: 22px;
-  padding: 26px;
-
-  background: linear-gradient(180deg, #ffffff 0%, #f7f5fb 100%);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+  padding: 18px;
 }
 
 @media (max-width: 860px){
-  .page-faqs .cenit-faq-final{ grid-template-columns: 1fr; }
+  .cenit-faq-final{ grid-template-columns: 1fr; }
 }
 
-/* Media: weich, ruhig, "schwebend" */
-.page-faqs .cenit-faq-final-media img{
+/* Bild wie „Hero“-Weichheit */
+.cenit-faq-final-media img{
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 16px;
 }
 
-/* Content: mehr Atmung */
-.page-faqs .cenit-faq-final-content{
-  padding: 18px 10px;
+/* Content luftiger */
+.cenit-faq-final-content{
+  padding: 6px 6px 6px 10px;
 }
 
-.page-faqs .cenit-faq-final-title{
-  margin: 0 0 10px 0;
+.cenit-faq-final-title{
+  margin: 0 0 8px 0;
   font-family: "EB Garamond", serif;
   font-style: italic;
   font-weight: 400;
   color: var(--cenit-purple);
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.2;
 }
 
-/* Buttons/Links in Final-Card: etwas leichter */
-.page-faqs .cenit-faq-final-actions{
-  margin-top: 16px;
+.cenit-faq-final-actions{
+  margin-top: 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.page-faqs .cenit-faq-final-link{
-  color: rgba(107,20,184,0.55);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.page-faqs .cenit-faq-final-link:hover{
-  text-decoration: underline;
 }
