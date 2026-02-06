@@ -1270,10 +1270,10 @@ p, li{ color:var(--muted-foreground); }
 
 /* FARBSPIEL (wie Podcast-Grid) – interpretiert nach deinem Hinweis:
    Childs 1,4,5:   #f5f3f9
-   Die anderen:    #ffffff
+   Die anderen:    #f6f3ff
    (Kein #fafafa, bleibt Background)
 */
-.cenit-faq-grid .cenit-faq-card{ background: #ffffff; }
+.cenit-faq-grid .cenit-faq-card{ background: #f6f3ff; }
 .cenit-faq-grid .cenit-faq-card:nth-child(1),
 .cenit-faq-grid .cenit-faq-card:nth-child(4),
 .cenit-faq-grid .cenit-faq-card:nth-child(5),{
