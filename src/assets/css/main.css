@@ -1201,145 +1201,158 @@ p, li{ color:var(--muted-foreground); }
   margin-top: 0;        /* Sicherheit: Abstand kommt von der Card */
 }
 
-/* =========================
-   FAQS (Layout wie Webador)
-========================= */
+/* =========================================================
+   FAQ — Minimal Refactor (luftiger + CI-consistent)
+   Ziel:
+   - 950px Grid bleibt
+   - Lead max 760px
+   - Cards leichter (mehr Luft, kleinere Typo)
+   - Alternierende Farben (deutlich, aber subtil)
+   - Gleiche Reihen-Höhen im Grid (ohne Quadratisch-Zwang)
+   - Final-Card weniger "Speisekarte"
+========================================================= */
 
-.cenit-faq-lead{
+/* 1) Lead sauber begrenzen */
+.page-faqs .cenit-faq-lead{
   max-width: 760px;
-  margin: 0 auto 42px auto;
+  margin: 0 auto 32px auto;
 }
 
-/* Grid enger */
-.cenit-faq-grid{
-  max-width: 950px;          /* wichtig: Grid bleibt auf 950 */
-  margin: 0 auto;            /* zentriert */
+/* 2) Grid: 950px + gleiche Reihenhöhe */
+.page-faqs .cenit-faq-grid{
+  max-width: 950px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  min-height: 260px;
-  gap: 18px;                 /* kleiner als 26 */
-  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;     /* wichtig: Cards dürfen "strecken" */
+  grid-auto-rows: 1fr;      /* gleiche Reihenhöhe */
 }
 
 @media (max-width: 860px){
-  .cenit-faq-grid{ grid-template-columns: 1fr; }
+  .page-faqs .cenit-faq-grid{ grid-template-columns: 1fr; }
 }
 
-/* FAQ Cards – Typo + Luft */
-.cenit-faq-card{
-  box-shadow: 0 6px 18px rgba(0,0,0,0.035);
-  padding: 26px 32px 30px 32px;        /* mehr Innenabstand seitlich */
+/* 3) Cards: leichter, mehr Innenabstand, kleinere Typo */
+.page-faqs .cenit-faq-card{
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
   border-radius: 18px;
+
+  padding: 26px 34px;       /* mehr seitliche Luft */
   height: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 1.55;
+
+  background: #f5f3f9;      /* Default (dein Wunsch) */
 }
 
-/* Farben: 1,4,5,7 = #f5f3f9 | Rest = #fff (kein #fafafa) */
-.page-faqs .cenit-faq-card{ background: #edebf5; }
-
-.page-faqs .cenit-faq-card:nth-child(1),
-.page-faqs .cenit-faq-card:nth-child(4),
-.page-faqs .cenit-faq-card:nth-child(5),
-.page-faqs .cenit-faq-card:nth-child(7){
+/* 4) Alternierende Farben — jetzt sichtbar aber ruhig
+   Hinweis: du wolltest "Childs 1,4,5,7" gleich färben; das ist NICHT "alternierend".
+   Ich setze hier: odd = #f5f3f9, even = #ffffff (nicht #fafafa) */
+.page-faqs .cenit-faq-card:nth-child(even){
   background: #ffffff;
 }
 
-.cenit-faq-q{
+/* Optional (wenn du wirklich 1,4,5,7 anders willst):
+.page-faqs .cenit-faq-card{ background:#ffffff; }
+.page-faqs .cenit-faq-card:nth-child(1),
+.page-faqs .cenit-faq-card:nth-child(4),
+.page-faqs .cenit-faq-card:nth-child(5),
+.page-faqs .cenit-faq-card:nth-child(7){ background:#f5f3f9; }
+*/
+
+/* 5) Frage-Typo: weniger "Drama", mehr Eleganz */
+.page-faqs .cenit-faq-q{
   margin: 0 0 14px 0;
   font-family: "EB Garamond", serif;
   font-style: italic;
   font-weight: 400;
   color: var(--cenit-purple);
   font-size: 17px;
+  line-height: 1.25;
+}
+
+/* 6) Body Typo in Cards */
+.page-faqs .cenit-faq-card p,
+.page-faqs .cenit-faq-card li{
+  font-size: 15px;
   line-height: 1.55;
 }
 
-/* Antwort-Text kompakter & ruhiger */
-.cenit-faq-list{
-  margin: 10px 0 0 0;
-  padding-left: 18px;        /* etwas mehr Luft */
-  font-size: 15px;           /* kleiner */
-  line-height: 1.55;
+/* 7) Listen etwas luftiger */
+.page-faqs .cenit-faq-list{
+  margin: 12px 0 0 0;
+  padding-left: 18px;
 }
 
-.cenit-faq-quote{
-  max-width: 760px;
-  margin: 36px auto;
-  text-align: center;
-  font-style: italic;
-  color: var(--cenit-purple);
-  background: transparent;
-  box-shadow: none;
-}
-
-.cenit-faq-list li{
+.page-faqs .cenit-faq-list li{
   margin: 6px 0;
 }
 
-/* Final Split-Card auch auf 950 begrenzen + enger */
-.cenit-faq-final{
+/* 8) Wide Card bleibt wide */
+.page-faqs .cenit-faq-wide{
+  grid-column: 1 / -1;
+}
+
+/* 9) Final Split-Card: weniger Speisekarte, mehr Landingpage-Feeling */
+.page-faqs .cenit-faq-final{
   max-width: 950px;
-  margin: 48px auto 0 auto;  /* vorher 26 */
+  margin: 18px auto 0 auto;
+
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 18px;                 /* kleiner */
+  gap: 18px;
   align-items: stretch;
-  padding: 18px;             /* falls cenit-card global viel Padding hat */
+
+  border-radius: 22px;
+  padding: 26px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f7f5fb 100%);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.05);
 }
 
 @media (max-width: 860px){
-  .cenit-faq-final{ grid-template-columns: 1fr; }
+  .page-faqs .cenit-faq-final{ grid-template-columns: 1fr; }
 }
 
-.cenit-faq-final{
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #f7f5fb 100%
-  );
-  padding: 28px;
-  border-radius: 22px;
-}
-
-.cenit-faq-final-media img{
+/* Media: weich, ruhig, "schwebend" */
+.page-faqs .cenit-faq-final-media img{
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 18px;
 }
 
-.cenit-faq-final-content{
-  padding: 18px 12px;
+/* Content: mehr Atmung */
+.page-faqs .cenit-faq-final-content{
+  padding: 18px 10px;
 }
 
-.cenit-faq-final-title{
-  margin: 0 0 8px 0;
+.page-faqs .cenit-faq-final-title{
+  margin: 0 0 10px 0;
   font-family: "EB Garamond", serif;
   font-style: italic;
   font-weight: 400;
   color: var(--cenit-purple);
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.2;
 }
 
-.cenit-faq-final-actions{
-  margin-top: 14px;
+/* Buttons/Links in Final-Card: etwas leichter */
+.page-faqs .cenit-faq-final-actions{
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.cenit-faq-final-link{
+.page-faqs .cenit-faq-final-link{
   color: rgba(107,20,184,0.55);
   text-decoration: none;
   font-weight: 500;
 }
 
-.cenit-faq-final-link:hover{
+.page-faqs .cenit-faq-final-link:hover{
   text-decoration: underline;
-  color: var(--muted-foreground);
 }
-
