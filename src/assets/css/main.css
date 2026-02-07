@@ -852,8 +852,11 @@ p, li{ color:var(--muted-foreground); }
 /* Expertise responsive */
 @media (max-width: 980px){
   .cenit-expertise-main{ grid-template-columns:1fr; }
+  .cenit-expertise-cards{ grid-template-columns:1fr 1fr; }
 }
-
+@media (max-width: 540px){
+  .cenit-expertise-cards{ grid-template-columns:1fr; }
+}
 
 /* =========================
    CONTACT (Expertise-Raster)
