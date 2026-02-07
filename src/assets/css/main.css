@@ -1393,8 +1393,9 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .page-satzung .cenit-stat-leitbild-inner{
-  max-width: 820px;
-  margin: 0 auto;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page-satzung .cenit-stat-leitbild-lead{
