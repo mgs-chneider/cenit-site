@@ -767,14 +767,14 @@ p, li{ color:var(--muted-foreground); }
 @media (max-width: 560px){
   .cenit-about-photo{
     aspect-ratio: auto;     /* Bild bestimmt Höhe */
-    max-height: none;
+    height: 220px;
   }
 
   .cenit-about-photo img{
-    height:auto;
-    max-height:280px;       /* visuell ruhig */
+    height: 100%;
     width: 100%
     object-fit:contain;    /* KEIN Cropping */
+    object-position: center;
     display: block;
   }
 }
