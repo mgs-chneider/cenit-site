@@ -762,10 +762,6 @@ p, li{ color:var(--muted-foreground); }
   .cenit-about-team{
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .cenit-about-team .cenit-about-photo{
-    max-height: 260px;
-  }
 }
 
 @media (max-width: 560px){
@@ -870,7 +866,7 @@ p, li{ color:var(--muted-foreground); }
   .cenit-expertise-main{ grid-template-columns:1fr; }
 }
 @media (max-width: 540px){
-  .cenit-expertise-cards{ grid-template-columns:1fr; }
+  .cenit-about-team{ grid-template-columns:1fr; }
 }
 
 
