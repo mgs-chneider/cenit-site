@@ -1473,7 +1473,7 @@ p, li{ color:var(--muted-foreground); }
 .page-einblicke .cenit-einblicke-panel{
   max-width: 950px;
   margin: 0 auto;
-  padding: 34px;
+  padding: 28px;
   box-sizing: border-box;
 }
 
@@ -1533,4 +1533,18 @@ p, li{ color:var(--muted-foreground); }
   margin: 16px auto 0;
   padding: 18px;
   box-sizing: border-box;
+}
+
+/* Einblicke: Sections enger stapeln */
+.page-einblicke .cenit-section{
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* Optional auf Mobile noch etwas enger */
+@media (max-width: 768px){
+  .page-einblicke .cenit-section{
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
 }
