@@ -774,7 +774,7 @@ p, li{ color:var(--muted-foreground); }
 
 /* Feinjustierung Manfred – Kopf nicht abschneiden */
 .cenit-about-photo img[src*="FotoManfred"]{
-  object-position: center 25%;
+  object-position: center 20%;
 }
 
 /* =========================
