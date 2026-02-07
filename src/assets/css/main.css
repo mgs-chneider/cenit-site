@@ -700,18 +700,6 @@ p, li{ color:var(--muted-foreground); }
   border-radius:3px;
 }
 
-/* Team Grid */
-.cenit-about-team{
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  gap:26px;
-  align-items:start;
-  width:100%;
-  max-width:950px;
-  margin:0 auto 24px auto;
-  box-sizing: border-box;
-}
-
 .cenit-about-person{ text-align:center; }
 
 .cenit-about-photo{
@@ -754,21 +742,26 @@ p, li{ color:var(--muted-foreground); }
   line-height:1.55;
 }
 
-/* About responsive */
-@media (max-width: 980px){
-  .cenit-about-team{ grid-template-columns:repeat(2, 1fr); }
-
-/* Team Grid – Tablet (iPad) */
-@media (min-width: 561px) and (max-width: 980px){
-  .cenit-about-photo{
-    max-height: 260px;   /* Desktop: unbegrenzt | Mobile: 220px */
-  }
+/* Team Grid – Default (Desktop) */
+.cenit-about-team{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:26px;
+  align-items:start;
+  width:100%;
+  max-width:950px;
+  margin:0 auto 24px auto;
+  box-sizing:border-box;
 }
 
+/* Tablet: 2 Spalten */
+@media (max-width: 980px){
+  .cenit-about-team{ grid-template-columns:repeat(2, 1fr); }
+}
+
+/* Mobile: 1 Spalte (MUSS zuletzt kommen) */
 @media (max-width: 560px){
-  .cenit-about-photo{
-    aspect-ratio: 3 / 4;   /* statt 4 / 5 */
-  }
+  .cenit-about-team{ grid-template-columns:1fr; }
 }
 
 
