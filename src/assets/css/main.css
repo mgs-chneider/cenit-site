@@ -1392,6 +1392,23 @@ p, li{ color:var(--muted-foreground); }
   margin-top: 0;
 }
 
+/* Leitbild-Kapitelüberschriften: elegant wie FAQ */
+.page-satzung .cenit-stat-leitbild h3.cenit-h3{
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cenit-purple);
+  font-size: 20px;        /* ggf. 19–21 nach Geschmack */
+  line-height: 1.25;
+  letter-spacing: 0;
+  margin: 22px 0 10px 0;
+}
+
+/* Optional: Kapiteltext etwas ruhiger direkt unter Überschrift */
+.page-satzung .cenit-stat-leitbild h3.cenit-h3 + p{
+  margin-top: 0;
+}
+
 .page-satzung .cenit-stat-leitbild-inner{
   max-width: 760px;
   margin-left: auto;
