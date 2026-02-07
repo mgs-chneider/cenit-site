@@ -753,10 +753,6 @@ p, li{ color:var(--muted-foreground); }
   line-height:1.55;
 }
 
-/* =========================
-   TEAM – RESPONSIVE (ISOLIERT)
-========================= */
-
 /* Tablet */
 @media (min-width: 561px) and (max-width: 980px){
   .cenit-about-team{
@@ -765,18 +761,9 @@ p, li{ color:var(--muted-foreground); }
 }
 
 @media (max-width: 560px){
-  /* Portrait-Box wie Desktop, aber kleiner */
-  .cenit-about-photo{
-    aspect-ratio: 4 / 5;     /* bleibt Portrait */
-    max-height: 260px;       /* macht sie kleiner */
-    width: 100%;
-    background: #fff;
-  }
-
-@media (max-width: 560px){
   .cenit-about-team{ grid-template-columns:1fr; }
  }
-
+}
 
 /* =========================
    EXPERTISE
