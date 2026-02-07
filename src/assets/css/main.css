@@ -767,7 +767,7 @@ p, li{ color:var(--muted-foreground); }
 
 @media (max-width: 560px){
   .cenit-about-photo{
-    max-width: 86%;
+    max-width: 75%;
     margin: 0 auto;
   }
 }
