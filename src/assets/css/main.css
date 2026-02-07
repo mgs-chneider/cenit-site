@@ -768,14 +768,15 @@ p, li{ color:var(--muted-foreground); }
   }
 }
 
-/* Mobile */
 @media (max-width: 560px){
-  .cenit-about-team{
-    grid-template-columns: 1fr;
+  .cenit-about-photo{
+    aspect-ratio: auto;     /* Bild bestimmt Höhe */
   }
 
-  .cenit-about-team .cenit-about-photo{
-    max-height: 220px;
+  .cenit-about-photo img{
+    height:auto;
+    max-height:280px;       /* visuell ruhig */
+    object-fit:contain;    /* KEIN Cropping */
   }
 }
 
