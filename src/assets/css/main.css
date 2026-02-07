@@ -773,14 +773,9 @@ p, li{ color:var(--muted-foreground); }
     background: #fff;
   }
 
-  /* Bild komplett sichtbar (kein Crop) */
-  .cenit-about-photo img{
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-}
+@media (max-width: 560px){
+  .cenit-about-team{ grid-template-columns:1fr; }
+ }
 
 
 /* =========================
