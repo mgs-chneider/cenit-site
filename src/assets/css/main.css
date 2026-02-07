@@ -700,6 +700,17 @@ p, li{ color:var(--muted-foreground); }
   border-radius:3px;
 }
 
+/* team Grid: Default Desktop */
+.cenit-about-team{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:26px;
+  align-items:start;
+  width:100%;
+  max-width:950px;
+  margin:0 auto 24px auto;
+  box-sizing:border-box;
+}
 .cenit-about-person{ text-align:center; }
 
 .cenit-about-photo{
@@ -742,32 +753,31 @@ p, li{ color:var(--muted-foreground); }
   line-height:1.55;
 }
 
-/* team Grid: Default Desktop */
-.cenit-about-team{
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  gap:26px;
-  align-items:start;
-  width:100%;
-  max-width:950px;
-  margin:0 auto 24px auto;
-  box-sizing:border-box;
-}
+/* =========================
+   TEAM – RESPONSIVE (ISOLIERT)
+========================= */
 
 /* Tablet */
 @media (min-width: 561px) and (max-width: 980px){
   .cenit-about-team{
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cenit-about-team .cenit-about-photo{
+    max-height: 260px;
   }
 }
 
 /* Mobile */
 @media (max-width: 560px){
   .cenit-about-team{
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .cenit-about-team .cenit-about-photo{
+    max-height: 220px;
   }
 }
-
 
 
 /* =========================
