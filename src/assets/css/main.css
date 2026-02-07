@@ -765,16 +765,19 @@ p, li{ color:var(--muted-foreground); }
 }
 
 @media (max-width: 560px){
+  /* Portrait-Box wie Desktop, aber kleiner */
   .cenit-about-photo{
-    aspect-ratio: auto;     /* Bild bestimmt Höhe */
-    height: 220px;
+    aspect-ratio: 4 / 5;     /* bleibt Portrait */
+    max-height: 260px;       /* macht sie kleiner */
+    width: 100%;
+    background: #fff;
   }
 
+  /* Bild komplett sichtbar (kein Crop) */
   .cenit-about-photo img{
+    object-fit: contain;
+    width: 100%;
     height: 100%;
-    width: 100%
-    object-fit:contain;    /* KEIN Cropping */
-    object-position: center;
     display: block;
   }
 }
