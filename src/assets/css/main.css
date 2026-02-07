@@ -229,6 +229,55 @@ p, li{ color:var(--muted-foreground); }
   margin:0 auto;
 }
 
+/* =========================
+   CENIT DIVIDER / QUOTE BAND
+========================= */
+
+.cenit-gold-divider{
+  width: 140px;
+  height: 1px;
+  background: var(--cenit-gold);
+  border-radius: 3px;
+  margin: 0 auto;
+}
+
+/* Utility spacing around divider */
+.cenit-gap-48{ height: 48px; }
+.cenit-gap-32{ height: 32px; }
+
+/* Quote band (soft, editorial) */
+.cenit-quote-band{
+  max-width: 950px;
+  margin: 0 auto;
+  border-radius: 22px;
+  box-shadow: var(--cenit-shadow);
+  padding: 28px 22px;
+  box-sizing: border-box;
+  background: var(--cenit-soft); /* falls var nicht existiert, nimm #f5f3f9 */
+}
+
+.cenit-quote-band-inner{
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cenit-quote-band-quote{
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cenit-purple);
+  font-size: 20px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.cenit-quote-band-author{
+  margin: 12px 0 0 0;
+  font-size: 13px;
+  color: var(--muted-foreground);
+}
+
 /* Headings */
 .cenit-h2{
   font-family:'EB Garamond', serif;
