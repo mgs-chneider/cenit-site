@@ -762,6 +762,15 @@ p, li{ color:var(--muted-foreground); }
   .cenit-about-team{ grid-template-columns:1fr; }
 }
 
+@media (max-width: 560px){
+  .cenit-about-team img{
+    width: 100%;
+    max-height: 220px;   /* 200–240 je nach Geschmack */
+    object-fit: cover;
+    display: block;
+  }
+}
+
 
 /* =========================
    EXPERTISE
