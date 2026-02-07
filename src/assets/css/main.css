@@ -853,9 +853,6 @@ p, li{ color:var(--muted-foreground); }
 @media (max-width: 980px){
   .cenit-expertise-main{ grid-template-columns:1fr; }
 }
-@media (max-width: 540px){
-  .cenit-about-team{ grid-template-columns:1fr; }
-}
 
 
 /* =========================
