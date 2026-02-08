@@ -1522,7 +1522,6 @@ p, li{ color:var(--muted-foreground); }
   color: var(--muted-foreground);
 }
 
-/*
 /* =========================
    EINBLICKE & ENTWICKLUNGEN
 ========================= */
@@ -1614,36 +1613,6 @@ p, li{ color:var(--muted-foreground); }
   }
 }
 
-/*
-/* =========================
-   FOOTER – full width & subtle separation
-========================= */
-
-.cenit-footer{
-  width:100%;
-  background:#f0f1f4;            /* zwischen #fafafa und #c8c8c8 */
-  padding:28px 0 32px 0;
-  margin-top:48px;
-}
-
-/* Subtile obere Abgrenzung – KEIN Divider */
-.cenit-footer::before{
-  content:"";
-  display:block;
-  width:100%;
-  height:1px;
-  background:rgba(0,0,0,0.04);
-  margin-bottom:22px;
-}
-
-/* Innerer Footer bleibt elegant begrenzt */
-.cenit-footer-inner{
-  max-width:950px;
-  margin:0 auto;
-  padding:0 18px;
-  box-sizing:border-box;
-}
-
 /* =========================
    EINBLICKE – EDITORIAL HERO ROW (Image left, text right)
 ========================= */
@@ -1704,5 +1673,33 @@ p, li{ color:var(--muted-foreground); }
   }
 } 
 
+/* =========================
+   FOOTER – full width & subtle separation
+========================= */
+
+.cenit-footer{
+  width:100%;
+  background:#f0f1f4;            /* zwischen #fafafa und #c8c8c8 */
+  padding:28px 0 32px 0;
+  margin-top:48px;
+}
+
+/* Subtile obere Abgrenzung – KEIN Divider */
+.cenit-footer::before{
+  content:"";
+  display:block;
+  width:100%;
+  height:1px;
+  background:rgba(0,0,0,0.04);
+  margin-bottom:22px;
+}
+
+/* Innerer Footer bleibt elegant begrenzt */
+.cenit-footer-inner{
+  max-width:950px;
+  margin:0 auto;
+  padding:0 18px;
+  box-sizing:border-box;
+}
 
 
