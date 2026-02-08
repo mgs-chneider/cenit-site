@@ -1,4 +1,4 @@
-/* =========================
+t-text/* =========================
    TOKENS
    ========================= */
 
@@ -1708,4 +1708,9 @@ p, li{ color:var(--muted-foreground); }
 .page-einblicke .cenit-hero-row{
   grid-template-columns: 300px 1fr;
   gap: 26px;
+}
+
+/* Einblicke – Hero-Textfarbe korrekt setzen */
+.page-einblicke .cenit-hero-rowtext .cenit-text-body{
+  color: var(--cenit-text);
 }
