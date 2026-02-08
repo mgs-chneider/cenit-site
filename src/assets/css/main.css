@@ -1710,7 +1710,3 @@ p, li{ color:var(--muted-foreground); }
   gap: 26px;
 }
 
-/* Einblicke – Hero-Textfarbe korrekt setzen */
-.page-einblicke .cenit-hero-rowtext .cenit-text-body{
-  color: var(--cenit-text);
-}
