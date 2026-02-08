@@ -1643,7 +1643,6 @@ p, li{ color:var(--muted-foreground); }
   box-sizing:border-box;
 }
 
-/*
 /* =========================
    EINBLICKE – EDITORIAL HERO ROW (Image left, text right)
 ========================= */
@@ -1703,6 +1702,6 @@ p, li{ color:var(--muted-foreground); }
     text-align: center;
   }
 } 
-*/
+
 
 
