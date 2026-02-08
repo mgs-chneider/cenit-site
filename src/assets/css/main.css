@@ -1522,7 +1522,8 @@ p, li{ color:var(--muted-foreground); }
   color: var(--muted-foreground);
 }
 
-/*/* =========================
+/*
+/* =========================
    EINBLICKE & ENTWICKLUNGEN
 ========================= */
 
@@ -1700,6 +1701,7 @@ p, li{ color:var(--muted-foreground); }
     margin: 0 auto;
     text-align: center;
   }
-} */
+} 
+*/
 
 
