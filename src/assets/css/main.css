@@ -1614,6 +1614,7 @@ p, li{ color:var(--muted-foreground); }
   }
 }
 
+/*
 /* =========================
    FOOTER – full width & subtle separation
 ========================= */
@@ -1702,6 +1703,6 @@ p, li{ color:var(--muted-foreground); }
     text-align: center;
   }
 } 
-
+*/
 
 
