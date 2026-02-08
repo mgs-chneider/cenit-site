@@ -1695,9 +1695,17 @@ p, li{ color:var(--muted-foreground); }
   }
 }
 
-/* Einblicke – Hero bewusst schmaler (editorial) */
-.page-einblicke .cenit-hero-row{
+/* Einblicke Intro: auf 760px Achse */
+.page-einblicke .cenit-einblicke-intro{
   max-width: 760px;
+  margin: 0 auto;
+}
+
+.page-einblicke .cenit-einblicke-intro .cenit-hero-divider--small{
+  margin: 12px auto 18px;
+}
+
+.page-einblicke .cenit-hero-row{
   grid-template-columns: 300px 1fr;
   gap: 26px;
 }
