@@ -811,7 +811,7 @@ p, li{ color:var(--muted-foreground); }
 
 @media (max-width: 560px){
   .cenit-about-team{ grid-template-columns:1fr; 
- }
+  }
 }
 
 @media (max-width: 560px){
