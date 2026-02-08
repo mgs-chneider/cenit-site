@@ -1694,3 +1694,10 @@ p, li{ color:var(--muted-foreground); }
     text-align: center;
   }
 }
+
+/* Einblicke – Hero bewusst schmaler (editorial) */
+.page-einblicke .cenit-hero-row{
+  max-width: 760px;
+  grid-template-columns: 300px 1fr;
+  gap: 26px;
+}
