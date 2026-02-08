@@ -1522,6 +1522,7 @@ p, li{ color:var(--muted-foreground); }
   color: var(--muted-foreground);
 }
 
+/*
 /* =========================
    EINBLICKE & ENTWICKLUNGEN
 ========================= */
@@ -1672,6 +1673,7 @@ p, li{ color:var(--muted-foreground); }
     text-align: center;
   }
 } 
+*/
 
 /* =========================
    FOOTER – full width & subtle separation
