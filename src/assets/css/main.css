@@ -1643,77 +1643,63 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* =========================
-   EDITORIAL HERO ROW (Image left, text right)
+   EINBLICKE – EDITORIAL HERO ROW (Image left, text right)
 ========================= */
 
-.cenit-hero-row{
-  max-width: 950px;
-  margin: 18px auto 0 auto;
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 34px;
-  align-items: start;
-}
-
-.cenit-hero-floatimg{
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--cenit-shadow);
-  background: #fff;
-}
-
-.cenit-hero-floatimg img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Textblock rechts – kontrollierte Breite wie bei deinen Leads */
-.cenit-hero-rowtext{
-  max-width: 720px;
-}
-
-.cenit-hero-rowtext .cenit-text-body,
-.cenit-hero-rowtext p{
-  margin-top: 0;
-}
-
-/* Responsive */
-@media (max-width: 980px){
-  .cenit-hero-row{
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  .cenit-hero-floatimg{
-    max-width: 520px;
-    margin: 0 auto;
-  }
-  .cenit-hero-rowtext{
-    max-width: 760px;
-    margin: 0 auto;
-    text-align: center;
-  }
-}
-
-/* Einblicke – Intro auf 760px Achse (nur im Hero-Bereich) */
 .page-einblicke .cenit-hero-row{
   max-width: 760px;
-  margin: 0 auto;
+  margin: 18px auto 0 auto;
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 26px;
   align-items: start;
 }
 
-/* Divider in diesem Intro enger */
+.page-einblicke .cenit-hero-floatimg{
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--cenit-shadow);
+  background: #fff;
+}
+
+.page-einblicke .cenit-hero-floatimg img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text rechts */
+.page-einblicke .cenit-hero-rowtext{
+  max-width: 720px;
+  color: var(--cenit-text);
+}
+
+.page-einblicke .cenit-hero-rowtext .cenit-text-body,
+.page-einblicke .cenit-hero-rowtext p{
+  margin-top: 0;
+  color: var(--cenit-text);
+}
+
+/* Divider enger */
 .page-einblicke .cenit-hero-divider--small{
   margin: 12px auto 18px;
 }
 
-/* Hero-Textfarbe auf CI-Text setzen */
-.page-einblicke .cenit-hero-rowtext,
-.page-einblicke .cenit-hero-rowtext .cenit-text-body{
-  color: var(--cenit-text);
+/* Responsive */
+@media (max-width: 980px){
+  .page-einblicke .cenit-hero-row{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .page-einblicke .cenit-hero-floatimg{
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .page-einblicke .cenit-hero-rowtext{
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 
