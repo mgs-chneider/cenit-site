@@ -1789,6 +1789,19 @@ p, li{ color:var(--muted-foreground); }
   margin: 12px auto 18px;
 }
 
+/* Global: Floating hero image (shared) */
+.cenit-hero-floatimg{
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--cenit-shadow);
+  background: #fff;
+}
+.cenit-hero-floatimg img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .page-satzung .cenit-hero-row{
   max-width: 760px;
   margin: 18px auto 0 auto;
