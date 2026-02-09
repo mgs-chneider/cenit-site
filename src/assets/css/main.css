@@ -1522,6 +1522,17 @@ p, li{ color:var(--muted-foreground); }
   color: var(--muted-foreground);
 }
 
+/* Satzung: Abstand Hero → erster Panel wie Einblicke/FAQs */
+.page-satzung .cenit-einblicke-intro,
+.page-satzung .cenit-satzung-intro{
+  margin-bottom: 48px;
+}
+
+/* Falls der erste Panel zusätzlich "oben Luft" hat: wegnehmen */
+.page-satzung .cenit-stat-panel:first-of-type{
+  margin-top: 0;
+}
+
 /* =========================
    EINBLICKE & ENTWICKLUNGEN
 ========================= */
@@ -1831,16 +1842,6 @@ p, li{ color:var(--muted-foreground); }
     margin: 0 auto;
     text-align: center;
   }
-}
-
-/* Satzung: Abstand Hero → erster Panel wie Einblicke/FAQs */
-.page-satzung .cenit-satzung-intro{
-  margin-bottom: 48px;
-}
-
-/* Falls der erste Panel zusätzlich "oben Luft" hat: wegnehmen */
-.page-satzung .cenit-stat-panel:first-of-type{
-  margin-top: 0;
 }
 
 
