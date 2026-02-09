@@ -1764,3 +1764,14 @@ p, li{ color:var(--muted-foreground); }
   }
 }
 
+/* FAQS – Abstand Hero → erstes Card-Grid wie bei Einblicke */
+.page-faqs .cenit-faqs-intro{
+  margin-bottom: 48px;
+}
+
+/* Mobile etwas kompakter */
+@media (max-width: 768px){
+  .page-faqs .cenit-faqs-intro{
+    margin-bottom: 28px;
+  }
+}
