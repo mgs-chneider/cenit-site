@@ -1731,6 +1731,68 @@ p, li{ color:var(--muted-foreground); }
   margin: 12px auto 18px;
 }
 
+/* =========================
+   HERO IMAGE – FAQs
+========================= */
+
+.page-faqs-hero .cenit-hero-divider--small{
+  margin: 12px auto 18px;
+}
+
+.cenit-heroimg-wrap{
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--cenit-shadow);
+  background: #fff;
+}
+
+.cenit-heroimg-img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Subtiles Overlay unten */
+.cenit-heroimg-overlay{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 22px 22px 20px 22px;
+  background: linear-gradient(
+    to top,
+    rgba(255,255,255,0.94) 0%,
+    rgba(255,255,255,0.78) 45%,
+    rgba(255,255,255,0.00) 100%
+  );
+}
+
+.cenit-heroimg-text{
+  margin: 0;
+  max-width: 760px;
+  color: var(--cenit-text);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* Abstand Hero → erstes FAQ-Grid angleichen */
+.page-faqs .cenit-section + .cenit-section{
+  padding-top: 48px;
+}
+
+/* Mobile */
+@media (max-width: 600px){
+  .cenit-heroimg-overlay{
+    padding: 16px 16px 14px 16px;
+  }
+  .cenit-heroimg-text{
+    font-size: 14.5px;
+  }
+}
+
 .page-faqs .cenit-hero-row{
   max-width: 760px;
   margin: 18 auto 0 auto;
