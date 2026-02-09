@@ -1533,6 +1533,11 @@ p, li{ color:var(--muted-foreground); }
   margin-top: 0;
 }
 
+/* Divider zwischen Satzung und Leitbild visuell zentrieren */
+.page-satzung .cenit-gold-divider{
+  margin: 32px auto;
+}
+
 /* =========================
    EINBLICKE & ENTWICKLUNGEN
 ========================= */
