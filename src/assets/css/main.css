@@ -1719,19 +1719,6 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* =========================
-   FAQS – Editorial Intro (Hero Row)
-========================= */
-
-.page-faqs .cenit-faqs-intro{
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.page-faqs .cenit-faqs-intro .cenit-hero-divider--small{
-  margin: 12px auto 18px;
-}
-
-/* =========================
    HERO IMAGE – FAQs
 ========================= */
 
