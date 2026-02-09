@@ -1832,3 +1832,8 @@ p, li{ color:var(--muted-foreground); }
     text-align: center;
   }
 }
+
+/* Satzung: klarer Abschluss nach Hero-Intro */
+.page-satzung .cenit-satzung-intro{
+  margin-bottom: 48px; /* identisch zu Einblicke-Rhythmus */
+}
