@@ -1759,8 +1759,9 @@ p, li{ color:var(--muted-foreground); }
 
 .cenit-heroimg-text{
   margin: 0;
+  font-family:"EB Garamind";
   max-width: 640px;
-  color: var(--cenit-purple);
+  color: var(--cenit-soft);
   font-size: 16px;
   line-height: 1.65;
   font-weight: 400;
