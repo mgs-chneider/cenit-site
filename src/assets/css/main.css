@@ -1900,4 +1900,25 @@ p, li{ color:var(--muted-foreground); }
   padding-top: 88px;
 }
 
+/* HERO → erste Section: einheitlicher Abstand */
+.page-faqs-hero + .cenit-section,
+.page-einblicke-hero + .cenit-section,
+.page-satzung-hero + .cenit-section{
+  padding-top: 48px;
+}
+
+/* HERO – Mobile: Höhe harmonisieren */
+@media (max-width: 600px){
+  .cenit-hero-image{
+    aspect-ratio: 4 / 3;   /* ruhiger als 16:9 auf Mobile */
+  }
+
+  .cenit-hero-overlay{
+    padding: 20px 18px;
+  }
+
+  .cenit-hero-title{
+    font-size: 28px;
+  }
+}
 
