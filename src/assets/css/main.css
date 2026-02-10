@@ -1778,9 +1778,23 @@ p, li{ color:var(--muted-foreground); }
   text-align: center;
 }
 
+/* HERO – Overlay Title */
 .cenit-hero-title{
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.15;
   color: var(--cenit-purple);
-  margin-bottom: 8px;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+/* etwas kleiner auf Mobile */
+@media (max-width: 600px){
+  .cenit-hero-title{
+    font-size: 30px;
+  }
 }
 
 .cenit-hero-lead{
