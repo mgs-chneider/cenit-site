@@ -1761,7 +1761,7 @@ p, li{ color:var(--muted-foreground); }
   margin: 0;
   font-family:"EB Garamond";
   max-width: 640px;
-  color: var(--cenit-soft);
+  color: var(--cenit-text);
   font-size: 16px;
   line-height: 1.75;
   font-weight: 400;
