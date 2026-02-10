@@ -1775,7 +1775,7 @@ p, li{ color:var(--muted-foreground); }
   font-weight: 400;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: left;
 }
 
 /* HERO – Overlay Title */
