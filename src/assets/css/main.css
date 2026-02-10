@@ -1634,7 +1634,7 @@ p, li{ color:var(--muted-foreground); }
 ========================= */
 
 .page-einblicke .cenit-hero-row{
-  max-width: 760px;
+  max-width: 950px;
   margin: 18px auto 0 auto;
   display: grid;
   grid-template-columns: 300px 1fr;
