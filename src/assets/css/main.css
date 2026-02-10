@@ -1807,28 +1807,30 @@ p, li{ color:var(--muted-foreground); }
   text-align: left;
 }
 
-/* etwas kleiner auf Mobile */
 @media (max-width: 600px){
+  /* Hero wieder „breiter“ – weniger vertikaler Druck */
+  .cenit-hero-image{
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Overlay kompakter */
+  .cenit-hero-overlay{
+    padding: 14px 14px 12px 14px;
+    max-width: 100%;
+  }
+
+  /* Titel & Text kompakter */
   .cenit-hero-title{
-    font-size: 30px;
+    font-size: 26px;
+    line-height: 1.12;
+    margin: 0 0 6px 0;
   }
-}
 
-.cenit-hero-lead{
-  color: var(--cenit-text);
-}
-
-/* Mobile */
-@media (max-width: 600px){
-  .cenit-hero-overlay{
-    padding: 16px 16px 14px 16px;
-  }
-  .cenit-hero-overlay{
-   text-align: left;
- }
-   
+  .cenit-hero-lead,
   .cenit-heroimg-text{
     font-size: 14.5px;
+    line-height: 1.5;     /* weniger „luftig“ */
+    margin: 0;
   }
 }
 
