@@ -1760,12 +1760,13 @@ p, li{ color:var(--muted-foreground); }
 .cenit-heroimg-text{
   margin: 0;
   max-width: 640px;
-  color: var(--cenit-text);
+  color: var(--cenit-purple);
   font-size: 16px;
-  line-height: 1.75;
+  line-height: 1.65;
   font-weight: 500;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 /* Abstand Hero → erstes FAQ-Grid angleichen */
