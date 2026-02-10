@@ -1891,4 +1891,9 @@ p, li{ color:var(--muted-foreground); }
   }
 }
 
+/* HERO – einheitlicher Abstand zur Topbar */
+.page-einblicke-hero.cenit-section{
+  padding-top: 88px;
+}
+
 
