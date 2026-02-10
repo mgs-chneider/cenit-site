@@ -1726,14 +1726,26 @@ p, li{ color:var(--muted-foreground); }
   margin: 12px auto 18px;
 }
 
-.cenit-heroimg-wrap{
+.cenit-hero-image{
   position: relative;
   max-width: 950px;
   margin: 0 auto;
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: var(--cenit-shadow);
-  background: #fff;
+}
+
+.cenit-hero-image::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(250,250,250,0.95) 0%,
+    rgba(250,250,250,0.85) 35%,
+    rgba(250,250,250,0.4) 55%,
+    rgba(250,250,250,0) 70%
+  );
+  pointer-events: none;
 }
 
 .cenit-heroimg-img{
@@ -1742,19 +1754,14 @@ p, li{ color:var(--muted-foreground); }
   display: block;
 }
 
-/* Subtiles Overlay unten */
-.cenit-heroimg-overlay{
+.cenit-hero-overlay{
   position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  padding: 36px 34px 32px 36px;
-  background: linear-gradient(
-    to top,
-    rgba(255,255,255,0.94) 0%,
-    rgba(255,255,255,0.78) 45%,
-    rgba(255,255,255,0.00) 100%
-  );
+  padding: 32px 36px;
+  z-index: 2;
+  max-width: 720px;
 }
 
 .cenit-heroimg-text{
@@ -1768,6 +1775,15 @@ p, li{ color:var(--muted-foreground); }
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.cenit-hero-title{
+  color: var(--cenit-purple);
+  margin-bottom: 8px;
+}
+
+.cenit-hero-lead{
+  color: var(--cenit-text);
 }
 
 /* Abstand Hero → erstes FAQ-Grid angleichen */
