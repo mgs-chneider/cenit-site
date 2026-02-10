@@ -1808,36 +1808,30 @@ p, li{ color:var(--muted-foreground); }
 }
 
 @media (max-width: 600px){
-  /* Hero wieder „breiter“ – weniger vertikaler Druck */
+
+  /* Hero etwas höher als 16:9, damit Text bequem reinpasst */
   .cenit-hero-image{
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
   }
 
-  /* Overlay kompakter */
+  /* Overlay: kleiner + sicher innerhalb */
   .cenit-hero-overlay{
     padding: 14px 14px 12px 14px;
     max-width: 100%;
   }
 
-  /* Titel & Text kompakter */
+  /* Typo-Fix: du brauchst KEIN .cenit-heroimg-overlay */
   .cenit-hero-title{
-    font-size: 26px;
+    font-size: 28px;
     line-height: 1.12;
     margin: 0 0 6px 0;
   }
 
-  .cenit-hero-lead,
-  .cenit-heroimg-text{
+  .cenit-hero-lead{
     font-size: 14.5px;
-    line-height: 1.5;     /* weniger „luftig“ */
+    line-height: 1.45;
     margin: 0;
   }
-}
-
-/* FAQS – Abstand Hero → erstes Card-Grid wie bei Einblicke */
-.page-faqs .cenit-faqs-intro{ margin-bottom: 48px; }
-@media (max-width: 768px){
-  .page-faqs .cenit-faqs-intro{  margin-bottom: 28px;}
 }
 
 /* =========================
