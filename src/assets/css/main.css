@@ -1748,12 +1748,6 @@ p, li{ color:var(--muted-foreground); }
   display: block;
 }
 
-.cenit-heroimg-img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 .cenit-hero-overlay{
   position: absolute;
   bottom: 0;
