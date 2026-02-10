@@ -278,6 +278,36 @@ p, li{ color:var(--muted-foreground); }
   color: var(--muted-foreground);
 }
 
+/* =========================
+   AXES / RHYTHM UTILITIES
+========================= */
+
+/* 950px Achse (Cards, Medien, Panels) */
+.cenit-axis-950{
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 760px Achse (Text, Leads, Body) */
+.cenit-axis-760{
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Einheitlicher Abstand von Hero/Intro zur nächsten Card/Section */
+.cenit-after-hero{
+  margin-bottom: 48px;
+}
+@media (max-width: 768px){
+  .cenit-after-hero{ margin-bottom: 28px; }
+}
+
 /* Headings */
 .cenit-h2{
   font-family:'EB Garamond', serif;
