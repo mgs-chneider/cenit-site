@@ -1533,9 +1533,13 @@ p, li{ color:var(--muted-foreground); }
   margin-top: 0;
 }
 
-/* Divider zwischen Satzung und Leitbild visuell zentrieren */
-.page-satzung .cenit-gold-divider{
-  margin: 32px auto;
+/* Satzung – Divider exakt zwischen zwei Panels */
+.cenit-section--divider{
+  padding: 24px 16px;
+}
+
+.cenit-section--divider .cenit-gold-divider{
+  margin: 0 auto;
 }
 
 /* =========================
