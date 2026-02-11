@@ -1891,5 +1891,37 @@ p, li{ color:var(--muted-foreground); }
   padding-top: 48px;
 }
 
+/* ===== Scroll-Reveal (dezent) ===== */
+.reveal{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 520ms ease-out, transform 520ms ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variante: von links/rechts, falls du es punktuell willst */
+.reveal--left{ transform: translateX(-16px); }
+.reveal--right{ transform: translateX(16px); }
+.reveal--left.is-visible,
+.reveal--right.is-visible{ transform: translateX(0); }
+
+/* Stagger/Delay via CSS-Variable */
+.reveal{
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* Accessibility: respektiere “Reduce motion” */
+@media (prefers-reduced-motion: reduce){
+  .reveal{
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
 
 
