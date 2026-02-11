@@ -109,3 +109,30 @@ if (scrollBtn) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".reveal");
+
+  // Fallback: wenn IO nicht verfügbar, sofort anzeigen
+  if (!("IntersectionObserver" in window)) {
+    items.forEach(el => el.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        obs.unobserve(entry.target); // nur einmal animieren
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0.12,
+    rootMargin: "0px 0px -10% 0px" // etwas früher “reinsliden”
+  });
+
+  items.forEach(el => observer.observe(el));
+});
+</script>
