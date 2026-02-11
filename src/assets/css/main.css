@@ -596,7 +596,7 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* CTA in Card: Abstand und Zentrierung */
-.cenit-vm-gridcard .cenit-vm-cta{
+.cenit-vm-cta{
   margin: 22px auto 0 auto;
   text-align: center;
   max-width: 760px;
