@@ -36,7 +36,164 @@ body{
 }
 
 /* Default Fließtext muted */
-p, li{ color:var(--muted-foreground); }
+p, li{ color:var(--muted-/* =====================================================
+   SYSTEM CLEANUP – AXES + RHYTHM (Authoritative Layer)
+   ===================================================== */
+
+/* =========================
+   1) GLOBAL CONTAINER SYSTEM
+   ========================= */
+
+/* 950px ist globale Content-Achse */
+.cenit-container{
+  max-width: 950px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Optional Wide (nur wenn bewusst genutzt) */
+.cenit-container--wide{
+  max-width: 1100px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* =========================
+   2) GLOBAL TEXT AXIS
+   ========================= */
+
+.cenit-axis-760,
+.cenit-lead,
+.cenit-quote-band-inner{
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================
+   3) SECTION RHYTHM (uniform)
+   ========================= */
+
+.cenit-section{
+  padding: 64px 16px;
+}
+
+@media (max-width: 600px){
+  .cenit-section{
+    padding: 44px 14px;
+  }
+}
+
+/* Entfernt alte Sonder-Spacing-Logik */
+.page-home .cenit-section{
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+/* =========================
+   4) CARD STANDARDISIERUNG
+   ========================= */
+
+.cenit-card{
+  background: var(--cenit-surface);
+  border-radius: var(--cenit-radius);
+  box-shadow: var(--cenit-shadow);
+  padding: 26px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cards liegen IMMER auf 950-Achse */
+.cenit-card,
+.cenit-hero-card,
+.cenit-expertise-card,
+.cenit-about-quote-card,
+.cenit-contact-card2,
+.cenit-card--narrow{
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   5) HERO SYSTEM
+   ========================= */
+
+/* Hero nutzt jetzt ebenfalls 950-System */
+.cenit-hero .cenit-container{
+  max-width: 950px;
+}
+
+/* Video ebenfalls 950 */
+.cenit-hero-video{
+  max-width: 950px;
+}
+
+/* =========================
+   6) TOPBAR SYSTEM-INTEGRATION
+   ========================= */
+
+/* Topbar bleibt full width */
+.cenit-topbar{
+  width: 100%;
+}
+
+/* Aber Content sitzt auf 950 */
+.cenit-topbar-inner{
+  max-width: 950px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* =========================
+   7) WIDTH-SAFETY
+   ========================= */
+
+/* verhindert versehentliche 1100/820/700 Drift */
+.cenit-about-intro,
+.cenit-about-body,
+.cenit-contact-lead,
+.cenit-contact-body,
+.cenit-hero-transition-text{
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   8) VM – AXIS HARDENING
+   ========================= */
+
+.cenit-vm-inner{
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* VM Cards nutzen 950 automatisch über cenit-card */
+.cenit-section-vision-mission .cenit-vm-gridcard{
+  width: 100%;
+}
+
+/* =========================
+   9) CLEANUP: REMOVE WIDTH CONFLICTS
+   ========================= */
+
+/* Falls irgendwo alte 1100px Regeln greifen */
+[class*="container"]{
+  box-sizing: border-box;
+}
+
 
 
 /* =========================
