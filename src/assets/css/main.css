@@ -571,35 +571,61 @@ p, li{ color:var(--muted-foreground); }
   text-align:center;
 }
 
-/* =========================
-   VM – Grid in Whitecard (like Expertise)
-   ========================= */
+/* =====================================================
+   VISION & MISSION – Grid in Whitecard (Systemkonform)
+   ===================================================== */
 
-/* Wrapper-Card (950 Raumteiler) */
+/* ---------------------------------
+   Wrapper-Card (liegt im 950-Container)
+---------------------------------- */
+
 .cenit-vm-gridcard{
-  width:100%;
-  max-width:950px;
-  margin:0 auto;
-  box-sizing:border-box;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* VM Whitecard: Innenachse 760px */
-.cenit-vm-gridcard .cenit-vm-inner{
+/* Whitecard-Optik nur setzen,
+   falls nicht bereits über .cenit-card vorhanden */
+
+.cenit-section-vision-mission .cenit-vm-gridcard{
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.05);
+  padding: 56px 56px;
+}
+
+/* Tablet / Mobile Padding reduzieren */
+@media (max-width: 980px){
+  .cenit-section-vision-mission .cenit-vm-gridcard{
+    padding: 28px 18px;
+  }
+}
+
+/* ---------------------------------
+   Innenachse (760px, stabiler Flow)
+---------------------------------- */
+
+.cenit-vm-inner{
   max-width: 760px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-sizing: border-box;
 }
 
-/* Typo bleibt, nur Achse fix */
+/* Text übernimmt Achse vom Inner */
 .cenit-vm-text{
-  max-width: 760px;
-  margin: 0 auto;
+  margin: 0;
 }
 
-/* CTA in Card: Abstand und Zentrierung */
+/* ---------------------------------
+   CTA – garantiert innerhalb der Card
+---------------------------------- */
+
 .cenit-vm-cta{
-  margin: 22px auto 0 auto;
+  margin-top: 6px;
   text-align: center;
-  max-width: 760px;
 }
 
 .cenit-vm-cta-note{
@@ -608,119 +634,111 @@ p, li{ color:var(--muted-foreground); }
   margin-bottom: 10px;
 }
 
-/* Optional: Button minimal ruhiger */
+/* Button ruhig */
 .cenit-vm-gridcard .cenit-btn{
   margin-top: 0;
 }
 
-/* Intro-Card in VM: Außen 950, innen 760 (sichtbar!) */
-.cenit-section-vision-mission .cenit-vm-gridcard{
-  max-width: 950px;
-  padding: 56px 56px;
+/* ---------------------------------
+   Grid (Podcast + Tiles)
+---------------------------------- */
+
+.cenit-vm-grid{
+  display: grid;
+  grid-template-columns: 1.05fr 1.95fr;
+  gap: 18px;
+  align-items: start;
+  box-sizing: border-box;
 }
 
-/* Tablet/Mobile: Padding runter, sonst wirkt 760 nicht */
+/* Responsive: Stack */
 @media (max-width: 980px){
-  .cenit-section-vision-mission .cenit-vm-gridcard{
-    padding: 28px 18px;
+  .cenit-vm-grid{
+    grid-template-columns: 1fr;
   }
 }
 
-/* In der Card: Grid */
-.cenit-vm-grid{
-  display:grid;
-  grid-template-columns: 1.05fr 1.95fr;
-  gap:18px;
-  align-items:start;
-  box-sizing:border-box;
-}
+/* ---------------------------------
+   Podcast Card (links)
+---------------------------------- */
 
-/* Left column: Podcast "Card-in-Card" (soft) */
 .cenit-vm-podcast-card{
-  background:#fafafa;
-  border-radius:18px;
-  padding:18px;
-  box-shadow:var(--cenit-shadow);
-
-  display:grid;
-  grid-template-rows: 1fr auto; /* Cover wächst, Audio bleibt unten */
-  box-sizing:border-box;
+  background: #fafafa;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--cenit-shadow);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  box-sizing: border-box;
 }
 
-/* Podcast Cover */
 .cenit-vm-podcast-cover{
-  width:100%;
+  width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit:cover;
-  border-radius:18px;
-  box-shadow:var(--cenit-shadow);
-  display:block;
-  box-sizing:border-box;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: var(--cenit-shadow);
+  display: block;
 }
 
-/* Audio bleibt nur in linker Spalte (= so breit wie Cover/Podcast-Card) */
 .cenit-vm-audio{
-  width:100%;
-  margin-top:14px;
-  align-self:end;
-  box-sizing:border-box;
+  width: 100%;
+  margin-top: 14px;
+  align-self: end;
 }
 
 .cenit-vm-podcast-meta{
-  margin-top:10px;
-  font-size:12px;
-  color:var(--muted-foreground);
-  opacity:0.85;
-  box-sizing:border-box;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted-foreground);
+  opacity: 0.85;
 }
 
-/* Right column: tiles 2x2 */
+/* ---------------------------------
+   Tiles (rechts) – neutral, CI-konform
+---------------------------------- */
+
 .cenit-vm-tiles{
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
-  gap:14px;
-  box-sizing:border-box;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 560px){
+  .cenit-vm-tiles{
+    grid-template-columns: 1fr;
+  }
 }
 
 .cenit-vm-tile{
-  border-radius:18px;
-  padding:24px 22px;
-  box-shadow:var(--cenit-shadow);
-  box-sizing:border-box;
+  border-radius: 18px;
+  padding: 24px 22px;
+  box-shadow: var(--cenit-shadow);
+  background: var(--cenit-surface-1, #fafafa);
+  box-sizing: border-box;
 }
 
-.cenit-vm-tile:nth-child(1),
-.cenit-vm-tile:nth-child(4){ background:#f5f3f9; }
-
-.cenit-vm-tile:nth-child(2),
-.cenit-vm-tile:nth-child(3){ background:#edebf5; }
+/* optional leichte Differenzierung ohne Farbstich */
+.cenit-vm-tile:nth-child(even){
+  background: var(--cenit-surface-2, #f2f2f2);
+}
 
 .cenit-vm-tile-title{
-  margin:0 0 10px 0;
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-weight:300;
-  font-size:18px;
-  color:var(--cenit-purple);
+  margin: 0 0 10px 0;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--cenit-purple);
 }
 
 .cenit-vm-tile-text{
-  margin:0;
-  font-size:13px;
-  line-height:1.65;
-  color:var(--muted-foreground);
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--muted-foreground);
 }
-
-/* Responsive */
-@media (max-width: 980px){
-  .cenit-vm-grid{ grid-template-columns: 1fr; }
-  .cenit-vm-tiles{ grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 560px){
-  .cenit-vm-tiles{ grid-template-columns: 1fr; }
-}
-
 
 /* =========================
    ABOUT US
