@@ -572,37 +572,6 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* =========================
-   VISION & MISSION – Intro Whitecard
-   ========================= */
-
-.cenit-vm-card{
-  width: 100%;
-  max-width: 950px;          /* Raumteiler wie Expertise */
-  margin: 0 auto 32px auto;  /* Abstand nach unten */
-  padding: 56px 56px;        /* ruhiger Innenraum */
-  box-sizing: border-box;
-
-  background: var(--cenit-surface);
-  border-radius: var(--cenit-radius);
-  box-shadow: var(--cenit-shadow);
-}
-
-.cenit-section--vision-mission .cenit-h2{
-  margin-bottom: 48px;
-}
-
-.cenit-vm-cta{
-  margin: 24px auto 56px auto;
-  text-align: center;
-  max-width: 720px;
-}
-
- /* VM – Abstand Begleittext → Button */
- .cenit-vm-cta .cenit-btn{
-  margin-top: 10px;
-}
-
-/* =========================
    VM – Grid in Whitecard (like Expertise)
    ========================= */
 
@@ -642,6 +611,19 @@ p, li{ color:var(--muted-foreground); }
 /* Optional: Button minimal ruhiger */
 .cenit-vm-gridcard .cenit-btn{
   margin-top: 0;
+}
+
+/* Intro-Card in VM: Außen 950, innen 760 (sichtbar!) */
+.cenit-section-vision-mission .cenit-vm-gridcard{
+  max-width: 950px;
+  padding: 56px 56px;
+}
+
+/* Tablet/Mobile: Padding runter, sonst wirkt 760 nicht */
+@media (max-width: 980px){
+  .cenit-section-vision-mission .cenit-vm-gridcard{
+    padding: 28px 18px;
+  }
 }
 
 /* In der Card: Grid */
