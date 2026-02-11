@@ -3,31 +3,60 @@ console.log("CENIT main.js loaded");
 /* =====================================================
    MENU TOGGLE
 ===================================================== */
-const menuBtn = document.querySelector(".cenit-menutoggle");
-const menu = document.querySelector(".cenit-menu");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (menuBtn && menu) {
-  menuBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const open = menu.classList.toggle("show");
-    menuBtn.setAttribute("aria-expanded", String(open));
+  const menuBtn = document.querySelector(".cenit-menutoggle");
+  const menu = document.querySelector(".cenit-menu");
+
+  if (menuBtn && menu) {
+    menuBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const open = menu.classList.toggle("show");
+      menuBtn.setAttribute("aria-expanded", String(open));
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+        menu.classList.remove("show");
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        menu.classList.remove("show");
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  /* Reveal Code hier ebenfalls einfügen */
+ document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".reveal");
+
+  // Fallback: wenn IO nicht verfügbar, sofort anzeigen
+  if (!("IntersectionObserver" in window)) {
+    items.forEach(el => el.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        obs.unobserve(entry.target); // nur einmal animieren
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0.12,
+    rootMargin: "0px 0px -10% 0px" // etwas früher “reinsliden”
   });
 
-  document.addEventListener("click", (e) => {
-    if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
-      menu.classList.remove("show");
-      menuBtn.setAttribute("aria-expanded", "false");
-    }
-  });
+  items.forEach(el => observer.observe(el));
+});
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      menu.classList.remove("show");
-      menuBtn.setAttribute("aria-expanded", "false");
-    }
-  });
-}
 
 /* =====================================================
    LANGUAGE SWITCH + i18n
@@ -110,29 +139,5 @@ if (scrollBtn) {
   });
 }
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".reveal");
 
-  // Fallback: wenn IO nicht verfügbar, sofort anzeigen
-  if (!("IntersectionObserver" in window)) {
-    items.forEach(el => el.classList.add("is-visible"));
-    return;
-  }
 
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        obs.unobserve(entry.target); // nur einmal animieren
-      }
-    });
-  }, {
-    root: null,
-    threshold: 0.12,
-    rootMargin: "0px 0px -10% 0px" // etwas früher “reinsliden”
-  });
-
-  items.forEach(el => observer.observe(el));
-});
-</script>
