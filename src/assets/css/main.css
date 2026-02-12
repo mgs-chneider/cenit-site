@@ -502,18 +502,19 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* =========================
-   HOME HERO – Image + Overlay
+   HOME HERO – Image + Overlay (systemkonform)
    ========================= */
 
-.cenit-hero.cenit-section{
-  padding-top: 24px;   /* wegen sticky topbar */
+/* Rhythmus: nur Home, klar definiert */
+.page-home .cenit-hero.cenit-section{
+  padding-top: 64px;   /* wegen sticky topbar + Luft */
   padding-bottom: 24px;
 }
 
-.cenit-hero-image{
+/* Hero-Bild nutzt die 950-Achse aus dem HTML */
+.page-home .cenit-hero-image{
   position: relative;
   width: 100%;
-  max-width: 950px;
   margin: 0 auto 28px auto;
   border-radius: 22px;
   overflow: hidden;
@@ -522,15 +523,15 @@ p, li{ color:var(--muted-foreground); }
   background: #fff;
 }
 
-.cenit-hero-image > img{
+.page-home .cenit-hero-image > img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Gradient overlay (wie Unterseiten) */
-.cenit-hero-image::after{
+/* Gradient overlay */
+.page-home .cenit-hero-image::after{
   content:"";
   position:absolute;
   inset:0;
@@ -544,7 +545,7 @@ p, li{ color:var(--muted-foreground); }
   pointer-events:none;
 }
 
-.cenit-hero-overlay{
+.page-home .cenit-hero-overlay{
   position: absolute;
   left: 0; right: 0; bottom: 0;
   z-index: 2;
@@ -555,14 +556,13 @@ p, li{ color:var(--muted-foreground); }
   box-sizing: border-box;
 }
 
-/* Logo im Overlay: klein + ruhig */
-.cenit-hero-brand{
+/* (optional) Logo im Overlay */
+.page-home .cenit-hero-brand{
   display:flex;
   justify-content:center;
   margin-bottom: 10px;
 }
-
-.cenit-hero-logoimg{
+.page-home .cenit-hero-logoimg{
   height: 42px;
   width: auto;
   max-width: 180px;
@@ -570,8 +570,7 @@ p, li{ color:var(--muted-foreground); }
   opacity: 0.92;
 }
 
-/* Reuse deiner Typo, aber passend zum Overlay */
-.cenit-hero-claim{
+.page-home .cenit-hero-claim{
   font-family:'EB Garamond', serif;
   font-style:italic;
   font-weight:300;
@@ -582,7 +581,7 @@ p, li{ color:var(--muted-foreground); }
   margin: 10px 0 12px 0;
 }
 
-.cenit-hero-sub{
+.page-home .cenit-hero-sub{
   font-family:'Lato', Arial, sans-serif;
   font-size:16px;
   line-height:1.5;
@@ -592,13 +591,23 @@ p, li{ color:var(--muted-foreground); }
 
 /* Mobile */
 @media (max-width: 600px){
-  .cenit-hero-image{ aspect-ratio: 4 / 3; margin-bottom: 18px; }
-  .cenit-hero-overlay{ padding: 14px 14px 12px 14px; max-width: 100%; }
-  .cenit-hero-logoimg{ height: 34px; }
-  .cenit-hero-claim{ font-size: 22px; line-height: 1.25; margin: 8px 0 10px; }
+  .page-home .cenit-hero-image{
+    aspect-ratio: 4 / 3;
+    margin-bottom: 18px;
+  }
+  .page-home .cenit-hero-overlay{
+    padding: 14px 14px 12px 14px;
+    max-width: 100%;
+  }
+  .page-home .cenit-hero-logoimg{ height: 34px; }
+  .page-home .cenit-hero-claim{
+    font-size: 22px;
+    line-height: 1.25;
+    margin: 8px 0 10px;
+  }
 }
 
-
+/* Transition bleibt systemweit okay (oder auch page-home scopen, wenn du willst) */
 .cenit-hero-transition{
   text-align:center;
   padding:16px 0 0 0;
