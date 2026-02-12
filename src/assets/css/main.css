@@ -735,13 +735,12 @@ p, li{ color:var(--muted-foreground); }
   border-radius: 18px;
   padding: 24px 22px;
   box-shadow: var(--cenit-shadow);
-  background: var(--cenit-surface-1, #fafafa);
+  background: var(--cenit-surface-1, #fff);
   box-sizing: border-box;
 }
 
-.cenit-vm-tile:nth-child(even){
-  background: var(--cenit-surface-2, #f2f2f2);
-}
+.cenit-vm-tile:nth-child(odd){ background: #f5f3f9; }
+.cenit-vm-tile:nth-child(even){ background: #edebf5; }
 
 .cenit-vm-tile-title{
   margin: 0 0 10px 0;
