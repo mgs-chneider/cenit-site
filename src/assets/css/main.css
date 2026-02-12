@@ -871,6 +871,7 @@ p, li{ color:var(--muted-foreground); }
 .cenit-about-person{ text-align:center; }
 
 .cenit-about-photo{
+  position relative;
   width:100%;
   aspect-ratio:4 / 5;
   border-radius:18px;
@@ -885,6 +886,19 @@ p, li{ color:var(--muted-foreground); }
   display:block;
 }
 
+/* Subtiler Overlay-Gradient nach unten (für Name/Role-Zone) */
+.cenit-about-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.42) 0%,
+    rgba(0,0,0,0.22) 28%,
+    rgba(0,0,0,0.00) 62%
+  );
+  pointer-events:none;
+}
 .cenit-about-name{
   margin:16px 0 2px 0;
   font-family:'EB Garamond', serif;
