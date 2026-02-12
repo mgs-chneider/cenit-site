@@ -884,21 +884,24 @@ p, li{ color:var(--muted-foreground); }
   aspect-ratio: 4 / 5;   /* ← wichtig */
 }
 
-/* Bild bleibt wie gehabt */
+/* Bild */
 .cenit-about-photo img{
   width:100%;
   height:100%;
   object-fit:cover;
+  display:block;
+}
 
+/* Subtiler Fade nach unten */
 .cenit-about-photo::after{
   content:"";
   position:absolute;
   inset:0;
   background: linear-gradient(
     to top,
-    rgba(250,250,250,0.65) 0%,
-    rgba(250,250,250,0.25) 35%,
-    rgba(250,250,250,0.00) 60%
+    rgba(250,250,250,0.55) 0%,
+    rgba(250,250,250,0.20) 40%,
+    rgba(250,250,250,0.00) 65%
   );
   pointer-events:none;
 }
