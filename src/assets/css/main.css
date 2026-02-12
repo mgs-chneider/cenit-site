@@ -131,7 +131,7 @@ p, li{ color:var(--muted-foreground); }
 .cenit-h2{
   font-family:'EB Garamond',serif;
   font-weight:200;
-  font-size:40px;
+  font-size:36px;
   line-height:1.15;
   letter-spacing:0.01em;
   color:var(--cenit-purple);
