@@ -1790,3 +1790,25 @@ p, li{ color:var(--muted-foreground); }
   }
 }
 
+/* =========================
+   STICKY TOPBAR – ROBUST FIX
+   ========================= */
+
+/* Sticky needs a clean scroll container */
+html, body{
+  overflow: visible;
+}
+
+/* Avoid sticky being broken by wrapper overflow */
+body > section,
+body > div{
+  overflow: visible;
+}
+
+/* The bar itself */
+.cenit-topbar{
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1400;
+}
+
