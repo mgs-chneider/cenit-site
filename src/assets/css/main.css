@@ -902,6 +902,19 @@ p, li{ color:var(--muted-foreground); }
   pointer-events:none;
 }
 
+.cenit-about-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to top,
+    rgba(250,250,250,0.65) 0%,
+    rgba(250,250,250,0.25) 35%,
+    rgba(250,250,250,0.00) 60%
+  );
+  pointer-events:none;
+}
+
 .cenit-about-name{
   margin:16px 0 2px 0;
   font-family:'EB Garamond', serif;
