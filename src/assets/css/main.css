@@ -501,40 +501,76 @@ p, li{ color:var(--muted-foreground); }
   opacity:0.9;
 }
 
-
 /* =========================
-   HERO (Logo outside card)
+   HOME HERO – Image + Overlay
    ========================= */
 
-.cenit-hero-logo-wrap{
+.cenit-hero.cenit-section{
+  padding-top: 24px;   /* wegen sticky topbar */
+  padding-bottom: 24px;
+}
+
+.cenit-hero-image{
+  position: relative;
+  width: 100%;
   max-width: 950px;
-  margin: 0 auto 32px auto;
-  display: flex;
-  justify-content: center;
+  margin: 0 auto 28px auto;
+  border-radius: 22px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  box-shadow: var(--cenit-shadow);
+  background: #fff;
 }
 
-.cenit-hero-logo{
-  display: flex;
-  justify-content: center;
+.cenit-hero-image > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.cenit-hero-logo img{
-  height: 72px;
+/* Gradient overlay (wie Unterseiten) */
+.cenit-hero-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to top,
+    rgba(250,250,250,0.90) 0%,
+    rgba(250,250,250,0.72) 40%,
+    rgba(250,250,250,0.28) 62%,
+    rgba(250,250,250,0) 78%
+  );
+  pointer-events:none;
+}
+
+.cenit-hero-overlay{
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  z-index: 2;
+  padding: 30px 34px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Logo im Overlay: klein + ruhig */
+.cenit-hero-brand{
+  display:flex;
+  justify-content:center;
+  margin-bottom: 10px;
+}
+
+.cenit-hero-logoimg{
+  height: 42px;
   width: auto;
-  max-width: 100%;
+  max-width: 180px;
   object-fit: contain;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
-.cenit-hero-card{
-  width:100%;
-  max-width:950px;
-  margin:0 auto 28px auto;
-  padding:42px 28px;
-  text-align:center;
-  box-sizing:border-box;
-}
-
+/* Reuse deiner Typo, aber passend zum Overlay */
 .cenit-hero-claim{
   font-family:'EB Garamond', serif;
   font-style:italic;
@@ -543,20 +579,7 @@ p, li{ color:var(--muted-foreground); }
   line-height:1.34;
   letter-spacing:0.2px;
   color:var(--cenit-purple);
-  margin:18px 0 18px 0;
-}
-
-.cenit-hero-divider{
-  width:160px;
-  height:1px;
-  background-color:var(--cenit-gold);
-  margin:20px auto 28px auto;
-  border-radius:3px;
-}
-
-.cenit-hero-divider--small{
-  width:140px;
-  margin:20px auto 24px auto;
+  margin: 10px 0 12px 0;
 }
 
 .cenit-hero-sub{
@@ -567,47 +590,14 @@ p, li{ color:var(--muted-foreground); }
   margin:0;
 }
 
-.cenit-hero-video{
-  width:100%;
-  max-width:950px;
-  margin:0 auto 44px auto;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 4px 15px rgba(0,0,0,0.10);
-  position:relative;
-  box-sizing:border-box;
+/* Mobile */
+@media (max-width: 600px){
+  .cenit-hero-image{ aspect-ratio: 4 / 3; margin-bottom: 18px; }
+  .cenit-hero-overlay{ padding: 14px 14px 12px 14px; max-width: 100%; }
+  .cenit-hero-logoimg{ height: 34px; }
+  .cenit-hero-claim{ font-size: 22px; line-height: 1.25; margin: 8px 0 10px; }
 }
 
-.cenit-hero-video-inner{
-  position:relative;
-  padding-bottom:56.25%;
-  height:0;
-  overflow:hidden;
-}
-
-.cenit-hero-video iframe{
-  position:absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  border:none;
-}
-
-.cenit-hero-soundbtn{
-  position:absolute;
-  bottom:20px;
-  right:20px;
-  background-color:#e7e4f7;
-  color:var(--cenit-text);
-  padding:10px 16px;
-  border:none;
-  border-radius:25px;
-  font-size:15px;
-  font-family:'Lato', Arial, sans-serif;
-  cursor:pointer;
-  opacity:0.9;
-  transition:opacity 0.3s ease;
-}
-.cenit-hero-soundbtn:hover{ opacity:1; }
 
 .cenit-hero-transition{
   text-align:center;
