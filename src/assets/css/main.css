@@ -1801,3 +1801,10 @@ body > div{
   z-index: 1400;
 }
 
+.cenit-topbar{
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+}
+
