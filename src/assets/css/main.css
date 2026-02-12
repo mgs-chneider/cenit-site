@@ -519,6 +519,11 @@ p, li{ color:var(--muted-foreground); }
   display: block;
 }
 
+/* Hero-Bild etwas unter sticky Topbar ziehen */
+.cenit-hero-image{
+  margin-top: 16px;
+}
+
 /* Gradient overlay */
 .page-home .cenit-hero-image::after{
   content:"";
