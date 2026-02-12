@@ -875,11 +875,13 @@ p, li{ color:var(--muted-foreground); }
    ========================= */
 
 .cenit-about-photo{
-  position: relative;          /* wichtig für ::after */
+  position: relative;
   border-radius:18px;
   overflow:hidden;
   box-shadow:var(--cenit-shadow);
   background:#fff;
+
+  aspect-ratio: 4 / 5;   /* ← wichtig */
 }
 
 /* Bild bleibt wie gehabt */
