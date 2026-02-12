@@ -1768,5 +1768,5 @@ p, li{ color:var(--muted-foreground); }
 
 /* Positionierung der drei Blöcke */
 .cenit-langswitch{ justify-self:start; }
-.cenit-social{ justify-self:center; }
+.cenit-topbar-logo{ justify-self:center; }
 .cenit-menutoggle{ justify-self:end; }
