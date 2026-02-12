@@ -870,15 +870,19 @@ p, li{ color:var(--muted-foreground); }
 }
 .cenit-about-person{ text-align:center; }
 
+/* =========================
+   ABOUT – Foto: Gradient Overlay
+   ========================= */
+
 .cenit-about-photo{
-  position relative;
-  width:100%;
-  aspect-ratio:4 / 5;
+  position: relative;          /* wichtig für ::after */
   border-radius:18px;
   overflow:hidden;
   box-shadow:var(--cenit-shadow);
   background:#fff;
 }
+
+/* Bild bleibt wie gehabt */
 .cenit-about-photo img{
   width:100%;
   height:100%;
@@ -899,6 +903,7 @@ p, li{ color:var(--muted-foreground); }
   );
   pointer-events:none;
 }
+
 .cenit-about-name{
   margin:16px 0 2px 0;
   font-family:'EB Garamond', serif;
