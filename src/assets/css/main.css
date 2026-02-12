@@ -649,11 +649,13 @@ p, li{ color:var(--muted-foreground); }
 
 .cenit-vm-card{
   padding: 56px 56px;
+  margin-bottom: 22px; /* ✅ Luft zu Card 2 */
 }
 
 @media (max-width: 980px){
   .cenit-vm-card{
     padding: 28px 18px;
+    margin-bottom: 16px;
   }
 }
 
@@ -668,14 +670,29 @@ p, li{ color:var(--muted-foreground); }
   margin-bottom: 10px;
 }
 
+/* Mission dezent hervorheben (editorial, nicht werblich) */
 .cenit-vm-mission{
+  margin-top: 14px;
   padding-left: 14px;
   border-left: 2px solid rgba(201,164,78,0.65);
+  color: var(--cenit-text);         /* leicht „wichtiger“ als muted */
   background: transparent;
+}
+
+/* =========================
+   VISION & MISSION – Card 2 (Gridcard)
+   ========================= */
+
+/* ✅ Stabilisiere Whitecard-Look, falls irgendwo überschrieben */
+.cenit-vm-gridcard{
+  background: var(--cenit-surface);
+  border-radius: var(--cenit-radius);
+  box-shadow: var(--cenit-shadow);
 }
 
 .cenit-vm-gridcard .cenit-btn{ margin-top: 0; }
 
+/* Grid */
 .cenit-vm-grid{
   display: grid;
   grid-template-columns: 1.05fr 1.95fr;
@@ -688,6 +705,7 @@ p, li{ color:var(--muted-foreground); }
   .cenit-vm-grid{ grid-template-columns: 1fr; }
 }
 
+/* Podcast card */
 .cenit-vm-podcast-card{
   background: #fafafa;
   border-radius: 18px;
@@ -720,6 +738,7 @@ p, li{ color:var(--muted-foreground); }
   opacity: 0.85;
 }
 
+/* Tiles */
 .cenit-vm-tiles{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -735,10 +754,10 @@ p, li{ color:var(--muted-foreground); }
   border-radius: 18px;
   padding: 24px 22px;
   box-shadow: var(--cenit-shadow);
-  background: var(--cenit-surface-1, #fff);
   box-sizing: border-box;
 }
 
+/* ✅ Farb-Look fixieren: entweder neutral ODER lila-tint – du nutzt aktuell lila-tint */
 .cenit-vm-tile:nth-child(odd){ background: #f5f3f9; }
 .cenit-vm-tile:nth-child(even){ background: #edebf5; }
 
