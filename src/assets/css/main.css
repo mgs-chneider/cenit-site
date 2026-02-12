@@ -707,7 +707,7 @@ p, li{ color:var(--muted-foreground); }
 
 /* Podcast card */
 .cenit-vm-podcast-card{
-  background: #fafafa;
+  background: #fff;
   border-radius: 18px;
   padding: 18px;
   box-shadow: var(--cenit-shadow);
@@ -757,9 +757,17 @@ p, li{ color:var(--muted-foreground); }
   box-sizing: border-box;
 }
 
-/* ✅ Farb-Look fixieren: entweder neutral ODER lila-tint – du nutzt aktuell lila-tint */
-.cenit-vm-tile:nth-child(odd){ background: #f5f3f9; }
-.cenit-vm-tile:nth-child(even){ background: #edebf5; }
+/* Tiles – diagonale Zweiton-Logik (1&4 / 2&3) */
+.cenit-vm-tile:nth-child(1),
+.cenit-vm-tile:nth-child(4){
+  background: #f5f3f9;
+}
+
+.cenit-vm-tile:nth-child(2),
+.cenit-vm-tile:nth-child(3){
+  background: #edebf5;
+}
+
 
 .cenit-vm-tile-title{
   margin: 0 0 10px 0;
