@@ -668,6 +668,14 @@ p, li{ color:var(--muted-foreground); }
   margin-bottom: 10px;
 }
 
+/* VM Card 1: Mission dezent hervorheben */
+.cenit-vm-mission{
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-left: 2px solid rgba(201,164,78,0.65); /* Gold hairline */
+  background: rgba(246,243,255,0.55);           /* cenit-soft, aber sehr leicht */
+  border-radius: 14px;
+}
 
 .cenit-vm-gridcard .cenit-btn{ margin-top: 0; }
 
