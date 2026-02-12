@@ -1790,3 +1790,6 @@ p, li{ color:var(--muted-foreground); }
   }
 }
 
+.page-home .cenit-hero-logo-wrap{
+  outline: 6px solid red !important;
+}
