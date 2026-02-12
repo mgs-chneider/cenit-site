@@ -181,24 +181,72 @@ p, li{ color:var(--muted-foreground); }
   font-family:'Lato', Arial, sans-serif;
 }
 
+/* =========================
+   TOPBAR (Sticky, subtle)
+   ========================= */
+
+/* Full-width bar stays on top */
 .cenit-topbar{
   position: sticky;
   top: 0;
   z-index: 1400;
+
+  /* ruhiger Look */
   background: rgba(250,250,250,0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+
   border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 
-/* Topbar – Content sitzt auf 950 */
+/* 950-content axis inside */
 .cenit-topbar-inner{
-  max-width:950px;
-  margin:0 auto;
-  display:grid;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0.65rem 1rem;
+  box-sizing: border-box;
+
+  display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items:center;
-  gap:1rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Make sure dropdown anchors to topbar */
+.cenit-topbar{ overflow: visible; }
+
+/* Dropdown positioning (anchored to topbar) */
+.cenit-menu{
+  position: absolute;
+  right: max(1rem, calc((100vw - 950px)/2 + 1rem));
+  top: calc(100% + 10px);
+
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.14);
+
+  padding: 0 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+
+  width: 210px;
+  z-index: 1500;
+}
+
+.cenit-menu.show{
+  max-height: 520px;
+  padding: 0.9rem 0.85rem;
+}
+
+/* Mobile: keep dropdown inside viewport */
+@media (max-width: 600px){
+  .cenit-topbar-inner{ padding: 0.55rem 0.7rem; }
+  .cenit-menu{ right: 0.7rem; }
 }
 
 /* LEFT */
