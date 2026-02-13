@@ -871,39 +871,58 @@ p, li{ color:var(--muted-foreground); }
 .cenit-about-person{ text-align:center; }
 
 /* =========================
-   ABOUT – Magazin Band
+   ABOUT – Card (systemkonform)
    ========================= */
 
-.cenit-about-band{
-  background: var(--cenit-soft);
-  padding: 56px 42px;
-  border-radius: 28px;
+.cenit-about-card{
+  max-width: 950px;           /* sicher, falls Container anders ist */
+  margin: 0 auto;
+  padding: 52px 56px;
 }
 
 @media (max-width: 980px){
-  .cenit-about-band{
-    padding: 36px 22px;
+  .cenit-about-card{
+    padding: 28px 18px;
   }
+}
+
+/* Headline in Card etwas kleiner, weniger „old school“ */
+.cenit-about .cenit-h2{
+  font-size: 34px;
+  margin: 0 0 14px 0;
+}
+
+@media (max-width: 600px){
+  .cenit-about .cenit-h2{ font-size: 30px; }
+}
+
+/* Lead etwas kompakter */
+.cenit-about .cenit-lead{
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 auto 18px auto;
+  color: var(--muted-foreground);
+}
+
+/* Divider Abstand */
+.cenit-about .cenit-gold-divider{
+  margin: 0 auto 34px auto;
 }
 
 /* Team Grid */
 .cenit-about-team{
-  margin-top: 42px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  gap: 34px;
+  align-items: start;
 }
 
 @media (max-width: 980px){
-  .cenit-about-team{
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .cenit-about-team{ grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 560px){
-  .cenit-about-team{
-    grid-template-columns: 1fr;
-  }
+  .cenit-about-team{ grid-template-columns: 1fr; gap: 26px; }
 }
 
 /* Portrait */
@@ -916,62 +935,70 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .cenit-about-photo img{
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display:block;
+  display: block;
 }
 
-/* Typografie */
+/* Name kleiner + ruhiger (Herbert passt) */
 .cenit-about-name{
-  margin:18px 0 4px 0;
-  font-family:'EB Garamond', serif;
+  margin: 16px 0 4px 0;
+  font-family: 'EB Garamond', serif;
   font-style: italic;
-  font-weight:400;
-  font-size:20px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.25;
   color: var(--cenit-purple);
 }
 
+/* Role als Editorial-Kicker */
 .cenit-about-role{
-  margin:0 0 12px 0;
-  font-size:11.5px;
-  letter-spacing:0.05em;
+  margin: 0 0 10px 0;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted-foreground);
 }
 
-/* Tag statt Button */
+/* Tag statt Button (leiser) */
 .cenit-about-tag{
-  display:inline-block;
-  font-size:0.74rem;
-  padding:0.30rem 0.75rem;
-  border-radius:999px;
-  border:1px solid rgba(201,164,78,0.5);
-  text-decoration:none;
-  color:var(--muted-foreground);
-  margin-bottom:14px;
-  transition: all 0.2s ease;
+  display: inline-block;
+  font-size: 0.68rem;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(201,164,78,0.35);
+  text-decoration: none;
+  color: var(--muted-foreground);
+  margin-bottom: 12px;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .cenit-about-tag:hover{
   color: var(--cenit-purple);
-  border-color: var(--cenit-gold);
+  border-color: rgba(201,164,78,0.65);
+  background: rgba(201,164,78,0.06);
 }
 
+/* Text */
 .cenit-about-text{
-  margin:0;
-  font-size:13px;
-  line-height:1.6;
-  color:var(--cenit-text);
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--cenit-text);
 }
 
+/* Feinjustierung Manfred – Kopf nicht abschneiden */
+.cenit-about-photo img[src*="FotoManfred"]{
+  object-position: center 20%;
+}
 
 .cenit-about-photo img[src*="FotoManfred"]{
   object-position: center 10%;
 }
 
 .cenit-about-photo img[src*="FotoHerbert"]{
-  object-position: center 30%;
+  object-position: center 40%;
 }
 
 
