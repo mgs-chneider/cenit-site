@@ -804,10 +804,6 @@ p, li{ color:var(--muted-foreground); }
   color: var(--muted-foreground);
 }
 
-.cenit-vm-grid{
-  margin-bottom: 72px;
-}
-
 /* =========================
    ABOUT US
    ========================= */
