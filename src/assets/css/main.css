@@ -804,6 +804,11 @@ p, li{ color:var(--muted-foreground); }
   color: var(--muted-foreground);
 }
 
+/* Mehr Abstand NACH der VM-Section (Podcast/Gridcard), bevor About startet */
+.page-home .cenit-section-vision-mission{
+  padding-bottom: 96px; /* default ist 64px -> +32px Luft */
+}
+
 /* =========================
    ABOUT (clean + systemkonform)
    ========================= */
