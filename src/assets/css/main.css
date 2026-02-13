@@ -817,6 +817,7 @@ p, li{ color:var(--muted-foreground); }
 .cenit-about-card{
   max-width: 950px;
   margin: 0 auto;
+  padding: 52px 56px;
   box-sizing: border-box;
 }
 
