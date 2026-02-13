@@ -1941,3 +1941,11 @@ body > div{
   right: 0;
 }
 
+/* Home: mehr Luft zwischen VM und About (Margin kann kollabieren → Padding ist stabil) */
+.page-home #vision.cenit-section{
+  padding-bottom: 88px; /* 72–96 nach Geschmack */
+}
+
+.page-home #ueber-uns.cenit-section{
+  padding-top: 88px;    /* 72–96 nach Geschmack */
+}
