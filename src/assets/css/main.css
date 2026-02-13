@@ -988,11 +988,29 @@ p, li{ color:var(--muted-foreground); }
   color: var(--cenit-text);
 }
 
-/* Feinjustierung Manfred – Kopf nicht abschneiden */
-.cenit-about-photo img[src*="FotoManfred"]{
-  object-position: center 20%;
+/* About: Tag/Pill – gleiche Höhe, nie umbrechen */
+.cenit-about-link,
+.cenit-about-tag{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 28px;                 /* fixe Höhe */
+  padding: 0 12px;              /* nur horizontal */
+  line-height: 1;               /* verhindert “höher werden” */
+  white-space: nowrap;          /* kein Umbruch */
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;      /* falls mal zu lang */
 }
 
+/* immer Luft nach unten – egal wie der Tag ausfällt */
+.cenit-about-link,
+.cenit-about-tag{
+  margin: 10px 0 14px 0;
+}
+
+/* Feinjustierung Manfred – Kopf nicht abschneiden */
 .cenit-about-photo img[src*="FotoManfred"]{
   object-position: center 10%;
 }
