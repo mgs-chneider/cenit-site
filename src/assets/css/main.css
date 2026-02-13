@@ -1834,3 +1834,115 @@ body > div{
   right: 0;
 }
 
+/* =========================
+   ABOUT – VM-orientiert (FINAL OVERRIDE)
+   ========================= */
+
+/* Titel wie gewünscht (du wolltest 34px) */
+.cenit-about .cenit-h2{
+  font-size:34px;
+  margin:0 0 18px 0;
+}
+
+/* Intro auf 760-Achse + sauberer Abstand zur Card */
+.cenit-about .cenit-axis-760{
+  max-width:760px;
+  margin:0 auto 36px auto;
+}
+
+/* Team-Whitecard: wie VM-Gridcard (950er Rhythmus) */
+.cenit-about-teamcard{
+  max-width:950px;
+  margin:0 auto;
+  padding:22px; /* nur innen in der Whitecard, nicht in der Section */
+}
+
+/* Grid bleibt 950-Achse */
+.cenit-about-team{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:34px;
+  align-items:start;
+}
+
+@media (max-width: 980px){
+  .cenit-about-team{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 560px){
+  .cenit-about-team{ grid-template-columns:1fr; gap:26px; }
+}
+
+/* Portrait 4/5 */
+.cenit-about-photo{
+  aspect-ratio:4/5;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:var(--cenit-shadow);
+  background:#fff;
+}
+.cenit-about-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Name/Role ruhig */
+.cenit-about-person{ text-align:center; }
+.cenit-about-name{
+  margin:14px 0 4px 0;
+  font-family:'EB Garamond', serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:17px;
+  line-height:1.25;
+  color:var(--cenit-purple);
+}
+.cenit-about-role{
+  margin:0 0 10px 0;
+  font-size:10.5px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--muted-foreground);
+}
+
+/* Tags: EINHEITLICHE HÖHE → kein Größenversatz Herbert/Manfred */
+.cenit-about-tag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:28px;
+  padding:0 12px;
+  line-height:1;
+  white-space:nowrap;
+  border-radius:999px;
+  border:1px solid rgba(201,164,78,0.35);
+  text-decoration:none;
+  color:var(--muted-foreground);
+  margin:10px 0 14px 0;
+  max-width:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.cenit-about-tag:hover{
+  color:var(--cenit-purple);
+  border-color:rgba(201,164,78,0.65);
+  background:rgba(201,164,78,0.06);
+}
+
+.cenit-about-text{
+  margin:0;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--cenit-text);
+}
+
+/* Feinjustierung */
+.cenit-about-photo img[src*="FotoManfred"]{ object-position:center 10%; }
+.cenit-about-photo img[src*="FotoHerbert"]{ object-position:center 40%; }
+
+/* WICHTIG: Altlasten neutralisieren (Quote-Kram etc.) */
+.cenit-about-quote-card,
+.cenit-about-quote,
+.cenit-about-quote-author,
+.cenit-about-quote-divider{ display:none !important; }
