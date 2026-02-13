@@ -787,7 +787,6 @@ p, li{ color:var(--muted-foreground); }
   background: #edebf5;
 }
 
-
 .cenit-vm-tile-title{
   margin: 0 0 10px 0;
   font-family: 'EB Garamond', serif;
@@ -802,11 +801,6 @@ p, li{ color:var(--muted-foreground); }
   font-size: 13px;
   line-height: 1.65;
   color: var(--muted-foreground);
-}
-
-/* Mehr Abstand NACH der VM-Section (Podcast/Gridcard), bevor About startet */
-.cenit-section-vision-mission{
-  padding-bottom: 96px; /* default ist 64px -> +32px Luft */
 }
 
 /* =========================
