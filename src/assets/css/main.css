@@ -726,7 +726,7 @@ p, li{ color:var(--muted-foreground); }
 
 /* Podcast card */
 .cenit-vm-podcast-card{
-  background: #fafafa
+  background: #fafafa;
   border-radius: 18px;
   padding: 18px;
   box-shadow: var(--cenit-shadow);
