@@ -809,72 +809,40 @@ p, li{ color:var(--muted-foreground); }
   padding-bottom: 96px; /* default ist 64px -> +32px Luft */
 }
 
-/* =====================================================
-   ABOUT (authoritative, reset + stable rhythm)
-   ===================================================== */
+/* =========================
+   ABOUT – VM-kompatibel
+   ========================= */
 
-/* IMPORTANT: nichts an .cenit-section ändern. About folgt dem globalen Rhythmus. */
-.cenit-about.cenit-section{
-  padding-top: 64px;      /* entspricht deinem globalen System */
-  padding-bottom: 64px;
-}
-
-/* Abstand NACH VM (Podcast/Grid) → VOR About (robust, kein margin-collapse) */
-.cenit-section-vision-mission{
-  padding-bottom: 96px;   /* +32px Luft zur nächsten Section */
-}
-
-/* About Panel (Whitecard) */
-.cenit-card.cenit-about-card{
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 52px 56px;
-  box-sizing: border-box;
-}
-
-@media (max-width: 980px){
-  .cenit-card.cenit-about-card{ padding: 28px 18px; }
-}
-
-/* Typography inside About card */
 .cenit-about .cenit-h2{
-  font-size: 34px;
-  margin: 0 0 14px 0;
-}
-@media (max-width: 600px){
-  .cenit-about .cenit-h2{ font-size: 30px; }
+  font-size: 34px;       /* wie VM */
+  margin: 0 0 18px 0;
 }
 
-.cenit-about .cenit-lead{
+.cenit-about .cenit-text-body{
   max-width: 760px;
-  margin: 0 auto 18px auto;
+  margin: 0 auto 42px auto;   /* Abstand zum Grid */
   text-align: center;
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--muted-foreground);
 }
 
-.cenit-about .cenit-gold-divider{
-  margin: 0 auto 34px auto;
-}
-
-/* Team grid */
+/* Grid */
 .cenit-about-team{
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 34px;
   max-width: 950px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 34px;
-  align-items: start;
-  box-sizing: border-box;
 }
 
 @media (max-width: 980px){
-  .cenit-about-team{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cenit-about-team{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 @media (max-width: 560px){
-  .cenit-about-team{ grid-template-columns: 1fr; gap: 26px; }
+  .cenit-about-team{
+    grid-template-columns: 1fr;
+  }
 }
 
 .cenit-about-person{ text-align: center; }
