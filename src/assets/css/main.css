@@ -804,11 +804,6 @@ p, li{ color:var(--muted-foreground); }
   color: var(--muted-foreground);
 }
 
-/* Abstand zwischen VM und About */
-#vision{
-  margin-bottom: 88px;
-}
-
 /* =========================
    ABOUT US
    ========================= */
