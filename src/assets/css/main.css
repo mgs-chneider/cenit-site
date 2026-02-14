@@ -965,6 +965,7 @@ html, body{ overflow-x: hidden; }
   background:var(--cenit-soft);
   border-radius:18px;
   padding:14px;
+  pisition: relative;
 }
 
 /* Right: content softbox with gradient (dominance reduced) */
@@ -1592,12 +1593,11 @@ html, body{ overflow-x: hidden; }
   }
 }
 
-/* last resort: ensure gradient wins */
-.cenit-contact-box{
+.page-home .cenit-section.cenit-contact .cenit-contact-box{
   background: linear-gradient(
     135deg,
-    #f6f3ff 0%,
-    #f4f1fd 55%,
-    #f2eefc 100%
+    #f8f5ff 0%,
+    #f1ecfd 55%,
+    #ebe3fb 100%
   ) !important;
 }
