@@ -974,7 +974,8 @@ html, body{ overflow-x: hidden; }
     #efe9fb 100%
   );
 }
-.cenit-contact-media{
+.cenit-contact-media,
+.cenit-contact-box{
   background:var(--cenit-soft);
   border-radius:18px;
   padding:14px;
