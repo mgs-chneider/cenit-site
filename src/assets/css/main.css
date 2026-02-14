@@ -975,9 +975,9 @@ html, body{ overflow-x: hidden; }
   padding:20px 18px;
   background: linear-gradient(
     135deg,
-    rgba(107,20,184,0.06) 0%,
-    rgba(107,20,184,0.10) 55%,
-    rgba(107,20,184,0.14) 100%
+    #f8f5ff 0%,
+    #f1ecfd 55%,
+    #ebe3fb 100%
   );
 }
 
