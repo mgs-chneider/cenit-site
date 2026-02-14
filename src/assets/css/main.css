@@ -1,7 +1,13 @@
+/* =========================================================
+   CENIT — main.css (Clean Rebuild)
+   Goal: one system layer, no duplicates, consistent spacing,
+         sticky topbar, reliable dropdown, unified axes.
+   ========================================================= */
+
+
 /* =========================
    TOKENS
    ========================= */
-
 :root{
   /* Typography */
   --foreground: #2e2e2e;
@@ -17,9 +23,27 @@
   --cenit-surface:#ffffff;
   --cenit-shadow:0 8px 25px rgba(0,0,0,0.06);
   --cenit-radius:20px;
+
+  /* Layout rhythm */
+  --cenit-section-py: 72px;
+  --cenit-section-px: 16px;
+  --cenit-section-py-mobile: 44px;
+  --cenit-section-px-mobile: 14px;
+
+  /* Axes */
+  --cenit-axis-950: 950px;
+  --cenit-axis-760: 760px;
+
+  /* Topbar */
+  --cenit-topbar-z: 1400;
+  --cenit-menu-z: 1500;
 }
 
+/* =========================
+   BASE / RESET
+   ========================= */
 html{ font-size:16px; }
+*{ box-sizing:border-box; }
 
 body{
   margin:0;
@@ -35,99 +59,65 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Default Fließtext muted */
+/* Default muted text (kept as in your system) */
 p, li{ color:var(--muted-foreground); }
 
+/* Prevent horizontal scroll from any stray transforms */
+html, body{ overflow-x: hidden; }
 
-/* =====================================================
-   SYSTEM CLEANUP – AXES + RHYTHM (Authoritative Layer)
-   ===================================================== */
-
-/* 950px ist globale Content-Achse */
+/* =========================
+   AXES / CONTAINERS
+   ========================= */
 .cenit-container{
-  max-width: 950px;
+  max-width: var(--cenit-axis-950);
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  box-sizing: border-box;
 }
 
-/* Optional Wide (nur wenn bewusst genutzt) */
 .cenit-container--wide{
   max-width: 1100px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  box-sizing: border-box;
 }
 
-/* Legacy helper (falls du ihn bereits im HTML nutzt) */
-.cenit-container--narrow{
-  max-width: 950px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* 950px Achse (Cards, Medien, Panels) */
 .cenit-axis-950{
-  max-width: 950px;
+  max-width: var(--cenit-axis-950);
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  box-sizing: border-box;
 }
 
-/* 760px Achse (Text, Leads, Body) */
 .cenit-axis-760{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  box-sizing: border-box;
 }
 
-/* Einheitlicher Section-Rhythmus */
+/* =========================
+   SECTION RHYTHM
+   ========================= */
 .cenit-section{
-  padding: 64px 16px;
+  padding: var(--cenit-section-py) var(--cenit-section-px);
 }
 
-/* Mobile */
 @media (max-width: 600px){
-  .cenit-section{ padding: 44px 14px; }
+  .cenit-section{
+    padding: var(--cenit-section-py-mobile) var(--cenit-section-px-mobile);
+  }
 }
 
-/* Card-Standard */
-.cenit-card{
-  background:var(--cenit-surface);
-  border-radius:var(--cenit-radius);
-  box-shadow:var(--cenit-shadow);
-  padding:26px;
-  box-sizing:border-box;
-  width:100%;
-  max-width:950px;
-  margin-left:auto;
-  margin-right:auto;
+/* Optional spacing utility */
+.cenit-after-hero{ margin-bottom: 48px; }
+@media (max-width: 768px){
+  .cenit-after-hero{ margin-bottom: 28px; }
 }
 
-/* Softcard (für Tiles / Insets) */
-.cenit-softcard{
-  background:var(--cenit-soft);
-  border-radius:18px;
-  padding:22px 18px;
-  box-sizing:border-box;
-}
-
-/* Bild-Utility */
-.cenit-img{
-  width:100%;
-  height:100%;
-  display:block;
-  border-radius:14px;
-  object-fit:cover;
-}
-
-/* Headings */
+/* =========================
+   TYPOGRAPHY
+   ========================= */
 .cenit-h2{
   font-family:'Cormorant Garamond',serif;
   font-weight:200;
@@ -136,64 +126,125 @@ p, li{ color:var(--muted-foreground); }
   letter-spacing:0.01em;
   color:var(--cenit-purple);
   text-align:center;
-  margin:40px 0 12px 0;
+
+  /* Clean rhythm: let section padding do the vertical work */
+  margin: 0 0 12px 0;
 }
 
-/* Mobile heading */
 @media (max-width: 600px){
   .cenit-h2{ font-size:34px; }
-  .cenit-card{ padding:18px; }
 }
 
-/* Lead */
 .cenit-lead{
   margin:0 auto 26px auto;
   text-align:center;
-  max-width:760px;
+  max-width: var(--cenit-axis-760);
   font-size:15px;
   line-height:1.8;
   color:var(--muted-foreground);
 }
 
-/* Einheitlicher Abstand von Hero/Intro zur nächsten Card/Section */
-.cenit-after-hero{ margin-bottom: 48px; }
-@media (max-width: 768px){
-  .cenit-after-hero{ margin-bottom: 28px; }
+/* Generic body helper if you use it in HTML */
+.cenit-text-body{
+  color: var(--cenit-text);
+  font-size: 16px;
+  line-height: 1.75;
 }
-
 
 /* =========================
-   TOPBAR
+   CARDS / SURFACES
    ========================= */
-
-.cenit-menutoggle{ position:relative; z-index:1300; }
-.cenit-menu{ z-index:1200;  
+.cenit-card{
+  background:var(--cenit-surface);
+  border-radius:var(--cenit-radius);
+  box-shadow:var(--cenit-shadow);
+  padding:26px;
+  width:100%;
+  max-width: var(--cenit-axis-950);
+  margin-left:auto;
+  margin-right:auto;
 }
 
+@media (max-width: 600px){
+  .cenit-card{ padding:18px; }
+}
+
+.cenit-softcard{
+  background:var(--cenit-soft);
+  border-radius:18px;
+  padding:22px 18px;
+}
+
+.cenit-img{
+  width:100%;
+  height:100%;
+  display:block;
+  border-radius:14px;
+  object-fit:cover;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.cenit-btn{
+  display:inline-block;
+  padding:0.45rem 1.15rem;
+  border-radius:999px;
+  border:1px solid rgba(201,164,78,0.65);
+  text-decoration:none;
+
+  font-size:0.78rem;
+  font-weight:500;
+  letter-spacing:0.01em;
+
+  color:var(--muted-foreground);
+  background:transparent;
+  opacity:0.85;
+
+  transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.cenit-btn:hover{
+  opacity:1;
+  color:var(--cenit-purple);
+  border-color:var(--cenit-gold);
+  background:rgba(201,164,78,0.08);
+  transform:translateY(-1px);
+}
+.cenit-btn:active{ transform:translateY(0); }
+.cenit-btn:focus-visible{
+  outline:2px solid var(--cenit-gold);
+  outline-offset:3px;
+}
+
+.cenit-btn--light{
+  color:var(--muted-foreground);
+  background:transparent;
+  opacity:0.9;
+}
+
+/* =========================
+   TOPBAR (STICKY + DROPDOWN)
+   ========================= */
 .cenit-topbar{
   position: sticky;
   top: 0;
-  z-index: 1400;
+  z-index: var(--cenit-topbar-z);
 
   width:100%;
-  padding:0.65rem 1rem; 
-  box-sizing:border-box;
+  padding:0.65rem 1rem;
+  overflow: visible;
 
-  overflow:visible;
-  font-family:'Lato', Arial, sans-serif;
-     
   background: rgba(250,250,250,0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 
-/* 950-content axis inside */
 .cenit-topbar-inner{
-  max-width: 950px;
+  max-width: var(--cenit-axis-950);
   margin: 0 auto;
   padding: 0.65rem 1rem;
-  box-sizing: border-box;
 
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -201,44 +252,7 @@ p, li{ color:var(--muted-foreground); }
   gap: 1rem;
 }
 
-/* Make sure dropdown anchors to topbar */
-.cenit-topbar{ overflow: visible; }
-
-/* Dropdown positioning (anchored to topbar) */
-.cenit-menu{
-  position: absolute;
-  right: max(1rem, calc((100vw - 950px)/2 + 1rem));
-  top: calc(100% + 10px);
-
-  background: #f5f5f5;
-  border-radius: 10px;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.14);
-
-  padding: 0 0.85rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
-
-  width: 210px;
-  z-index: 1500;
-}
-
-.cenit-menu.show{
-  max-height: 520px;
-  padding: 0.9rem 0.85rem;
-}
-
-/* Mobile: keep dropdown inside viewport */
-@media (max-width: 600px){
-  .cenit-topbar-inner{ padding: 0.55rem 0.7rem; }
-  .cenit-menu{ right: 0.7rem; }
-}
-
-/* LEFT */
+/* Left: language */
 .cenit-langswitch{
   justify-self:start;
   display:flex;
@@ -269,7 +283,7 @@ p, li{ color:var(--muted-foreground); }
   font-weight:400;
 }
 
-/* CENTER */
+/* Center: logo */
 .cenit-topbar-logo{
   justify-self: center;
   display: inline-flex;
@@ -277,19 +291,15 @@ p, li{ color:var(--muted-foreground); }
   text-decoration: none;
   line-height: 0;
 }
-
 .cenit-topbar-logo img{
-  height: 28px;          /* bewusst klein */
+  height: 28px;
   width: auto;
   max-width: 140px;
   object-fit: contain;
   opacity: 0.92;
 }
-@media (max-width: 600px){
-  .cenit-topbar-logo img{ height: 24px; }
-}
 
-/* RIGHT */
+/* Right: hamburger */
 .cenit-menutoggle{
   justify-self:end;
   font-size:1.05rem;
@@ -302,6 +312,8 @@ p, li{ color:var(--muted-foreground); }
   gap:0.6rem;
   padding:0.1rem 0.2rem;
   font-weight:500;
+  position: relative;
+  z-index: calc(var(--cenit-topbar-z) + 50);
 }
 .cenit-menutoggle:hover{ color:var(--cenit-purple); }
 
@@ -312,24 +324,31 @@ p, li{ color:var(--muted-foreground); }
 
 /* Dropdown */
 .cenit-menu{
-  position:absolute;
-  right:1rem;
-  top:2.6rem;
-  background:#f5f5f5;
-  border-radius:10px;
-  box-shadow:0 10px 26px rgba(0,0,0,0.14);
-  padding:0 0.85rem;
-  display:flex;
-  flex-direction:column;
-  gap:0.25rem;
-  max-height:0;
-  overflow:hidden;
-  box-sizing:border-box;
-  transition:max-height 0.35s ease, padding 0.35s ease;
-  width:210px;
-  z-index:1200;
+  position: absolute;
+  right: max(1rem, calc((100vw - var(--cenit-axis-950))/2 + 1rem));
+  top: calc(100% + 10px);
+
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.14);
+
+  padding: 0 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+
+  width: 210px;
+  z-index: var(--cenit-menu-z);
 }
-.cenit-menu.show{ max-height:520px; padding:0.9rem 0.85rem; }
+
+.cenit-menu.show{
+  max-height: 520px;
+  padding: 0.9rem 0.85rem;
+}
 
 .cenit-menu a{
   color:rgba(107,20,184,0.86);
@@ -342,17 +361,15 @@ p, li{ color:var(--muted-foreground); }
 .cenit-menu a:hover{ background:#ffffff; color:var(--cenit-purple); }
 
 @media (max-width: 600px){
-  .cenit-topbar{
-    padding:0.55rem 0.7rem;
-  }
-  .cenit-menu{ right:0.7rem; }
+  .cenit-topbar{ padding:0.55rem 0.7rem; }
+  .cenit-topbar-inner{ padding: 0.55rem 0.7rem; }
+  .cenit-topbar-logo img{ height: 24px; }
+  .cenit-menu{ right: 0.7rem; }
 }
 
-
 /* =========================
-   FOOTER – full width & subtle separation
+   FOOTER
    ========================= */
-
 .cenit-footer{
   width:100%;
   background:#f0f1f4;
@@ -371,10 +388,9 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .cenit-footer-inner{
-  max-width:950px;
+  max-width: var(--cenit-axis-950);
   margin:0 auto;
   padding:0 18px;
-  box-sizing:border-box;
   text-align:center;
   color:var(--cenit-text);
 }
@@ -391,18 +407,16 @@ p, li{ color:var(--muted-foreground); }
 
 .cenit-footer-note{
   margin: 12px auto 0 auto;
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   font-size: 12px;
   line-height: 1.5;
   color: var(--muted-foreground);
   text-align: center;
 }
 
-
 /* =========================
-   CENIT DIVIDER / QUOTE BAND
+   DIVIDER / QUOTE BAND
    ========================= */
-
 .cenit-gold-divider{
   width: 140px;
   height: 1px;
@@ -415,17 +429,16 @@ p, li{ color:var(--muted-foreground); }
 .cenit-gap-32{ height: 32px; }
 
 .cenit-quote-band{
-  max-width: 950px;
+  max-width: var(--cenit-axis-950);
   margin: 0 auto;
   border-radius: 22px;
   box-shadow: var(--cenit-shadow);
   padding: 28px 22px;
-  box-sizing: border-box;
   background: var(--cenit-soft);
 }
 
 .cenit-quote-band-inner{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   margin: 0 auto;
   text-align: center;
 }
@@ -446,86 +459,32 @@ p, li{ color:var(--muted-foreground); }
   color: var(--muted-foreground);
 }
 
-
 /* =========================
-   BUTTONS (single definition)
+   HERO IMAGE (BASE) + HOME HERO
    ========================= */
 
-.cenit-btn{
-  display:inline-block;
-  padding:0.45rem 1.15rem;
-  border-radius:999px;
-  border:1px solid rgba(201,164,78,0.65);
-  text-decoration:none;
-
-  font-size:0.78rem;
-  font-weight:500;
-  letter-spacing:0.01em;
-
-  color:var(--muted-foreground);
-  background:transparent;
-  opacity:0.85;
-
-  transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-.cenit-btn:hover{
-  opacity:1;
-  color:var(--cenit-purple);
-  border-color:var(--cenit-gold);
-  background:rgba(201,164,78,0.08);
-  transform:translateY(-1px);
-}
-
-.cenit-btn:active{ transform:translateY(0); }
-
-.cenit-btn:focus-visible{
-  outline:2px solid var(--cenit-gold);
-  outline-offset:3px;
-}
-
-.cenit-btn--light{
-  color:var(--muted-foreground);
-  background:transparent;
-  opacity:0.9;
-}
-
-/* =========================
-   HOME HERO – Image + Overlay (systemkonform)
-   ========================= */
-
-/* Rhythmus: nur Home, klar definiert */
-.page-home .cenit-hero.cenit-section{
-  padding-top: 64px;   /* wegen sticky topbar + Luft */
-  padding-bottom: 24px;
-}
-
-/* Hero-Bild nutzt die 950-Achse aus dem HTML */
-.page-home .cenit-hero-image{
+/* Base hero image block (also used on internal pages) */
+.cenit-hero-image{
   position: relative;
   width: 100%;
-  margin: 0 auto 28px auto;
+  max-width: var(--cenit-axis-950);
+  margin: 16px auto 0 auto;
   border-radius: 22px;
   overflow: hidden;
   aspect-ratio: 16 / 9;
   box-shadow: var(--cenit-shadow);
-  background: #fff;
+  background:#fff;
 }
 
-.page-home .cenit-hero-image > img{
+.cenit-hero-image > img,
+.cenit-heroimg-img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Hero-Bild etwas unter sticky Topbar ziehen */
-.cenit-hero-image{
-  margin-top: 16px;
-}
-
-/* Gradient overlay */
-.page-home .cenit-hero-image::after{
+.cenit-hero-image::after{
   content:"";
   position:absolute;
   inset:0;
@@ -539,6 +498,7 @@ p, li{ color:var(--muted-foreground); }
   pointer-events:none;
 }
 
+/* Overlay (home) */
 .page-home .cenit-hero-overlay{
   position: absolute;
   left: 0; right: 0; bottom: 0;
@@ -547,21 +507,6 @@ p, li{ color:var(--muted-foreground); }
   max-width: 720px;
   margin: 0 auto;
   text-align: center;
-  box-sizing: border-box;
-}
-
-/* (optional) Logo im Overlay */
-.page-home .cenit-hero-brand{
-  display:flex;
-  justify-content:center;
-  margin-bottom: 10px;
-}
-.page-home .cenit-hero-logoimg{
-  height: 42px;
-  width: auto;
-  max-width: 180px;
-  object-fit: contain;
-  opacity: 0.92;
 }
 
 .page-home .cenit-hero-claim{
@@ -583,50 +528,14 @@ p, li{ color:var(--muted-foreground); }
   margin:0;
 }
 
-/* Mobile */
-@media (max-width: 600px){
-  .page-home .cenit-hero-image{
-    aspect-ratio: 4 / 3;
-    margin-bottom: 18px;
-  }
-  .page-home .cenit-hero-overlay{
-    padding: 14px 14px 12px 14px;
-    max-width: 100%;
-  }
-  .page-home .cenit-hero-logoimg{ height: 34px; }
-  .page-home .cenit-hero-claim{
-    font-size: 22px;
-    line-height: 1.25;
-    margin: 8px 0 10px;
-  }
-}
-
-/* Transition bleibt systemweit okay (oder auch page-home scopen, wenn du willst) */
 .cenit-hero-transition{
   text-align:center;
   padding:16px 0 0 0;
 }
 
-.cenit-hero-quote{
-  font-family:'EB Garamond', serif;
-  font-size:26px;
-  color:var(--cenit-purple);
-  font-weight:400;
-  line-height:1.4;
-  margin:0 0 10px 0;
-}
-
-.cenit-hero-quote-author{
-  font-family:'Lato', Arial, sans-serif;
-  font-size:14px;
-  color:var(--cenit-text);
-  margin:0 0 8px 0;
-}
-
 .cenit-hero-transition-text{
-  max-width:760px;
+  max-width: var(--cenit-axis-760);
   margin:0 auto;
-  font-family:'Lato', Arial, sans-serif;
   font-size:16px;
   color:#333;
   line-height:1.6;
@@ -637,26 +546,36 @@ p, li{ color:var(--muted-foreground); }
   text-align:center;
 }
 
-/* Hero darf oben etwas Luft behalten (wenn du es brauchst) */
-.page-home .cenit-hero{
-  padding-top: 64px;
+/* Small divider used in hero blocks */
+.cenit-hero-divider--small{
+  width: 120px;
+  height: 1px;
+  background: rgba(201,164,78,0.75);
+  border-radius: 3px;
+  margin: 12px auto 18px;
+}
+
+@media (max-width: 600px){
+  .cenit-hero-image{
+    aspect-ratio: 4 / 3;
+    margin-bottom: 18px;
+  }
+  .page-home .cenit-hero-overlay{
+    padding: 14px 14px 12px 14px;
+    max-width: 100%;
+  }
+  .page-home .cenit-hero-claim{
+    font-size: 22px;
+    line-height: 1.25;
+    margin: 8px 0 10px;
+  }
 }
 
 /* =========================
-   VM – Magazine Style (ohne Whitecard)
+   VISION & MISSION (HOME)
    ========================= */
+.cenit-section--vision .cenit-h2{ margin-bottom: 28px; }
 
-.cenit-section--vision{
-  padding-top: 72px;
-  padding-bottom: 48px;
-}
-
-/* Abstand zwischen H2 und Text */
-.cenit-section--vision .cenit-h2{
-  margin-bottom: 36px;
-}
-
-/* Vision – normaler Fließtext */
 .cenit-vm-vision{
   font-size: 16px;
   line-height: 1.75;
@@ -664,7 +583,6 @@ p, li{ color:var(--muted-foreground); }
   margin: 0 0 24px 0;
 }
 
-/* Mission – subtil hervorgehoben */
 .cenit-vm-mission{
   font-size: 17px;
   line-height: 1.8;
@@ -672,59 +590,44 @@ p, li{ color:var(--muted-foreground); }
 
   padding-left: 18px;
   border-left: 2px solid rgba(201,164,78,0.65);
-
-  margin: 0 0 36px 0;
+  margin: 0 0 28px 0;
 }
 
-/* CTA */
 .cenit-vm-cta{
   text-align: center;
 }
-
 .cenit-vm-cta-note{
   font-size: 13px;
   color: var(--muted-foreground);
-  margin-bottom: 12px;
+  margin: 0 0 12px 0;
 }
 
-/* =========================
-   VISION & MISSION – Card 2 (Gridcard)
-   ========================= */
-
-/* ✅ Stabilisiere Whitecard-Look, falls irgendwo überschrieben */
+/* VM gridcard (whitecard) */
 .cenit-vm-gridcard{
+  max-width: var(--cenit-axis-950);
+  margin: 26px auto 0 auto;
   background: var(--cenit-surface);
   border-radius: var(--cenit-radius);
   box-shadow: var(--cenit-shadow);
-}
-
-.cenit-vm-gridcard .cenit-btn{ margin-top: 0; }
-
-/* VM Card 2: Whitecard-Padding */
-.cenit-vm-gridcard{
-  padding: 26px; /* oder 28px, je nach restlichem System */
+  padding: 26px;
 }
 
 @media (max-width: 980px){
-  .cenit-vm-gridcard{
-    padding: 18px;
-  }
+  .cenit-vm-gridcard{ padding: 18px; }
 }
 
-/* Grid */
 .cenit-vm-grid{
   display: grid;
   grid-template-columns: 1.05fr 1.95fr;
   gap: 18px;
   align-items: start;
-  box-sizing: border-box;
 }
 
 @media (max-width: 980px){
   .cenit-vm-grid{ grid-template-columns: 1fr; }
 }
 
-/* Podcast card */
+/* Podcast card (BUGFIX: semicolon) */
 .cenit-vm-podcast-card{
   background: #fafafa;
   border-radius: 18px;
@@ -732,7 +635,6 @@ p, li{ color:var(--muted-foreground); }
   box-shadow: var(--cenit-shadow);
   display: grid;
   grid-template-rows: 1fr auto;
-  box-sizing: border-box;
 }
 
 .cenit-vm-podcast-cover{
@@ -762,7 +664,6 @@ p, li{ color:var(--muted-foreground); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  box-sizing: border-box;
 }
 
 @media (max-width: 560px){
@@ -773,19 +674,13 @@ p, li{ color:var(--muted-foreground); }
   border-radius: 18px;
   padding: 24px 22px;
   box-shadow: var(--cenit-shadow);
-  box-sizing: border-box;
 }
 
-/* Tiles – diagonale Zweiton-Logik (1&4 / 2&3) */
 .cenit-vm-tile:nth-child(1),
-.cenit-vm-tile:nth-child(4){
-  background: #f5f3f9;
-}
+.cenit-vm-tile:nth-child(4){ background: #f5f3f9; }
 
 .cenit-vm-tile:nth-child(2),
-.cenit-vm-tile:nth-child(3){
-  background: #edebf5;
-}
+.cenit-vm-tile:nth-child(3){ background: #edebf5; }
 
 .cenit-vm-tile-title{
   margin: 0 0 10px 0;
@@ -804,44 +699,41 @@ p, li{ color:var(--muted-foreground); }
 }
 
 /* =========================
-   ABOUT – VM-kompatibel
+   ABOUT (HOME)
    ========================= */
-
 .cenit-about .cenit-h2{
-  font-size: 34px;       /* wie VM */
-  margin: 0 0 18px 0;
+  font-size: 34px;
+  margin-bottom: 18px;
 }
 
-.cenit-about .cenit-text-body{
-  max-width: 760px;
-  margin: 0 auto 42px auto;   /* Abstand zum Grid */
+.cenit-about .cenit-axis-760{
+  max-width: var(--cenit-axis-760);
+  margin: 0 auto 36px auto;
   text-align: center;
 }
 
-/* Grid */
+.cenit-about-teamcard{
+  max-width: var(--cenit-axis-950);
+  margin: 0 auto;
+  padding: 22px;
+}
+
 .cenit-about-team{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 34px;
-  max-width: 950px;
-  margin: 0 auto;
+  align-items: start;
 }
 
 @media (max-width: 980px){
-  .cenit-about-team{
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .cenit-about-team{ grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 560px){
-  .cenit-about-team{
-    grid-template-columns: 1fr;
-  }
+  .cenit-about-team{ grid-template-columns: 1fr; gap: 26px; }
 }
 
 .cenit-about-person{ text-align: center; }
 
-/* Portrait */
 .cenit-about-photo{
   aspect-ratio: 4 / 5;
   border-radius: 18px;
@@ -849,7 +741,6 @@ p, li{ color:var(--muted-foreground); }
   box-shadow: var(--cenit-shadow);
   background: #fff;
 }
-
 .cenit-about-photo img{
   width: 100%;
   height: 100%;
@@ -857,9 +748,12 @@ p, li{ color:var(--muted-foreground); }
   display: block;
 }
 
-/* Name / role */
+/* Crop tweaks */
+.cenit-about-photo img[src*="FotoManfred"]{ object-position: center 10%; }
+.cenit-about-photo img[src*="FotoHerbert"]{ object-position: center 40%; }
+
 .cenit-about-name{
-  margin: 16px 0 4px 0;
+  margin:14px 0 4px 0;
   font-family: 'EB Garamond', serif;
   font-style: italic;
   font-weight: 400;
@@ -876,16 +770,16 @@ p, li{ color:var(--muted-foreground); }
   color: var(--muted-foreground);
 }
 
-/* Tag/Pill — FIXED HEIGHT, NO WRAP, SAME SIZE FOR ALL */
+/* Tag/pill: fixed height (no size drift) */
 .cenit-about-tag{
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  height: 28px;              /* identische Höhe */
-  padding: 0 12px;           /* nur horizontal */
-  line-height: 1;            /* keine zusätzliche Höhe */
-  white-space: nowrap;       /* kein Umbruch */
+  height: 28px;
+  padding: 0 12px;
+  line-height: 1;
+  white-space: nowrap;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -896,8 +790,7 @@ p, li{ color:var(--muted-foreground); }
   text-decoration: none;
   color: var(--muted-foreground);
 
-  margin: 10px 0 14px 0;     /* verhindert “kleben” am Text */
-  box-sizing: border-box;
+  margin: 10px 0 14px 0;
 }
 
 .cenit-about-tag:hover{
@@ -906,7 +799,6 @@ p, li{ color:var(--muted-foreground); }
   background: rgba(201,164,78,0.06);
 }
 
-/* Body */
 .cenit-about-text{
   margin: 0;
   font-size: 13px;
@@ -914,24 +806,17 @@ p, li{ color:var(--muted-foreground); }
   color: var(--cenit-text);
 }
 
-/* Crop tweaks */
-.cenit-about-photo img[src*="FotoManfred"]{ object-position: center 10%; }
-.cenit-about-photo img[src*="FotoHerbert"]{ object-position: center 40%; }
-
-
 /* =========================
-   EXPERTISE
+   EXPERTISE (HOME)
    ========================= */
-
-.cenit-expertise .cenit-h2{ margin-bottom:48px; }
+.cenit-expertise .cenit-h2{ margin-bottom: 24px; } /* clean & consistent */
 .cenit-expertise .cenit-lead{ margin-top:0; }
 
 .cenit-expertise-card{
   width:100%;
-  max-width:950px;
+  max-width: var(--cenit-axis-950);
   margin-left:auto;
   margin-right:auto;
-  box-sizing:border-box;
 }
 
 .cenit-expertise-main{
@@ -952,7 +837,6 @@ p, li{ color:var(--muted-foreground); }
   background:var(--cenit-soft);
   border-radius:16px;
   padding:16px 16px 14px 16px;
-  box-sizing:border-box;
 }
 
 .cenit-expertise-mini-title{
@@ -967,7 +851,6 @@ p, li{ color:var(--muted-foreground); }
 
 .cenit-expertise-mini-text{
   margin:0;
-  font-family:'Lato', Arial, sans-serif;
   font-size:13px;
   line-height:1.55;
   color:var(--muted-foreground);
@@ -977,15 +860,13 @@ p, li{ color:var(--muted-foreground); }
   background:var(--cenit-soft);
   border-radius:18px;
   padding:14px;
-  box-sizing:border-box;
 }
 
 .cenit-expertise-quote{
   width:100%;
-  max-width:950px;
-  margin:56px auto 0 auto;
+  max-width: var(--cenit-axis-950);
+  margin: 24px auto 0 auto;
   text-align:center;
-  box-sizing:border-box;
 }
 
 .cenit-expertise-quote-text{
@@ -1006,38 +887,29 @@ p, li{ color:var(--muted-foreground); }
   .cenit-expertise-cards{ grid-template-columns:1fr; }
 }
 
-/* Landingpage: Expertise Rhythmus (optional) */
-.page-home .cenit-expertise .cenit-h2{ margin-bottom: 24px; }
-.page-home .cenit-expertise .cenit-expertise-quote{ margin-top: 24px; }
-
-
 /* =========================
-   CONTACT (Expertise-Raster)
+   CONTACT (HOME)
    ========================= */
-
-.cenit-contact.cenit-section{ padding-top:56px; }
-.cenit-contact .cenit-h2{ margin-bottom:48px; }
+.cenit-contact .cenit-h2{ margin-bottom: 24px; }
 
 .cenit-card.cenit-contact-hero{
   width:100%;
-  max-width:950px;
+  max-width: var(--cenit-axis-950);
   margin:0 auto 22px auto;
-  box-sizing:border-box;
 }
 
 .cenit-contact-lead,
 .cenit-contact-body{
-  font-family:'Lato', Arial, sans-serif;
   line-height:1.7;
   color:var(--cenit-text);
-  max-width:760px;
+  max-width: var(--cenit-axis-760);
   margin-left:auto;
   margin-right:auto;
   text-align:center;
 }
 
-.cenit-contact-lead{ font-size:16px; margin-bottom:8px; }
-.cenit-contact-body{ font-size:16px; margin-bottom:10px; }
+.cenit-contact-lead{ font-size:16px; margin:0 0 8px 0; }
+.cenit-contact-body{ font-size:16px; margin:0 0 10px 0; }
 
 .cenit-contact-quote{
   margin:0;
@@ -1047,22 +919,18 @@ p, li{ color:var(--muted-foreground); }
   font-weight:400;
   color:var(--cenit-purple);
   text-align:center;
-  margin-left:auto;
-  margin-right:auto;
 }
 
 .cenit-card.cenit-contact-card2{
   width:100%;
-  max-width:950px;
+  max-width: var(--cenit-axis-950);
   margin:0 auto;
   padding:0;
   overflow:hidden;
-  box-sizing:border-box;
 }
 
 .cenit-contact-main{
   padding:22px;
-  box-sizing:border-box;
   display:grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap:18px;
@@ -1073,7 +941,6 @@ p, li{ color:var(--muted-foreground); }
 .cenit-contact-box{
   background:var(--cenit-soft);
   border-radius:18px;
-  box-sizing:border-box;
 }
 
 .cenit-contact-media{ padding:14px; }
@@ -1100,7 +967,6 @@ p, li{ color:var(--muted-foreground); }
 
 .cenit-contact-text{
   margin:0 0 16px 0;
-  font-family:'Lato', Arial, sans-serif;
   font-size:16px;
   line-height:1.7;
   color:var(--muted-foreground);
@@ -1120,7 +986,6 @@ p, li{ color:var(--muted-foreground); }
 .cenit-contact-mail{
   display:block;
   margin-top:10px;
-  font-family:'Lato', Arial, sans-serif;
   font-size:16px;
   color:var(--muted-foreground);
   text-decoration:none;
@@ -1136,17 +1001,14 @@ p, li{ color:var(--muted-foreground); }
   .cenit-contact-media .cenit-img{ min-height:240px; }
 }
 
-
 /* =========================
-   FACTS: Embeds (Infogram iframe)
+   FACTS (Zahlen & Fakten)
    ========================= */
-
 .cenit-card--narrow{
-  max-width:950px;
+  max-width: var(--cenit-axis-950);
   margin-left:auto;
   margin-right:auto;
   width: 100%;
-  box-sizing:border-box;
 }
 
 .cenit-facts-header{ text-align:center; margin-bottom:48px; }
@@ -1156,14 +1018,12 @@ p, li{ color:var(--muted-foreground); }
 
 .cenit-video-frame{
   width:100%;
-  max-width:100%;
   position:relative;
   padding-bottom:56.25%;
   height:0;
   overflow:hidden;
   border-radius:16px;
 }
-
 .cenit-video-frame iframe{
   position:absolute;
   inset:0;
@@ -1183,7 +1043,6 @@ p, li{ color:var(--muted-foreground); }
   color:var(--cenit-purple);
   margin:0 0 6px 0;
 }
-
 .cenit-facts-subline{
   font-size:15px;
   color:var(--muted-foreground);
@@ -1202,7 +1061,6 @@ p, li{ color:var(--muted-foreground); }
   border-radius:16px;
   box-shadow:var(--cenit-shadow);
   padding:14px 14px 12px 14px;
-  box-sizing:border-box;
 }
 
 .cenit-embed{
@@ -1221,7 +1079,6 @@ p, li{ color:var(--muted-foreground); }
   text-align:center;
   color:var(--muted-foreground);
 }
-
 .cenit-zf-sources a{ color:var(--muted-foreground); text-decoration:none; }
 .cenit-zf-sources a:hover{ text-decoration:underline; }
 .cenit-zf-sources-label{ font-weight:500; }
@@ -1232,46 +1089,26 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .page-zahlen-fakten .cenit-section{
-  padding: 72px 16px;
+  padding: 72px var(--cenit-section-px);
 }
-
-.page-zahlen-fakten .cenit-card--narrow{
-  max-width: 950px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.cenit-zf-whitecard{ text-align:center; }
-
-.cenit-zf-whitecard .cenit-zf-headline,
-.cenit-zf-whitecard .cenit-zf-subline,
-.cenit-zf-whitecard .cenit-zf-intro{
-  margin-left:auto;
-  margin-right:auto;
-}
-
 .page-zahlen-fakten .cenit-h2{ margin-bottom: 32px; }
 
-
 /* =========================
-   FAQS – Whitecard pro Reihe, 950px
+   FAQS
    ========================= */
-
 .page-faqs .cenit-faq-lead{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   margin: 0 auto 28px auto;
   color: var(--cenit-text);
 }
 
 .page-faqs .cenit-faq-row{
-  max-width: 950px;
+  max-width: var(--cenit-axis-950);
   margin: 0 auto 20px auto;
-  box-sizing: border-box;
   background: #ffffff;
   border-radius: 22px;
   padding: 18px;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
@@ -1318,7 +1155,7 @@ p, li{ color:var(--muted-foreground); }
 .page-faqs .cenit-faq-wide{ grid-column: 1 / -1; }
 
 .page-faqs .cenit-faq-final{
-  max-width: 950px;
+  max-width: var(--cenit-axis-950);
   margin: 0 auto 20px auto;
   background:#ffffff;
   border-radius: 22px;
@@ -1354,31 +1191,28 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .page-faqs .cenit-faq-final-link{
-  color: var(--cenit-muted-foreground, rgba(107,20,184,0.55));
+  color: rgba(107,20,184,0.55);
   text-decoration: none;
   font-weight: 500;
 }
 .page-faqs .cenit-faq-final-link:hover{ text-decoration: underline; }
 
-
 /* =========================
-   SATZUNG / LEITBILD (wie FAQs)
+   SATZUNG / LEITBILD
    ========================= */
-
 .page-satzung .cenit-stat-lead{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   margin: 0 auto 28px auto;
   color: var(--cenit-text);
 }
 
 .page-satzung .cenit-stat-panel{
-  max-width: 950px;
+  max-width: var(--cenit-axis-950);
   margin: 0 auto 20px auto;
   background: #ffffff;
   border-radius: 22px;
   box-shadow: 0 10px 28px rgba(0,0,0,0.05);
   padding: 18px;
-  box-sizing: border-box;
 }
 
 .page-satzung .cenit-stat-tiles3{
@@ -1386,7 +1220,6 @@ p, li{ color:var(--muted-foreground); }
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
-
 .page-satzung .cenit-stat-tiles2{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1401,9 +1234,7 @@ p, li{ color:var(--muted-foreground); }
 .page-satzung .cenit-stat-tile{
   border-radius: 18px;
   padding: 18px 20px;
-  box-sizing: border-box;
 }
-
 .page-satzung .cenit-stat-tile.is-soft{ background: #f5f3f9; }
 .page-satzung .cenit-stat-tile.is-white{ background: #ffffff; }
 
@@ -1427,20 +1258,19 @@ p, li{ color:var(--muted-foreground); }
   color: var(--cenit-purple);
   font-size: 20px;
   line-height: 1.25;
-  letter-spacing: 0;
   margin: 22px 0 10px 0;
 }
 
 .page-satzung .cenit-stat-leitbild h3.cenit-h3 + p{ margin-top: 0; }
 
 .page-satzung .cenit-stat-leitbild-inner{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   margin-left: auto;
   margin-right: auto;
 }
 
 .page-satzung .cenit-stat-leitbild-lead{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   margin-left: auto;
   margin-right: auto;
 }
@@ -1449,9 +1279,7 @@ p, li{ color:var(--muted-foreground); }
   border-radius: 18px;
   padding: 16px 18px;
   margin: 0 0 14px 0;
-  box-sizing: border-box;
 }
-
 .page-satzung .cenit-stat-axis.is-soft{ background: #f5f3f9; }
 
 .page-satzung .cenit-stat-axis-title{
@@ -1478,26 +1306,23 @@ p, li{ color:var(--muted-foreground); }
 
 .page-satzung .cenit-stat-panel:first-of-type{ margin-top: 0; }
 
-.cenit-section--divider{ padding: 24px 16px; }
+.cenit-section--divider{ padding: 24px var(--cenit-section-px); }
 .cenit-section--divider .cenit-gold-divider{ margin: 0 auto; }
-
 
 /* =========================
    EINBLICKE & ENTWICKLUNGEN
    ========================= */
-
 .page-einblicke .cenit-einblicke-lead{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   margin: 0 auto;
   text-align: center;
   color: var(--cenit-text);
 }
 
 .page-einblicke .cenit-einblicke-panel{
-  max-width: 950px;
+  max-width: var(--cenit-axis-950);
   margin: 0 auto;
   padding: 28px;
-  box-sizing: border-box;
 }
 
 .page-einblicke .cenit-einblicke-title{
@@ -1510,18 +1335,18 @@ p, li{ color:var(--muted-foreground); }
 }
 
 .page-einblicke .cenit-einblicke-subtitle{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   margin: 14px auto 0;
   text-align: center;
 }
 
 .page-einblicke .cenit-einblicke-bodywrap{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   margin: 18px auto 0;
 }
 
 .page-einblicke .cenit-einblicke-body{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   margin: 10px auto 0;
 }
 
@@ -1533,28 +1358,26 @@ p, li{ color:var(--muted-foreground); }
   font-size: 18px;
   line-height: 1.25;
   margin: 22px auto 0;
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
 }
 
 .page-einblicke .cenit-einblicke-list{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   margin: 10px auto 0;
   padding-left: 18px;
 }
 .page-einblicke .cenit-einblicke-list li{ margin: 6px 0; }
 
 .page-einblicke .cenit-einblicke-quote{
-  max-width: 760px;
+  max-width: var(--cenit-axis-760);
   margin: 16px auto 0;
   padding: 18px;
-  box-sizing: border-box;
 }
 
 .page-einblicke .cenit-section{
   padding-top: 48px;
   padding-bottom: 48px;
 }
-
 @media (max-width: 768px){
   .page-einblicke .cenit-section{
     padding-top: 22px;
@@ -1562,149 +1385,14 @@ p, li{ color:var(--muted-foreground); }
   }
 }
 
+/* Editorial hero row (Einblicke) */
 .page-einblicke .cenit-hero-row{
-  max-width: 950px;
+  max-width: var(--cenit-axis-950);
   margin: 18px auto 0 auto;
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 26px;
   align-items: start;
-}
-
-.page-einblicke .cenit-hero-floatimg{
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--cenit-shadow);
-  background: #fff;
-}
-
-.page-einblicke .cenit-hero-floatimg img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.page-einblicke .cenit-hero-rowtext{
-  max-width: 760px;
-  color: var(--cenit-text);
-}
-
-.page-einblicke .cenit-hero-rowtext .cenit-text-body,
-.page-einblicke .cenit-hero-rowtext p{
-  margin-top: 0;
-  color: var(--cenit-text);
-}
-
-.page-einblicke .cenit-hero-divider--small{
-  margin: 12px auto 18px;
-}
-
-
-/* =========================
-   HERO IMAGE – FAQs
-   ========================= */
-
-.page-faqs-hero .cenit-hero-divider--small{
-  margin: 12px auto 18px;
-}
-
-.cenit-hero-image{
-  position: relative;
-  width: 100%;
-  max-width: 950px;
-  margin: 0 auto;
-  border-radius: 22px;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-}
-
-.cenit-hero-image::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(250,250,250,0.88) 0%,
-    rgba(250,250,250,0.72) 40%,
-    rgba(250,250,250,0.28) 62%,
-    rgba(250,250,250,0) 78%
-  );
-  pointer-events: none;
-}
-
-.cenit-hero-image > img,
-.cenit-heroimg-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.cenit-hero-overlay{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 32px 36px;
-  z-index: 2;
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.cenit-heroimg-text{
-  margin: 0;
-  font-family:"EB Garamond";
-  max-width: 480px;
-  color: var(--cenit-text);
-  font-size: 18px;
-  line-height: 1.75;
-  font-weight: 400;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
-
-.cenit-hero-title{
-  font-family: "EB Garamond", serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 1.15;
-  color: var(--cenit-purple);
-  margin: 0 0 10px 0;
-  text-align: left;
-}
-
-@media (max-width: 600px){
-  .cenit-hero-image{ aspect-ratio: 4 / 3; }
-  .cenit-hero-overlay{
-    padding: 14px 14px 12px 14px;
-    max-width: 100%;
-  }
-  .cenit-hero-title{
-    font-size: 28px;
-    line-height: 1.12;
-    margin: 0 0 6px 0;
-  }
-  .cenit-hero-lead{
-    font-size: 14.5px;
-    line-height: 1.45;
-    margin: 0;
-  }
-}
-
-
-/* =========================
-   SATZUNG – EDITORIAL HERO ROW (wie FAQs/Einblicke)
-   ========================= */
-
-.page-satzung .cenit-satzung-intro{
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.page-satzung .cenit-hero-divider--small{
-  margin: 12px auto 18px;
 }
 
 .cenit-hero-floatimg{
@@ -1719,30 +1407,69 @@ p, li{ color:var(--muted-foreground); }
   display: block;
 }
 
-.page-satzung .cenit-hero-row{
-  max-width: 760px;
-  margin: 18px auto 0 auto;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 26px;
-  align-items: start;
+.page-einblicke .cenit-hero-rowtext{
+  max-width: var(--cenit-axis-760);
+  color: var(--cenit-text);
 }
-
-.page-satzung .cenit-hero-rowtext,
-.page-satzung .cenit-hero-rowtext .cenit-text-body{
+.page-einblicke .cenit-hero-rowtext .cenit-text-body,
+.page-einblicke .cenit-hero-rowtext p{
+  margin-top: 0;
   color: var(--cenit-text);
 }
 
-.page-einblicke-hero.cenit-section{ padding-top: 88px; }
-
-.page-faqs-hero + .cenit-section,
-.page-einblicke-hero + .cenit-section,
-.page-satzung-hero + .cenit-section{
-  padding-top: 48px;
+/* =========================
+   HERO IMAGE — INTERNAL PAGES TEXT
+   ========================= */
+.cenit-hero-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 36px;
+  z-index: 2;
+  max-width: var(--cenit-axis-760);
+  margin: 0 auto;
 }
 
+.cenit-hero-title{
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.15;
+  color: var(--cenit-purple);
+  margin: 0 0 10px 0;
+  text-align: left;
+}
 
-/* ===== Scroll to Top ===== */
+.cenit-heroimg-text{
+  margin: 0;
+  font-family:"EB Garamond", serif;
+  max-width: 480px;
+  color: var(--cenit-text);
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+@media (max-width: 600px){
+  .cenit-hero-overlay{
+    padding: 14px 14px 12px 14px;
+    max-width: 100%;
+  }
+  .cenit-hero-title{
+    font-size: 28px;
+    line-height: 1.12;
+    margin: 0 0 6px 0;
+  }
+}
+
+/* =========================
+   Scroll to Top
+   ========================= */
 #scrollTopBtn{
   position: fixed;
   bottom: 24px;
@@ -1758,21 +1485,20 @@ p, li{ color:var(--muted-foreground); }
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease, transform 0.25s ease;
-  z-index: 1400;
+  z-index: var(--cenit-topbar-z);
 }
-
 #scrollTopBtn.show{
   opacity: 0.85;
   pointer-events: auto;
 }
-
 #scrollTopBtn:hover{
   opacity: 1;
   transform: translateY(-2px);
 }
 
-
-/* ===== Scroll-Reveal (dezent) ===== */
+/* =========================
+   Reveal (dezent)
+   ========================= */
 .reveal{
   opacity: 0;
   transform: translateY(14px);
@@ -1780,12 +1506,10 @@ p, li{ color:var(--muted-foreground); }
   transition-delay: var(--reveal-delay, 0ms);
   will-change: opacity, transform;
 }
-
 .reveal.is-visible{
   opacity: 1;
   transform: translateY(0);
 }
-
 .reveal--left{ transform: translateX(-16px); }
 .reveal--right{ transform: translateX(16px); }
 .reveal--left.is-visible,
@@ -1798,145 +1522,3 @@ p, li{ color:var(--muted-foreground); }
     transition: none !important;
   }
 }
-
-/* =========================
-   STICKY TOPBAR – ROBUST FIX
-   ========================= */
-
-/* Sticky needs a clean scroll container */
-html, body{
-  overflow: visible;
-}
-
-/* Avoid sticky being broken by wrapper overflow */
-body > section,
-body > div{
-  overflow: visible;
-}
-
-/* The bar itself */
-.cenit-topbar{
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1400;
-}
-
-.cenit-topbar{
-  position: fixed !important;
-  top: 0 !important;
-  left: 0;
-  right: 0;
-}
-
-/* =========================
-   ABOUT – VM-orientiert (FINAL OVERRIDE)
-   ========================= */
-
-/* Titel wie gewünscht (du wolltest 34px) */
-.cenit-about .cenit-h2{
-  font-size:34px;
-  margin:0 0 18px 0;
-}
-
-/* Intro auf 760-Achse + sauberer Abstand zur Card */
-.cenit-about .cenit-axis-760{
-  max-width:760px;
-  margin:0 auto 36px auto;
-}
-
-/* Team-Whitecard: wie VM-Gridcard (950er Rhythmus) */
-.cenit-about-teamcard{
-  max-width:950px;
-  margin:0 auto;
-  padding:22px; /* nur innen in der Whitecard, nicht in der Section */
-}
-
-/* Grid bleibt 950-Achse */
-.cenit-about-team{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:34px;
-  align-items:start;
-}
-
-@media (max-width: 980px){
-  .cenit-about-team{ grid-template-columns:repeat(2,1fr); }
-}
-@media (max-width: 560px){
-  .cenit-about-team{ grid-template-columns:1fr; gap:26px; }
-}
-
-/* Portrait 4/5 */
-.cenit-about-photo{
-  aspect-ratio:4/5;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:var(--cenit-shadow);
-  background:#fff;
-}
-.cenit-about-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-/* Name/Role ruhig */
-.cenit-about-person{ text-align:center; }
-.cenit-about-name{
-  margin:14px 0 4px 0;
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-weight:400;
-  font-size:17px;
-  line-height:1.25;
-  color:var(--cenit-purple);
-}
-.cenit-about-role{
-  margin:0 0 10px 0;
-  font-size:10.5px;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  color:var(--muted-foreground);
-}
-
-/* Tags: EINHEITLICHE HÖHE → kein Größenversatz Herbert/Manfred */
-.cenit-about-tag{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  height:28px;
-  padding:0 12px;
-  line-height:1;
-  white-space:nowrap;
-  border-radius:999px;
-  border:1px solid rgba(201,164,78,0.35);
-  text-decoration:none;
-  color:var(--muted-foreground);
-  margin:10px 0 14px 0;
-  max-width:100%;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-.cenit-about-tag:hover{
-  color:var(--cenit-purple);
-  border-color:rgba(201,164,78,0.65);
-  background:rgba(201,164,78,0.06);
-}
-
-.cenit-about-text{
-  margin:0;
-  font-size:13px;
-  line-height:1.6;
-  color:var(--cenit-text);
-}
-
-/* Feinjustierung */
-.cenit-about-photo img[src*="FotoManfred"]{ object-position:center 10%; }
-.cenit-about-photo img[src*="FotoHerbert"]{ object-position:center 40%; }
-
-/* WICHTIG: Altlasten neutralisieren (Quote-Kram etc.) */
-.cenit-about-quote-card,
-.cenit-about-quote,
-.cenit-about-quote-author,
-.cenit-about-quote-divider{ display:none !important; }
