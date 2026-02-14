@@ -1,4 +1,4 @@
-/* =========================================================
+le/* =========================================================
    CENIT — main.css (Clean Rebuild)
    Goal: one system layer, no duplicates, consistent spacing,
          sticky topbar, reliable dropdown, unified axes.
@@ -962,10 +962,11 @@ html, body{ overflow-x: hidden; }
 
 /* Left: media softbox */
 .cenit-contact-media{
+  position: relative;
+  overflow: hidden;
   background:var(--cenit-soft);
   border-radius:18px;
   padding:14px;
-  pisition: relative;
 }
 
 /* Right: content softbox with gradient (dominance reduced) */
