@@ -498,6 +498,16 @@ html, body{ overflow-x: hidden; }
   pointer-events:none;
 }
 
+/* HERO: more breathing room below image */
+.page-home .cenit-hero-image{
+  margin: 0 auto 44px auto;   /* vorher ~28px */
+}
+
+@media (max-width: 600px){
+  .page-home .cenit-hero-image{
+    margin: 0 auto 28px auto;
+  }
+}
 /* Overlay (home) */
 .page-home .cenit-hero-overlay{
   position: absolute;
