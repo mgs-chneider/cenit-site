@@ -881,6 +881,33 @@ html, body{ overflow-x: hidden; }
   padding:14px;
 }
 
+/* EXPERTISE image overlay – pixel-perfect for 26px card padding */
+.cenit-expertise-media{
+  position: relative;
+  overflow: hidden;
+  border-radius:18px;
+}
+
+.cenit-expertise-media::after{
+  content:"";
+  position:absolute;
+
+  top:14px;
+  left:14px;
+  right:14px;
+  bottom:14px;
+
+  border-radius:14px;
+  pointer-events:none;
+
+  background: linear-gradient(
+    to top,
+    rgba(250,250,250,0.35) 0%,
+    rgba(250,250,250,0.12) 55%,
+    rgba(250,250,250,0.00) 100%
+  );
+}
+
 @media (max-width: 980px){
   .cenit-expertise-main{ grid-template-columns:1fr; }
   .cenit-expertise-cards{ grid-template-columns:1fr 1fr; }
@@ -892,47 +919,26 @@ html, body{ overflow-x: hidden; }
 /* =========================
    CONTACT (HOME)
    ========================= */
+
 .cenit-contact .cenit-h2{ margin-bottom: 24px; }
 
-.cenit-card.cenit-contact-hero{
-  width:100%;
-  max-width: var(--cenit-axis-950);
-  margin:0 auto 22px auto;
+/* CONTACT intro (760px rhythm like VM) */
+.cenit-contact-lead{
+  font-size:15px;
+  margin-bottom:12px;
+  text-align:center;
 }
 
-.cenit-contact-lead,
 .cenit-contact-body{
-  line-height:1.7;
-  color:var(--cenit-text);
-  max-width: var(--cenit-axis-760);
-  margin-left:auto;
-  margin-right:auto;
+  font-size:15px;
+  margin-bottom:14px;
   text-align:center;
 }
 
-.cenit-contact-lead{ font-size:16px; margin:0 0 8px 0; }
-.cenit-contact-body{ font-size:16px; margin:0 0 10px 0; }
-
-.cenit-contact-quote{
-  margin:0;
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-size:18px;
-  font-weight:400;
-  color:var(--cenit-purple);
-  text-align:center;
-}
-
-.cenit-card.cenit-contact-card2{
-  width:100%;
-  max-width: var(--cenit-axis-950);
-  margin:0 auto;
-  padding:0;
-  overflow:hidden;
-}
+.cenit-contact-card2{ padding: 0px; }
 
 .cenit-contact-main{
-  padding:22px;
+  padding:0px;
   display:grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap:18px;
@@ -957,6 +963,33 @@ html, body{ overflow-x: hidden; }
   display:block;
 }
 
+.cenit-contact-media{
+  position: relative;
+  overflow: hidden;
+  border-radius:18px;
+}
+
+.cenit-contact-media::after{
+  content:"";
+  position:absolute;
+
+  /* exakt auf Bildbereich abgestimmt */
+  top:14px;
+  left:14px;
+  right:14px;
+  bottom:14px;
+
+  border-radius:14px;
+  pointer-events:none;
+
+  background: linear-gradient(
+    to top,
+    rgba(250,250,250,0.35) 0%,
+    rgba(250,250,250,0.12) 55%,
+    rgba(250,250,250,0.00) 100%
+  );
+}
+
 .cenit-contact-h3{
   margin:0 0 10px 0;
   font-family:'EB Garamond', serif;
@@ -969,7 +1002,7 @@ html, body{ overflow-x: hidden; }
 
 .cenit-contact-text{
   margin:0 0 16px 0;
-  font-size:16px;
+  font-size:15px;
   line-height:1.7;
   color:var(--muted-foreground);
 }
