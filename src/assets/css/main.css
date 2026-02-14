@@ -965,8 +965,18 @@ html, body{ overflow-x: hidden; }
   background:var(--cenit-soft);
   border-radius:18px;
   padding:14px;
-  position:relative;
-  overflow:hidden;
+}
+
+/* Right: content softbox with gradient (dominance reduced) */
+.cenit-contact-box{
+  border-radius:18px;
+  padding:20px 18px;
+  background: linear-gradient(
+    135deg,
+    #f6f3ff 0%,
+    #f4f1fd 55%,
+    #f2eefc 100%
+  );
 }
 
 /* Image */
@@ -992,22 +1002,6 @@ html, body{ overflow-x: hidden; }
     rgba(250,250,250,0.12) 55%,
     rgba(250,250,250,0.00) 100%
   );
-}
-
-/* Right: content softbox with gradient (dominance reduced) */
-.cenit-contact-box{
-  border-radius:18px;
-  padding:20px 18px;
-
-  background: linear-gradient(
-    135deg,
-    #f6f3ff 0%,
-    #f4f1fd 55%,
-    #f2eefc 100%
-  );
-
-  display:flex;
-  flex-direction:column;
 }
 
 /* Typography */
@@ -1074,6 +1068,8 @@ html, body{ overflow-x: hidden; }
   .cenit-contact-main{ grid-template-columns:1fr; }
   .cenit-contact-media .cenit-img{ min-height:240px; }
 }
+
+
 /* =========================
    FACTS (Zahlen & Fakten)
    ========================= */
