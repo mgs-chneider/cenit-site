@@ -922,65 +922,44 @@ html, body{ overflow-x: hidden; }
 
 .cenit-contact .cenit-h2{ margin-bottom: 24px; }
 
-/* CONTACT intro (760px rhythm like VM) */
+/* Intro (760px) */
 .cenit-contact-lead{
   font-size:15px;
-  margin-bottom:12px;
+  margin:0 0 12px 0;
   text-align:center;
 }
-
 .cenit-contact-body{
   font-size:15px;
-  margin-bottom:14px;
-  text-align:center;
-}
-.cenit-contact-quote{
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-size:16px;
-  color:var(--cenit-purple);
-  margin-top:6px;
+  margin:0 0 18px 0; /* etwas mehr Luft, wenn Quote weg ist */
   text-align:center;
 }
 
-.cenit-contact-card2{ padding: 0px; }
+/* Wenn Quote entfernt: Klasse darf bleiben, wird aber nicht gebraucht */
+.cenit-contact-quote{ display:none; }
 
+/* Card2: NICHT padding nullen – Whitecard-Rahmen kommt von .cenit-card (26px) */
+.cenit-card.cenit-contact-card2{
+  padding:26px;            /* explizit, damit nichts überschreibt */
+}
+
+/* Grid */
 .cenit-contact-main{
-  padding:0px;
   display:grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap:18px;
   align-items:stretch;
 }
 
-.cenit-contact-quote{
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-size:16px;
-  color:var(--cenit-purple);
-  margin-top:6px;
-  text-align:center;
-}
-
-/* CONTACT: softer gradient instead of flat block */
-.cenit-contact-box{
-  padding:20px 18px;
-  border-radius:18px;
-
-  background: linear-gradient(
-    135deg,
-    #f6f3ff 0%,
-    #f3effc 55%,
-    #efe9fb 100%
-  );
-}
-.cenit-contact-media,
-.cenit-contact-box{
+/* Left: media softbox */
+.cenit-contact-media{
   background:var(--cenit-soft);
   border-radius:18px;
   padding:14px;
+  position:relative;
+  overflow:hidden;
 }
 
+/* Image */
 .cenit-contact-media .cenit-img{
   width:100%;
   height:100%;
@@ -990,25 +969,13 @@ html, body{ overflow-x: hidden; }
   display:block;
 }
 
-.cenit-contact-media{
-  position: relative;
-  overflow: hidden;
-  border-radius:18px;
-}
-
+/* Subtle overlay on the image area (14px padding aware) */
 .cenit-contact-media::after{
   content:"";
   position:absolute;
-
-  /* exakt auf Bildbereich abgestimmt */
-  top:14px;
-  left:14px;
-  right:14px;
-  bottom:14px;
-
+  top:14px; left:14px; right:14px; bottom:14px;
   border-radius:14px;
   pointer-events:none;
-
   background: linear-gradient(
     to top,
     rgba(250,250,250,0.35) 0%,
@@ -1017,6 +984,23 @@ html, body{ overflow-x: hidden; }
   );
 }
 
+/* Right: content softbox with gradient (dominance reduced) */
+.cenit-contact-box{
+  border-radius:18px;
+  padding:20px 18px;
+
+  background: linear-gradient(
+    135deg,
+    #f6f3ff 0%,
+    #f4f1fd 55%,
+    #f2eefc 100%
+  );
+
+  display:flex;
+  flex-direction:column;
+}
+
+/* Typography */
 .cenit-contact-h3{
   margin:0 0 10px 0;
   font-family:'EB Garamond', serif;
@@ -1040,46 +1024,46 @@ html, body{ overflow-x: hidden; }
   max-width:100%;
   white-space:nowrap;
   padding:0.55rem 1.2rem;
-  margin:6px 0 12px 0;
+  margin:6px 0 10px 0;
   border:1px solid rgba(107,20,184,0.6);
   color:var(--cenit-purple);
 }
 
 .cenit-contact-mail{
-  display:block;
-  margin-top:10px;
+  display:inline-block;
+  margin-top:6px;
   font-size:16px;
-  color:var(--muted-foreground);
+  color:var(--cenit-purple);
   text-decoration:none;
 }
-.cenit-contact-box .cenit-contact-mail:hover{
-  color:var(--cenit-purple);
+.cenit-contact-mail:hover{
   text-decoration:underline;
   text-underline-offset:3px;
 }
 
+/* Social */
 .cenit-contact-social{
-  margin-top:18px;
+  margin-top:16px;
   display:flex;
-  gap:18px;
+  gap:16px;
   align-items:center;
 }
-
 .cenit-contact-social a{
   color:#6b14b8;
   opacity:0.85;
+  line-height:0;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
-
 .cenit-contact-social a:hover{
   opacity:1;
   transform:translateY(-2px);
 }
+
+/* Responsive */
 @media (max-width: 980px){
   .cenit-contact-main{ grid-template-columns:1fr; }
   .cenit-contact-media .cenit-img{ min-height:240px; }
 }
-
 /* =========================
    FACTS (Zahlen & Fakten)
    ========================= */
