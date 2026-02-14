@@ -1591,3 +1591,13 @@ html, body{ overflow-x: hidden; }
     transition: none !important;
   }
 }
+
+/* last resort: ensure gradient wins */
+.cenit-contact-box{
+  background: linear-gradient(
+    135deg,
+    #f6f3ff 0%,
+    #f4f1fd 55%,
+    #f2eefc 100%
+  ) !important;
+}
