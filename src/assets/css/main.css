@@ -934,6 +934,14 @@ html, body{ overflow-x: hidden; }
   margin-bottom:14px;
   text-align:center;
 }
+.cenit-contact-quote{
+  font-family:'EB Garamond', serif;
+  font-style:italic;
+  font-size:16px;
+  color:var(--cenit-purple);
+  margin-top:6px;
+  text-align:center;
+}
 
 .cenit-contact-card2{ padding: 0px; }
 
