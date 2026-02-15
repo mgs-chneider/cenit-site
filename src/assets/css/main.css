@@ -1035,16 +1035,12 @@ html, body{ overflow-x: hidden; }
   color:var(--cenit-purple);
 }
 
-.cenit-contact-mail{
-  display:inline-block;
-  margin-top:6px;
-  font-size:16px;
-  color:var(--cenit-purple);
-  text-decoration:none;
-}
-.cenit-contact-mail:hover{
-  text-decoration:underline;
-  text-underline-offset:3px;
+/* CTA row */
+.cenit-contact-cta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:10px;
 }
 
 /* Social */
