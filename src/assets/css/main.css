@@ -534,7 +534,7 @@ html, body{ overflow-x: hidden; }
   font-family:'Lato', Arial, sans-serif;
   font-size:16px;
   line-height:1.5;
-  color:var(--cenit-text);
+  color:var(--muted-foreground);
   margin:0;
 }
 
