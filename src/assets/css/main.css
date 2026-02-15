@@ -1071,6 +1071,117 @@ html, body{ overflow-x: hidden; }
   .cenit-contact-media .cenit-img{ min-height:240px; }
 }
 
+/* =========================
+   CONTACT: CTA hierarchy
+   ========================= */
+
+/* Wrap spacing */
+.cenit-contact-box{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* Buttons row: FAQs + Mail */
+.cenit-contact-box .cenit-contact-btn{
+  /* secondary / outline */
+  align-self:flex-start;
+  padding:0.52rem 1.05rem;
+  border-radius:999px;
+  border:1px solid rgba(107,20,184,0.35);
+  background: transparent;
+  color: var(--cenit-purple);
+  font-size:0.82rem;
+  font-weight:500;
+  opacity:0.9;
+  transition: transform .2s ease, opacity .2s ease, background-color .2s ease, border-color .2s ease;
+}
+.cenit-contact-box .cenit-contact-btn:hover{
+  opacity:1;
+  transform: translateY(-1px);
+  border-color: rgba(107,20,184,0.55);
+  background: rgba(107,20,184,0.06);
+}
+
+/* Primary CTA: mail link as “button” */
+.cenit-contact-mail{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  width: fit-content;
+  padding:0.56rem 1.15rem;
+  border-radius:999px;
+
+  background: rgba(107,20,184,0.10);
+  border: 1px solid rgba(107,20,184,0.45);
+  color: var(--cenit-purple);
+  font-size:0.86rem;
+  font-weight:600;
+  text-decoration:none;
+
+  margin-top: 2px;  /* small separation from secondary */
+  transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
+}
+.cenit-contact-mail:hover{
+  transform: translateY(-1px);
+  background: rgba(107,20,184,0.14);
+  border-color: rgba(107,20,184,0.60);
+  text-decoration:none;
+}
+
+/* Optional: make the “Kontakt aufnehmen” text slightly more “buttony” even if long */
+.cenit-contact-mail span{ white-space:nowrap; }
+
+/* Social: tertiary, smaller, aligned as a quiet row */
+.cenit-contact-social{
+  margin-top: 6px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.cenit-contact-social a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  width:32px;
+  height:32px;
+  border-radius:10px;
+
+  color: rgba(107,20,184,0.85);
+  background: rgba(107,20,184,0.06);
+  border:1px solid rgba(107,20,184,0.12);
+
+  opacity:0.85;
+  transition: opacity .2s ease, transform .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.cenit-contact-social a:hover{
+  opacity:1;
+  transform: translateY(-1px);
+  background: rgba(107,20,184,0.10);
+  border-color: rgba(107,20,184,0.20);
+}
+
+/* If your icons are SVGs, ensure they scale nicely */
+.cenit-contact-social svg{
+  width:18px;
+  height:18px;
+}
+
+/* Mobile: center CTAs if you prefer */
+@media (max-width: 600px){
+  .cenit-contact-box .cenit-contact-btn,
+  .cenit-contact-mail{
+    align-self:center;
+  }
+  .cenit-contact-social{
+    justify-content:center;
+  }
+}
 
 /* =========================
    FACTS (Zahlen & Fakten)
