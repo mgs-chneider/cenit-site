@@ -1088,7 +1088,7 @@ html, body{ overflow-x: hidden; }
   align-self:flex-start;
   padding:0.52rem 1.05rem;
   border-radius:999px;
-  border:1px cenit-gold;
+  border:1.5px cenit-gold;
   background: transparent;
   color: var(--cenit-purple);
   font-size:0.82rem;
@@ -1099,7 +1099,7 @@ html, body{ overflow-x: hidden; }
 .cenit-contact-box .cenit-contact-btn:hover{
   opacity:1;
   transform: translateY(-1px);
-  border-color: 1px cenit-gold;
+  border-color: 1.5px solid var(--cenit-gold);
   background: transparent;
 }
 
