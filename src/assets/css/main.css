@@ -1088,7 +1088,7 @@ html, body{ overflow-x: hidden; }
   align-self:flex-start;
   padding:0.52rem 1.05rem;
   border-radius:999px;
-  border:1px solid rgba(107,20,184,0.35);
+  border:1px cenit-gold;
   background: transparent;
   color: var(--cenit-purple);
   font-size:0.82rem;
@@ -1099,8 +1099,8 @@ html, body{ overflow-x: hidden; }
 .cenit-contact-box .cenit-contact-btn:hover{
   opacity:1;
   transform: translateY(-1px);
-  border-color: rgba(107,20,184,0.55);
-  background: rgba(107,20,184,0.06);
+  border-color: 1px cenit-gold;
+  background: transparent;
 }
 
 /* Primary CTA: mail link as “button” */
