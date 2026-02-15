@@ -1590,4 +1590,8 @@ html, body{ overflow-x: hidden; }
   }
 }
 
-
+.page-faqs .reveal,
+.page-satzung .reveal {
+  transform: translateY(8px);
+  transition: opacity 420ms ease-out, transform 420ms ease-out;
+}
