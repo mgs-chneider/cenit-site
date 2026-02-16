@@ -1382,27 +1382,16 @@ html, body{ overflow-x: hidden; }
    ZF – Closing Quote (High-End)
    ========================= */
 
-.page-zahlen-fakten .cenit-zf-quote-wrap{
-  max-width: 950px;
-  margin: 0 auto;
-  text-align: center;
-
-  background: rgba(107,20,184,0.04);
-  border-radius: 30px;
-  padding: 64px 44px;
-
-  box-shadow:
-    0 14px 36px rgba(25,25,60,0.05),
-    0 4px 12px rgba(25,25,60,0.03);
-}
+.page-zahlen-fakten .cenit-zf-outro
+background:#fafafa{
 
 .page-zahlen-fakten .cenit-zf-quote{
-  margin: 0 0 16px 0;
+  margin: 0 0 18px 0;
   font-family: 'EB Garamond', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 26px;
-  line-height: 1.55;
+  font-size: 28px;
+  line-height: 1.25;
   color: var(--cenit-purple);
 }
 
@@ -1414,9 +1403,9 @@ html, body{ overflow-x: hidden; }
 }
 
 .page-zahlen-fakten .cenit-zf-quote-sub{
-  margin: 0;
-  font-size: 13px;
-  letter-spacing: 0.08em;
+  margin: 18px 0 0 0;
+  font-size: 12px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted-foreground);
 }
@@ -1425,9 +1414,6 @@ html, body{ overflow-x: hidden; }
   .page-zahlen-fakten .cenit-zf-quote-wrap{
     padding: 44px 18px;
     border-radius: 24px;
-  }
-  .page-zahlen-fakten .cenit-zf-quote{
-    font-size: 22px;
   }
 }
 
