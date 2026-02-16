@@ -1069,35 +1069,43 @@ html, body{ overflow-x: hidden; }
 
 
 /* =========================
-   FACTS (Zahlen & Fakten)
+   FACTS (Zahlen & Fakten) – CLEAN / FINAL
    ========================= */
 
-.cenit-card--narrow{
+/* Container helper */
+.page-zahlen-fakten .cenit-card--narrow{
   max-width: var(--cenit-axis-950);
   margin-left:auto;
   margin-right:auto;
   width: 100%;
 }
 
-/* HERO / HEADER */
-.cenit-facts-header{
+/* PAGE PADDING */
+.page-zahlen-fakten .cenit-section{
+  padding: 76px var(--cenit-section-px);
+}
+
+/* =========================
+   HERO / HEADER (Top editorial)
+   ========================= */
+.page-zahlen-fakten .cenit-facts-header{
   text-align:center;
-  margin-bottom:56px; /* mehr Luft */
+  margin-bottom:56px;
 }
 
-.cenit-zf-hero{
-  padding-bottom:56px; /* mehr Luft nach unten */
+.page-zahlen-fakten .cenit-zf-hero{
+  padding-bottom:56px;
 }
 
-.cenit-facts-title{
+.page-zahlen-fakten .cenit-facts-title{
   font-family:'EB Garamond', serif;
-  font-size:36px;         /* leicht größer */
+  font-size:36px;
   font-weight:400;
   color:var(--cenit-purple);
   margin:0 0 8px 0;
 }
 
-.cenit-editorial-lead{
+.page-zahlen-fakten .cenit-editorial-lead{
   font-size:18px;
   line-height:1.75;
   text-align:center;
@@ -1105,45 +1113,110 @@ html, body{ overflow-x: hidden; }
   color:var(--cenit-text);
 }
 
-.cenit-divider-gold{
+/* Achtung: im HTML heißt es cenit-divider--gold (doppelt Bindestrich).
+   Falls du global schon .cenit-divider--gold hast: ok.
+   Wenn nicht, aktiviere diese Fallback-Rule: */
+.page-zahlen-fakten .cenit-divider--gold{
   width:60px;
   height:2px;
   background:rgba(201,164,78,0.75);
   margin:0 auto 38px auto;
 }
 
-.cenit-facts-subline{
+.page-zahlen-fakten .cenit-zf-subline{
   font-size:15px;
   line-height:1.65;
   color:var(--muted-foreground);
   margin:0;
 }
 
-/* VIDEO */
-.cenit-zf-video{
-  padding-top:34px;
-  padding-bottom:34px;
+.page-zahlen-fakten .cenit-kicker{
+  margin: 22px 0 10px 0;
+  font-size:14px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--muted-foreground);
 }
 
-.cenit-video-panel{
+.page-zahlen-fakten .cenit-zf-intro{
+  font-size:16px;
+  line-height:1.85;
+  margin:0 0 28px 0;
+  color:var(--cenit-text);
+}
+
+/* =========================
+   TRANSITIONS (tight to visuals)
+   ========================= */
+
+/* Transition directly above video */
+.page-zahlen-fakten .cenit-video-transition{
+  max-width: var(--cenit-axis-760);
+  margin: 18px auto 16px auto;
+  text-align:center;
+}
+.page-zahlen-fakten .cenit-video-transition p{ margin:0; }
+
+.page-zahlen-fakten .cenit-video-headline{
+  font-family:'EB Garamond', serif;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.6;
+  color:var(--cenit-text);
+  margin:0;
+}
+
+/* Transition directly above charts */
+.page-zahlen-fakten .cenit-zf-transition{
+  max-width: var(--cenit-axis-760);
+  margin: 18px auto 16px auto;
+  text-align:center;
+}
+
+.page-zahlen-fakten .cenit-zf-chapter{
+  font-family:'EB Garamond', serif;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.6;
+  margin:0;
+  color:var(--cenit-text);
+}
+
+/* Optional divider for chapter (wenn du ihn nutzen willst) */
+.page-zahlen-fakten .cenit-zf-chapter-divider{
+  width:48px;
+  height:2px;
+  background:rgba(201,164,78,0.65);
+  margin:10px auto 0 auto;
+}
+
+/* =========================
+   VIDEO
+   ========================= */
+.page-zahlen-fakten .cenit-zf-video{
+  padding-top: 12px;   /* näher an Transition */
+  padding-bottom: 72px;/* Luft Richtung Charts */
+}
+
+.page-zahlen-fakten .cenit-video-panel{
   background:rgba(107,20,184,0.035);
   padding:32px;
   border-radius:24px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.04); /* “schwebend” */
+  box-shadow: 0 10px 40px rgba(0,0,0,0.04);
 }
 
-.cenit-zf-video-card{ padding:18px; }
-.cenit-zf-video-subtitle{ text-align:center; }
+.page-zahlen-fakten .cenit-zf-video-card{ padding:18px; }
+.page-zahlen-fakten .cenit-zf-video-subtitle{ text-align:center; }
 
-.cenit-video-frame{
+.page-zahlen-fakten .cenit-video-frame{
   width:100%;
   position:relative;
   padding-bottom:56.25%;
   height:0;
   overflow:hidden;
-  border-radius:18px; /* etwas runder */
+  border-radius:18px;
 }
-.cenit-video-frame iframe{
+.page-zahlen-fakten .cenit-video-frame iframe{
   position:absolute;
   inset:0;
   width:100%;
@@ -1152,210 +1225,52 @@ html, body{ overflow-x: hidden; }
   display:block;
 }
 
-/* EDITORIAL HEADLINE VOR CHARTS (falls du sie nutzt) */
-.cenit-stat-headline{
-  font-size:20px;
-  font-weight:500;
-  text-align:center;
-  margin:64px 0 36px 0;
-  color:var(--cenit-text);
-}
-
-/* CHART GRID: Dramaturgie (wichtiger Chart leicht dominant) */
-.cenit-facts-grid{
-  display:grid;
-  grid-template-columns: 1.2fr 0.8fr; /* statt 1fr/1fr */
-  gap:26px;
-  align-items:start;
-}
-
-/* EMBED CARD: mehr editorial, weniger dashboard */
-.cenit-embed-card{
-  background:var(--cenit-surface);
-  border-radius:20px; /* hochwertiger */
-  box-shadow:var(--cenit-shadow);
-  padding:22px 22px 18px 22px; /* mehr Innenraum */
-}
-
-.cenit-embed{
-  width:100%;
-  height:420px;              /* etwas mehr Bühne */
-  border:0;
-  border-radius:16px;
-  display:block;
-  background:#fff;
-}
-
-/* Quellen */
-.cenit-zf-sources{
-  margin-top:16px;
-  font-size:13px;
-  line-height:1.55;
-  text-align:center;
-  color:var(--muted-foreground);
-}
-.cenit-zf-sources a{
-  color:var(--muted-foreground);
-  text-decoration:none;
-}
-.cenit-zf-sources a:hover{
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-.cenit-zf-sources-label{ font-weight:500; }
-
-/* RESPONSIVE */
-@media (max-width: 980px){
-  .cenit-facts-grid{ grid-template-columns:1fr; }
-  .cenit-embed{ height:540px; }
-  .cenit-video-panel{ padding:26px; }
-}
-
-/* PAGE PADDING */
-.page-zahlen-fakten .cenit-section{
-  padding: 76px var(--cenit-section-px); /* minimal mehr */
-}
-.page-zahlen-fakten .cenit-h2{ margin-bottom: 32px; }
-
-/* Kicker – redaktionell, klein, ruhig */
-.cenit-kicker{
-  margin: 22px 0 10px 0;
-  font-size:14px;
-  letter-spacing:0.06em;
-  text-transform:uppercase;
-  color:var(--muted-foreground);
-}
-
-/* Intro leicht luftiger */
-.cenit-zf-intro{
-  font-size:16px;
-  line-height:1.85;
-  margin:0 0 28px 0;
-  color:var(--cenit-text);
-}
-
-.cenit-video-transition{
-  max-width: var(--cenit-axis-760);
-  margin: 48px auto 28px auto;
-  text-align:center;
-}
-
-.cenit-video-headline{
-  font-family:'EB Garamond', serif;
-  font-size:20px;
-  font-weight:400;
-  line-height:1.6;
-  color:var(--cenit-text);
-  margin:0;
-}
-
-.cenit-zf-transition{
-  max-width: var(--cenit-axis-760);
-  margin: 48px auto 28px auto;
-  text-align:center;  
-}
-
-.cenit-zf-chapter{
-  font-family:'EB Garamond', serif;
-  font-size:20px;
-  font-weight:400;
-  line-height:1.6;
-  text-align:center;
-  margin:0;
-  color:var(--cenit-text);
-}
-
 /* =========================
-   ZAHLEN & FAKTEN – Transition-Spacings (targeted)
+   CHARTS (Data room / grid)
    ========================= */
-
-/* 1) Übergangstext direkt vor dem Video */
-.page-zahlen-fakten .cenit-video-transition{
-  margin: 18px auto 16px auto;   /* Abstand: nach oben / zum Video */
-  max-width: var(--cenit-axis-760);
-  text-align: center;
-}
-
-/* Falls der Text innen (p) noch Standard-Margins hat */
-.page-zahlen-fakten .cenit-video-transition p{
-  margin: 0;
-}
-
-/* Video-Block selbst: oben enger, unten bleibt Luft zur nächsten Sektion */
-.page-zahlen-fakten .cenit-zf-video{
-  padding-top: 12px;             /* Video näher an Transition */
-  padding-bottom: 72px;          /* großzügig Richtung Charts */
-}
-
-.cenit-zf-transition{
-  margin: 18px auto 16px auto;   /* kontrollierte Nähe */
-  max-width: var(--cenit-axis-760);
-  text-align:center;
-}
-
-/* Charts-Block selbst: oben enger, unten bleibt Luft zur nächsten Sektion */
 .page-zahlen-fakten .cenit-zf-charts{
-  padding-top: 12px;             /* Charts näher an Transition */
-  padding-bottom: 64px;          /* großzügig Richtung Quote Band */
+  padding-top: 12px;   /* näher an Transition */
+  padding-bottom: 64px;
 }
 
-/* =========================
-   FACTS – DATA ROOM
-   ========================= */
-
-.cenit-zf-charts{
+/* Wenn du “Data room” Hintergrund willst, lass aktiv.
+   Wenn du’s clean/white willst: setz background: transparent; */
+.page-zahlen-fakten .cenit-zf-charts-inner{
   background: rgba(107,20,184,0.02);
   border-radius: 28px;
   padding: 64px 56px;
 }
 
-/* Dramaturgischer Kapitel-Übergang */
-.cenit-zf-chapter{
-  font-family:'EB Garamond', serif;
-  font-size:28px;
-  font-weight:400;
-  text-align:center;
-  color:var(--cenit-purple);
-  margin:0 0 12px 0;
-}
-
-.cenit-zf-chapter-divider{
-  width:48px;
-  height:2px;
-  background:rgba(201,164,78,0.65);
-  margin:0 auto 52px auto;
-}
-
-/* Grid großzügiger */
-.cenit-facts-grid{
+/* Grid */
+.page-zahlen-fakten .cenit-facts-grid{
   display:grid;
   grid-template-columns: 1fr 1fr;
   gap: 42px;
   align-items:start;
 }
 
-/* Embed Cards – weniger UI, mehr Editorial */
-.cenit-embed-card{
+/* Embed cards */
+.page-zahlen-fakten .cenit-embed-card{
   background:#ffffff;
   border-radius:22px;
   padding:26px 26px 22px 26px;
-
   box-shadow:
     0 14px 36px rgba(25,25,60,0.05),
     0 4px 12px rgba(25,25,60,0.03);
 }
 
-/* Mehr Luft */
-.cenit-embed-card h3{
+.page-zahlen-fakten .cenit-embed{
+  width:100%;
+  height:420px;
+  border:0;
+  border-radius:16px;
+  display:block;
+  background:#fff;
   margin-bottom:20px;
 }
 
-.cenit-embed{
-  margin-bottom:20px;
-}
-
-/* Quellen ruhiger */
-.cenit-zf-sources{
+/* Sources */
+.page-zahlen-fakten .cenit-zf-sources{
   margin-top:18px;
   font-size:13px;
   line-height:1.6;
@@ -1363,13 +1278,22 @@ html, body{ overflow-x: hidden; }
   color:var(--muted-foreground);
   opacity:0.85;
 }
+.page-zahlen-fakten .cenit-zf-sources a{
+  color:var(--muted-foreground);
+  text-decoration:none;
+}
+.page-zahlen-fakten .cenit-zf-sources a:hover{
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.page-zahlen-fakten .cenit-zf-sources-label{ font-weight:500; }
 
 /* =========================
-   ZF – Closing Quote (High-End)
+   OUTRO (text only on #fafafa)
    ========================= */
-
-.page-zahlen-fakten .cenit-zf-outro
-background:#fafafa{
+.page-zahlen-fakten .cenit-zf-outro{
+  background:#fafafa;
+}
 
 .page-zahlen-fakten .cenit-zf-quote{
   margin: 0 0 18px 0;
@@ -1379,9 +1303,10 @@ background:#fafafa{
   font-size: 28px;
   line-height: 1.25;
   color: var(--cenit-purple);
+  text-align:center;
 }
 
-.page-zahlen-fakten .cenit-divider-gold{
+.page-zahlen-fakten .cenit-divider-gold-32{
   width: 56px;
   height: 2px;
   background: rgba(201,164,78,0.65);
@@ -1394,12 +1319,26 @@ background:#fafafa{
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted-foreground);
+  text-align:center;
 }
 
-@media (max-width: 600px){
-  .page-zahlen-fakten .cenit-zf-quote-wrap{
-    padding: 44px 18px;
+/* =========================
+   RESPONSIVE (must be last)
+   ========================= */
+@media (max-width: 980px){
+  .page-zahlen-fakten .cenit-video-panel{ padding:26px; }
+
+  .page-zahlen-fakten .cenit-zf-charts-inner{
+    padding: 40px 18px;
     border-radius: 24px;
+  }
+
+  .page-zahlen-fakten .cenit-facts-grid{
+    grid-template-columns: 1fr; /* charts stack */
+  }
+
+  .page-zahlen-fakten .cenit-embed{
+    height:540px;
   }
 }
 
