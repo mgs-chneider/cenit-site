@@ -1275,6 +1275,45 @@ html, body{ overflow-x: hidden; }
 }
 
 /* =========================
+   ZAHLEN & FAKTEN – Transition-Spacings (targeted)
+   ========================= */
+
+/* 1) Übergangstext direkt vor dem Video */
+.page-zahlen-fakten .cenit-video-transition{
+  margin: 18px auto 16px auto;   /* Abstand: nach oben / zum Video */
+  max-width: var(--cenit-axis-760);
+  text-align: center;
+}
+
+/* Falls der Text innen (p) noch Standard-Margins hat */
+.page-zahlen-fakten .cenit-video-transition p{
+  margin: 0;
+}
+
+/* Video-Block selbst: oben enger, unten bleibt Luft zur nächsten Sektion */
+.page-zahlen-fakten .cenit-zf-video{
+  padding-top: 12px;             /* Video näher an Transition */
+  padding-bottom: 64px;          /* großzügig Richtung Charts */
+}
+
+/* 2) Übergang zu den Charts als eigene Section */
+.page-zahlen-fakten .cenit-section.cenit-zf-transition{
+  padding-top: 18px;             /* Transition näher an vorherigem Visual (Video) */
+  padding-bottom: 18px;          /* Transition näher an Charts */
+}
+
+/* Optional: Divider in der Transition kompakter */
+.page-zahlen-fakten .cenit-zf-transition .cenit-divider-gold{
+  margin: 10px auto 14px auto;
+}
+
+/* Optional: Falls Transition-Headline (h2/p) zu viel Luft hat */
+.page-zahlen-fakten .cenit-zf-transition h2,
+.page-zahlen-fakten .cenit-zf-transition .cenit-h2{
+  margin-bottom: 10px;
+}
+
+/* =========================
    FAQS
    ========================= */
 .page-faqs .cenit-faq-lead{
