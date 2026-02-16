@@ -1284,7 +1284,7 @@ html, body{ overflow-x: hidden; }
 /* Video-Block selbst: oben enger, unten bleibt Luft zur nächsten Sektion */
 .page-zahlen-fakten .cenit-zf-video{
   padding-top: 12px;             /* Video näher an Transition */
-  padding-bottom: 96px;          /* großzügig Richtung Charts */
+  padding-bottom: 72px;          /* großzügig Richtung Charts */
 }
 
 .cenit-zf-transition{
