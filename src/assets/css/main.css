@@ -1251,8 +1251,9 @@ html, body{ overflow-x: hidden; }
 
 /* Übergang zwischen Video und Charts */
 .cenit-zf-transition{
-  padding-top: 72px;
-  padding-bottom: 36px;
+  max-width: var(--cenit-axis-760);
+  margin: 48px auto 28px auto;
+  text-align:center;  
 }
 
 .cenit-zf-chapter{
@@ -1287,10 +1288,6 @@ html, body{ overflow-x: hidden; }
   padding-bottom: 64px;          /* großzügig Richtung Charts */
 }
 
-/* =========================
-   ZF – Charts Transition
-   ========================= */
-
 .cenit-zf-transition{
   margin: 18px auto 16px auto;   /* kontrollierte Nähe */
   max-width: var(--cenit-axis-760);
@@ -1301,6 +1298,7 @@ html, body{ overflow-x: hidden; }
 /* =========================
    FAQS
    ========================= */
+
 .page-faqs .cenit-faq-lead{
   max-width: var(--cenit-axis-760);
   margin: 0 auto 28px auto;
