@@ -1293,6 +1293,11 @@ html, body{ overflow-x: hidden; }
   text-align:center;
 }
 
+/* Charts-Block selbst: oben enger, unten bleibt Luft zur nächsten Sektion */
+.page-zahlen-fakten .cenit-zf-charts{
+  padding-top: 12px;             /* Charts näher an Transition */
+  padding-bottom: 64px;          /* großzügig Richtung Quote Band */
+}
 
 /* =========================
    FAQS
