@@ -1296,21 +1296,21 @@ html, body{ overflow-x: hidden; }
   padding-bottom: 64px;          /* großzügig Richtung Charts */
 }
 
-/* 2) Übergang zu den Charts als eigene Section */
-.page-zahlen-fakten .cenit-section.cenit-zf-transition{
-  padding-top: 18px;             /* Transition näher an vorherigem Visual (Video) */
-  padding-bottom: 18px;          /* Transition näher an Charts */
+/* =========================
+   ZF – Charts Transition
+   ========================= */
+
+.cenit-zf-transition{
+  margin: 40px 0 24px 0;   /* kontrollierte Nähe */
+  text-align:center;
 }
 
-/* Optional: Divider in der Transition kompakter */
-.page-zahlen-fakten .cenit-zf-transition .cenit-divider-gold{
-  margin: 10px auto 14px auto;
-}
-
-/* Optional: Falls Transition-Headline (h2/p) zu viel Luft hat */
-.page-zahlen-fakten .cenit-zf-transition h2,
-.page-zahlen-fakten .cenit-zf-transition .cenit-h2{
-  margin-bottom: 10px;
+.cenit-zf-chapter{
+  font-family:'EB Garamond', serif;
+  font-size:22px;
+  font-weight:400;
+  margin:0 0 10px 0;
+  color:var(--cenit-text);
 }
 
 /* =========================
