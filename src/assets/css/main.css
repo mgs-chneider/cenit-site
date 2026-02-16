@@ -1342,6 +1342,23 @@ html, body{ overflow-x: hidden; }
   }
 }
 
+/* ZF – Mobile: Chart 2 weniger Luft zwischen Embed und Quellen */
+@media (max-width: 980px){
+
+  /* nur die 2. Chart-Card (rechts/2. im Grid) */
+  .page-zahlen-fakten .cenit-facts-grid .cenit-embed-card:nth-child(2){
+    padding-bottom: 18px; /* war optisch zu “tief” */
+  }
+
+  .page-zahlen-fakten .cenit-facts-grid .cenit-embed-card:nth-child(2) .cenit-embed{
+    margin-bottom: 10px; /* war 20px */
+    height: 460px;       /* war 540px -> reduziert leere “Bühne” */
+  }
+
+  .page-zahlen-fakten .cenit-facts-grid .cenit-embed-card:nth-child(2) .cenit-zf-sources{
+    margin-top: 10px;    /* war 18px */
+  }
+}
 /* =========================
    FAQS
    ========================= */
