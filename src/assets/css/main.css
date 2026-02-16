@@ -1366,6 +1366,27 @@ html, body{ overflow-x: hidden; }
   }
 }
 
+@media (max-width: 600px){
+
+  /* Chapter-Block: seitliche Luft + kompaktere Typo */
+  .page-zahlen-fakten .cenit-zf-transition{
+    padding-left: 14px;
+    padding-right: 14px;
+    margin: 14px auto 12px auto;
+  }
+
+  .page-zahlen-fakten .cenit-zf-chapter{
+    font-size: 18px;     /* war 20px */
+    line-height: 1.45;
+    margin-bottom: 8px;
+  }
+
+  /* Falls du den Divider nutzt */
+  .page-zahlen-fakten .cenit-zf-chapter-divider{
+    margin-top: 8px;
+  }
+}
+
 /* =========================
    FAQS
    ========================= */
