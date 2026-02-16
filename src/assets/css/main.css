@@ -1234,6 +1234,21 @@ html, body{ overflow-x: hidden; }
   color:var(--cenit-text);
 }
 
+.cenit-video-transition{
+  max-width: var(--cenit-axis-760);
+  margin: 48px auto 28px auto;
+  text-align:center;
+}
+
+.cenit-video-headline{
+  font-family:'EB Garamond', serif;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.6;
+  color:var(--cenit-text);
+  margin:0;
+}
+
 /* =========================
    FAQS
    ========================= */
