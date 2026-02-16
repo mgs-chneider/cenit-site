@@ -1300,6 +1300,85 @@ html, body{ overflow-x: hidden; }
 }
 
 /* =========================
+   FACTS – DATA ROOM
+   ========================= */
+
+.cenit-zf-charts{
+  background: rgba(107,20,184,0.02);
+  border-radius: 28px;
+  padding: 64px 56px;
+}
+
+/* Dramaturgischer Kapitel-Übergang */
+.cenit-zf-chapter{
+  font-family:'EB Garamond', serif;
+  font-size:28px;
+  font-weight:400;
+  text-align:center;
+  color:var(--cenit-purple);
+  margin:0 0 12px 0;
+}
+
+.cenit-zf-chapter-divider{
+  width:48px;
+  height:2px;
+  background:rgba(201,164,78,0.65);
+  margin:0 auto 52px auto;
+}
+
+/* Grid großzügiger */
+.cenit-facts-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  align-items:start;
+}
+
+/* Embed Cards – weniger UI, mehr Editorial */
+.cenit-embed-card{
+  background:#ffffff;
+  border-radius:22px;
+  padding:26px 26px 22px 26px;
+
+  box-shadow:
+    0 14px 36px rgba(25,25,60,0.05),
+    0 4px 12px rgba(25,25,60,0.03);
+}
+
+/* Mehr Luft */
+.cenit-embed-card h3{
+  margin-bottom:20px;
+}
+
+.cenit-embed{
+  margin-bottom:20px;
+}
+
+/* Quellen ruhiger */
+.cenit-zf-sources{
+  margin-top:18px;
+  font-size:13px;
+  line-height:1.6;
+  text-align:center;
+  color:var(--muted-foreground);
+  opacity:0.85;
+}
+
+.cenit-zf-quote{
+  background: rgba(107,20,184,0.04);
+  border-radius: 30px;
+  padding: 64px 40px;
+  text-align:center;
+}
+
+.cenit-zf-quote p{
+  font-family:'EB Garamond', serif;
+  font-size:24px;
+  line-height:1.6;
+  color:var(--cenit-purple);
+}
+
+/* =========================
    FAQS
    ========================= */
 
