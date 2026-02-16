@@ -1249,6 +1249,22 @@ html, body{ overflow-x: hidden; }
   margin:0;
 }
 
+/* Übergang zwischen Video und Charts */
+.cenit-zf-transition{
+  padding-top: 72px;
+  padding-bottom: 36px;
+}
+
+.cenit-zf-chapter{
+  font-family:'EB Garamond', serif;
+  font-size:22px;
+  font-weight:400;
+  line-height:1.6;
+  text-align:center;
+  margin:0;
+  color:var(--cenit-text);
+}
+
 /* =========================
    FAQS
    ========================= */
