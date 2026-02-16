@@ -1249,7 +1249,6 @@ html, body{ overflow-x: hidden; }
   margin:0;
 }
 
-/* Übergang zwischen Video und Charts */
 .cenit-zf-transition{
   max-width: var(--cenit-axis-760);
   margin: 48px auto 28px auto;
