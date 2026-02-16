@@ -1292,17 +1292,11 @@ html, body{ overflow-x: hidden; }
    ========================= */
 
 .cenit-zf-transition{
-  margin: 40px 0 24px 0;   /* kontrollierte Nähe */
+  margin: 18px auto 16px auto;   /* kontrollierte Nähe */
+  max-width: var(--cenit-axis-760);
   text-align:center;
 }
 
-.cenit-zf-chapter{
-  font-family:'EB Garamond', serif;
-  font-size:22px;
-  font-weight:400;
-  margin:0 0 10px 0;
-  color:var(--cenit-text);
-}
 
 /* =========================
    FAQS
