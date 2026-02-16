@@ -1071,6 +1071,7 @@ html, body{ overflow-x: hidden; }
 /* =========================
    FACTS (Zahlen & Fakten)
    ========================= */
+
 .cenit-card--narrow{
   max-width: var(--cenit-axis-950);
   margin-left:auto;
@@ -1078,10 +1079,61 @@ html, body{ overflow-x: hidden; }
   width: 100%;
 }
 
-.cenit-facts-header{ text-align:center; margin-bottom:48px; }
+/* HERO / HEADER */
+.cenit-facts-header{
+  text-align:center;
+  margin-bottom:56px; /* mehr Luft */
+}
 
-.cenit-zf-hero{ padding-bottom:44px; }
+.cenit-zf-hero{
+  padding-bottom:56px; /* mehr Luft nach unten */
+}
+
+.cenit-facts-title{
+  font-family:'EB Garamond', serif;
+  font-size:36px;         /* leicht größer */
+  font-weight:400;
+  color:var(--cenit-purple);
+  margin:0 0 8px 0;
+}
+
+.cenit-editorial-lead{
+  font-size:18px;
+  line-height:1.75;
+  text-align:center;
+  margin:12px 0 22px 0;
+  color:var(--cenit-text);
+}
+
+.cenit-divider-gold{
+  width:60px;
+  height:2px;
+  background:rgba(201,164,78,0.75);
+  margin:0 auto 38px auto;
+}
+
+.cenit-facts-subline{
+  font-size:15px;
+  line-height:1.65;
+  color:var(--muted-foreground);
+  margin:0;
+}
+
+/* VIDEO */
+.cenit-zf-video{
+  padding-top:34px;
+  padding-bottom:34px;
+}
+
+.cenit-video-panel{
+  background:rgba(107,20,184,0.035);
+  padding:32px;
+  border-radius:24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.04); /* “schwebend” */
+}
+
 .cenit-zf-video-card{ padding:18px; }
+.cenit-zf-video-subtitle{ text-align:center; }
 
 .cenit-video-frame{
   width:100%;
@@ -1089,7 +1141,7 @@ html, body{ overflow-x: hidden; }
   padding-bottom:56.25%;
   height:0;
   overflow:hidden;
-  border-radius:16px;
+  border-radius:18px; /* etwas runder */
 }
 .cenit-video-frame iframe{
   position:absolute;
@@ -1100,63 +1152,68 @@ html, body{ overflow-x: hidden; }
   display:block;
 }
 
-.cenit-zf-video-subtitle{ text-align:center; }
-.cenit-zf-video{ padding-top:32px; padding-bottom:32px; }
-
-.cenit-facts-title{
-  font-family:'EB Garamond', serif;
-  font-size:30px;
-  font-weight:400;
-  color:var(--cenit-purple);
-  margin:0 0 6px 0;
-}
-.cenit-facts-subline{
-  font-size:15px;
-  color:var(--muted-foreground);
-  margin:0;
+/* EDITORIAL HEADLINE VOR CHARTS (falls du sie nutzt) */
+.cenit-stat-headline{
+  font-size:20px;
+  font-weight:500;
+  text-align:center;
+  margin:64px 0 36px 0;
+  color:var(--cenit-text);
 }
 
+/* CHART GRID: Dramaturgie (wichtiger Chart leicht dominant) */
 .cenit-facts-grid{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr; /* statt 1fr/1fr */
   gap:26px;
   align-items:start;
 }
 
+/* EMBED CARD: mehr editorial, weniger dashboard */
 .cenit-embed-card{
   background:var(--cenit-surface);
-  border-radius:16px;
+  border-radius:20px; /* hochwertiger */
   box-shadow:var(--cenit-shadow);
-  padding:14px 14px 12px 14px;
+  padding:22px 22px 18px 22px; /* mehr Innenraum */
 }
 
 .cenit-embed{
   width:100%;
-  height:400px;
+  height:420px;              /* etwas mehr Bühne */
   border:0;
-  border-radius:14px;
+  border-radius:16px;
   display:block;
   background:#fff;
 }
 
+/* Quellen */
 .cenit-zf-sources{
-  margin-top:14px;
+  margin-top:16px;
   font-size:13px;
-  line-height:1.5;
+  line-height:1.55;
   text-align:center;
   color:var(--muted-foreground);
 }
-.cenit-zf-sources a{ color:var(--muted-foreground); text-decoration:none; }
-.cenit-zf-sources a:hover{ text-decoration:underline; }
+.cenit-zf-sources a{
+  color:var(--muted-foreground);
+  text-decoration:none;
+}
+.cenit-zf-sources a:hover{
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
 .cenit-zf-sources-label{ font-weight:500; }
 
+/* RESPONSIVE */
 @media (max-width: 980px){
   .cenit-facts-grid{ grid-template-columns:1fr; }
   .cenit-embed{ height:540px; }
+  .cenit-video-panel{ padding:26px; }
 }
 
+/* PAGE PADDING */
 .page-zahlen-fakten .cenit-section{
-  padding: 72px var(--cenit-section-px);
+  padding: 76px var(--cenit-section-px); /* minimal mehr */
 }
 .page-zahlen-fakten .cenit-h2{ margin-bottom: 32px; }
 
