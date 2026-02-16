@@ -1352,7 +1352,7 @@ html, body{ overflow-x: hidden; }
 
   .page-zahlen-fakten .cenit-facts-grid .cenit-embed-card:nth-child(2) .cenit-embed{
     margin-bottom: 10px; /* war 20px */
-    height: 460px;       /* war 540px -> reduziert leere “Bühne” */
+    height: 420px;       /* war 540px -> reduziert leere “Bühne” */
   }
 
   .page-zahlen-fakten .cenit-facts-grid .cenit-embed-card:nth-child(2) .cenit-zf-sources{
