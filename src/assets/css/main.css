@@ -791,6 +791,32 @@ html, body{ overflow-x: hidden; }
 /* Optional: Tag/Button auf gleiche Baseline */
 .cenit-about-tag{ display:inline-block; margin: 10px auto 10px auto; }
 
+/* Beide Grids identisch */
+.cenit-about-photos,
+.cenit-about-team{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Fotos nicht mehr schmaler machen */
+.cenit-about-photo{
+  width:100%;
+}
+
+.cenit-about-person{
+  padding:18px 18px 16px 18px;
+  border-radius:18px;
+
+  box-shadow:
+    0 8px 22px rgba(25,25,60,0.04);
+}
+
+.cenit-about-teamcard{
+  padding-top: 26px;
+  padding-bottom: 32px;
+}
+
 @media (max-width: 980px){
   .cenit-about-team{ grid-template-columns: 1fr 1fr; }
 }
@@ -857,30 +883,6 @@ html, body{ overflow-x: hidden; }
   color: var(--cenit-text);
 }
 
-/* Beide Grids identisch */
-.cenit-about-photos,
-.cenit-about-team{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-/* Fotos nicht mehr schmaler machen */
-.cenit-about-photo{
-  width:100%;
-}
-
-.cenit-about-person{
-  padding:18px 18px 16px 18px;
-  border-radius:18px;
-
-  box-shadow:
-    0 8px 22px rgba(25,25,60,0.04);
-}
-
-.cenit-about-photos{
-  margin-bottom: 18px;   /* statt z.B. 36px */
-}
 
 /* =========================
    EXPERTISE (HOME)
