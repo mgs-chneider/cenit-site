@@ -747,7 +747,7 @@ html, body{ overflow-x: hidden; }
 .cenit-about-person{ text-align: center; }
 
 /* =========================
-   ABOUT – Portrait (Originalzustand)
+   ABOUT – Ensemble
    ========================= */
 
 /* ABOUT – Ensemble in Card */
@@ -855,6 +855,31 @@ html, body{ overflow-x: hidden; }
   font-size: 13px;
   line-height: 1.6;
   color: var(--cenit-text);
+}
+
+/* Beide Grids identisch */
+.cenit-about-photos,
+.cenit-about-team{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Fotos nicht mehr schmaler machen */
+.cenit-about-photo{
+  width:100%;
+}
+
+.cenit-about-person{
+  padding:18px 18px 16px 18px;
+  border-radius:18px;
+
+  box-shadow:
+    0 8px 22px rgba(25,25,60,0.04);
+}
+
+.cenit-about-photos{
+  margin-bottom: 18px;   /* statt z.B. 36px */
 }
 
 /* =========================
