@@ -799,7 +799,7 @@ html, body{ overflow-x: hidden; }
 }
 
 /* RESPONSIVE */
-@media (max-width: 980px){
+@media (max-width: 1100px){
   .cenit-about-team{
     grid-template-columns: repeat(2, 1fr);
     gap:24px;
@@ -1854,5 +1854,16 @@ html, body{ overflow-x: hidden; }
   border-radius:0 !important;
 }
 
+.cenit-about-teamcard,
+.cenit-about-team,
+.cenit-about-person{
+  box-sizing:border-box;
+}
 
+.cenit-about-team{
+  width:100%;
+}
 
+.cenit-about-photo img{
+  max-width:100%;
+}
