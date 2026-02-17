@@ -800,9 +800,25 @@ html, body{ overflow-x: hidden; }
 
 @media (max-width: 640px){
   .cenit-about-team{
-    grid-template-columns: 1fr;
-  }
+    grid-template-columns: /* ABOUT: unify portrait sizes */
+.cenit-about-photo{
+  width: 100%;
+  aspect-ratio: 4 / 5;     /* einheitliches Portrait-Format */
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #fff;        /* optional: falls Bilder transparent wären */
 }
+
+.cenit-about-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* schneidet gleichmäßig zu */
+  object-position: center; /* optional: ggf. "center top" wenn Köpfe zu knapp */
+  display: block;
+  border-radius: 0;        /* Radius kommt vom Wrapper */
+}
+
 
 /* =========================
    EXPERTISE (HOME)
