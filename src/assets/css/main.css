@@ -750,24 +750,54 @@ html, body{ overflow-x: hidden; }
    ABOUT – Portrait (Originalzustand)
    ========================= */
 
-.cenit-about-photo{
-  aspect-ratio: 4 / 5;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: var(--cenit-shadow);
-  background: #fff;
+/* ABOUT – Ensemble in Card */
+.cenit-about-teamcard{
+  padding: 26px;
 }
 
-.cenit-about-photo img{
-  width: 100%;
-  height: 100%;
+.cenit-about-ensemble{
+  width:100%;
+  border-radius: 22px;
+  overflow:hidden;
+  margin: 0 0 22px 0;
+  background: rgba(107,20,184,0.03);
+}
+
+.cenit-about-ensemble img{
+  width:100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  display: block;
+  display:block;
 }
 
-/* Crop tweaks */
-.cenit-about-photo img[src*="FotoManfred"]{ object-position: center 10%; }
-.cenit-about-photo img[src*="FotoHerbert"]{ object-position: center 40%; }
+/* Team grid bleibt 4-spaltig, aber ohne Foto mehr Luft/Balance */
+.cenit-about-team{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* Person card: jetzt wie editorial tiles */
+.cenit-about-person{
+  background: #fff;
+  border-radius: 18px;
+  padding: 16px 16px 14px 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.04);
+}
+
+/* Name/Role etwas kompakter ohne Bild */
+.cenit-about-name{ margin-top: 0; }
+
+/* Optional: Tag/Button auf gleiche Baseline */
+.cenit-about-tag{ display:inline-block; margin: 10px auto 10px auto; }
+
+@media (max-width: 980px){
+  .cenit-about-team{ grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px){
+  .cenit-about-team{ grid-template-columns: 1fr; }
+}
 
 .cenit-about-name{
   margin:14px 0 4px 0;
