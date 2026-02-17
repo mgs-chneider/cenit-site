@@ -730,22 +730,6 @@ html, body{ overflow-x: hidden; }
   padding: 22px;
 }
 
-.cenit-about-team{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 34px;
-  align-items: start;
-}
-
-@media (max-width: 980px){
-  .cenit-about-team{ grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 560px){
-  .cenit-about-team{ grid-template-columns: 1fr; gap: 26px; }
-}
-
-.cenit-about-person{ text-align: center; }
-
 /* =========================
    ABOUT – TEAM
    ========================= */
