@@ -1835,7 +1835,24 @@ html, body{ overflow-x: hidden; }
   transform: scale(1);
 }
 
+/* ABOUT – force identical portrait boxes (override-safe) */
+.cenit-about-teamcard .cenit-about-photo{
+  width:100%;
+  aspect-ratio: 4 / 5;
+  border-radius:18px;
+  overflow:hidden;
+  margin-bottom:16px;
+  background:#fff;
+}
 
+.cenit-about-teamcard .cenit-about-photo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center top; /* hilft v.a. Polina/Manfred */
+  display:block;
+  border-radius:0 !important;
+}
 
 
 
