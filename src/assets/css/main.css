@@ -741,18 +741,25 @@ html, body{ overflow-x: hidden; }
   align-items:start;
 }
 
-.cenit-about-person{
-  text-align:center;
-}
+.cenit-about-person{ text-align:center; }
 
+/* FOTO: einheitlicher Rahmen */
 .cenit-about-photo{
-  margin-bottom:16px;
+  width: 100%;
+  aspect-ratio: 4 / 5;     /* einheitliches Portrait-Format */
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #fff;
 }
 
 .cenit-about-photo img{
-  width:100%;
-  border-radius:18px;
-  display:block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 0;        /* Radius kommt vom Wrapper */
 }
 
 .cenit-about-name{
@@ -791,6 +798,7 @@ html, body{ overflow-x: hidden; }
   color:var(--cenit-text);
 }
 
+/* RESPONSIVE */
 @media (max-width: 980px){
   .cenit-about-team{
     grid-template-columns: repeat(2, 1fr);
@@ -800,24 +808,11 @@ html, body{ overflow-x: hidden; }
 
 @media (max-width: 640px){
   .cenit-about-team{
-    grid-template-columns: /* ABOUT: unify portrait sizes */
-.cenit-about-photo{
-  width: 100%;
-  aspect-ratio: 4 / 5;     /* einheitliches Portrait-Format */
-  border-radius: 18px;
-  overflow: hidden;
-  margin-bottom: 16px;
-  background: #fff;        /* optional: falls Bilder transparent wären */
+    grid-template-columns: 1fr;
+  }
 }
 
-.cenit-about-photo img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;       /* schneidet gleichmäßig zu */
-  object-position: center; /* optional: ggf. "center top" wenn Köpfe zu knapp */
-  display: block;
-  border-radius: 0;        /* Radius kommt vom Wrapper */
-}
+
 
 
 /* =========================
