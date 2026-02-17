@@ -747,150 +747,78 @@ html, body{ overflow-x: hidden; }
 .cenit-about-person{ text-align: center; }
 
 /* =========================
-   ABOUT – Ensemble + Textgrid koppeln
+   ABOUT – TEAM
    ========================= */
 
-/* 1) Whitecard: kontrollierte Innenabstände */
-.cenit-about-teamcard{
-  padding: 26px;                 /* sollte zu euren 26px cards passen */
-}
-
-/* 2) Ensemble-Wrapper: “hero-like” Bühne */
-.cenit-about-ensemble{
-  /* gleiche Achse wie die darunterliegenden Inhalte */
-  max-width: 900px;              /* Stellschraube: 860–920 je nach Geschmack */
-  margin: 0 auto 18px auto;      /* weniger Abstand nach unten */
-  border-radius: 22px;
-  overflow: hidden;
-  position: relative;
-  background: var(--cenit-soft); /* falls PNG Transparenz hat */
-  box-shadow: 0 14px 36px rgba(25,25,60,0.06);
-}
-
-/* Bild: sauber, keine Überraschungen */
-.cenit-about-ensemble img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* optional: sehr subtiler “Wash” damit es sich in #fafafa einbettet */
-.cenit-about-ensemble::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background: linear-gradient(
-    to bottom,
-    rgba(250,250,250,0.06) 0%,
-    rgba(250,250,250,0.00) 35%,
-    rgba(10,10,20,0.04) 100%
-  );
-}
-
-/* 3) Textgrid: EXAKT auf Ensemble-Innenkante setzen */
 .cenit-about-team{
-  max-width: 900px;              /* MUSS identisch zu .cenit-about-ensemble sein */
-  margin: 0 auto;
-  display: grid;
+  display:grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  align-items: start;
+  gap: 32px;
+  align-items:start;
 }
 
-/* 4) Cards unter dem Ensemble: kompakter + näher ans Bild */
 .cenit-about-person{
-  padding-top: 2px;              /* optisch näher */
+  text-align:center;
 }
 
-/* Typo/Spacing leicht straffer (damit “unter Bild” sauber wirkt) */
-.cenit-about-name{ margin: 0 0 6px 0; }
-.cenit-about-role{ margin: 0 0 10px 0; }
-.cenit-about-tag{ margin: 0 auto 10px auto; } /* falls centered */
-.cenit-about-text{ margin: 0; }
-
-/* Responsive: 2 Spalten / 1 Spalte */
-@media (max-width: 980px){
-  .cenit-about-ensemble,
-  .cenit-about-team{
-    max-width: 760px;            /* passt zu eurer 760-Achse */
-  }
-  .cenit-about-team{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
+.cenit-about-photo{
+  margin-bottom:16px;
 }
 
-@media (max-width: 600px){
-  .cenit-about-team{
-    grid-template-columns: 1fr;
-  }
-  .cenit-about-teamcard{
-    padding: 20px;
-  }
-  .cenit-about-ensemble{
-    margin-bottom: 14px;
-  }
+.cenit-about-photo img{
+  width:100%;
+  border-radius:18px;
+  display:block;
 }
 
 .cenit-about-name{
-  margin:14px 0 4px 0;
-  font-family: 'EB Garamond', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 1.25;
-  color: var(--cenit-purple);
+  font-family:'EB Garamond', serif;
+  font-size:18px;
+  color:var(--cenit-purple);
+  margin:0 0 6px 0;
 }
 
 .cenit-about-role{
-  margin: 0 0 10px 0;
-  font-size: 9.5px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted-foreground);
-
-  white-space: nowrap;    
-  overflow: hidden;
-  text-overflow: ellipsis
+  font-size:13px;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  color:var(--muted-foreground);
+  margin:0 0 10px 0;
 }
 
-/* Tag/pill: fixed height (no size drift) */
 .cenit-about-tag{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 28px;
-  padding: 0 12px;
-  line-height: 1;
-  white-space: nowrap;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  font-size: 0.68rem;
-  border-radius: 999px;
-  border: 1px solid rgba(201,164,78,0.35);
-  text-decoration: none;
-  color: var(--muted-foreground);
-
-  margin: 10px 0 14px 0;
+  display:inline-block;
+  margin:8px 0 14px 0;
+  padding:6px 14px;
+  font-size:13px;
+  border-radius:999px;
+  border:1px solid rgba(201,164,78,0.6);
+  color:var(--cenit-purple);
+  text-decoration:none;
 }
 
 .cenit-about-tag:hover{
-  color: var(--cenit-purple);
-  border-color: rgba(201,164,78,0.65);
-  background: rgba(201,164,78,0.06);
+  background:rgba(201,164,78,0.08);
 }
 
 .cenit-about-text{
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--cenit-text);
+  font-size:14px;
+  line-height:1.6;
+  color:var(--cenit-text);
 }
 
+@media (max-width: 980px){
+  .cenit-about-team{
+    grid-template-columns: repeat(2, 1fr);
+    gap:24px;
+  }
+}
+
+@media (max-width: 640px){
+  .cenit-about-team{
+    grid-template-columns: 1fr;
+  }
+}
 
 /* =========================
    EXPERTISE (HOME)
