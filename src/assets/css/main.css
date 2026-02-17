@@ -1840,36 +1840,7 @@ html, body{ overflow-x: hidden; }
   transform: scale(1);
 }
 
-/* Reduce motion respektieren */
-@media (prefers-reduced-motion: reduce){
-  .cenit-hero-image.reveal .cenit-heroimg-img,
-  .page-home .cenit-hero-image.reveal > img{
-    transform: none !important;
-    filter: none !important;
-    transition: none !/* =========================
-   ABOUT – Responsive final override
-   (place at very end of main.css)
-   ========================= */
 
-/* verhindert, dass Grid-Items die Spaltenbreite sprengen */
-.cenit-about .cenit-about-person{ min-width:0; }
-.cenit-about .cenit-about-photo img{ width:100%; height:auto; display:block; }
-
-/* <= 980px: 2 Spalten */
-@media (max-width: 980px){
-  .cenit-about .cenit-about-team{
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 24px !important;
-  }
-}
-
-/* <= 640px: 1 Spalte */
-@media (max-width: 640px){
-  .cenit-about .cenit-about-team{
-    grid-template-columns: 1fr !important;
-    gap: 18px !important;
-  }
-}
 
 
 
