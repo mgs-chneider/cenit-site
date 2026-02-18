@@ -764,10 +764,6 @@ html, body{ overflow-x: hidden; }
   border-radius: 0;         /* Radius kommt vom Wrapper */
 }
 
-.cenit-about-person--manfred .cenit-about-photo img{
-  object-position: center 35%;
-}
-
 .cenit-about-name{
   font-family:'EB Garamond', serif;
   font-style: italic;
@@ -819,6 +815,10 @@ html, body{ overflow-x: hidden; }
 @media (max-width: 640px){
   .cenit-card.cenit-about-teamcard{ padding: 18px; }
   .cenit-about-team{ grid-template-columns: 1fr; gap: 22px; }
+}
+
+.cenit-about-person--manfred .cenit-about-photo img{
+  object-position: center 15%;
 }
 
 /* =========================
