@@ -728,6 +728,7 @@ html, body{ overflow-x: hidden; }
   max-width: var(--cenit-axis-950);
   margin: 0 auto;
   padding: 22px;
+  overflow: hidden;
 }
 
 /* =========================
@@ -736,17 +737,20 @@ html, body{ overflow-x: hidden; }
 
 .cenit-about-team{
   display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
   align-items:start;
 }
 
-.cenit-about-person{ text-align:center; }
+.cenit-about-person{ 
+  text-align:center;
+  min-width:0;
+}
 
 /* FOTO: einheitlicher Rahmen */
 .cenit-about-photo{
   width: 100%;
-  aspect-ratio: 4 / 5;     /* einheitliches Portrait-Format */
+  aspect-ratio: 3 / 4;     /* einheitliches Portrait-Format */
   border-radius: 18px;
   overflow: hidden;
   margin-bottom: 16px;
@@ -799,9 +803,9 @@ html, body{ overflow-x: hidden; }
 }
 
 /* RESPONSIVE */
-@media (max-width: 1024px){
+@media (max-width: 980px){
   .cenit-about-team{
-    grid-template-columns: repeat(2, minmax(0 1fr));
+    grid-template-columns: repeat(2, 0 1fr);
     gap:24px;
   }
 }
