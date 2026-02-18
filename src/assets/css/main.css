@@ -764,6 +764,9 @@ html, body{ overflow-x: hidden; }
   border-radius: 0;         /* Radius kommt vom Wrapper */
 }
 
+.cenit-about-person--manfred .cenit-about-photo img{
+  object-position: center 35%;
+}
 
 .cenit-about-name{
   font-family:'EB Garamond', serif;
