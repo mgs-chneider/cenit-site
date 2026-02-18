@@ -88,22 +88,15 @@
     <div class="cenit-video-frame">
 
       <!-- DE Video -->
-      <video controls>
-        data-lang="de"
-        <source src="public/assets/video/cenit-videode.mp4">
-        title="CENIT – Prävention im Tanz (DE)"
-        allowfullscreen
-        loading="lazy">
+      <video class="cenit-video" controls playsinline preload="metadata" data-lang="de">
+        <source src="/assets/video/cenit-video-de.mp4" type="video/mp4">
+        Ihr Browser unterstützt das Video-Tag nicht.
       </video>
 
       <!-- EN Video -->
-      <video controls>
-        data-lang="en"
-        style="display:none;"
-        <source src="public/assets/video/cenit-video-en.mp4"
-        title="CENIT – Prevention in Dance (EN)"
-        allowfullscreen
-        loading="lazy">
+      <video class="cenit-video" controls playsinline preload="metadata" data-lang="en" style="display:none;">
+        <source src="/assets/video/cenit-video-en.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
 
     </div>
