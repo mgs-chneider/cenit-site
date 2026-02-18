@@ -963,16 +963,11 @@ html, body{ overflow-x: hidden; }
   padding:14px;
 }
 
-/* Right: content softbox with gradient (dominance reduced) */
 .cenit-contact-box{
+  background: transparent;
+  border: 1px solid rgba(201,164,78,0.45);
   border-radius:18px;
-  padding:20px 18px;
-  background: linear-gradient(
-    135deg,
-    #f3edff 0%,
-    #ebe3fb 55%,
-    #e3d7f8 100%
-  );
+  padding:24px;
 }
 
 /* Image */
