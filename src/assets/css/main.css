@@ -1127,14 +1127,6 @@ html, body{ overflow-x: hidden; }
   margin:0;
 }
 
-.page-zahlen-fakten .cenit-kicker{
-  margin: 22px 0 10px 0;
-  font-size:14px;
-  letter-spacing:0.06em;
-  text-transform:uppercase;
-  color:var(--muted-foreground);
-}
-
 .page-zahlen-fakten .cenit-zf-intro{
   font-size:16px;
   line-height:1.85;
