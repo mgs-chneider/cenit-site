@@ -1226,7 +1226,7 @@ html, body{ overflow-x: hidden; }
 
   background: linear-gradient(
     to top,
-   rgba(250,250,250,0.72) 0%,
+    rgba(250,250,250,0.72) 0%,
     rgba(250,250,250,0.60) 30%,
     rgba(250,250,250,0.45) 50%,
     rgba(250,250,250,0.20) 70%,
