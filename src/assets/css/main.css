@@ -1176,7 +1176,7 @@ html, body{ overflow-x: hidden; }
   font-weight:400;
   line-height:1.6;
   margin:0;
-  color:var(--cenit-text);
+  color:var(--cenit-purple);
 }
 
 /* Optional divider for chapter (wenn du ihn nutzen willst) */
