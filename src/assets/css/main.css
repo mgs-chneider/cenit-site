@@ -1518,6 +1518,7 @@ html, body{ overflow-x: hidden; }
 /* =========================
    SATZUNG / LEITBILD
    ========================= */
+
 .page-satzung .cenit-stat-lead{
   max-width: var(--cenit-axis-760);
   margin: 0 auto 28px auto;
@@ -1568,6 +1569,10 @@ html, body{ overflow-x: hidden; }
 
 .page-satzung .cenit-stat-leitbild{ padding: 28px 18px; }
 .page-satzung .cenit-stat-leitbild-title{ text-align: center; margin-top: 0; }
+
+.page-satzung .cenit-stat-leitbild .cenit-h2{
+  margin-bottom: 26px;
+}
 
 .page-satzung .cenit-stat-leitbild h3.cenit-h3{
   font-family: "EB Garamond", serif;
