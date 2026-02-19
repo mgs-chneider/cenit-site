@@ -1196,8 +1196,13 @@ html, body{ overflow-x: hidden; }
   padding-bottom: 72px;/* Luft Richtung Charts */
 }
 
-.page-zahlen-fakten .cenit-zf-video-card.cenit-card--narrow{
-  max-width: 950px;
+.page-zahlen-fakten{
+  --zf-video-axis: 880px; /* tweak: 860 / 880 / 900 */
+}
+
+.page-zahlen-fakten .cenit-zf-video-card .cenit-video-frame{
+  max-width: var(--zf-video-axis);
+  margin: 0 auto;
 }
 
 .page-zahlen-fakten .cenit-video-panel{
@@ -1213,7 +1218,7 @@ html, body{ overflow-x: hidden; }
 .page-zahlen-fakten .cenit-video-frame{
   width:100%;
   aspect-ratio:16/9;
-  border-radius:18px;
+  border-radius:16px;
   overflow:hidden;
   background:#000;
 }
@@ -1223,6 +1228,15 @@ html, body{ overflow-x: hidden; }
   height:100%;
   object-fit:cover;
   display:block;
+}
+
+.page-zahlen-fakten .cenit-zf-video-card{
+  padding: 22px 18px; /* wie cenit-softcard */
+}
+
+.page-zahlen-fakten .cenit-zf-video-card .cenit-video-frame{
+  max-width: var(--zf-video-axis);
+  margin: 0 auto;
 }
 
 
