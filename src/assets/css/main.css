@@ -1134,6 +1134,13 @@ html, body{ overflow-x: hidden; }
   color:var(--cenit-text);
 }
 
+.page-zahlen-fakten .cenit-zf-intro p{
+  margin: 0 0 18px 0; /* oder euer Standard */
+}
+.page-zahlen-fakten .cenit-zf-intro p:last-child{
+  margin-bottom: 0;
+}
+
 /* =========================
    TRANSITIONS (tight to visuals)
    ========================= */
@@ -1164,7 +1171,7 @@ html, body{ overflow-x: hidden; }
 
 .page-zahlen-fakten .cenit-zf-chapter{
   font-family:'EB Garamond', serif;
-  font-size:24px;
+  font-size:22px;
   font-weight:400;
   line-height:1.6;
   margin:0;
@@ -1304,6 +1311,7 @@ html, body{ overflow-x: hidden; }
 /* =========================
    OUTRO (text only on #fafafa)
    ========================= */
+
 .page-zahlen-fakten .cenit-zf-outro{
   background:#fafafa;
 }
