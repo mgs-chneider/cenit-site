@@ -1213,7 +1213,6 @@ html, body{ overflow-x: hidden; }
   box-shadow: 0 10px 40px rgba(0,0,0,0.04);
 }
 
-.page-zahlen-fakten .cenit-zf-video-card{ padding:18px; }
 .page-zahlen-fakten .cenit-zf-video-subtitle{ text-align:center; }
 
 .page-zahlen-fakten .cenit-video-frame{
@@ -1232,7 +1231,7 @@ html, body{ overflow-x: hidden; }
 }
 
 .page-zahlen-fakten .cenit-zf-video-card{
-  padding: 22px 18px; /* wie cenit-softcard */
+  padding: 26px 26px; /* symmetrisch */
 }
 
 .page-zahlen-fakten .cenit-zf-video-card .cenit-video-frame{
@@ -1240,6 +1239,12 @@ html, body{ overflow-x: hidden; }
   margin: 0 auto;
 }
 
+/* Inner Container steuert die Achse UND vertikale Balance */
+.page-zahlen-fakten .cenit-zf-video-inner{
+  max-width: 840px;   /* deine embedded-Achse */
+  margin: 0 auto;
+  padding: 10px 0;    /* vertikale Kompensation */
+}
 
 /* =========================
    CHARTS (Data room / grid)
