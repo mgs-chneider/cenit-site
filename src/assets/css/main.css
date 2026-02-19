@@ -1190,59 +1190,45 @@ html, body{ overflow-x: hidden; }
    VIDEO
    ========================= */
 
-.page-zahlen-fakten .cenit-zf-video{
-  padding-top: 12px;   /* näher an Transition */
-  padding-bottom: 72px;/* Luft Richtung Charts */
-}
-
 .page-zahlen-fakten{
-  --zf-video-axis: 840px; /* tweak: 820 / 804 / 860 */
+  --zf-video-axis: 840px; /* embedded/doc: 820–860 ok */
 }
 
-.page-zahlen-fakten .cenit-zf-video-card .cenit-video-frame{
-  max-width: var(--zf-video-axis);
-  margin: 0 auto;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+.page-zahlen-fakten .cenit-zf-video{
+  padding-top: 12px;
+  padding-bottom: 72px;
 }
 
-.page-zahlen-fakten .cenit-video-panel{
-  background:rgba(107,20,184,0.035);
-  padding:32px;
-  border-radius:24px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.04);
-}
-
-.page-zahlen-fakten .cenit-zf-video-subtitle{ text-align:center; }
-
-.page-zahlen-fakten .cenit-video-frame{
-  width:100%;
-  aspect-ratio:16/9;
-  border-radius:16px;
-  overflow:hidden;
-  background:#000;
-}
-
-.cenit-video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-.page-zahlen-fakten .cenit-zf-video-card{
-  padding: 26px 26px; /* symmetrisch */
-}
-
-.page-zahlen-fakten .cenit-zf-video-card .cenit-video-frame{
-  max-width: var(--zf-video-axis);
-  margin: 0 auto;
-}
-
-/* Inner Container steuert die Achse UND vertikale Balance */
+/* Wrapper um das Video (mit reveal) */
 .page-zahlen-fakten .cenit-zf-video-inner{
-  max-width: 840px;   /* deine embedded-Achse */
+  max-width: var(--zf-video-axis);
   margin: 0 auto;
-  padding: 10px 0;    /* vertikale Kompensation */
+  padding: 10px 0; /* vertikale Balance */
+}
+
+/* 16:9 Frame */
+.page-zahlen-fakten .cenit-video-frame{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06); /* optional */
+}
+
+.page-zahlen-fakten .cenit-video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Panel-Klasse neutralisieren (falls irgendwo noch drin) */
+.page-zahlen-fakten .cenit-video-panel{
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* =========================
