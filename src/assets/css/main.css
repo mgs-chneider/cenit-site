@@ -1208,12 +1208,28 @@ html, body{ overflow-x: hidden; }
 
 /* 16:9 Frame */
 .page-zahlen-fakten .cenit-video-frame{
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 16px;
   overflow: hidden;
   background: #000;
   box-shadow: 0 10px 28px rgba(0,0,0,0.06); /* optional */
+}
+
+.page-zahlen-fakten .cenit-video-frame::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px; /* gleich wie frame */
+  pointer-events:none;
+
+  background: linear-gradient(
+    to top,
+    rgba(250,250,250,0.35) 0%,
+    rgba(250,250,250,0.12) 55%,
+    rgba(250,250,250,0.00) 100%
+  );
 }
 
 .page-zahlen-fakten .cenit-video{
