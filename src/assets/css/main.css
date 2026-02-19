@@ -1197,12 +1197,13 @@ html, body{ overflow-x: hidden; }
 }
 
 .page-zahlen-fakten{
-  --zf-video-axis: 880px; /* tweak: 860 / 880 / 900 */
+  --zf-video-axis: 840px; /* tweak: 820 / 804 / 860 */
 }
 
 .page-zahlen-fakten .cenit-zf-video-card .cenit-video-frame{
   max-width: var(--zf-video-axis);
   margin: 0 auto;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
 }
 
 .page-zahlen-fakten .cenit-video-panel{
