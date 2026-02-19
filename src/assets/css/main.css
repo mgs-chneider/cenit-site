@@ -1708,37 +1708,6 @@ html, body{ overflow-x: hidden; }
   }
 }
 
-/* Editorial hero row (Einblicke) */
-.page-einblicke .cenit-hero-row{
-  max-width: var(--cenit-axis-950);
-  margin: 18px auto 0 auto;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 26px;
-  align-items: start;
-}
-
-.cenit-hero-floatimg{
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--cenit-shadow);
-  background: #fff;
-}
-.cenit-hero-floatimg img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.page-einblicke .cenit-hero-rowtext{
-  max-width: var(--cenit-axis-760);
-  color: var(--cenit-text);
-}
-.page-einblicke .cenit-hero-rowtext .cenit-text-body,
-.page-einblicke .cenit-hero-rowtext p{
-  margin-top: 0;
-  color: var(--cenit-text);
-}
 
 /* =========================
    HERO IMAGE — INTERNAL PAGES TEXT
