@@ -8,40 +8,41 @@ document.addEventListener("DOMContentLoaded", () => {
   /* =====================================================
      MENU TOGGLE
   ===================================================== */
-  const menuBtn = document.querySelector(".cenit-menutoggle");
-  const menu = document.querySelector(".cenit-menu");
+ const menuBtn = document.querySelector(".cenit-menutoggle");
+const menu = document.querySelector(".cenit-menu");
 
-  if (menuBtn && menu) {
+if (menuBtn && menu) {
+  const closeMenu = () => {
+    menu.classList.remove("show");
+    menuBtn.setAttribute("aria-expanded", "false");
+  };
 
-    menuBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+  const toggleMenu = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const open = menu.classList.toggle("show");
+    menuBtn.setAttribute("aria-expanded", String(open));
+  };
 
-      const open = menu.classList.toggle("show");
-      menuBtn.setAttribute("aria-expanded", String(open));
-    });
+  menuBtn.addEventListener("click", toggleMenu);
 
-    document.addEventListener("click", (e) => {
-      if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
-        menu.classList.remove("show");
-        menuBtn.setAttribute("aria-expanded", "false");
-      }
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        menu.classList.remove("show");
-        menuBtn.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-   document.querySelectorAll(".cenit-menu a").forEach(a => {
-  a.addEventListener("click", () => {
-    const btn = document.querySelector(".cenit-menutoggle");
-    if (btn && btn.getAttribute("aria-expanded") === "true") btn.click();
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeMenu();
+    }
   });
-});
+
+  // Close on Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  // Close after clicking any menu item (anchors + pages)
+  menu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => closeMenu());
+  });
+}
 
   /* =====================================================
      LANGUAGE SWITCH + i18n
