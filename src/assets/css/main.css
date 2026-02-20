@@ -352,23 +352,24 @@ html, body{ overflow-x: hidden; }
 
 .cenit-menu{
   padding: 10px;
+  width: 220px;
 }
 
 /* Dach/Heading */
-.cenit-menu .cenit-menu-heading{
-  padding: 4px 16px 2px 16px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+.cenit-menu-heading{
+  padding: 6px 14px 6px 14px;
+  font-size: 11.5px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--muted-foreground);
 }
 
 /* Hauptseiten: EINHEITLICH muted */
-.cenit-menu .cenit-menu-item{
+.cenit-menu-item{
   display:block;
-  padding-left: 16px;
-  padding-right: 16px;
-  font-size: 13px;
+  padding: 7px 14px;             /* minimal stärker als Subitems */
+  font-size: 12.5px;
   line-height: 1.25;
   font-weight: 600;
   color: var(--muted-foreground);
@@ -376,22 +377,26 @@ html, body{ overflow-x: hidden; }
 }
 
 /* Landing-Sections: dezenter als jetzt, aber etwas präsenter als muted */
-.cenit-menu .cenit-menu-subitem{
+.cenit-menu-subitem{
   display:block;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 6px 14px 6px 28px;    /* kompakt + eingerückt */
   font-size: 12.5px;
   line-height: 1.25;
-  font-weight: 500;
+  font-weight: 400;
   color: rgba(25,25,112,0.72);  /* ruhig (Midnight), nicht knallig */
   text-decoration:none;
 }
 
+/* Gruppenabstand zwischen Dach und Divider */
+.cenit-menu .cenit-menu-group{
+  padding-bottom: 4px;
+}
+
 /* Divider kompakter */
-.cenit-menu .cenit-menu-divider{
+.cenit-menu-divider{
   height:1px;
-  margin: 8px 10px;
-  background: rgba(0,0,0,0.10);
+  margin: 8px 14px;
+  background: rgba(0,0,0,0.08);
 }
 
 /* Hover: Akzent nur bei Interaktion */
