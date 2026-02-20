@@ -322,11 +322,42 @@ html, body{ overflow-x: hidden; }
   font-weight:500;
 }
 
+/* =========================
+   DROPDOWN MENU (POSITION + VISIBILITY)
+   ========================= */
+
+/* sticky bar is already positioned; ensure anchor context */
+.cenit-topbar{
+  position: sticky;
+  top: 0;
+  z-index: var(--cenit-topbar-z);
+}
+
+/* menu hidden by default */
+.cenit-menu{
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 1rem;                  /* align with topbar padding */
+  z-index: calc(var(--cenit-topbar-z) + 40);
+
+  width: 260px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+  border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* open state */
+.cenit-menu.show{
+  display: block;
+}
+
 /* ===== Hamburger Menu: refined ToC style ===== */
 
 .cenit-menu{
   padding: 10px;
-  min-width: 220px;
 }
 
 /* Dach/Heading */
@@ -370,38 +401,6 @@ html, body{ overflow-x: hidden; }
 /* Hover: Akzent nur bei Interaktion */
 .cenit-menu a:hover{
   color: var(--cenit-purple);
-}
-
-/* Hamburger menu hierarchy */
-.cenit-menu .cenit-menu-heading{
-  padding: 10px 14px 6px 14px;
-  font-weight: 700;
-  opacity: 0.9;
-}
-
-.cenit-menu .cenit-menu-item{
-  display:block;
-  padding: 10px 14px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.cenit-menu .cenit-menu-subitem{
-  display:block;
-  padding: 8px 14px 8px 30px; /* eingerückt */
-  font-size: 0.94rem;
-  opacity: 0.85;
-  text-decoration:none;
-}
-
-.cenit-menu .cenit-menu-subitem:hover{
-  opacity: 1;
-}
-
-.cenit-menu .cenit-menu-divider{
-  height: 1px;
-  margin: 10px 14px;
-  background: rgba(0,0,0,0.12);
 }
 
 @media (max-width: 600px){
