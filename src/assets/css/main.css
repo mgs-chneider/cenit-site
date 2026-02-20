@@ -832,6 +832,7 @@ html, body{ overflow-x: hidden; }
 /* =========================
    EXPERTISE (HOME)
    ========================= */
+
 .cenit-expertise .cenit-h2{ margin-bottom: 24px; } /* clean & consistent */
 .cenit-expertise .cenit-lead{ margin-top:0; }
 
@@ -1570,9 +1571,8 @@ html, body{ overflow-x: hidden; }
 .page-satzung .cenit-stat-leitbild{ padding: 28px 18px; }
 .page-satzung .cenit-stat-leitbild-title{ text-align: center; margin-top: 0; }
 
-.page-satzung .cenit-stat-leitbild-title{
-  margin-bottom: 26px;
-}
+.page-satzung .cenit-stat-leitbild-title{ margin: 0 0 26px 0; }
+.page-satzung .cenit-stat-leitbild-lead{ margin: 0 0 10px 0; }
 
 .page-satzung .cenit-stat-leitbild h3.cenit-h3{
   font-family: "EB Garamond", serif;
