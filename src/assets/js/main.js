@@ -36,6 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+   document.querySelectorAll(".cenit-menu a").forEach(a => {
+  a.addEventListener("click", () => {
+    const btn = document.querySelector(".cenit-menutoggle");
+    if (btn && btn.getAttribute("aria-expanded") === "true") btn.click();
+  });
+});
 
   /* =====================================================
      LANGUAGE SWITCH + i18n
