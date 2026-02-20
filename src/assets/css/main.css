@@ -323,33 +323,27 @@ html, body{ overflow-x: hidden; }
 }
 
 /* =========================
-   DROPDOWN MENU (POSITION + VISIBILITY)
+   DROPDOWN MENU – aligned to button
    ========================= */
 
-/* sticky bar is already positioned; ensure anchor context */
-.cenit-topbar{
-  position: sticky;
-  top: 0;
-  z-index: var(--cenit-topbar-z);
-}
-
-/* menu hidden by default */
 .cenit-menu{
   display: none;
-  position: absolute;
-  top: calc(100% + 10px);
-  right: 1rem;                  /* align with topbar padding */
-  z-index: calc(var(--cenit-topbar-z) + 40);
 
-  width: 260px;
+  position: absolute;
+  top: calc(100% + 6px);        /* näher dran */
+  right: 0;                     /* exakt rechtsbündig */
+
+  width: 220px;                 /* schmaler */
+  padding: 10px 0;              /* vertikal Luft, horizontal über Items */
+
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.14);
-  border: 1px solid rgba(0,0,0,0.06);
-  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+
+  z-index: calc(var(--cenit-topbar-z) + 40);
 }
 
-/* open state */
 .cenit-menu.show{
   display: block;
 }
