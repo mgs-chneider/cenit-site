@@ -360,6 +360,38 @@ html, body{ overflow-x: hidden; }
 }
 .cenit-menu a:hover{ background:#ffffff; color:var(--cenit-purple); }
 
+/* Hamburger menu hierarchy */
+.cenit-menu .cenit-menu-heading{
+  padding: 10px 14px 6px 14px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.cenit-menu .cenit-menu-item{
+  display:block;
+  padding: 10px 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cenit-menu .cenit-menu-subitem{
+  display:block;
+  padding: 8px 14px 8px 30px; /* eingerückt */
+  font-size: 0.94rem;
+  opacity: 0.85;
+  text-decoration:none;
+}
+
+.cenit-menu .cenit-menu-subitem:hover{
+  opacity: 1;
+}
+
+.cenit-menu .cenit-menu-divider{
+  height: 1px;
+  margin: 10px 14px;
+  background: rgba(0,0,0,0.12);
+}
+
 @media (max-width: 600px){
   .cenit-topbar{ padding:0.55rem 0.7rem; }
   .cenit-topbar-inner{ padding: 0.55rem 0.7rem; }
