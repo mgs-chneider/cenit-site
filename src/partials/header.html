@@ -1,11 +1,11 @@
-<!-- CENIT TOP-BAR: Language | Logo | Menu -->
+<!-- CENIT TOP-BAR: Language | Social | Menu -->
 <section style="margin:0; padding:0;">
   <div class="cenit-topbar">
     <div class="cenit-topbar-inner">
 
       <!-- Language Switch (no navigation) -->
       <div class="cenit-langswitch" aria-label="Language switch">
-        <button type="button" class="cenit-langbtn is-active" data-set-lang="de">DE</button>
+        <button type="button" class="cenit-langbtn" data-set-lang="de">DE</button>
         <span class="cenit-langsep">|</span>
         <button type="button" class="cenit-langbtn" data-set-lang="en">EN</button>
       </div>
@@ -20,21 +20,29 @@
         ☰ <span class="cenit-menulabel" data-i18n="menuLabel">Menü</span>
       </button>
 
-    </div><!-- /.cenit-topbar-inner -->
+    </div>
 
-    <!-- Dropdown (anchored to .cenit-topbar) -->
+    <!-- Dropdown -->
     <nav class="cenit-menu" aria-label="Site navigation">
-      <a href="/" data-i18n="home">Home</a>
-      <a href="/#vision" data-i18n="vision">Vision</a>
-      <a href="/#ueber-uns" data-i18n="about">Über uns</a>
-      <a href="/#expertise" data-i18n="expertise">Expertise</a>
-      <a href="/einblicke-entwicklungen" data-i18n="insights">Einblicke &amp; Entwicklungen</a>
-      <a href="/faqs" data-i18n="faqs">FAQs</a>
-      <a href="/#kontakt" data-i18n="contact">Kontakt</a>
-      <a href="/satzung" data-i18n="statutes">Satzung</a>
+
+      <!-- Dach: Übersicht (Landing-Sections als Inhaltsverzeichnis) -->
+      <div class="cenit-menu-group">
+        <div class="cenit-menu-heading" data-i18n="overview">Übersicht</div>
+
+        <a class="cenit-menu-subitem" href="/#vision" data-i18n="visionMission">Vision &amp; Mission</a>
+        <a class="cenit-menu-subitem" href="/#ueber-uns" data-i18n="about">Über uns</a>
+        <a class="cenit-menu-subitem" href="/#expertise" data-i18n="expertise">Expertise</a>
+        <a class="cenit-menu-subitem" href="/#kontakt" data-i18n="contact">Kontakt</a>
+      </div>
+
+      <div class="cenit-menu-divider" role="separator" aria-hidden="true"></div>
+
+      <!-- Eigenständige Seiten gleichrangig -->
+      <a class="cenit-menu-item" href="/einblicke-entwicklungen" data-i18n="insights">Einblicke &amp; Entwicklungen</a>
+      <a class="cenit-menu-item" href="/faqs" data-i18n="faqs">FAQs</a>
+      <a class="cenit-menu-item" href="/satzung" data-i18n="statutes">Satzung</a>
+
     </nav>
 
-  </div><!-- /.cenit-topbar -->
+  </div>
 </section>
-
-
