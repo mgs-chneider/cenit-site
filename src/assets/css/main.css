@@ -1,4 +1,4 @@
-/* =========================================================
+./* =========================================================
    CENIT — main.css (Clean Rebuild)
    Goal: one system layer, no duplicates, consistent spacing,
          sticky topbar, reliable dropdown, unified axes.
@@ -864,7 +864,7 @@ html, body{ overflow-x: hidden; }
 
   .cenit-about-person .cenit-about-photo{
     aspect-ratio: 4 / 3;   /* weniger "posterhaft" */
-    max-height: 260px;     /* Deckel gegen riesige Bilder */
+    max-height: 320px;     /* Deckel gegen riesige Bilder */
     overflow: hidden;
     border-radius: 16px;   /* falls nicht ohnehin gesetzt */
   }
