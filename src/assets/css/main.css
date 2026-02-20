@@ -322,43 +322,55 @@ html, body{ overflow-x: hidden; }
   font-weight:500;
 }
 
-/* Dropdown */
+/* ===== Hamburger Menu: refined ToC style ===== */
+
 .cenit-menu{
-  position: absolute;
-  right: max(1rem, calc((100vw - var(--cenit-axis-950))/2 + 1rem));
-  top: calc(100% + 10px);
-
-  background: #f5f5f5;
-  border-radius: 10px;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.14);
-
-  padding: 0 0.85rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
-
-  width: 210px;
-  z-index: var(--cenit-menu-z);
+  padding: 10px;
+  min-width: 220px;
 }
 
-.cenit-menu.show{
-  max-height: 520px;
-  padding: 0.9rem 0.85rem;
+/* Dach/Heading */
+.cenit-menu .cenit-menu-heading{
+  padding: 6px 10px 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--muted-foreground);
 }
 
-.cenit-menu a{
-  color:rgba(107,20,184,0.86);
+/* Hauptseiten: EINHEITLICH muted */
+.cenit-menu .cenit-menu-item{
+  display:block;
+  padding: 8px 10px;
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  text-decoration: none;
+}
+
+/* Landing-Sections: dezenter als jetzt, aber etwas präsenter als muted */
+.cenit-menu .cenit-menu-subitem{
+  display:block;
+  padding: 7px 10px 7px 22px;   /* eingerückt + kompakt */
+  font-size: 12.5px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: rgba(25,25,112,0.72);  /* ruhig (Midnight), nicht knallig */
   text-decoration:none;
-  font-size:0.95rem;
-  padding:0.30rem 0.25rem;
-  border-radius:6px;
-  line-height:1.25;
 }
-.cenit-menu a:hover{ background:#ffffff; color:var(--cenit-purple); }
+
+/* Divider kompakter */
+.cenit-menu .cenit-menu-divider{
+  height:1px;
+  margin: 8px 10px;
+  background: rgba(0,0,0,0.10);
+}
+
+/* Hover: Akzent nur bei Interaktion */
+.cenit-menu a:hover{
+  color: var(--cenit-purple);
+}
 
 /* Hamburger menu hierarchy */
 .cenit-menu .cenit-menu-heading{
