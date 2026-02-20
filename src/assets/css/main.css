@@ -855,10 +855,26 @@ html, body{ overflow-x: hidden; }
 }
 
 /* RESPONSIVE: Tablet = 2x2 */
+/* iPad / Tablet portrait: About-Team 2x2, Fotos weniger dominant */
 @media (min-width: 700px) and (max-width: 980px){
   .cenit-about-team{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
+    gap: 16px;
+  }
+
+  .cenit-about-person .cenit-about-photo{
+    aspect-ratio: 4 / 3;   /* weniger "posterhaft" */
+    max-height: 220px;     /* Deckel gegen riesige Bilder */
+    overflow: hidden;
+    border-radius: 16px;   /* falls nicht ohnehin gesetzt */
+  }
+
+  .cenit-about-person .cenit-about-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%; /* Gesicht etwas höher halten */
+    display: block;
   }
 }
 
