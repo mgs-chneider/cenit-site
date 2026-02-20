@@ -864,7 +864,7 @@ html, body{ overflow-x: hidden; }
 
   .cenit-about-person .cenit-about-photo{
     aspect-ratio: 4 / 3;   /* weniger "posterhaft" */
-    max-height: 220px;     /* Deckel gegen riesige Bilder */
+    max-height: 260px;     /* Deckel gegen riesige Bilder */
     overflow: hidden;
     border-radius: 16px;   /* falls nicht ohnehin gesetzt */
   }
