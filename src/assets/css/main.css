@@ -883,7 +883,7 @@ html, body{ overflow-x: hidden; }
 }
 
 /* iPad portrait widths (Safari/Chrome iPad): 768–834px */
-@media (min-width: 740px) and (max-width: 900px){
+@media (max-width: 900px){
   .cenit-about-team{
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
