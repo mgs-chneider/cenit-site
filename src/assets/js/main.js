@@ -52,9 +52,9 @@ if (menuBtn && menu) {
 
   const dict = {
     de: {
-      home: "Startseite",
+      home: "Übersicht",
       menuLabel: "Menü",
-      vision: "Vision",
+      vision: "Vision & Mission",
       about: "Über uns",
       expertise: "Expertise",
       insights: "Einblicke & Entwicklungen",
@@ -63,9 +63,9 @@ if (menuBtn && menu) {
       statutes: "Satzung"
     },
     en: {
-      home: "Home",
+      home: "Overview",
       menuLabel: "Menu",
-      vision: "Vision",
+      vision: "Vision & Mission",
       about: "About us",
       expertise: "Expertise",
       insights: "Insights & Updates",
