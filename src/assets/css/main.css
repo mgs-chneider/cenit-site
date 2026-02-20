@@ -356,7 +356,7 @@ html, body{ overflow-x: hidden; }
 
 /* Dach/Heading */
 .cenit-menu .cenit-menu-heading{
-  padding: 6px 10px 4px 10px;
+  padding: 4px 16px 2px 16px;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -366,7 +366,8 @@ html, body{ overflow-x: hidden; }
 /* Hauptseiten: EINHEITLICH muted */
 .cenit-menu .cenit-menu-item{
   display:block;
-  padding: 8px 10px;
+  padding-left: 16px;
+  padding-right: 16px;
   font-size: 13px;
   line-height: 1.25;
   font-weight: 600;
@@ -377,7 +378,8 @@ html, body{ overflow-x: hidden; }
 /* Landing-Sections: dezenter als jetzt, aber etwas präsenter als muted */
 .cenit-menu .cenit-menu-subitem{
   display:block;
-  padding: 7px 10px 7px 22px;   /* eingerückt + kompakt */
+  padding-left: 16px;
+  padding-right: 16px;
   font-size: 12.5px;
   line-height: 1.25;
   font-weight: 500;
