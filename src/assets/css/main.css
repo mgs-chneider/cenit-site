@@ -397,6 +397,7 @@ html, body{ overflow-x: hidden; }
   height:1px;
   margin: 8px 14px;
   background: rgba(0,0,0,0.08);
+  display: none;
 }
 
 /* Hover: Akzent nur bei Interaktion */
