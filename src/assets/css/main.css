@@ -370,7 +370,7 @@ html, body{ overflow-x: hidden; }
   display:block;
   padding: 7px 14px;             /* minimal stärker als Subitems */
   font-size: 12.5px;
-  line-height: 1.25;
+  line-height: 1.20;
   font-weight: 600;
   color: var(--muted-foreground);
   text-decoration: none;
@@ -380,8 +380,8 @@ html, body{ overflow-x: hidden; }
 .cenit-menu-subitem{
   display:block;
   padding: 6px 14px 6px 28px;    /* kompakt + eingerückt */
-  font-size: 12.5px;
-  line-height: 1.25;
+  font-size: 11.5px;
+  line-height: 1.20;
   font-weight: 500;
   color: rgba(25,25,112,0.72);  /* ruhig (Midnight), nicht knallig */
   text-decoration:none;
