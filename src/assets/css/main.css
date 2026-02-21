@@ -422,8 +422,10 @@ li{ margin: 0 0 6px 0; }
 .cenit-quote-band-author{
   margin: 12px 0 0 0;
   font-size: 13px;
-  color: var(--muted-
-  
+  color: var(--muted-foreground);
+}
+
+
 /* =========================
    HOME HERO – FINAL CLEAN
 ========================= */
