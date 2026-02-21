@@ -627,145 +627,7 @@ html, body{ overflow-x: hidden; }
   }
 }
 
-/* =========================
-   HOME HERO – FULL BLEED (override)
-   nur Landingpage: body.page-home
-   ========================= */
 
-/* ggf. anpassen, falls deine Topbar höher ist */
-:root{
-  --cenit-topbar-height: 64px; /* 64–76px tweak */
-}
-
-/* Topbar sitzt "im Bild" (nur Home) */
-body.page-home .cenit-topbar{
-  background: rgba(250,250,250,0.18);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-/* Hero Section full width, ohne Container */
-body.page-home .cenit-hero{
-  margin: 0;
-  padding: 0;
-  background: #fafafa; /* falls Bild nicht lädt */
-}
-
-/* Media-Block full bleed */
-body.page-home .cenit-hero-media{
-  position: relative;
-  width: 100%;
-  min-height: clamp(560px, 82vh, 860px);
-  overflow: hidden;
-}
-
-/* Background image */
-body.page-home .cenit-hero-media > img{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  /* mehr Präsenz als vorher, aber noch "soft" */
-  opacity: 0.93;      /* 0.88–0.96 */
-  filter: contrast(1.04);
-}
-
-/* Overlay: übernimmt auch Transition und blendet unten in #fafafa aus */
-body.page-home .cenit-hero-overlay{
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  /* Topbar mitdenken + Claim etwas nach unten */
-  padding-top: calc(var(--cenit-topbar-height) + clamp(28px, 6vh, 84px));
-  padding-bottom: clamp(34px, 6vh, 72px);
-
-  /* Bottom Fade in #fafafa */
-  background: linear-gradient(
-    to bottom,
-    rgba(250,250,250,0.06) 0%,
-    rgba(250,250,250,0.10) 28%,
-    rgba(250,250,250,0.22) 48%,
-    rgba(250,250,250,0.55) 70%,
-    rgba(250,250,250,0.86) 86%,
-    rgba(250,250,250,1.00) 100%
-  );
-}
-
-/* 760 Achse + Center */
-body.page-home .cenit-hero-top,
-body.page-home .cenit-hero-bottom{
-  max-width: 760px;
-  margin: 0 auto;
-  width: calc(100% - 2 * var(--cenit-section-px));
-  text-align: center;
-}
-
-/* Typografie: größer, damit sie im full-bleed nicht "verliert" */
-body.page-home .cenit-hero-claim{
-  margin: 0;
-  font-family: 'EB Garamond', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(26px, 3vw, 44px);
-  line-height: 1.18;
-  color: var(--cenit-purple);
-  text-shadow: 0 1px 0 rgba(250,250,250,0.35);
-}
-
-body.page-home .cenit-hero-sub{
-  margin: 10px 0 0 0;
-  font-size: clamp(14px, 1.2vw, 16px);
-  color: rgba(25,25,112,0.78);
-}
-
-/* Divider */
-body.page-home .cenit-hero-divider{
-  width: 92px;
-  height: 2px;
-  margin: 14px auto 10px auto;
-  background: rgba(201,164,78,0.70);
-  border-radius: 999px;
-}
-
-body.page-home .cenit-hero-divider--thin{
-  height: 1px;
-  opacity: 0.85;
-  margin-top: 16px;
-}
-
-/* Transition text */
-body.page-home .cenit-hero-transition-text{
-  margin: 0;
-  font-size: clamp(14px, 1.25vw, 17px);
-  line-height: 1.55;
-  color: rgba(25,25,112,0.78);
-}
-
-/* CTA */
-body.page-home .cenit-hero-cta{
-  margin-top: 14px;
-  display: flex;
-  justify-content: center;
-}
-
-body.page-home .cenit-hero-cta .cenit-btn{
-  background: rgba(250,250,250,0.70);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-
-/* Mobile: etwas kompakter */
-@media (max-width: 560px){
-  body.page-home .cenit-hero-divider{ margin: 12px auto 8px auto; }
-  body.page-home .cenit-hero-sub{ margin-top: 8px; }
-}
 
 
 /* =========================
@@ -2108,39 +1970,155 @@ body.page-home .cenit-hero-cta .cenit-btn{
 }
 
 /* =========================
-   HERO IMAGE – cinematic reveal (subtle)
+   HOME HERO – FULL BLEED (FINAL FIX)
    ========================= */
 
-/* Ausgangszustand: Bild minimal größer + leicht weich */
-.cenit-hero-image.reveal .cenit-heroimg-img{
-  transform: scale(1.02);
-  filter: saturate(0.98) contrast(0.98);
-  transition:
-    transform 900ms ease-out,
-    filter 900ms ease-out;
-  will-change: transform, filter;
+:root{
+  --cenit-topbar-height: 64px; /* optional: 64–76px */
 }
 
-/* Wenn sichtbar: auf „normal“ zurück */
-.cenit-hero-image.reveal.is-visible .cenit-heroimg-img{
-  transform: scale(1);
-  filter: saturate(1) contrast(1);
+/* 1) Topbar: wirklich "im Bild" (erzwinge Override) */
+body.page-home .cenit-topbar{
+  background: rgba(250,250,250,0.10) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.04) !important;
 }
 
-/* Optional: auch für Home-Hero (falls du willst) */
-.page-home .cenit-hero-image.reveal > img{
-  transform: scale(1.02);
-  transition: transform 900ms ease-out;
-}
-.page-home .cenit-hero-image.reveal.is-visible > img{
-  transform: scale(1);
+/* Hero: full width, keine Container-Logik */
+body.page-home .cenit-hero{
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
 }
 
-/* iPad / Tablet portrait: force 2 columns for team grid */
-@media (max-width: 900px){
-  .cenit-about-team{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px; /* optional etwas enger */
-  }
+/* Full-bleed Media */
+body.page-home .cenit-hero-media{
+  position: relative;
+  width: 100%;
+  min-height: clamp(620px, 88vh, 920px);
+  overflow: hidden;
+}
+
+/* Hintergrundbild */
+body.page-home .cenit-hero-media > img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0.92;              /* 0.90–0.96 */
+  filter: contrast(1.05);
+}
+
+/* 3) Der wichtige Teil: Bild unten in #fafafa "ausfaden" (full-bleed) */
+body.page-home .cenit-hero-media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(250,250,250,0.00) 0%,
+    rgba(250,250,250,0.06) 35%,
+    rgba(250,250,250,0.22) 55%,
+    rgba(250,250,250,0.58) 72%,
+    rgba(250,250,250,0.86) 86%,
+    rgba(250,250,250,1.00) 100%
+  );
+}
+
+/* Overlay: KEIN Background mehr -> verhindert diese "weiße Box" */
+body.page-home .cenit-hero-overlay{
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  /* Topbar mitdenken */
+  padding-top: calc(var(--cenit-topbar-height) + 14px);
+  padding-bottom: clamp(28px, 6vh, 70px);
+}
+
+/* 2) Claim bewusst nach unten schieben:
+      - oben wird "frei"
+      - Claim sitzt im unteren Drittel
+*/
+body.page-home .cenit-hero-top{
+  max-width: 760px;
+  width: calc(100% - 2 * var(--cenit-section-px));
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  margin-top: auto; /* <- schiebt Claim nach unten */
+  margin-bottom: clamp(14px, 4vh, 42px);
+}
+
+/* Transition unten bleibt unten */
+body.page-home .cenit-hero-bottom{
+  max-width: 760px;
+  width: calc(100% - 2 * var(--cenit-section-px));
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Typografie */
+body.page-home .cenit-hero-claim{
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(28px, 3.1vw, 46px);
+  line-height: 1.16;
+  color: var(--cenit-purple);
+
+  /* leichte Lesbarkeits-Hilfe ohne Box */
+  text-shadow: 0 1px 0 rgba(250,250,250,0.35);
+}
+
+body.page-home .cenit-hero-sub{
+  margin: 10px 0 0 0;
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: rgba(25,25,112,0.78);
+}
+
+body.page-home .cenit-hero-divider{
+  width: 92px;
+  height: 2px;
+  margin: 14px auto 10px auto;
+  background: rgba(201,164,78,0.70);
+  border-radius: 999px;
+}
+
+body.page-home .cenit-hero-divider--thin{
+  height: 1px;
+  opacity: 0.85;
+  margin-top: 16px;
+}
+
+body.page-home .cenit-hero-transition-text{
+  margin: 0;
+  font-size: clamp(14px, 1.25vw, 17px);
+  line-height: 1.55;
+  color: rgba(25,25,112,0.78);
+}
+
+body.page-home .cenit-hero-cta{
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CTA bleibt leicht "glass", aber ohne harte Box */
+body.page-home .cenit-hero-cta .cenit-btn{
+  background: rgba(250,250,250,0.70);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
