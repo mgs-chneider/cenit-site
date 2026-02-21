@@ -39,6 +39,9 @@
   --cenit-menu-z: 1500;
 }
 
+:root{ --cenit-topbar-height: 72px; } /* teste 64 / 72 / 76 */
+
+
 /* =========================
    BASE / RESET
    ========================= */
@@ -1979,10 +1982,9 @@ html, body{ overflow-x: hidden; }
 
 /* 1) Topbar: wirklich "im Bild" (erzwinge Override) */
 body.page-home .cenit-topbar{
-  background: rgba(250,250,250,0.10) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,0.04) !important;
+  background: rgba(250,250,250,0.06) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.00) !important;
+  box-shadow: none !important;
 }
 
 /* Hero: full width, keine Container-Logik */
@@ -1990,6 +1992,10 @@ body.page-home .cenit-hero{
   margin: 0;
   padding: 0;
   background: #fafafa;
+}
+
+body.page-home #vision{
+  padding-top: 52px;     /* 40–80 */
 }
 
 /* Full-bleed Media */
@@ -2056,7 +2062,7 @@ body.page-home .cenit-hero-top{
   text-align: center;
 
   margin-top: auto; /* <- schiebt Claim nach unten */
-  margin-bottom: clamp(14px, 4vh, 42px);
+  margin-bottom: clamp(34px, 8vh, 110px);
 }
 
 /* Transition unten bleibt unten */
