@@ -52,7 +52,7 @@ if (menuBtn && menu) {
 
   const dict = {
     de: {
-      home: "Übersicht",
+      home: "Home",
       menuLabel: "Menü",
       vision: "Vision & Mission",
       about: "Über uns",
@@ -63,7 +63,7 @@ if (menuBtn && menu) {
       statutes: "Satzung"
     },
     en: {
-      home: "Overview",
+      home: "Home",
       menuLabel: "Menu",
       vision: "Vision & Mission",
       about: "About us",
