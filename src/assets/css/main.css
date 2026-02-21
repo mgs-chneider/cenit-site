@@ -422,7 +422,111 @@ li{ margin: 0 0 6px 0; }
 .cenit-quote-band-author{
   margin: 12px 0 0 0;
   font-size: 13px;
-  color: var(--muted-foreground);
+  color: var(--muted-
+  
+/* =========================
+   HOME HERO – FINAL CLEAN
+========================= */
+
+/* A) Topbar auf Home: transparent + im Bild, ohne harte Kante */
+body.page-home .cenit-topbar{
+  background: transparent !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* weiche “Lesbarkeitsschicht” über der Topbar, aber ohne sichtbare Kante */
+body.page-home .cenit-topbar::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background: linear-gradient(
+    to bottom,
+    rgba(250,250,250,0.88) 0%,
+    rgba(250,250,250,0.00) 100%
+  );
+}
+
+/* B) Hero-Image darf hinter der sticky Topbar „durchlaufen“ */
+body.page-home .cenit-hero-home{
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+}
+
+body.page-home .cenit-hero-home-media{
+  position: relative;
+  width: 100%;
+  min-height: clamp(680px, 96vh, 980px);
+  overflow: hidden;
+}
+
+body.page-home .cenit-hero-home-media > img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  opacity: 0.94;
+  filter: contrast(1.05);
+}
+
+/* C) Fade nach unten: später beginnen + vollständiger Übergang in #fafafa */
+body.page-home .cenit-hero-home-media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+  background: linear-gradient(
+    to bottom,
+    rgba(250,250,250,0.00) 0%,
+    rgba(250,250,250,0.05) 46%,
+    rgba(250,250,250,0.18) 62%,
+    rgba(250,250,250,0.50) 76%,
+    rgba(250,250,250,0.82) 90%,
+    rgba(250,250,250,1.00) 100%
+  );
+}
+
+/* D) Overlay-Stack: Topbar berücksichtigen, Claim bewusst tiefer */
+body.page-home .cenit-hero-home-overlay{
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  padding-top: calc(var(--cenit-topbar-height) + 18px);
+  padding-bottom: clamp(64px, 10vh, 150px);
+}
+
+/* Claim tiefer (unteres Drittel) */
+body.page-home .cenit-hero-home-top{
+  max-width: 760px;
+  width: calc(100% - 2 * var(--cenit-section-px));
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+
+  margin-top: auto;
+  margin-bottom: clamp(110px, 18vh, 260px);
+}
+
+/* Transition bleibt unten */
+body.page-home .cenit-hero-home-bottom{
+  max-width: 760px;
+  width: calc(100% - 2 * var(--cenit-section-px));
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+/* E) Mehr Abstand zwischen Hero und Vision & Mission */
+body.page-home #vision{
+  padding-top: clamp(120px, 14vh, 220px);
 }
 
 
