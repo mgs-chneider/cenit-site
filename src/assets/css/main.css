@@ -433,10 +433,11 @@ li{ margin: 0 0 6px 0; }
    ========================================================= */
 
 /* =========================
-   HOME HERO — FULL BLEED (page-home only)
+   HOME HERO (Landingpage) – CLEAN COPY/PASTE
+   Voraussetzung: <body class="page-home">
    ========================= */
 
-/* Topbar “in image” on Home */
+/* Topbar auf Home: im Bild, ohne harte Kante */
 body.page-home .cenit-topbar{
   background: transparent !important;
   border-bottom: 0 !important;
@@ -451,37 +452,44 @@ body.page-home .cenit-topbar::before{
   pointer-events:none;
   background: linear-gradient(
     to bottom,
-    rgba(250,250,250,0.78) 0%,
+    rgba(250,250,250,0.88) 0%,
     rgba(250,250,250,0.00) 100%
   );
 }
+/* falls main.js innen noch Flächen setzt */
+body.page-home .cenit-topbar-inner{
+  background: transparent !important;
+  border-bottom: 0 !important;
+}
 
-/* Home hero wrapper */
-body.page-home .cenit-hero-home{
+/* Hero Wrapper */
+body.page-home .cenit-hero{
   margin: 0;
   padding: 0;
   background: #fafafa;
 }
 
-/* Full-bleed media */
-body.page-home .cenit-hero-home-media{
+/* Full-bleed Media */
+body.page-home .cenit-hero-media{
   position: relative;
   width: 100%;
-  min-height: clamp(640px, 92vh, 980px);
+  min-height: clamp(680px, 96vh, 980px);
   overflow: hidden;
 }
-body.page-home .cenit-hero-home-media > img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
+
+/* Hintergrundbild */
+body.page-home .cenit-hero-media > img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   opacity: 0.94;
   filter: contrast(1.05);
 }
 
-/* Fade to #fafafa at bottom */
-body.page-home .cenit-hero-home-media::after{
+/* Fade nach unten sauber in #fafafa */
+body.page-home .cenit-hero-media::after{
   content:"";
   position:absolute;
   inset:0;
@@ -490,50 +498,49 @@ body.page-home .cenit-hero-home-media::after{
   background: linear-gradient(
     to bottom,
     rgba(250,250,250,0.00) 0%,
-    rgba(250,250,250,0.06) 35%,
-    rgba(250,250,250,0.22) 55%,
-    rgba(250,250,250,0.58) 72%,
-    rgba(250,250,250,0.86) 86%,
+    rgba(250,250,250,0.05) 46%,
+    rgba(250,250,250,0.18) 62%,
+    rgba(250,250,250,0.50) 76%,
+    rgba(250,250,250,0.82) 90%,
     rgba(250,250,250,1.00) 100%
   );
 }
 
-/* Overlay stack */
-body.page-home .cenit-hero-home-overlay{
+/* Overlay: Topbar-Offset + Stack */
+body.page-home .cenit-hero-overlay{
   position: relative;
   z-index: 2;
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: calc(var(--cenit-topbar-height) + 14px);
-  padding-bottom: clamp(56px, 10vh, 140px);
+  padding-top: calc(var(--cenit-topbar-height) + 18px);
+  padding-bottom: clamp(64px, 10vh, 150px);
 }
 
-/* Claim block lower */
-body.page-home .cenit-hero-home-top{
+/* Claim nach unten (unteres Drittel) */
+body.page-home .cenit-hero-top{
   max-width: 760px;
   width: calc(100% - 2 * var(--cenit-section-px));
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
-
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   margin-top: auto;
-  margin-bottom: clamp(72px, 14vh, 200px);
+  margin-bottom: clamp(110px, 18vh, 260px);
 }
 
-/* Transition block */
-body.page-home .cenit-hero-home-bottom{
+/* Transition unten */
+body.page-home .cenit-hero-bottom{
   max-width: 760px;
   width: calc(100% - 2 * var(--cenit-section-px));
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
-/* Titles inside hero */
-body.page-home .cenit-hero-home-claim{
+/* Typografie */
+body.page-home .cenit-hero-claim{
   margin: 0;
-  font-family:'EB Garamond', serif;
+  font-family: 'EB Garamond', serif;
   font-style: italic;
   font-weight: 400;
   font-size: clamp(28px, 3.1vw, 46px);
@@ -542,48 +549,48 @@ body.page-home .cenit-hero-home-claim{
   text-shadow: 0 1px 0 rgba(250,250,250,0.35);
 }
 
-/* Hero subtitle as intro/body text */
-body.page-home .cenit-hero-home-sub{
+body.page-home .cenit-hero-sub{
   margin: 10px 0 0 0;
   font-size: clamp(14px, 1.2vw, 16px);
-  color: var(--cenit-text);
+  color: rgba(25,25,112,0.78);
 }
 
-/* Dividers */
-body.page-home .cenit-hero-home-divider{
+body.page-home .cenit-hero-divider{
   width: 92px;
   height: 2px;
   margin: 14px auto 10px auto;
   background: rgba(201,164,78,0.70);
   border-radius: 999px;
 }
-body.page-home .cenit-hero-home-divider--thin{
+body.page-home .cenit-hero-divider--thin{
   height: 1px;
   opacity: 0.85;
   margin-top: 16px;
 }
 
-body.page-home .cenit-hero-home-transition-text{
+body.page-home .cenit-hero-transition-text{
   margin: 0;
   font-size: clamp(14px, 1.25vw, 17px);
   line-height: 1.55;
   color: rgba(25,25,112,0.78);
 }
 
-body.page-home .cenit-hero-home-cta{
+body.page-home .cenit-hero-cta{
   margin-top: 14px;
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
 }
-body.page-home .cenit-hero-home-cta .cenit-btn{
+
+/* CTA leicht “glass” */
+body.page-home .cenit-hero-cta .cenit-btn{
   background: rgba(250,250,250,0.70);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
 
-/* More space between hero and Vision */
+/* Abstand Hero -> Vision */
 body.page-home #vision{
-  padding-top: clamp(96px, 12vh, 180px);
+  padding-top: clamp(120px, 14vh, 220px);
 }
 
 
