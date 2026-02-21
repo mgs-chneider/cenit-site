@@ -878,6 +878,15 @@ html, body{ overflow-x: hidden; }
     object-position: center 12%;  /* kopfsicherer Crop */
   }
 }
+
+/* iPad / Tablet portrait: force 2 columns for team grid */
+@media (max-width: 900px){
+  .cenit-about-team{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px; /* optional etwas enger */
+  }
+}
+
 /* Mobile = 1x4 */
 @media (max-width: 640px){
   .cenit-card.cenit-about-teamcard{ padding: 18px; }
