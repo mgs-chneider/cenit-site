@@ -886,26 +886,43 @@ html, body{ overflow-x: hidden; }
   }
 }
 
+/* iPad portrait / tablet refinement */
 @media (max-width: 900px){
 
-  /* Foto → Text: enger */
+  /* 2x2 Grid bleibt */
+  .cenit-about-team{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  /* Foto ohne Container-Effekt */
   .cenit-about-person .cenit-about-photo{
-    margin: 0 0 10px 0 !important;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    margin-bottom: 10px;   /* ↓ enger zum Namen */
   }
 
-  /* Fallback: falls du keine speziellen Klassen hast */
-  .cenit-about-person h3{
-    margin: 0 0 4px 0 !important;
+  /* Name */
+  .cenit-about-person .cenit-about-name{
+    margin: 0 0 4px 0;
   }
 
-  .cenit-about-person p{
-    margin: 0 0 10px 0 !important;
+  /* Funktion / Rolle */
+  .cenit-about-person .cenit-about-role{
+    margin: 0 0 8px 0;
   }
 
-  /* Pills/Tags (bei dir oft <a class="cenit-about-tag">...) */
+  /* Pill / Tag */
   .cenit-about-person .cenit-about-tag{
-    margin: 6px 0 10px 0 !important;
+    margin: 4px 0 8px 0;
   }
+
+  /* Beschreibung */
+  .cenit-about-person .cenit-about-description{
+    margin: 0;
+  }
+
 }
 
 /* Mobile = 1x4 */
