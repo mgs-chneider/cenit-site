@@ -666,7 +666,14 @@ html, body{ overflow-x: hidden; }
   padding: 26px;
 }
 
-/* Layout: Desktop default */
+@media (max-width: 980px){
+  .cenit-vm-gridcard{ padding: 18px; }
+}
+
+/* =========================
+   LAYOUT: DESKTOP DEFAULT
+   ========================= */
+
 .cenit-vm-grid{
   display: grid;
   grid-template-columns: 1.05fr 1.95fr; /* Podcast | Tiles */
@@ -690,8 +697,7 @@ html, body{ overflow-x: hidden; }
   object-fit: cover;
   border-radius: 18px;
   display: block;
-  /* Cover nicht doppelt „schatten“ lassen – sonst zu schwer */
-  box-shadow: none;
+  box-shadow: none; /* nicht doppelt */
 }
 
 .cenit-vm-audio{
@@ -707,25 +713,24 @@ html, body{ overflow-x: hidden; }
 }
 
 /* =========================
-   VM TILES (GLOBAL)
+   TILES: DEFAULT (works with OR without .cenit-vm-tiles wrapper)
    ========================= */
 
-/* Desktop / Default Layout */
-.cenit-vm-grid{
-  display: grid;
-  grid-template-columns: 1.05fr 1.95fr; /* Podcast | Tiles */
-  gap: 18px;
-  align-items: start;
-}
-
-/* Tiles-Bereich (alle nicht-Podcast Elemente) */
-.cenit-vm-grid > :not(.cenit-vm-podcast-card){
+/* Wenn ein Wrapper .cenit-vm-tiles existiert → nutze ihn */
+.cenit-vm-tiles{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
 
-/* Einzelne Tile */
+/* Wenn KEIN Wrapper existiert, sondern Tiles direkt im 2. Grid-Child liegen */
+.cenit-vm-grid > :not(.cenit-vm-podcast-card):not(.cenit-vm-tiles){
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Einzelne Tile (egal ob vm-wissen oder cenit-vm-tile) */
 .cenit-vm-tile,
 .vm-wissen,
 .vm-forschung,
@@ -736,14 +741,14 @@ html, body{ overflow-x: hidden; }
   box-shadow: var(--cenit-shadow);
 }
 
-/* Farb-Logik */
+/* Farb-Logik über Klassen (stabiler als nth-child) */
 .vm-wissen,
 .vm-struktur{ background: #f5f3f9; }
 
 .vm-forschung,
 .vm-bildung{ background: #edebf5; }
 
-/* Titel */
+/* Titel / Text */
 .cenit-vm-tile-title{
   margin: 0 0 10px 0;
   font-family: 'EB Garamond', serif;
@@ -753,110 +758,67 @@ html, body{ overflow-x: hidden; }
   color: var(--cenit-purple);
 }
 
-/* Text */
 .cenit-vm-tile-text{
   margin: 0;
   font-size: 13px;
   line-height: 1.65;
   color: var(--muted-foreground);
 }
-/* ✅ iPad / Tablet Portrait: curated 2x2 areas layout */
-@media (min-width: 740px) and (max-width: 1024px){
 
-  /* Main grid becomes an area grid */
+/* =========================
+   iPad PORTRAIT: curated areas layout (ONLY portrait range)
+   ========================= */
+
+@media (min-width: 740px) and (max-width: 900px){
+
   .cenit-vm-grid{
-    display: grid;
     grid-template-columns: 1.15fr 1fr;
     gap: 16px;
-    align-items: start;
-
     grid-template-areas:
       "podcast wissen"
       "podcast forschung"
       "bildung struktur";
   }
 
-  /* Assign areas */
   .cenit-vm-podcast-card{ grid-area: podcast; }
 
-  /* Turn tiles wrapper into "pass-through" so tiles can occupy areas */
+  /* Wenn Wrapper existiert, machen wir ihn "durchlässig" */
   .cenit-vm-tiles{ display: contents; }
 
-  .cenit-vm-tile.vm-wissen{ grid-area: wissen; }
-  .cenit-vm-tile.vm-forschung{ grid-area: forschung; }
-  .cenit-vm-tile.vm-bildung{ grid-area: bildung; }
-  .cenit-vm-tile.vm-struktur{ grid-area: struktur; }
+  /* Areas: bevorzugt .cenit-vm-tile.vm-* ; fallback nur .vm-* */
+  .cenit-vm-tile.vm-wissen, .vm-wissen{ grid-area: wissen; }
+  .cenit-vm-tile.vm-forschung, .vm-forschung{ grid-area: forschung; }
+  .cenit-vm-tile.vm-bildung, .vm-bildung{ grid-area: bildung; }
+  .cenit-vm-tile.vm-struktur, .vm-struktur{ grid-area: struktur; }
 
-  /* Slightly tighter tile padding for tablet */
-  .cenit-vm-tile{
+  /* tablet-tight */
+  .cenit-vm-tile,
+  .vm-wissen,.vm-forschung,.vm-bildung,.vm-struktur{
     padding: 20px 18px;
   }
 
-  /* Optional: reduce "white" feeling inside podcast card */
+  .cenit-vm-tile-title{ font-size: 17px; margin-bottom: 8px; }
+  .cenit-vm-tile-text{ font-size: 12.8px; line-height: 1.6; }
+
   .cenit-vm-podcast-card{ padding: 16px; }
   .cenit-vm-audio{ margin-top: 12px; }
   .cenit-vm-podcast-meta{ margin-top: 8px; }
 }
 
 /* =========================
-   RESPONSIVE
+   MOBILE: stack
    ========================= */
 
-/* Slightly tighter padding on medium screens */
-@media (max-width: 980px){
-  .cenit-vm-gridcard{ padding: 18px; }
-}
-
-/* ✅ iPad / Tablet: keep two columns (like landscape), but tuned */
-@media (min-width: 740px) and (max-width: 1024px){
-
-  /* Grid proportions: less dominant podcast than desktop */
-  .cenit-vm-grid{
-    grid-template-columns: 1.15fr 1fr;
-    gap: 16px;
-  }
-
-  /* Tiles remain 2x2, but slightly tighter */
-  .cenit-vm-tiles{
-    gap: 12px;
-  }
-
-  .cenit-vm-tile{
-    padding: 20px 18px;
-  }
-
-  .cenit-vm-tile-title{
-    font-size: 17px;
-    margin-bottom: 8px;
-  }
-
-  .cenit-vm-tile-text{
-    font-size: 12.8px;
-    line-height: 1.6;
-  }
-
-  /* Podcast card a bit tighter */
-  .cenit-vm-podcast-card{
-    padding: 16px;
-  }
-
-  .cenit-vm-audio{ margin-top: 12px; }
-  .cenit-vm-podcast-meta{ margin-top: 8px; }
-}
-
-/* Mobile / narrow: stack */
 @media (max-width: 739px){
-  .cenit-vm-grid{
-    grid-template-columns: 1fr;
-  }
+  .cenit-vm-grid{ grid-template-columns: 1fr; }
+
+  /* Tiles 1-col auf mobile (egal ob Wrapper existiert) */
   .cenit-vm-tiles{
     grid-template-columns: 1fr;
   }
-}
-
-/* Very small screens: keep tiles 1 col */
-@media (max-width: 560px){
-  .cenit-vm-tiles{ grid-template-columns: 1fr; }
+  .cenit-vm-grid > :not(.cenit-vm-podcast-card):not(.cenit-vm-tiles){
+    grid-template-columns: 1fr;
+  }
 }
 
 
