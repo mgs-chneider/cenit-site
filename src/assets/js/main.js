@@ -165,3 +165,21 @@ if (menuBtn && menu) {
   }
 
 });
+
+  /* =====================================================
+     MENU OVERVIEW LINK
+  ===================================================== */
+
+const overviewLink = document.querySelector(".cenit-menu-overviewlink");
+
+if (overviewLink) {
+  overviewLink.addEventListener("click", (e) => {
+    if (document.body.classList.contains("page-home")) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  });
+}
