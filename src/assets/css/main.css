@@ -427,10 +427,10 @@ li{ margin: 0 0 6px 0; }
 
 
 /* =========================
-   HOME HERO – FINAL CLEAN
-========================= */
+   HOME HERO – CLEAN (Landingpage only)
+   ========================= */
 
-/* A) Topbar auf Home: transparent + im Bild, ohne harte Kante */
+/* A) Topbar auf Home: integriert */
 body.page-home .cenit-topbar{
   background: transparent !important;
   border-bottom: 0 !important;
@@ -438,8 +438,6 @@ body.page-home .cenit-topbar{
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
-
-/* weiche “Lesbarkeitsschicht” über der Topbar, aber ohne sichtbare Kante */
 body.page-home .cenit-topbar::before{
   content:"";
   position:absolute;
@@ -452,7 +450,7 @@ body.page-home .cenit-topbar::before{
   );
 }
 
-/* B) Hero-Image darf hinter der sticky Topbar „durchlaufen“ */
+/* B) Hero Wrapper + Media */
 body.page-home .cenit-hero-home{
   margin: 0;
   padding: 0;
@@ -476,7 +474,7 @@ body.page-home .cenit-hero-home-media > img{
   filter: contrast(1.05);
 }
 
-/* C) Fade nach unten: später beginnen + vollständiger Übergang in #fafafa */
+/* C) Fade nach unten */
 body.page-home .cenit-hero-home-media::after{
   content:"";
   position:absolute;
@@ -494,18 +492,20 @@ body.page-home .cenit-hero-home-media::after{
   );
 }
 
-/* D) Overlay-Stack: Topbar berücksichtigen, Claim bewusst tiefer */
+/* D) Overlay MUSS die gesamte Media-Fläche füllen */
 body.page-home .cenit-hero-home-overlay{
-  position: relative;
+  position: absolute;     /* <- entscheidend */
+  inset: 0;
   z-index: 2;
-  height: 100%;
+
   display:flex;
   flex-direction: column;
+
   padding-top: calc(var(--cenit-topbar-height) + 18px);
-  padding-bottom: clamp(64px, 10vh, 150px);
+  padding-bottom: clamp(28px, 6vh, 70px);
 }
 
-/* Claim tiefer (unteres Drittel) */
+/* Claim im unteren Drittel, aber nicht “rausdrücken” */
 body.page-home .cenit-hero-home-top{
   max-width: 760px;
   width: calc(100% - 2 * var(--cenit-section-px));
@@ -514,41 +514,22 @@ body.page-home .cenit-hero-home-top{
   text-align:center;
 
   margin-top: auto;
-  margin-bottom: clamp(110px, 18vh, 260px);
+  margin-bottom: clamp(48px, 9vh, 140px); /* <- safe: Claim bleibt sichtbar */
 }
 
-/* Transition bleibt unten */
+/* Transition unten */
 body.page-home .cenit-hero-home-bottom{
   max-width: 760px;
   width: calc(100% - 2 * var(--cenit-section-px));
   margin-left:auto;
   margin-right:auto;
   text-align:center;
+  margin-bottom: clamp(12px, 3vh, 44px);
 }
 
-/* E) Mehr Abstand zwischen Hero und Vision & Mission */
+/* E) Abstand Hero -> Vision */
 body.page-home #vision{
   padding-top: clamp(120px, 14vh, 220px);
-}
-
-/* HOME HERO – Claim wieder sichtbar (Patch) */
-body.page-home .cenit-hero-media{ position: relative; }
-
-body.page-home .cenit-hero-overlay{
-  position: absolute;   /* <- wichtig: overlay füllt die Media-Fläche */
-  inset: 0;
-  z-index: 2;
-  height: auto;         /* 100% wird nicht mehr benötigt */
-}
-
-/* Claim nicht “rausdrücken” */
-body.page-home .cenit-hero-top{
-  margin-bottom: clamp(40px, 8vh, 120px) !important;
-}
-
-/* Transition bleibt unten */
-body.page-home .cenit-hero-bottom{
-  margin-bottom: clamp(18px, 4vh, 56px);
 }
 
 /* =========================
