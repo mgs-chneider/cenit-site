@@ -741,6 +741,44 @@ html, body{ overflow-x: hidden; }
   color: var(--muted-foreground);
 }
 
+/* ✅ iPad / Tablet Portrait: curated 2x2 areas layout */
+@media (min-width: 740px) and (max-width: 1024px){
+
+  /* Main grid becomes an area grid */
+  .cenit-vm-grid{
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 16px;
+    align-items: start;
+
+    grid-template-areas:
+      "podcast wissen"
+      "podcast forschung"
+      "bildung struktur";
+  }
+
+  /* Assign areas */
+  .cenit-vm-podcast-card{ grid-area: podcast; }
+
+  /* Turn tiles wrapper into "pass-through" so tiles can occupy areas */
+  .cenit-vm-tiles{ display: contents; }
+
+  .cenit-vm-tile.vm-wissen{ grid-area: wissen; }
+  .cenit-vm-tile.vm-forschung{ grid-area: forschung; }
+  .cenit-vm-tile.vm-bildung{ grid-area: bildung; }
+  .cenit-vm-tile.vm-struktur{ grid-area: struktur; }
+
+  /* Slightly tighter tile padding for tablet */
+  .cenit-vm-tile{
+    padding: 20px 18px;
+  }
+
+  /* Optional: reduce "white" feeling inside podcast card */
+  .cenit-vm-podcast-card{ padding: 16px; }
+  .cenit-vm-audio{ margin-top: 12px; }
+  .cenit-vm-podcast-meta{ margin-top: 8px; }
+}
+
 /* =========================
    RESPONSIVE
    ========================= */
