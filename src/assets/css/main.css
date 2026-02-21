@@ -531,6 +531,26 @@ body.page-home #vision{
   padding-top: clamp(120px, 14vh, 220px);
 }
 
+/* HOME HERO – Claim wieder sichtbar (Patch) */
+body.page-home .cenit-hero-media{ position: relative; }
+
+body.page-home .cenit-hero-overlay{
+  position: absolute;   /* <- wichtig: overlay füllt die Media-Fläche */
+  inset: 0;
+  z-index: 2;
+  height: auto;         /* 100% wird nicht mehr benötigt */
+}
+
+/* Claim nicht “rausdrücken” */
+body.page-home .cenit-hero-top{
+  margin-bottom: clamp(40px, 8vh, 120px) !important;
+}
+
+/* Transition bleibt unten */
+body.page-home .cenit-hero-bottom{
+  margin-bottom: clamp(18px, 4vh, 56px);
+}
+
 /* =========================
    INTERNAL HERO IMAGE (shared on non-home pages)
    ========================= */
