@@ -879,8 +879,9 @@ html, body{ overflow-x: hidden; }
   /* Bildgröße kontrollieren */
   .cenit-about-photo-inner{
     width: 78%;
-  }
-
+    border-radius: 18px;
+    overflow: hidden;
+}
   .cenit-about-photo-inner img{
     width: 100%;
     height: auto;
