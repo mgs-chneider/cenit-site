@@ -1976,10 +1976,6 @@ html, body{ overflow-x: hidden; }
    HOME HERO – FULL BLEED (FINAL FIX)
    ========================= */
 
-:root{
-  --cenit-topbar-height: 64px; /* optional: 64–76px */
-}
-
 /* 1) Topbar: wirklich "im Bild" (erzwinge Override) */
 body.page-home .cenit-topbar{
   background: rgba(250,250,250,0.06) !important;
