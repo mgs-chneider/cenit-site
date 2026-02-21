@@ -961,6 +961,7 @@ body.page-home .cenit-hero-full .cenit-hero-divider--small{
   width: 100%;
   box-sizing: border-box;
   padding: 22px;
+  display: none;
 }
 
 .cenit-about-team{
