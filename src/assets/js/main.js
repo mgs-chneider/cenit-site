@@ -170,7 +170,7 @@ if (menuBtn && menu) {
      MENU OVERVIEW LINK
   ===================================================== */
 
-const overviewLink = document.querySelector(".cenit-menu-overviewlink");
+const overviewLink = document.querySelector(".cenit-menu-home");
 
 if (overviewLink) {
   overviewLink.addEventListener("click", (e) => {
