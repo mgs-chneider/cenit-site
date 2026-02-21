@@ -888,28 +888,24 @@ html, body{ overflow-x: hidden; }
 
 @media (max-width: 900px){
 
-  /* Name näher ans Foto */
-  .cenit-about-person .cenit-about-name{
-    margin-top: 12px;      /* vorher vermutlich 20+ */
-    margin-bottom: 4px;
+  /* Foto → Text: enger */
+  .cenit-about-person .cenit-about-photo{
+    margin: 0 0 10px 0 !important;
   }
 
-  /* Titel enger */
-  .cenit-about-person .cenit-about-role{
-    margin-top: 0;
-    margin-bottom: 10px;
+  /* Fallback: falls du keine speziellen Klassen hast */
+  .cenit-about-person h3{
+    margin: 0 0 4px 0 !important;
   }
 
-  /* Tag (Pill) kompakter */
-  .cenit-about-person .cenit-about-tag{
-    margin: 6px 0 10px 0;
-  }
-
-  /* Beschreibung enger */
   .cenit-about-person p{
-    margin-top: 6px;
+    margin: 0 0 10px 0 !important;
   }
 
+  /* Pills/Tags (bei dir oft <a class="cenit-about-tag">...) */
+  .cenit-about-person .cenit-about-tag{
+    margin: 6px 0 10px 0 !important;
+  }
 }
 
 /* Mobile = 1x4 */
