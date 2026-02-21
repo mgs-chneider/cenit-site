@@ -851,7 +851,7 @@ html, body{ overflow-x: hidden; }
   width: 100%;
   box-sizing: border-box;
   padding: 22px;
-  display: transparent;
+  background: transparent;
 }
 
 .cenit-about-team{
