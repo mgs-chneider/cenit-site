@@ -23,15 +23,17 @@
      HERO (Image + Gradient Overlay)
      ========================= -->
 
-<section class="cenit-section cenit-hero" id="hero">
-  <div class="cenit-container">
+<section class="cenit-hero-full" id="hero">
+  <!-- Background image full-bleed -->
+  <div class="cenit-hero-full-bg" aria-hidden="true">
+    <img src="/assets/img/hero-cenit.png" alt="" loading="eager">
+  </div>
 
-    <div class="cenit-hero-image reveal">
-      <img src="/assets/img/hero-cenit.png" alt="" loading="eager">
+  <!-- Overlay content (Claim + Transition + CTA) -->
+  <div class="cenit-hero-full-overlay reveal" style="--reveal-delay:80ms">
+    <div class="cenit-container">
 
-      <!-- Overlay content -->
-      <div class="cenit-hero-overlay">
-
+      <div class="cenit-hero-full-top">
         <p class="cenit-hero-claim" data-lang="de">
           „Von der Idee zur Wirkung – Prävention beginnt mit Bewegung“
         </p>
@@ -40,43 +42,35 @@
         </p>
 
         <div class="cenit-hero-divider cenit-hero-divider--small"></div>
-        
+
         <p class="cenit-hero-sub" data-lang="de">
-          CENIT – Verein zur Förderung interdisziplinärer Tanzmedizin e.V.
+          CENIT e.V. – Forschung. Förderung. Bewegung.
         </p>
         <p class="cenit-hero-sub" data-lang="en" style="display:none;">
-          CENIT – Association for interdisciplinary Dance Medicine
+          CENIT e.V. – Research. Advancement. Movement.
+        </p>
+      </div>
+
+      <div class="cenit-hero-full-bottom">
+        <p class="cenit-hero-transition-text" data-lang="de">
+          Die körperlichen Anforderungen im Tanz sind hoch.<br>
+          Wie groß sind Belastung und Verletzungsrisiko?
         </p>
 
-      </div>
-    </div>
+        <p class="cenit-hero-transition-text" data-lang="en" style="display:none;">
+          The physical demands in dance are high.<br>
+          How significant are strain and injury risks?
+        </p>
 
-    <!-- TRANSITION -->
-    <div class="cenit-hero-transition">
+        <div class="cenit-hero-divider cenit-hero-divider--small"></div>
 
-      <p class="cenit-hero-transition-text" data-lang="de">
-        Die körperlichen Anforderungen im Tanz sind hoch.<br>
-        Wie groß ist das Risiko von Überlastung und Verletzung?<br>
-        Die Zahlen geben eine klare Antwort.
-      </p>
-
-      <p class="cenit-hero-transition-text" data-lang="en" style="display:none;">
-        The physical demands in dance are high.<br>
-        How significant are strain and injury risks?<br>
-        The numbers provide a clear answer.
-      </p>
-
-      <div class="cenit-hero-cta">
-        <a href="/zahlen-fakten" data-lang="de" class="cenit-btn">
-          Zahlen &amp; Fakten
-        </a>
-        <a href="/zahlen-fakten" data-lang="en" class="cenit-btn" style="display:none;">
-          Facts &amp; Figures
-        </a>
+        <div class="cenit-hero-cta">
+          <a href="/zahlen-fakten" data-lang="de" class="cenit-btn">Zahlen &amp; Fakten</a>
+          <a href="/zahlen-fakten" data-lang="en" class="cenit-btn" style="display:none;">Facts &amp; Figures</a>
+        </div>
       </div>
 
     </div>
-
   </div>
 </section>
 
