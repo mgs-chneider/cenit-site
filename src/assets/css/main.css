@@ -428,9 +428,10 @@ li{ margin: 0 0 6px 0; }
 
 /* =========================
    HOME HERO – CLEAN (Landingpage only)
-   ========================= */
+   Requires: body.page-home + classes .cenit-hero-home-*
+========================= */
 
-/* A) Topbar auf Home: integriert */
+/* Topbar on home: visually integrated */
 body.page-home .cenit-topbar{
   background: transparent !important;
   border-bottom: 0 !important;
@@ -450,20 +451,20 @@ body.page-home .cenit-topbar::before{
   );
 }
 
-/* B) Hero Wrapper + Media */
+/* Wrapper */
 body.page-home .cenit-hero-home{
   margin: 0;
   padding: 0;
   background: #fafafa;
 }
 
+/* Media */
 body.page-home .cenit-hero-home-media{
   position: relative;
   width: 100%;
   min-height: clamp(680px, 96vh, 980px);
   overflow: hidden;
 }
-
 body.page-home .cenit-hero-home-media > img{
   position:absolute;
   inset:0;
@@ -474,7 +475,7 @@ body.page-home .cenit-hero-home-media > img{
   filter: contrast(1.05);
 }
 
-/* C) Fade nach unten */
+/* Fade into #fafafa */
 body.page-home .cenit-hero-home-media::after{
   content:"";
   position:absolute;
@@ -492,9 +493,9 @@ body.page-home .cenit-hero-home-media::after{
   );
 }
 
-/* D) Overlay MUSS die gesamte Media-Fläche füllen */
+/* Overlay fills whole hero */
 body.page-home .cenit-hero-home-overlay{
-  position: absolute;     /* <- entscheidend */
+  position: absolute;
   inset: 0;
   z-index: 2;
 
@@ -505,7 +506,7 @@ body.page-home .cenit-hero-home-overlay{
   padding-bottom: clamp(28px, 6vh, 70px);
 }
 
-/* Claim im unteren Drittel, aber nicht “rausdrücken” */
+/* Claim block lower third (safe) */
 body.page-home .cenit-hero-home-top{
   max-width: 760px;
   width: calc(100% - 2 * var(--cenit-section-px));
@@ -514,10 +515,10 @@ body.page-home .cenit-hero-home-top{
   text-align:center;
 
   margin-top: auto;
-  margin-bottom: clamp(48px, 9vh, 140px); /* <- safe: Claim bleibt sichtbar */
+  margin-bottom: clamp(48px, 9vh, 140px);
 }
 
-/* Transition unten */
+/* Transition block at bottom */
 body.page-home .cenit-hero-home-bottom{
   max-width: 760px;
   width: calc(100% - 2 * var(--cenit-section-px));
@@ -527,11 +528,63 @@ body.page-home .cenit-hero-home-bottom{
   margin-bottom: clamp(12px, 3vh, 44px);
 }
 
-/* E) Abstand Hero -> Vision */
+/* === TYPO + DIVIDERS + CTA === */
+
+body.page-home .cenit-hero-home-claim{
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(28px, 3.1vw, 46px);
+  line-height: 1.16;
+  color: var(--cenit-purple);
+  text-shadow: 0 1px 0 rgba(250,250,250,0.35);
+}
+
+body.page-home .cenit-hero-home-sub{
+  margin: 10px 0 0 0;
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: rgba(25,25,112,0.78);
+}
+
+body.page-home .cenit-hero-home-divider{
+  width: 92px;
+  height: 2px;
+  margin: 14px auto 10px auto;
+  background: rgba(201,164,78,0.70); /* gold */
+  border-radius: 999px;
+}
+
+/* thin divider variant */
+body.page-home .cenit-hero-home-divider--thin{
+  height: 1px;
+  opacity: 0.85;
+  margin-top: 16px;
+}
+
+body.page-home .cenit-hero-home-transition-text{
+  margin: 0;
+  font-size: clamp(14px, 1.25vw, 17px);
+  line-height: 1.55;
+  color: rgba(25,25,112,0.78);
+}
+
+body.page-home .cenit-hero-home-cta{
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+body.page-home .cenit-hero-home-cta .cenit-btn{
+  background: rgba(250,250,250,0.70);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* spacing to Vision */
 body.page-home #vision{
   padding-top: clamp(120px, 14vh, 220px);
 }
-
 /* =========================
    INTERNAL HERO IMAGE (shared on non-home pages)
    ========================= */
