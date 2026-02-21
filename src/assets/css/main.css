@@ -855,7 +855,7 @@ html, body{ overflow-x: hidden; }
 }
 
 @media (min-width: 700px) and (max-width: 980px){
-  .cenit-about-person .cenit-about-photo{
+  .cenit-about-photo{
     max-height: 220px;
     overflow: hidden;
     border-radius: 16px;
@@ -867,7 +867,7 @@ html, body{ overflow-x: hidden; }
     justify-content: center;
   }
 
-  .cenit-about-person .cenit-about-photo img{
+  .cenit-about-photo img{
     width: 100%;
     height: 100%;
     object-fit: contain;      /* <-- kein Abschneiden */
