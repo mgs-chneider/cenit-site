@@ -706,25 +706,44 @@ html, body{ overflow-x: hidden; }
   opacity: 0.85;
 }
 
-/* Tiles */
-.cenit-vm-tiles{
+/* =========================
+   VM TILES (GLOBAL)
+   ========================= */
+
+/* Desktop / Default Layout */
+.cenit-vm-grid{
+  display: grid;
+  grid-template-columns: 1.05fr 1.95fr; /* Podcast | Tiles */
+  gap: 18px;
+  align-items: start;
+}
+
+/* Tiles-Bereich (alle nicht-Podcast Elemente) */
+.cenit-vm-grid > :not(.cenit-vm-podcast-card){
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
 
-.cenit-vm-tile{
+/* Einzelne Tile */
+.cenit-vm-tile,
+.vm-wissen,
+.vm-forschung,
+.vm-bildung,
+.vm-struktur{
   border-radius: 18px;
   padding: 24px 22px;
   box-shadow: var(--cenit-shadow);
 }
 
-.cenit-vm-tile:nth-child(1),
-.cenit-vm-tile:nth-child(4){ background: #f5f3f9; }
+/* Farb-Logik */
+.vm-wissen,
+.vm-struktur{ background: #f5f3f9; }
 
-.cenit-vm-tile:nth-child(2),
-.cenit-vm-tile:nth-child(3){ background: #edebf5; }
+.vm-forschung,
+.vm-bildung{ background: #edebf5; }
 
+/* Titel */
 .cenit-vm-tile-title{
   margin: 0 0 10px 0;
   font-family: 'EB Garamond', serif;
@@ -734,13 +753,13 @@ html, body{ overflow-x: hidden; }
   color: var(--cenit-purple);
 }
 
+/* Text */
 .cenit-vm-tile-text{
   margin: 0;
   font-size: 13px;
   line-height: 1.65;
   color: var(--muted-foreground);
 }
-
 /* ✅ iPad / Tablet Portrait: curated 2x2 areas layout */
 @media (min-width: 740px) and (max-width: 1024px){
 
