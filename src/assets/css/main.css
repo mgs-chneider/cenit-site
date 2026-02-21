@@ -854,21 +854,33 @@ html, body{ overflow-x: hidden; }
   margin: 0;
 }
 
+/* iPad portrait / tablet: keep 2x2 but reduce photo dominance */
 @media (max-width: 900px){
-
   .cenit-about-team{
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
   }
 
-  /* iPad portrait: Photo height control */
+  /* outer wrapper: no visible container */
   .cenit-about-person .cenit-about-photo{
-    max-height: 280px;   /* 240–280 je nach Geschmack */
-    overflow: hidden;
+    background: transparent;
+    padding: 0;
+    border: 0;
   }
 
-  .cenit-about-person .cenit-about-photo img{
+  /* inner photo area: 70–80% of card width, centered */
+  .cenit-about-person .cenit-about-photo-inner{
+    width: 78%;              /* tweak: 70% / 75% / 80% */
+    margin: 0 auto;
+    aspect-ratio: 4 / 5;     /* bleibt portrait */
+    overflow: hidden;
+    border-radius: 18px;
+  }
+
+  .cenit-about-person .cenit-about-photo-inner img{
+    width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
     object-position: center 12%;
   }
