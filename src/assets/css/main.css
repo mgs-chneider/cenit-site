@@ -863,7 +863,7 @@ html, body{ overflow-x: hidden; }
 
   /* iPad portrait: Photo height control */
   .cenit-about-person .cenit-about-photo{
-    max-height: 260px;   /* 240–280 je nach Geschmack */
+    max-height: 280px;   /* 240–280 je nach Geschmack */
     overflow: hidden;
   }
 
