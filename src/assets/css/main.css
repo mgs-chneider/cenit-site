@@ -1885,10 +1885,18 @@ body.page-home .cenit-hero-home-cta .cenit-btn{
   letter-spacing: 0.01em;
 }
 
+/* =========================
+   TEAM GRID – transparent card
+========================= */
+
 body.page-home .cenit-about-team-grid-card{
-  background: rgba(255,255,255,0.35);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 6px 30px rgba(0,0,0,0.04);
-  border: 1px solid rgba(255,255,255,0.35);
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* optional: etwas mehr vertikale Luft */
+body.page-home .cenit-about-team-grid{
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
