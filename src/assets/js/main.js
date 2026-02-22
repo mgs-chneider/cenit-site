@@ -5,6 +5,15 @@ console.log("CENIT main.js loaded");
 ===================================================== */
 document.addEventListener("DOMContentLoaded", () => {
 
+   const topbar = document.querySelector(".cenit-topbar");
+if (topbar) {
+  const onScroll = () => {
+    topbar.classList.toggle("is-scrolled", window.scrollY > 12);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+}
+   
   /* =====================================================
      MENU TOGGLE
   ===================================================== */
