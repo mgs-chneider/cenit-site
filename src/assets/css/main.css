@@ -42,10 +42,10 @@
 /* =========================
    BASE / RESET
    ========================= */
-html{ font-size:16px; }
-*{ box-sizing:border-box; }
 
-html, body{ overflow-x: hidden; }
+html{ font-size:16px; overflow-x:hidden; }
+body{ margin:0; padding:0; overflow-x:visible; }
+*{ box-sizing:border-box; }
 
 body{
   margin:0;
