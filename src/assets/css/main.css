@@ -1847,42 +1847,30 @@ body.page-home #vision{
    ========================================================= */
 
 /* =========================
-   HOME HERO – TYPO PATCH
-   Claim heller, Sub/Transition = muted + größer + letter spacing
+   HOME HERO – Tonwert Feintuning
 ========================= */
 
+/* Claim etwas heller (mehr Leuchtkraft, gleiche Farbwelt) */
 body.page-home .cenit-hero-home-claim{
-  /* etwas heller als Brand-Purple, aber innerhalb CI */
-  color: rgba(107,20,184,0.88);
+  color: rgba(107,20,184,0.95); /* vorher ~0.88 */
   text-shadow:
-    0 1px 0 rgba(250,250,250,0.55),
-    0 10px 34px rgba(250,250,250,0.28);
+    0 1px 0 rgba(250,250,250,0.65),
+    0 12px 38px rgba(250,250,250,0.35);
 }
 
-/* Subline unter Claim: muted-foreground statt Sonderfarbe */
+
+/* Subline unter Claim – dunkler, klarer */
 body.page-home .cenit-hero-home-sub{
-  color: var(--muted-foreground);
-  font-size: clamp(14.5px, 1.25vw, 17px);
-  letter-spacing: 0.02em;
+  color: rgba(25,25,112,0.85); /* kräftiger als muted */
   font-weight: 500;
-  opacity: 0.92;
-  margin-top: 12px;
 }
 
-/* Transition-Text: ebenfalls muted-foreground, etwas größer + spacing */
+
+/* Transition / Lead Text – ebenfalls dunkler */
 body.page-home .cenit-hero-home-transition-text{
-  color: var(--muted-foreground);
-  font-size: clamp(14.5px, 1.25vw, 17px);
-  letter-spacing: 0.015em;
+  color: rgba(25,25,112,0.85);
   font-weight: 500;
-  opacity: 0.92;
-  text-shadow: 0 1px 0 rgba(250,250,250,0.40);
-}
-
-/* Optional: CTA Button Text minimal “ruhiger”, wenn er zu blass wirkt */
-body.page-home .cenit-hero-home-cta .cenit-btn{
-  color: var(--muted-foreground);
-  letter-spacing: 0.01em;
+  text-shadow: 0 1px 0 rgba(250,250,250,0.35);
 }
 
 /* =========================
