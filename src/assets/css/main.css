@@ -1861,7 +1861,7 @@ body.page-home .cenit-hero-home-sub{
   font-size: clamp(15px, 1.3vw, 18px);
   letter-spacing: 0.02em;
   font-weight: 500;
-  opacity: 0.92;
+  opacity: 0.90;
 }
 
 /* Lead / Transition: muted-foreground */
@@ -1870,7 +1870,7 @@ body.page-home .cenit-hero-home-transition-text{
   font-size: clamp(15px, 1.3vw, 18px);
   letter-spacing: 0.015em;
   font-weight: 500;
-  opacity: 0.95;
+  opacity: 0.98;
 }
 
 /* =========================
