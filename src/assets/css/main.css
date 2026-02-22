@@ -1893,3 +1893,19 @@ body.page-home .cenit-about-teamcard{
   max-width: var(--cenit-axis-950);
   margin: 0 auto;
 }
+
+/* Home Topbar default (oben im Hero) */
+body.page-home .cenit-topbar{
+  background: rgba(250,250,250,0.18);
+  border-bottom: 0;
+  box-shadow: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+/* Wenn gescrollt: etwas solider für Lesbarkeit */
+body.page-home .cenit-topbar.is-scrolled{
+  background: rgba(250,250,250,0.88);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
