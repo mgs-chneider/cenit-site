@@ -735,7 +735,7 @@ body.page-home #vision{
 .cenit-footer-copy{
   margin: 10px 0 6px 0;
   font-size: 13px;
-  color: var(--muted-foreground);
+  color: var(--cenit-text);
   text-align: center;
 }
 .cenit-footer-note{
@@ -743,7 +743,7 @@ body.page-home #vision{
   max-width: var(--cenit-axis-760);
   font-size: 12px;
   line-height: 1.5;
-  color: var(--muted-foreground);
+  color: var(--cenit-text);
   text-align: center;
 }
 
