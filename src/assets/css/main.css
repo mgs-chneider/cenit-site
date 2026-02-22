@@ -431,17 +431,14 @@ li{ margin: 0 0 6px 0; }
    Requires: body.page-home + classes .cenit-hero-home-*
 ========================= */
 
-/* 1) Topbar: leichtes Glass, KEINE harte Kante */
 body.page-home .cenit-topbar{
-  background: rgba(250,250,250,0.22) !important;
+  background: rgba(250,250,250,0.18) !important;
   border-bottom: 1px solid rgba(0,0,0,0.00) !important;
   box-shadow: none !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
-body.page-home .cenit-topbar::before{ content:none !important; }
 body.page-home .cenit-topbar-inner{ background: transparent !important; }
-
 
 body.page-home .cenit-topbar::before{
   content:"";
@@ -462,13 +459,14 @@ body.page-home .cenit-hero-home{
   background: #fafafa;
 }
 
-/* Media */
+/* Hero media baseline */
 body.page-home .cenit-hero-home-media{
   position: relative;
   width: 100%;
   min-height: clamp(680px, 96vh, 980px);
   overflow: hidden;
 }
+
 body.page-home .cenit-hero-home-media > img{
   position:absolute;
   inset:0;
@@ -479,35 +477,34 @@ body.page-home .cenit-hero-home-media > img{
   filter: contrast(1.05);
 }
 
-/* 2) Hero-Fade: nur Bottom-Fade + sehr subtiler Mid-Boost
-      -> garantiert ohne Kante nach #fafafa */
-body.page-home .cenit-hero-home-media::after{
-  content:"";
+/* NEU: Gradient-Layer statt ::after */
+body.page-home .cenit-hero-home-gradient{
   position:absolute;
   inset:0;
-  pointer-events:none;
   z-index:1;
+  pointer-events:none;
 
+  /* oben nur minimal für Topbar/Claim-Lesbarkeit,
+     unten sauber in #fafafa auslaufen */
   background: linear-gradient(
     to bottom,
-    rgba(250,250,250,0.00) 0%,
-    rgba(250,250,250,0.04) 38%,   /* subtil: Claim-Zone minimal ruhiger */
-    rgba(250,250,250,0.18) 58%,
-    rgba(250,250,250,0.55) 76%,
-    rgba(250,250,250,0.86) 90%,
-    rgba(250,250,250,1.00) 100%   /* <- sauberer Auslauf in #fafafa */
+    rgba(250,250,250,0.10) 0%,
+    rgba(250,250,250,0.06) 22%,
+    rgba(250,250,250,0.12) 42%,
+    rgba(250,250,250,0.38) 62%,
+    rgba(250,250,250,0.78) 84%,
+    rgba(250,250,250,1.00) 100%
   );
 }
 
-/* Overlay fills whole hero */
+/* Overlay content above gradient */
 body.page-home .cenit-hero-home-overlay{
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+  position:absolute;
+  inset:0;
+  z-index:2;
 
   display:flex;
-  flex-direction: column;
-
+  flex-direction:column;
   padding-top: calc(var(--cenit-topbar-height) + 18px);
   padding-bottom: clamp(28px, 6vh, 70px);
 }
@@ -594,6 +591,7 @@ body.page-home .cenit-hero-home-cta .cenit-btn{
 body.page-home #vision{
   padding-top: clamp(120px, 14vh, 220px);
 }
+
 /* =========================
    INTERNAL HERO IMAGE (shared on non-home pages)
    ========================= */
