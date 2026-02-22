@@ -1886,17 +1886,22 @@ body.page-home .cenit-hero-home-cta .cenit-btn{
 }
 
 /* =========================
-   TEAM GRID – transparent card
+   ABOUT – TEAMCARD transparent (Landing/Home)
 ========================= */
 
-body.page-home .cenit-about-team-grid-card{
+body.page-home .cenit-card.cenit-about-teamcard{
   background: transparent !important;
   box-shadow: none !important;
   border: none !important;
+  padding: 0 !important;            /* optional: Whitecard-Padding entfernen */
 }
 
-/* optional: etwas mehr vertikale Luft */
-body.page-home .cenit-about-team-grid{
-  padding-top: 12px;
-  padding-bottom: 12px;
+/* Damit das Grid nicht „klebt“: Luft zurückgeben */
+body.page-home .cenit-about-team{
+  gap: 24px;                         /* bleibt wie gehabt */
+}
+
+body.page-home .cenit-about-teamcard{
+  max-width: var(--cenit-axis-950);
+  margin: 0 auto;
 }
