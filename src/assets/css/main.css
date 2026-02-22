@@ -1847,30 +1847,30 @@ body.page-home #vision{
    ========================================================= */
 
 /* =========================
-   HOME HERO – Tonwert Feintuning
+   HOME HERO – CI-konforme Tonwert-Anpassung
 ========================= */
 
-/* Claim etwas heller (mehr Leuchtkraft, gleiche Farbwelt) */
+/* Claim etwas heller */
 body.page-home .cenit-hero-home-claim{
-  color: rgba(107,20,184,0.95); /* vorher ~0.88 */
-  text-shadow:
-    0 1px 0 rgba(250,250,250,0.65),
-    0 12px 38px rgba(250,250,250,0.35);
+  color: rgba(107,20,184,0.95); /* nur Claim leicht heller */
 }
 
-
-/* Subline unter Claim – dunkler, klarer */
+/* Sub: body-text Bereich */
 body.page-home .cenit-hero-home-sub{
-  color: rgba(25,25,112,0.85); /* kräftiger als muted */
+  color: var(--body-text);
+  font-size: clamp(15px, 1.3vw, 18px);
+  letter-spacing: 0.02em;
   font-weight: 500;
+  opacity: 0.92;
 }
 
-
-/* Transition / Lead Text – ebenfalls dunkler */
+/* Lead / Transition: muted-foreground */
 body.page-home .cenit-hero-home-transition-text{
-  color: rgba(25,25,112,0.85);
+  color: var(--muted-foreground);
+  font-size: clamp(15px, 1.3vw, 18px);
+  letter-spacing: 0.015em;
   font-weight: 500;
-  text-shadow: 0 1px 0 rgba(250,250,250,0.35);
+  opacity: 0.95;
 }
 
 /* =========================
