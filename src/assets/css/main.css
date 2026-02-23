@@ -1964,3 +1964,22 @@ body.page-home .cenit-hero-home-cta .cenit-btn:focus-visible{
   outline: 3px solid var(--cenit-gold);
   outline-offset: 4px;
 }
+
+/* =========================
+   SECTION INTRO – unified
+========================= */
+.cenit-section-intro{
+  max-width: var(--cenit-axis-760);
+  margin: 0 auto 36px auto;
+  text-align: center;
+
+  font-size: 15px;        /* einheitlich */
+  line-height: 1.8;
+  color: var(--muted-foreground);
+}
+@media (max-width: 600px){
+  .cenit-section-intro{
+    margin-bottom: 28px;
+    font-size: 14.5px;
+  }
+}
