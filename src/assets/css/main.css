@@ -1965,37 +1965,3 @@ body.page-home .cenit-hero-home-cta .cenit-btn:focus-visible{
   outline-offset: 4px;
 }
 
-/* =========================
-   BUTTON – A11y upgrade (shared)
-========================= */
-
-/* Base: größere Hit-Area + klare Typo */
-.cenit-btn{
-  padding: 0.55rem 1.25rem;     /* etwas größer */
-  min-height: 44px;             /* WCAG target size */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* A11y variant: "glass" wie im Hero */
-.cenit-btn--glass{
-  background: rgba(250,250,250,0.72);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-color: rgba(201,164,78,0.75);
-  color: var(--cenit-text);
-  opacity: 1;
-}
-
-/* Hover: nicht nur Farbe, auch Kontrast */
-.cenit-btn--glass:hover{
-  background: rgba(250,250,250,0.88);
-  color: var(--cenit-purple);
-}
-
-/* Focus: eindeutig sichtbar */
-.cenit-btn--glass:focus-visible{
-  outline: 3px solid var(--cenit-gold);
-  outline-offset: 4px;
-}
