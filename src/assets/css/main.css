@@ -1201,7 +1201,7 @@ body.page-home #vision{
 /* Intros: body text */
 .cenit-contact-lead,
 .cenit-contact-body{
-  font-size:15px;
+  font-size:16px;
   text-align:center;
   color: var(--cenit-text);
 }
