@@ -1456,6 +1456,10 @@ body.page-home #vision{
     0 4px 12px rgba(25,25,60,0.03);
 }
 
+.page-zahlen-fakten .cenit-embed-card{
+  border:1px solid rgba(25,25,60,0.05);
+}
+
 /* CHART IFRAME */
 
 .page-zahlen-fakten .cenit-embed{
