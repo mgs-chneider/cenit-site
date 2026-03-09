@@ -1456,15 +1456,11 @@ body.page-home #vision{
     0 4px 12px rgba(25,25,60,0.03);
 }
 
-.page-zahlen-fakten .cenit-embed-card{
-  border:1px solid rgba(25,25,60,0.05);
-}
-
 /* CHART IFRAME */
 
 .page-zahlen-fakten .cenit-embed{
   width:100%;
-  height:480px;          /* etwas mehr Raum als vorher */
+  height:560px;          /* etwas mehr Raum als vorher */
   border:0;
   border-radius:16px;
   display:block;
@@ -1542,7 +1538,7 @@ body.page-home #vision{
   }
 
   .page-zahlen-fakten .cenit-embed{
-    height:620px;      /* genug Raum für Infogram */
+    height:680px;      /* genug Raum für Infogram */
   }
 
 }
@@ -1554,7 +1550,7 @@ body.page-home #vision{
 @media (max-width: 600px){
 
   .page-zahlen-fakten .cenit-embed{
-    height:680px;
+    height:720px;
   }
 
   .page-zahlen-fakten .cenit-zf-transition{
