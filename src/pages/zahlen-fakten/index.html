@@ -74,23 +74,41 @@
   <!-- =========================
        VIDEO SECTION
        ========================= -->
- <section class="cenit-section">
+  
+  <section class="cenit-section">
     <div class="cenit-container">
+      <div class="cenit-zf-video-inner reveal" style="--reveal-delay:200ms;">
 
-      <div class="cenit-card" style="max-width:950px; margin:0 auto; padding:18px;">
-        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px;">
-          <iframe
-            src href="public/video/cenit-video-de.mp4"
-            style="position:absolute; inset:0; width:100%; height:100%; border:0;"
-            allowfullscreen
-            title="CENIT Zahlen & Fakten"></iframe>
+        <div class="cenit-video-frame">
+
+          <!-- DE -->
+          <video
+            class="cenit-video"
+            controls
+            playsinline
+            preload="metadata"
+            poster="/video/still-martha-graham.png"
+            data-lang="de"
+          >
+            <source src="/video/cenit-video-de.mp4" type="video/mp4">
+          </video>
+
+          <!-- EN -->
+          <video
+            class="cenit-video"
+            controls
+            playsinline
+            preload="metadata"
+            poster="/video/still-martha-graham.png"
+            data-lang="en"
+            style="display:none;"
+          >
+            <source src="/video/cenit-video-en.mp4" type="video/mp4">
+          </video>
+
         </div>
 
-        <p style="font-size:13px; color:var(--muted-foreground); margin:12px 0 0 0; text-align:center;">
-          Ein Film über Verantwortung, Bewegung und Zukunft.
-        </p>
       </div>
-
     </div>
   </section>
 
