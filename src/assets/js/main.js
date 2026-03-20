@@ -198,28 +198,24 @@ if (overviewLink) {
   ===================================================== */
 
 function loadInfogramEmbed(button) {
-  const consentBox = button.closest(".cenit-embed-consent");
-  if (!consentBox) return;
+  const box = button.closest(".cenit-embed-consent-box");
+  if (!box) return;
 
-  const src = consentBox.getAttribute("data-embed-src");
-  const height = consentBox.getAttribute("data-embed-height") || "640";
+  const src = box.getAttribute("data-embed-src");
+  const height = box.getAttribute("data-embed-height") || "560";
 
   if (!src) return;
 
-  const frameWrap = document.createElement("div");
-  frameWrap.className = "cenit-embed-frame-wrap";
-  frameWrap.setAttribute("data-lang", consentBox.getAttribute("data-lang") || "");
-
   const iframe = document.createElement("iframe");
-  iframe.className = "cenit-embed-frame";
+  iframe.className = "cenit-embed";
   iframe.src = src;
   iframe.width = "100%";
   iframe.height = height;
+  iframe.setAttribute("loading", "lazy");
   iframe.setAttribute("frameborder", "0");
   iframe.setAttribute("scrolling", "no");
   iframe.setAttribute("allowfullscreen", "allowfullscreen");
   iframe.setAttribute("title", "Infogram chart");
 
-  frameWrap.appendChild(iframe);
-  consentBox.replaceWith(frameWrap);
+  box.replaceWith(iframe);
 }
