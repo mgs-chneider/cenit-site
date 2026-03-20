@@ -1358,7 +1358,7 @@ body.page-home #vision{
 .page-zahlen-fakten .cenit-zf-intro{
   font-size:16px;
   line-height:1.85;
-  margin:0 0 28px 0;
+  margin:0 0 18px 0;
   color:var(--cenit-text);
 }
 
@@ -1385,13 +1385,13 @@ body.page-home #vision{
 
 .page-zahlen-fakten .cenit-zf-video{
   padding-top:8px;
-  padding-bottom:44px;
+  padding-bottom:56px;
 }
 
 .page-zahlen-fakten .cenit-zf-video-inner{
   max-width:var(--zf-video-axis);
   margin:0 auto;
-  padding:6px 0;
+  padding: 0;
 }
 
 .page-zahlen-fakten .cenit-video-frame{
