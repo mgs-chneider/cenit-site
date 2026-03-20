@@ -1384,8 +1384,8 @@ body.page-home #vision{
 }
 
 .page-zahlen-fakten .cenit-zf-video{
-  padding-top:12px;
-  padding-bottom:64px;
+  padding-top: 12px;
+  padding-bottom: 64px;
 }
 
 .page-zahlen-fakten .cenit-zf-video-inner{
@@ -1430,8 +1430,8 @@ body.page-home #vision{
    ========================= */
 
 .page-zahlen-fakten .cenit-zf-charts{
-  padding-top:0px;
-  padding-bottom:44px;
+  padding-top: 0;
+  padding-bottom: 44px;
 }
 
 .page-zahlen-fakten .cenit-zf-charts-inner{
@@ -1457,12 +1457,12 @@ body.page-home #vision{
 }
 
 .page-zahlen-fakten .cenit-chart-headline{
-  margin:0 0 8px 0;
-  font-family:"EB Garamond", serif;
-  font-size:24px;
-  line-height:1.2;
-  font-weight:400;
-  color:rgba(25,25,60,0.88);
+  margin: 0 0 8px 0;
+  font-family: "EB Garamond", serif;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color:r gba(25,25,60,0.88);
   letter-spacing: 0.01em;
 }
 
