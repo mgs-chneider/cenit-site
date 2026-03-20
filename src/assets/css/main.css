@@ -1365,7 +1365,7 @@ body.page-home #vision{
 /* Transition / Chapter */
 .page-zahlen-fakten .cenit-zf-transition{
   max-width:var(--cenit-axis-760);
-  margin: 0 auto 0 auto;
+  margin: 0 auto 8px auto;
   text-align:center;
 }
 
@@ -1385,7 +1385,7 @@ body.page-home #vision{
 
 .page-zahlen-fakten .cenit-zf-video{
   padding-top: 12px;
-  padding-bottom: 64px;
+  padding-bottom: 72px;
 }
 
 .page-zahlen-fakten .cenit-zf-video-inner{
@@ -1430,7 +1430,7 @@ body.page-home #vision{
    ========================= */
 
 .page-zahlen-fakten .cenit-zf-charts{
-  padding-top: 0;
+  padding-top: 8px;
   padding-bottom: 44px;
 }
 
