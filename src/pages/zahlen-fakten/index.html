@@ -75,27 +75,77 @@
        VIDEO SECTION
        ========================= -->
   <section class="cenit-section cenit-zf-video">
-    <div class="cenit-container">
-      <div class="cenit-zf-video-inner reveal" style="--reveal-delay:200ms;">
+   <div class="cenit-container">
+      <div class="cenit-zf-charts-inner reveal" style="--reveal-delay:220ms;">
 
-        <div class="cenit-video-frame">
-          <!-- DE -->
-          <video class="cenit-video" controls playsinline preload="metadata"
-                 poster="/video/still-martha-graham.png" data-lang="de">
-            <source src="/video/cenit-video-de.mp4" type="video/mp4">
-          </video>
+        <!-- DE -->
+        <div
+          class="cenit-embed-consent"
+          data-lang="de"
+          data-embed-type="infogram"
+          data-embed-src="https://e.infogram.com/DEIN-DE-EMBED-LINK"
+          data-embed-height="640"
+        >
+          <div class="cenit-embed-consent-inner">
+            <p class="cenit-embed-kicker">Zahlen & Fakten</p>
 
-          <!-- EN -->
-          <video class="cenit-video" controls playsinline preload="metadata"
-                 poster="/video/still-martha-graham.png" data-lang="en" style="display:none;">
-            <source src="/video/cenit-video-en.mp4" type="video/mp4">
-          </video>
+            <h3 class="cenit-embed-title">
+              Interaktive Grafik laden
+            </h3>
+
+            <p class="cenit-embed-text">
+              Zur Darstellung dieser Grafik nutzen wir einen externen Dienst.
+              Der Inhalt wird erst nach Ihrer Zustimmung geladen.
+            </p>
+
+            <div class="cenit-embed-actions">
+              <button class="cenit-embed-button" type="button" onclick="loadInfogramEmbed(this)">
+                Grafik anzeigen
+              </button>
+
+              <a class="cenit-embed-link" href="/de/datenschutz/">
+                Datenschutz
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EN -->
+        <div
+          class="cenit-embed-consent"
+          data-lang="en"
+          data-embed-type="infogram"
+          data-embed-src="https://e.infogram.com/DEIN-EN-EMBED-LINK"
+          data-embed-height="640"
+          style="display:none;"
+        >
+          <div class="cenit-embed-consent-inner">
+            <p class="cenit-embed-kicker">Facts & Figures</p>
+
+            <h3 class="cenit-embed-title">
+              Load interactive chart
+            </h3>
+
+            <p class="cenit-embed-text">
+              We use an external service to display this chart.
+              The content will only be loaded after your consent.
+            </p>
+
+            <div class="cenit-embed-actions">
+              <button class="cenit-embed-button" type="button" onclick="loadInfogramEmbed(this)">
+                Show chart
+              </button>
+
+              <a class="cenit-embed-link" href="/de/datenschutz/">
+                Privacy
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>
-    </div>
+    </div>>
   </section>
-
 
   <!-- =========================
        CHAPTER TRANSITION
