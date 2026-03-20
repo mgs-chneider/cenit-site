@@ -1335,6 +1335,16 @@ body.page-home #vision{
   padding:76px var(--cenit-section-px);
 }
 
+.page-zahlen-fakten .cenit-section.cenit-zf-video{
+  padding-top: 20px;
+  padding-bottom: 64px;
+}
+
+.page-zahlen-fakten .cenit-section.cenit-zf-charts{
+  padding-top: 28px;
+  padding-bottom: 44px;
+}
+
 .page-zahlen-fakten .cenit-zf-hero{
   padding-bottom:56px;
 }
