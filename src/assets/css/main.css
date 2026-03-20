@@ -1365,7 +1365,7 @@ body.page-home #vision{
 /* Transition / Chapter */
 .page-zahlen-fakten .cenit-zf-transition{
   max-width:var(--cenit-axis-760);
-  margin: 0 auto 8px auto;
+  margin: 0 auto 18px auto;
   text-align:center;
 }
 
@@ -1373,7 +1373,7 @@ body.page-home #vision{
   font-family:'EB Garamond', serif;
   font-size:22px;
   font-weight:400;
-  line-height:1.4;
+  line-height:1.45;
   margin:0;
   color:var(--cenit-purple);
 }
@@ -1430,7 +1430,7 @@ body.page-home #vision{
    ========================= */
 
 .page-zahlen-fakten .cenit-zf-charts{
-  padding-top: 8px;
+  padding-top: 24px;
   padding-bottom: 44px;
 }
 
