@@ -1365,7 +1365,7 @@ body.page-home #vision{
 /* Transition / Chapter */
 .page-zahlen-fakten .cenit-zf-transition{
   max-width:var(--cenit-axis-760);
-  margin: 0 auto 18px auto;
+  margin: 0 auto 8px auto;
   text-align:center;
 }
 
@@ -1437,7 +1437,7 @@ body.page-home #vision{
 .page-zahlen-fakten .cenit-zf-charts-inner{
   background:rgba(107,20,184,0.02);
   border-radius:28px;
-  padding:44px 44px;
+  padding: 28px 36px 36px 36px;
 }
 
 .page-zahlen-fakten .cenit-facts-grid{
@@ -1457,7 +1457,7 @@ body.page-home #vision{
 }
 
 .page-zahlen-fakten .cenit-chart-headline{
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
   font-family: "EB Garamond", serif;
   font-size: 24px;
   line-height: 1.2;
