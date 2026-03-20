@@ -1464,6 +1464,7 @@ body.page-home #vision{
   font-weight: 400;
   color:r gba(25,25,60,0.88);
   letter-spacing: 0.01em;
+  text-align: center;
 }
 
 .page-zahlen-fakten .cenit-embed{
