@@ -1459,10 +1459,10 @@ body.page-home #vision{
 .page-zahlen-fakten .cenit-chart-headline{
   margin: 0 0 6px 0;
   font-family: "EB Garamond", serif;
-  font-size: 24px;
-  line-height: 1.2;
+  font-size: 20px;
+  line-height: 1.25;
   font-weight: 400;
-  color:r gba(25,25,60,0.88);
+  color:r gba(25,25,60,0.72);
   letter-spacing: 0.01em;
   text-align: center;
 }
