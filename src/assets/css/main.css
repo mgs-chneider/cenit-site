@@ -1365,7 +1365,7 @@ body.page-home #vision{
 /* Transition / Chapter */
 .page-zahlen-fakten .cenit-zf-transition{
   max-width:var(--cenit-axis-760);
-  margin: 0 auto 8px auto;
+  margin: 0 auto 2px auto;
   text-align:center;
 }
 
