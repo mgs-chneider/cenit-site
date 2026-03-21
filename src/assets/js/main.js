@@ -70,7 +70,7 @@ if (menuBtn && menu) {
       faqs: "FAQs",
       contact: "Kontakt",
       statutes: "Satzung"
-    }
+    },
     en: {
       home: "Home",
       menuLabel: "Menu",
