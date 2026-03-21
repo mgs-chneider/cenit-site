@@ -69,8 +69,10 @@ if (menuBtn && menu) {
       insights: "Einblicke & Entwicklungen",
       faqs: "FAQs",
       contact: "Kontakt",
-      statutes: "Satzung"
-    },
+      statutes: "Satzung",
+      legal: "Impressum",
+      privacy: "Datenschutz"
+    }
     en: {
       home: "Home",
       menuLabel: "Menu",
@@ -80,7 +82,9 @@ if (menuBtn && menu) {
       insights: "Insights & Updates",
       faqs: "FAQs",
       contact: "Contact",
-      statutes: "Statutes"
+      statutes: "Statutes",
+      legal: "Legal",
+      privacy: "Privacy Policy"   
     }
   };
 
