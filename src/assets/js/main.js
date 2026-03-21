@@ -101,21 +101,58 @@ if (menuBtn && menu) {
       }
     });
 
-    // Button Active State
-    langButtons.forEach(btn => {
-      btn.classList.toggle("is-active", btn.dataset.setLang === L);
-    });
+   // Button Active State
+   langButtons.forEach(btn => {
+     btn.classList.toggle("is-active", btn.dataset.setLang === L);
+   });
 
-    try {
-      localStorage.setItem("cenit-lang", L);
-    } catch(e){}
-  }
+   try {
+     localStorage.setItem("cenit-lang", L);
+   } catch(e){}
+   }
 
-  langButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      applyLang(btn.dataset.setLang);
-    });
-  });
+   const routeMap = {
+     "/de/impressum/": "/en/legal-notice/",
+     "/en/legal-notice/": "/de/impressum/",
+     "/de/datenschutz/": "/en/privacy/",
+     "/en/privacy/": "/de/datenschutz/"
+   };
+
+   langButtons.forEach(btn => {
+     btn.addEventListener("click", () => {
+       const targetLang = btn.dataset.setLang;
+       const path = window.location.pathname;
+
+       // zuerst Spezialfälle mit unterschiedlichen Slugs
+       if (routeMap[path]) {
+         try {
+           localStorage.setItem("cenit-lang", targetLang);
+         } catch(e){}
+         window.location.href = routeMap[path];
+         return;
+       }
+
+       // generischer Wechsel für /de/... und /en/...
+       let newPath = path;
+
+       if (targetLang === "en" && path.startsWith("/de/")) {
+         newPath = path.replace(/^\/de\//, "/en/");
+       } else if (targetLang === "de" && path.startsWith("/en/")) {
+         newPath = path.replace(/^\/en\//, "/de/");
+       }
+
+       if (newPath !== path) {
+         try {
+         localStorage.setItem("cenit-lang", targetLang);
+         } catch(e){}
+         window.location.href = newPath;
+         return;
+       }
+
+       // Fallback für Seiten ohne /de/ oder /en/
+       applyLang(targetLang);
+     });
+   });
 
   let initialLang = "de";
   try {
