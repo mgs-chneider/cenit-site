@@ -1,57 +1,67 @@
-https://cenit-ev.de/
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <url>
+    <loc>https://cenit-ev.de/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-2025-06-01
-monthly
-1.0
+  <url>
+    <loc>https://cenit-ev.de/zahlen-fakten</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
+  <url>
+    <loc>https://cenit-ev.de/einblicke-entwicklungen</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-https://cenit-ev.de/zahlen-fakten
-2025-06-01
-monthly
-0.8
+  <url>
+    <loc>https://cenit-ev.de/faqs</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
+  <url>
+    <loc>https://cenit-ev.de/satzung</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-https://cenit-ev.de/einblicke-entwicklungen
-2025-06-01
-monthly
-0.8
+  <url>
+    <loc>https://cenit-ev.de/de/impressum/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 
+  <url>
+    <loc>https://cenit-ev.de/de/datenschutz/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 
-https://cenit-ev.de/faqs
-2025-06-01
-monthly
-0.7
+  <url>
+    <loc>https://cenit-ev.de/en/legal/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 
+  <url>
+    <loc>https://cenit-ev.de/en/privacy/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 
-https://cenit-ev.de/satzung
-2025-06-01
-yearly
-0.6
-
-
-https://cenit-ev.de/de/impressum/
-2025-06-01
-yearly
-0.3
-
-
-https://cenit-ev.de/de/datenschutz/
-2025-06-01
-yearly
-0.3
-
-
-https://cenit-ev.de/en/legal/
-2025-06-01
-yearly
-0.3
-
-
-https://cenit-ev.de/en/privacy/
-2025-06-01
-yearly
-0.3
-
-
-
+</urlset>
