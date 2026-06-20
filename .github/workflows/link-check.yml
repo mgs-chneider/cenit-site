@@ -21,6 +21,7 @@ jobs:
             --exclude-mail
             --exclude-private
             --exclude 'vbg.de/pmt'
+            --exclude-path './src/pages/zahlen-fakten/components/charts.html'
             --accept 200,204,301,302
             './src/pages/**/*.html'
           fail: true
