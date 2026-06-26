@@ -67,6 +67,7 @@ if (menuBtn && menu) {
       about: "Über uns",
       expertise: "Expertise",
       insights: "Einblicke & Entwicklungen",
+      glossary: "Glossar",
       faqs: "FAQs",
       contact: "Kontakt",
       statutes: "Satzung"
@@ -78,6 +79,7 @@ if (menuBtn && menu) {
       about: "About us",
       expertise: "Expertise",
       insights: "Insights & Updates",
+      glossary: "Glossary",
       faqs: "FAQs",
       contact: "Contact",
       statutes: "Statutes" 
