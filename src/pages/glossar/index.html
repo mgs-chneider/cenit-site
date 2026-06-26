@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
@@ -50,18 +50,23 @@
           CENIT Glossar
         </p>
 
-        <!-- Hinweis-Box -->
-        <div class="cenit-softcard cenit-glossar-hinweis" style="margin-top:0;">
-          <p class="cenit-text-body" style="margin:0; font-size:14px; color:var(--muted-foreground);">
+        <!-- Einordnung statt Hinweis-Box -->
+        <div class="cenit-glossar-intro">
+          <p class="cenit-glossar-intro-quote">
+            <span data-lang="de">Wissen einordnen, nicht nur definieren.</span>
+            <span data-lang="en" style="display:none;">Putting knowledge in context, not just defining it.</span>
+          </p>
+          <div class="cenit-gold-divider" style="margin:14px auto;"></div>
+          <p class="cenit-glossar-intro-note">
             <span data-lang="de">
-              ℹ️ Dieses Glossar dient der Wissensvermittlung im Präventionskontext. Es ersetzt keine medizinische
-              oder therapeutische Beratung. Bei Beschwerden oder Verletzungen wenden Sie sich an Ärztinnen, Ärzte
-              oder Physiotherapeut:innen – etwa über das <a href="https://tamed.eu" target="_blank" rel="noopener" style="color:var(--cenit-purple);">Verzeichnis von ta.med</a>.
+              Dieses Glossar dient der Wissensvermittlung im Präventionskontext und ersetzt keine medizinische
+              oder therapeutische Beratung. Bei Beschwerden oder Verletzungen empfehlen wir den Weg zu Ärztinnen,
+              Ärzten oder Physiotherapeut:innen – etwa über das <a href="https://tamed.eu" target="_blank" rel="noopener" style="color:var(--cenit-purple);">Verzeichnis von ta.med</a>.
             </span>
             <span data-lang="en" style="display:none;">
-              ℹ️ This glossary provides general knowledge in a prevention context. It does not replace medical
-              or therapeutic advice. If you are experiencing pain or injury, please consult a physician or
-              physiotherapist – for example via the <a href="https://tamed.eu" target="_blank" rel="noopener" style="color:var(--cenit-purple);">ta.med directory</a>.
+              This glossary provides general knowledge in a prevention context and does not replace medical or
+              therapeutic advice. For pain or injury, we recommend consulting a physician or physiotherapist –
+              for example via the <a href="https://tamed.eu" target="_blank" rel="noopener" style="color:var(--cenit-purple);">ta.med directory</a>.
             </span>
           </p>
         </div>
@@ -257,18 +262,27 @@
   <script src="/assets/js/main.js" defer></script>
 
   <style>
-    /* Glossar-spezifische Styles (lokal, kein Eingriff in main.css) */
-    .cenit-glossar-hinweis{
-      margin: 0 0 0 0;
-      padding: 16px 18px;
-      border-radius: 14px;
+    .cenit-glossar-intro{
+      text-align: center;
+      max-width: var(--cenit-axis-760);
+      margin: 0 auto 8px auto;
     }
-
-    .cenit-glossar-cat{
-      margin: 32px 0 14px 0;
+    .cenit-glossar-intro-quote{
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1.4;
+      color: var(--cenit-purple);
+      margin: 0;
     }
-    .cenit-glossar-cat:first-of-type{ margin-top: 0; }
-
+    .cenit-glossar-intro-note{
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--muted-foreground);
+      margin: 0;
+    }
+    
     /* Kartengrid statt flacher Liste */
     .cenit-glossar-grid{
       display: grid;
