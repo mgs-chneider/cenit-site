@@ -58,8 +58,38 @@
 
       <div class="cenit-einblicke-grid">
 
-        <!-- Kachel: Radar Juni 2026 -->
+        <!-- Kachel: Radar Juli 2026 -->
         <div class="cenit-einblicke-tile reveal" style="--reveal-delay:80ms">
+          <div class="cenit-einblicke-tile-meta">
+            <span class="cenit-einblicke-tile-tag">
+              <span data-lang="de">CENIT Radar</span>
+              <span data-lang="en" style="display:none;">CENIT Radar</span>
+            </span>
+            <span class="cenit-einblicke-tile-date">
+              <span data-lang="de">Juli 2026</span>
+              <span data-lang="en" style="display:none;">July 2026</span>
+            </span>
+          </div>
+          <h3 class="cenit-einblicke-tile-title">
+            <span data-lang="de">Psychische Gesundheit im Tanz</span>
+            <span data-lang="en" style="display:none;">Mental Health in Dance</span>
+          </h3>
+          <p class="cenit-einblicke-tile-teaser">
+            <span data-lang="de">
+              Tanzfestival Bielefeld mit ta.med-Beteiligung, IADMS-Konferenz Melbourne, aktuelle Forschung zur psychischen Gesundheit bei Profi- und Freizeittänzer*innen.
+            </span>
+            <span data-lang="en" style="display:none;">
+              Tanzfestival Bielefeld with ta.med involvement, IADMS Conference Melbourne, current research on mental health in professional and recreational dancers.
+            </span>
+          </p>
+          <a class="cenit-btn cenit-einblicke-tile-btn" href="/einblicke-entwicklungen/radar-juli-2026/">
+            <span data-lang="de">Zur Ausgabe →</span>
+            <span data-lang="en" style="display:none;">Read more →</span>
+          </a>
+        </div>
+
+        <!-- Kachel: Radar Juni 2026 -->
+        <div class="cenit-einblicke-tile reveal" style="--reveal-delay:160ms">
           <div class="cenit-einblicke-tile-meta">
             <span class="cenit-einblicke-tile-tag">
               <span data-lang="de">CENIT Radar</span>
@@ -158,22 +188,22 @@
 
   <style>
     /* Kacheln-Grid */
-    .cenit-einblicke-grid{
+    .cenit-einblicke-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
       max-width: var(--cenit-axis-950);
       margin: 0 auto;
     }
-    @media (max-width: 860px){
-      .cenit-einblicke-grid{ grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 860px) {
+      .cenit-einblicke-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (max-width: 540px){
-      .cenit-einblicke-grid{ grid-template-columns: 1fr; }
+    @media (max-width: 540px) {
+      .cenit-einblicke-grid { grid-template-columns: 1fr; }
     }
 
     /* Einzelne Kachel */
-    .cenit-einblicke-tile{
+    .cenit-einblicke-tile {
       background: var(--cenit-surface);
       border-radius: 18px;
       box-shadow:
@@ -186,7 +216,7 @@
       gap: 10px;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
-    .cenit-einblicke-tile:hover{
+    .cenit-einblicke-tile:hover {
       transform: translateY(-3px);
       box-shadow:
         0 4px 10px rgba(25,25,60,0.06),
@@ -195,12 +225,12 @@
     }
 
     /* Meta-Zeile */
-    .cenit-einblicke-tile-meta{
+    .cenit-einblicke-tile-meta {
       display: flex;
       align-items: center;
       gap: 10px;
     }
-    .cenit-einblicke-tile-tag{
+    .cenit-einblicke-tile-tag {
       display: inline-block;
       font-size: 11px;
       font-weight: 600;
@@ -211,13 +241,13 @@
       border-radius: 999px;
       padding: 3px 10px;
     }
-    .cenit-einblicke-tile-date{
+    .cenit-einblicke-tile-date {
       font-size: 12px;
       color: var(--muted-foreground);
     }
 
     /* Titel */
-    .cenit-einblicke-tile-title{
+    .cenit-einblicke-tile-title {
       font-family: 'EB Garamond', serif;
       font-style: italic;
       font-weight: 400;
@@ -228,7 +258,7 @@
     }
 
     /* Teaser */
-    .cenit-einblicke-tile-teaser{
+    .cenit-einblicke-tile-teaser {
       font-size: 14px;
       line-height: 1.65;
       color: var(--muted-foreground);
@@ -237,7 +267,7 @@
     }
 
     /* Button */
-    .cenit-einblicke-tile-btn{
+    .cenit-einblicke-tile-btn {
       align-self: flex-start;
       margin-top: 4px;
     }
