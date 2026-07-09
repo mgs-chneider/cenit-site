@@ -71,7 +71,7 @@
       <div class="cenit-glossar-groups">
 
         <!-- Verletzung & Prävention -->
-        <div class="cenit-glossar-group is-light">
+        <div class="cenit-glossar-group is-dark">
           <h2 class="cenit-glossar-group-title">
             <span data-lang="de">Verletzung &amp; Prävention</span>
             <span data-lang="en" style="display:none;">Injury &amp; Prevention</span>
@@ -113,7 +113,7 @@
         </div>
 
         <!-- Physiologie & Gesundheit -->
-        <div class="cenit-glossar-group is-dark">
+        <div class="cenit-glossar-group">
           <h2 class="cenit-glossar-group-title">
             <span data-lang="de">Physiologie &amp; Gesundheit</span>
             <span data-lang="en" style="display:none;">Physiology &amp; Health</span>
@@ -151,7 +151,7 @@
         </div>
 
         <!-- Psychische Gesundheit -->
-        <div class="cenit-glossar-group is-light">
+        <div class="cenit-glossar-group is-dark">
           <h2 class="cenit-glossar-group-title">
             <span data-lang="de">Psychische Gesundheit</span>
             <span data-lang="en" style="display:none;">Mental Health</span>
@@ -181,7 +181,7 @@
         </div>
 
         <!-- Anatomie & Technik -->
-        <div class="cenit-glossar-group is-dark">
+        <div class="cenit-glossar-group">
           <h2 class="cenit-glossar-group-title">
             <span data-lang="de">Anatomie &amp; Technik</span>
             <span data-lang="en" style="display:none;">Anatomy &amp; Technique</span>
@@ -211,7 +211,7 @@
         </div>
 
         <!-- Struktur & Beruf -->
-        <div class="cenit-glossar-group is-light">
+        <div class="cenit-glossar-group is-dark">
           <h2 class="cenit-glossar-group-title">
             <span data-lang="de">Struktur &amp; Beruf</span>
             <span data-lang="en" style="display:none;">Structure &amp; Profession</span>
@@ -302,7 +302,6 @@
       padding: 26px 30px;
       margin-bottom: 20px;
     }
-    .cenit-glossar-group.is-light{ background:#f5f3f9; }
     .cenit-glossar-group.is-dark{  background:#edebf5; }
     .cenit-glossar-group-title{
       margin: 0 0 4px 0;
@@ -334,6 +333,9 @@
       text-decoration: none;
       font-size: 14.5px;
       transition: background 0.15s ease, transform 0.15s ease;
+    }
+    .cenit-glossar-group:not(.is-dark) .cenit-glossar-term-link{
+      background: #f7f6fa;
     }
     .cenit-glossar-term-link:hover{
       background: rgba(255,255,255,0.9);
