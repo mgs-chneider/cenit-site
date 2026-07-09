@@ -1833,6 +1833,66 @@ body.page-home #vision{
 }
 .page-faqs .cenit-faq-final-link:hover{ text-decoration: underline; }
 
+/* ============ Glossar-Gruppenkarten (im FAQ-Stil) ============ */
+.cenit-glossar-groups{
+  max-width: var(--cenit-axis-950);
+  margin: 0 auto;
+}
+.cenit-glossar-group{
+  background:#ffffff;
+  border-radius: 22px;
+  padding: 26px 30px;
+  margin-bottom: 20px;
+}
+.cenit-glossar-group.is-light{ background:#f5f3f9; }
+.cenit-glossar-group.is-dark{  background:#edebf5; }
+.cenit-glossar-group-title{
+  margin: 0 0 4px 0;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cenit-purple);
+  font-size: 20px;
+  line-height: 1.25;
+}
+.cenit-glossar-group-count{
+  font-size: 12.5px;
+  color: var(--muted-foreground);
+  margin: 0 0 18px 0;
+}
+.cenit-glossar-terms{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.cenit-glossar-term-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.55);
+  color: var(--cenit-text);
+  text-decoration: none;
+  font-size: 14.5px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.cenit-glossar-group:not(.is-light):not(.is-dark) .cenit-glossar-term-link{
+  background: #f7f6fa;
+}
+.cenit-glossar-term-link:hover{
+  background: rgba(255,255,255,0.9);
+  transform: translateX(2px);
+}
+.cenit-glossar-term-arrow{
+  color: var(--cenit-gold);
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+@media (max-width: 480px){
+  .cenit-glossar-group{ padding: 20px; }
+  .cenit-glossar-terms{ grid-template-columns: 1fr; }
+}
 
 /* =========================================================
    PAGE: SATZUNG / LEITBILD
