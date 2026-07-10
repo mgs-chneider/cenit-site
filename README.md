@@ -43,6 +43,24 @@ Wiederverwendbare Bausteine werden über Platzhalter-Kommentare eingebunden:
 
 Diese werden beim Build automatisch durch den Inhalt der entsprechenden Datei in `src/partials/` ersetzt.
 
+## Content-Konventionen
+
+### Glossar
+
+Unter `/glossar/` liegt ein zweisprachiges Fachbegriff-Glossar zur Tanzmedizin, aktuell 24 Begriffe in fünf Kategorien: Grundlagen, Verletzung & Prävention, Physiologie & Gesundheit, Psychische Gesundheit, Anatomie & Technik.
+
+Jeder Begriff liegt unter `src/pages/glossar/[begriff]/index.html` und folgt einer festen sechsteiligen Struktur: Kurzdefinition, Im Tanzkontext, Warum das für Prävention wichtig ist, Hinweis, Quellen, Weiterführend. Inhalte sind reine Wissensvermittlung im Präventionskontext — keine Diagnosen oder Behandlungsempfehlungen, Sprache durchgängig gehedgt ("kann ein Hinweis sein auf …" statt "bedeutet …"). Quellen sind peer-reviewed oder stammen von anerkannten Fachorganisationen (IADMS, ta.med) und werden mit DOI oder Direktlink zitiert.
+
+Die Übersichtsseite `src/pages/glossar/index.html` gruppiert die Begriffe in Kategorie-Karten (Kartenstil analog zur FAQ-Seite: weißer Außenrahmen, farbige/helle Innenkarten alternierend). Die Kategorie „Grundlagen" (Tanzmedizin, Interdisziplinäre Versorgung, Screening) steht als Einführung voran, volle Breite, drei Spalten mit Teaser-Text statt Linkliste. Begriffe innerhalb der übrigen Kategorien sind alphabetisch sortiert.
+
+### CENIT Radar
+
+Unter `/einblicke-entwicklungen/radar-[monat]-[jahr]/` erscheint monatlich ein kuratierter Newsletter mit aktuellen Entwicklungen aus Forschung, Szene und Veranstaltungen der Tanzmedizin (Rubriken: Veranstaltung des Monats, Szene & Kontext, Forschung, Glossar-Begriff des Monats, Im Kalender). Der Glossar-Begriff des Monats verweist jeweils auf einen noch nicht vorgestellten Eintrag im Glossar; welcher Begriff bereits verwendet wurde, wird pro Ausgabe dokumentiert, um Wiederholungen zu vermeiden.
+
+### Rechtliches
+
+Bilinguale rechtliche Hinweise liegen unter `src/pages/de/impressum/` (DE) und `src/pages/en/legal-notice/` (EN), inklusive Anker-IDs für die Abschnitte Haftung für Links (`#haftung-fuer-links` / `#liability-for-links`) und Urheberrecht (`#urheberrecht` / `#copyright`). Glossar-Einträge mit externen Quellenverweisen verlinken auf diese Abschnitte.
+
 ## Build
 
 ```bash
@@ -58,5 +76,4 @@ Jeder Push auf den `main`-Branch löst automatisch einen neuen Build und Deploym
 ## Lizenz & Kontakt
 
 © CENIT – Verein zur Förderung interdisziplinärer Tanzmedizin e.V.
-
 Bei Fragen: [info@cenit-ev.de](mailto:info@cenit-ev.de)
