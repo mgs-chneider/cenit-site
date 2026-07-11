@@ -57,6 +57,10 @@ Die Übersichtsseite `src/pages/glossar/index.html` gruppiert die Begriffe in Ka
 
 Unter `/einblicke-entwicklungen/radar-[monat]-[jahr]/` erscheint monatlich ein kuratierter Newsletter mit aktuellen Entwicklungen aus Forschung, Szene und Veranstaltungen der Tanzmedizin (Rubriken: Veranstaltung des Monats, Szene & Kontext, Forschung, Glossar-Begriff des Monats, Im Kalender). Der Glossar-Begriff des Monats verweist jeweils auf einen noch nicht vorgestellten Eintrag im Glossar; welcher Begriff bereits verwendet wurde, wird pro Ausgabe dokumentiert, um Wiederholungen zu vermeiden.
 
+### Förderaufrufe
+
+Unter `/foerderaufrufe/` steht eine kuratierte, laufend aktualisierte Übersicht öffentlich zugänglicher EU-Förderprogramme (Horizon Europe, Erasmus+ Sport, COST u. a.) mit Relevanz für tanzmedizinische Forschung. Gegliedert in „Aktuell offen" und „Im Blick behalten" (Calls, deren nächste Runde noch nicht veröffentlicht ist). CENIT tritt hier nicht als Antragsteller auf, sondern als Orientierungshilfe für Hochschulen und Fachverbände im eigenen Netzwerk.
+
 ### Rechtliches
 
 Bilinguale rechtliche Hinweise liegen unter `src/pages/de/impressum/` (DE) und `src/pages/en/legal-notice/` (EN), inklusive Anker-IDs für die Abschnitte Haftung für Links (`#haftung-fuer-links` / `#liability-for-links`) und Urheberrecht (`#urheberrecht` / `#copyright`). Glossar-Einträge mit externen Quellenverweisen verlinken auf diese Abschnitte.
