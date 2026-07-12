@@ -101,23 +101,7 @@
     <!-- Podcast + Kacheln -->
     <div class="cenit-card cenit-vm-gridcard reveal" style="--reveal-delay:80ms">
       <div class="cenit-vm-grid">
-        <!-- links: Podcast -->
-        <div class="cenit-vm-podcast-card">
-          <img
-            class="cenit-vm-podcast-cover"
-            src="/assets/img/podcastcover.png"
-            alt="Podcast cover"
-            loading="lazy"
-          />
-          <audio class="cenit-vm-audio" controls preload="none">
-            <source src="/assets/audio/cenit-podcast.mp3" type="audio/mpeg" />
-          </audio>
-          <div class="cenit-vm-podcast-meta">
-            <span data-lang="de">Podcastdauer: ca. 20 Minuten</span>
-            <span data-lang="en" style="display:none;">Duration: approx. 20 minutes</span>
-          </div>
-        </div>
-        <!-- rechts: 4 Kacheln -->
+        <!-- 4 Kacheln, volle Breite (Podcast entfernt) -->
         <div class="cenit-vm-tiles">
           <div class="cenit-vm-tile vm-wissen reveal" style="--reveal-delay:120ms">
             <h3 class="cenit-vm-tile-title">
@@ -535,6 +519,19 @@
   <!-- Main JS -->
   <script src="/assets/js/main.js" defer></script>
   <style>
+    /* Vision & Mission: Podcast entfernt, 4 Kacheln nutzen volle Breite */
+    .cenit-vm-gridcard .cenit-vm-grid{
+      grid-template-columns: 1fr;
+    }
+    .cenit-vm-gridcard .cenit-vm-tiles{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 680px){
+      .cenit-vm-gridcard .cenit-vm-tiles{ grid-template-columns: 1fr; }
+    }
+
     /* Expertise-Kacheln: Belegte Links statt reiner Behauptung */
     .cenit-expertise-mini-link{
       display: inline-block;
