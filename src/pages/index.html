@@ -1,113 +1,616 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CENIT e.V.</title>
+  <link rel="preload" href="/assets/fonts/eb-garamond-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/eb-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="page-home">
 
-„Von der Idee zur Wirkung – Prävention beginnt mit Bewegung“
+  <!-- @@HEADER@@ -->
+<!-- =========================
+     HERO (Full-bleed Image + Overlay incl. Transition)
+     ========================= -->
+<section class="cenit-hero" id="hero">
+  <div class="cenit-hero-home-media">
+    <img src="/assets/img/hero-cenit.png" alt="" loading="eager">
+    <!-- Gradient-Layer (neu) -->
+    <div class="cenit-hero-home-gradient"></div>
+    <div class="cenit-hero-home-overlay">
+      <!-- Claim -->
+      <div class="cenit-hero-home-top">
+        <p class="cenit-hero-home-claim" data-lang="de">
+          „Von der Idee zur Wirkung – Prävention beginnt mit Bewegung“
+        </p>
+        <p class="cenit-hero-home-claim" data-lang="en" style="display:none;">
+          “From idea to impact – prevention starts with movement”
+        </p>
+        <div class="cenit-hero-home-divider"></div>
+        <p class="cenit-hero-home-sub" data-lang="de">
+          CENIT e.V. – Forschung. Förderung. Bewegung.
+        </p>
+        <p class="cenit-hero-home-sub" data-lang="en" style="display:none;">
+          CENIT e.V. – Research. Advancement. Movement.
+        </p>
+      </div>
+      <!-- Transition (jetzt im Overlay) -->
+      <div class="cenit-hero-home-bottom">
+        <p class="cenit-hero-home-transition-text" data-lang="de">
+          Die körperlichen Anforderungen im Tanz sind hoch.<br>
+          Wie groß sind Belastung und Verletzungsrisiko?
+        </p>
+        <p class="cenit-hero-home-transition-text" data-lang="en" style="display:none;">
+          The physical demands in dance are high.<br>
+          How significant are strain and injury risks?
+        </p>
+        <div class="cenit-hero-home-divider cenit-hero-home-divider--thin"></div>
+        <div class="cenit-hero-home-cta">
+          <a href="/zahlen-fakten" data-lang="de" class="cenit-btn">Zahlen &amp; Fakten</a>
+          <a href="/zahlen-fakten" data-lang="en" class="cenit-btn" style="display:none;">Facts &amp; Figures</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-CENIT e.V. – Forschung. Förderung. Bewegung.
+<!-- =========================
+    VISION & MISSION
+     ========================= -->
 
-Die körperlichen Anforderungen im Tanz sind hoch.
-Wie groß sind Belastung und Verletzungsrisiko?
+<section id="vision" class="cenit-section cenit-section--vision">
+  <div class="cenit-container">
+    <h2 class="cenit-h2">Vision & Mission</h2>
+     <div class="cenit-axis-760 cenit-vm-intro">
+        <p class="cenit-vm-vision" data-lang="de">
+          Wir setzen uns dafür ein, dass Prävention im Tanz zu einem
+          selbstverständlichen Teil der Gesundheitskultur wird –
+          über Institutionen, Generationen und Milieus hinweg.
+        </p>
+        <p class="cenit-vm-vision" data-lang="en" style="display:none;">
+          We are committed to making injury prevention in dance a natural part of health culture –
+          across institutions, generations, and communities.
+        </p>
+        <p class="cenit-vm-mission" data-lang="de">
+          Unsere Mission ist es, die wissenschaftlichen Grundlagen
+          der Tanzprävention sichtbar zu machen, Forschung zu ermöglichen
+          und evidenzbasiertes Wissen aufzubereiten und zu verbreiten –
+          damit Strukturen entstehen, die gesundes Tanzen für alle Menschen ermöglichen.
+        </p>
+        <p class="cenit-vm-mission" data-lang="en" style="display:none;">
+          Our mission is to make the scientific foundations of dance injury prevention visible,
+          enable research, and translate and share evidence-based knowledge –
+          so that structures emerge that support healthy dancing for everyone.
+        </p>
+      </div>
+    </div>
+  </div>
+    <!-- Kacheln: gleiche Optik wie "An wen wendet sich CENIT?" für nahtlosen Anschluss -->
+    <div class="cenit-einstieg-row reveal" style="--reveal-delay:80ms">
+      <div class="cenit-einstieg-card is-dark">
+        <div class="cenit-einstieg-cols">
+          <div class="cenit-einstieg-teaser">
+            <span class="cenit-einstieg-teaser-title">
+              <span data-lang="de">Wissen sichtbar machen</span>
+              <span data-lang="en" style="display:none;">Making knowledge accessible</span>
+            </span>
+            <span class="cenit-einstieg-teaser-text">
+              <span data-lang="de">Wir bereiten wissenschaftliche Erkenntnisse zur Tanzprävention verständlich auf – für alle, die tanzen, unterrichten oder sich bewegen.</span>
+              <span data-lang="en" style="display:none;">We translate scientific insights on dance injury prevention into accessible knowledge – for dancers, teachers, and movers.</span>
+            </span>
+          </div>
+          <div class="cenit-einstieg-teaser">
+            <span class="cenit-einstieg-teaser-title">
+              <span data-lang="de">Forschung ermöglichen</span>
+              <span data-lang="en" style="display:none;">Enabling research</span>
+            </span>
+            <span class="cenit-einstieg-teaser-text">
+              <span data-lang="de">Wir unterstützen Kooperationen und Projekte, die Prävention im Tanz weiterentwickeln. Wir forschen nicht selbst, sondern schaffen Zugang zu Evidenz und Expertise.</span>
+              <span data-lang="en" style="display:none;">We support collaborations and projects that advance prevention in dance. We don’t research ourselves; we enable access to evidence and expertise.</span>
+            </span>
+          </div>
+          <div class="cenit-einstieg-teaser">
+            <span class="cenit-einstieg-teaser-title">
+              <span data-lang="de">Aufklärung &amp; Bildung stärken</span>
+              <span data-lang="en" style="display:none;">Education &amp; awareness</span>
+            </span>
+            <span class="cenit-einstieg-teaser-text">
+              <span data-lang="de">Wir fördern niedrigschwellige Informations- und Bildungsangebote, die helfen, Verletzungen vorzubeugen und gesund zu trainieren.</span>
+              <span data-lang="en" style="display:none;">We support accessible education and information that helps prevent injuries and promotes healthy training.</span>
+            </span>
+          </div>
+          <div class="cenit-einstieg-teaser">
+            <span class="cenit-einstieg-teaser-title">
+              <span data-lang="de">Strukturen fördern</span>
+              <span data-lang="en" style="display:none;">Building structures</span>
+            </span>
+            <span class="cenit-einstieg-teaser-text">
+              <span data-lang="de">Wir vernetzen Akteur:innen aus Tanz, Wissenschaft und Gesundheitssystem – damit nachhaltige Strukturen der Prävention entstehen.</span>
+              <span data-lang="en" style="display:none;">We connect stakeholders from dance, science, and healthcare – so sustainable prevention structures can emerge.</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-Zahlen & Fakten
-Vision & Mission
-Wir setzen uns dafür ein, dass Prävention im Tanz zu einem selbstverständlichen Teil der Gesundheitskultur wird – über Institutionen, Generationen und Milieus hinweg.
+    <!-- CTA -->
+    <div class="cenit-vm-cta" style="margin-top:28px;">
+      <p class="cenit-vm-cta-note">
+        <span data-lang="de">Hier finden Sie unser vollständiges Leitbild.</span>
+        <span data-lang="en" style="display:none;">Find our complete mission statement here.</span>
+      </p>
+      <a href="/satzung#leitbild" class="cenit-btn">
+        <span data-lang="de">Zum Leitbild</span>
+        <span data-lang="en" style="display:none;">To the mission statement</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-Unsere Mission ist es, die wissenschaftlichen Grundlagen der Tanzprävention sichtbar zu machen, Forschung zu ermöglichen und evidenzbasiertes Wissen aufzubereiten und zu verbreiten – damit Strukturen entstehen, die gesundes Tanzen für alle Menschen ermöglichen.
+<!-- =========================
+     EINSTIEGSPFADE (Ganzheitlicher Ansatz)
+     ========================= -->
+<section class="cenit-section" id="einstiegspfade">
+  <div class="cenit-container">
+    <div class="cenit-einstieg-row">
+      <div class="cenit-einstieg-card is-dark">
+        <h2 class="cenit-einstieg-title">
+          <span data-lang="de">An wen wendet sich CENIT?</span>
+          <span data-lang="en" style="display:none;">Who does CENIT address?</span>
+        </h2>
+        <p class="cenit-einstieg-subtitle">
+          <span data-lang="de">Ganzheitlich gedacht – körperlich, psychisch und strukturell. Vier Perspektiven, ein Anliegen.</span>
+          <span data-lang="en" style="display:none;">Thought through holistically – physically, psychologically and structurally. Four perspectives, one cause.</span>
+        </p>
+        <div class="cenit-einstieg-cols">
 
-Wissen sichtbar machen
-Wir bereiten wissenschaftliche Erkenntnisse zur Tanzprävention verständlich auf – für alle, die tanzen, unterrichten oder sich bewegen.
-Forschung ermöglichen
-Wir unterstützen Kooperationen und Projekte, die Prävention im Tanz weiterentwickeln. Wir forschen nicht selbst, sondern schaffen Zugang zu Evidenz und Expertise.
-Aufklärung & Bildung stärken
-Wir fördern niedrigschwellige Informations- und Bildungsangebote, die helfen, Verletzungen vorzubeugen und gesund zu trainieren.
-Strukturen fördern
-Wir vernetzen Akteur:innen aus Tanz, Wissenschaft und Gesundheitssystem – damit nachhaltige Strukturen der Prävention entstehen.
-Hier finden Sie unser vollständiges Leitbild.
+          <a class="cenit-einstieg-teaser" href="/glossar/red-s/">
+            <span class="cenit-einstieg-teaser-title">
+              <span data-lang="de">Eltern</span>
+              <span data-lang="en" style="display:none;">Parents</span>
+              <span class="cenit-einstieg-arrow">→</span>
+            </span>
+            <span class="cenit-einstieg-teaser-text">
+              <span data-lang="de">Wenn Energiezufuhr und Trainingsbelastung dauerhaft nicht zusammenpassen, kann das Wachstum, Zyklus und Knochengesundheit beeinträchtigen. Was Eltern zu RED-S wissen sollten. <em>…mehr</em></span>
+              <span data-lang="en" style="display:none;">When energy intake and training load are chronically mismatched, it can affect growth, menstrual cycles and bone health. What parents should know about RED-S. <em>…more</em></span>
+            </span>
+          </a>
 
-Zum Leitbild
-An wen wendet sich CENIT?
-Ganzheitlich gedacht – körperlich, psychisch und strukturell. Vier Perspektiven, ein Anliegen.
+          <a class="cenit-einstieg-teaser" href="/glossar/belastungssteuerung/">
+            <span class="cenit-einstieg-teaser-title">
+              <span data-lang="de">Lehrende</span>
+              <span data-lang="en" style="display:none;">Teachers</span>
+              <span class="cenit-einstieg-arrow">→</span>
+            </span>
+            <span class="cenit-einstieg-teaser-text">
+              <span data-lang="de">Wie viel Training ist zu viel? Belastungssteuerung hilft, Trainingsumfang und Erholung so zu planen, dass Fortschritt möglich bleibt, ohne das Verletzungsrisiko zu erhöhen. <em>…mehr</em></span>
+              <span data-lang="en" style="display:none;">How much training is too much? Load management helps plan training volume and recovery so progress stays possible without raising injury risk. <em>…more</em></span>
+            </span>
+          </a>
 
-Eltern
-→
-Wenn Energiezufuhr und Trainingsbelastung dauerhaft nicht zusammenpassen, kann das Wachstum, Zyklus und Knochengesundheit beeinträchtigen. Was Eltern zu RED-S wissen sollten. …mehr
-Lehrende
-→
-Wie viel Training ist zu viel? Belastungssteuerung hilft, Trainingsumfang und Erholung so zu planen, dass Fortschritt möglich bleibt, ohne das Verletzungsrisiko zu erhöhen. …mehr
-Hobbytänzer:innen
-→
-Tanzmedizin ist nicht nur etwas für Profis: Sie befasst sich mit der Gesundheit von Tänzer:innen aller Stile, Altersgruppen und Leistungsniveaus – auch im Hobbybereich. …mehr
-Profis
-→
-Aktuelle Forschung, Szene-Entwicklungen und Veranstaltungen der Tanzmedizin – kuratiert im monatlichen CENIT Radar, für alle, die am Puls des Fachs bleiben wollen. …mehr
-Kostenträger
-→
-Prävention ist nicht nur gesundheitlich sinnvoll, sondern auch wirtschaftlich: strukturierte Präventionsarbeit senkt nachweislich Versicherungsfälle und Folgekosten. …mehr
-Über uns
-CENIT verbindet künstlerische Praxis, wissenschaftliche Perspektive und strukturelle Verantwortung – mit dem Ziel, Prävention im Tanz nachhaltig zu verankern.
+          <a class="cenit-einstieg-teaser" href="/glossar/tanzmedizin/">
+            <span class="cenit-einstieg-teaser-title">
+              <span data-lang="de">Hobbytänzer:innen</span>
+              <span data-lang="en" style="display:none;">Recreational Dancers</span>
+              <span class="cenit-einstieg-arrow">→</span>
+            </span>
+            <span class="cenit-einstieg-teaser-text">
+              <span data-lang="de">Tanzmedizin ist nicht nur etwas für Profis: Sie befasst sich mit der Gesundheit von Tänzer:innen aller Stile, Altersgruppen und Leistungsniveaus – auch im Hobbybereich. <em>…mehr</em></span>
+              <span data-lang="en" style="display:none;">Dance medicine isn't just for professionals: it addresses the health of dancers across all styles, ages and levels – including recreational dance. <em>…more</em></span>
+            </span>
+          </a>
 
-Prof. Polina Semionova
-Prof. Polina Semionova
+          <a class="cenit-einstieg-teaser" href="/einblicke-entwicklungen/">
+            <span class="cenit-einstieg-teaser-title">
+              <span data-lang="de">Profis</span>
+              <span data-lang="en" style="display:none;">Professionals</span>
+              <span class="cenit-einstieg-arrow">→</span>
+            </span>
+            <span class="cenit-einstieg-teaser-text">
+              <span data-lang="de">Aktuelle Forschung, Szene-Entwicklungen und Veranstaltungen der Tanzmedizin – kuratiert im monatlichen CENIT Radar, für alle, die am Puls des Fachs bleiben wollen. <em>…mehr</em></span>
+              <span data-lang="en" style="display:none;">Current research, scene developments and events in dance medicine – curated monthly in the CENIT Radar, for anyone who wants to stay at the pulse of the field. <em>…more</em></span>
+            </span>
+          </a>
 
-Kammertänzerin · Schirmherrin
+          <a class="cenit-einstieg-teaser" href="/zahlen-fakten/#kostentraeger">
+            <span class="cenit-einstieg-teaser-title">
+              <span data-lang="de">Kostenträger</span>
+              <span data-lang="en" style="display:none;">Payers</span>
+              <span class="cenit-einstieg-arrow">→</span>
+            </span>
+            <span class="cenit-einstieg-teaser-text">
+              <span data-lang="de">Prävention ist nicht nur gesundheitlich sinnvoll, sondern auch wirtschaftlich: strukturierte Präventionsarbeit senkt nachweislich Versicherungsfälle und Folgekosten. <em>…mehr</em></span>
+              <span data-lang="en" style="display:none;">Prevention isn't just good for health, it makes economic sense too: structured prevention work measurably reduces claims and downstream costs. <em>…more</em></span>
+            </span>
+          </a>
 
-Stimme der Bühne
-Verbindet internationale Bühnenerfahrung mit den Zielen nachhaltiger Prävention.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-Dr. Christiane Theobald
-Dr. Christiane Theobald
+<!-- =========================
+     ABOUT
+     ========================= -->
 
-Vorstand · Künstlerische Praxis
+<section class="cenit-section cenit-about" id="ueber-uns">
+  <div class="cenit-container">
+    <!-- Titel -->
+     <h2 class="cenit-h2 reveal">
+      <span data-lang="de">Über uns</span>
+      <span data-lang="en" style="display:none;">About us</span>
+    </h2>
+    <!-- Intro (760-Achse, ohne Card) -->
+    <div class="cenit-axis-760">
+      <p class="cenit-text-body">
+        <span data-lang="de">
+          CENIT verbindet künstlerische Praxis, wissenschaftliche Perspektive und strukturelle Verantwortung –
+          mit dem Ziel, Prävention im Tanz nachhaltig zu verankern.
+        </span>
+        <span data-lang="en" style="display:none;">
+          CENIT connects artistic practice, scientific perspective, and structural responsibility –
+          with the goal of establishing sustainable prevention in dance.
+        </span>
+      </p>
+    </div>
+   <!-- =========================
+     ABOUT Teamcard
+     ========================= -->
+    <!-- Team (950-Achse in Whitecard wie VM) -->
+    <div class="cenit-card cenit-about-teamcard reveal">
 
-Künstlerische Praxis
-Verknüpft künstlerische Expertise mit Förderstrukturen – für mehr gesundheitsorientierte Ausbildungswege.
+      <div class="cenit-about-team">
+        <!-- Person 1 -->
+        <article class="cenit-about-person cenit-about-person--polina">
+          <div class="cenit-about-photo">
+            <div class="cenit-about-photo-inner">
+              <img src="/assets/img/FotoPolinaSW.png" alt="Prof. Polina Semionova" loading="lazy">
+            </div>
+          </div>
+          <p class="cenit-about-name">Prof. Polina Semionova</p>
+          <p class="cenit-about-role">
+            <span data-lang="de">Kammertänzerin · Schirmherrin</span>
+            <span data-lang="en" style="display:none;">Principal Dancer · Patron</span>
+          </p>
+          <a href="/einblicke-entwicklungen#polina" class="cenit-about-tag">
+            <span data-lang="de">Stimme der Bühne</span>
+            <span data-lang="en" style="display:none;">Voice of the Stage</span>
+          </a>
+          <p class="cenit-about-text">
+            <span data-lang="de">Verbindet internationale Bühnenerfahrung mit den Zielen nachhaltiger Prävention.</span>
+            <span data-lang="en" style="display:none;">connects international stage experience with objectives of sustainable prevention.</span>
+          </p>
+        </article>
+        <!-- Person 2 -->
+        <article class="cenit-about-person cenit-about-person--jane">
+          <div class="cenit-about-photo">
+             <div class="cenit-about-photo-inner">
+               <img src="/assets/img/FotoJaneSW.png" alt="Dr. Christiane Theobald" loading="lazy">
+            </div>
+          </div>
 
-Prof. Dr. Herbert Schuster
-Prof. Dr. Herbert Schuster
+          <p class="cenit-about-name">Dr. Christiane Theobald</p>
+          <p class="cenit-about-role">
+            <span data-lang="de">Vorstand · Künstlerische Praxis</span>
+            <span data-lang="en" style="display:none;">Board · Artistic Practice</span>
+          </p>
+          <a href="/einblicke-entwicklungen#christiane" class="cenit-about-tag">
+            <span data-lang="de">Künstlerische Praxis</span>
+            <span data-lang="en" style="display:none;">Artistic Practice</span>
+          </a>
+          <p class="cenit-about-text">
+            <span data-lang="de">Verknüpft künstlerische Expertise mit Förderstrukturen – für mehr gesundheitsorientierte Ausbildungswege.</span>
+            <span data-lang="en" style="display:none;">Connects artistic expertise with support structures – for more health-oriented training pathways.</span>
+          </p>
+        </article>
+        <!-- Person 3 -->
+        <article class="cenit-about-person">
+          <div class="cenit-about-photo">
+             <div class="cenit-about-photo-inner">
+              <img src="/assets/img/FotoHerbertSW.png" alt="Prof. Dr. Herbert Schuster" loading="lazy">
+            </div>
+          </div>
 
-Vorstand · Medizinische Praxis
+          <p class="cenit-about-name">Prof. Dr. Herbert Schuster</p>
+          <p class="cenit-about-role">
+            <span data-lang="de">Vorstand · Medizinische Praxis</span>
+            <span data-lang="en" style="display:none;">Board · Medical Practice</span>
+          </p>
+          <a href="/einblicke-entwicklungen#herbert" class="cenit-about-tag">
+            <span data-lang="de">Tanzmedizin</span>
+            <span data-lang="en" style="display:none;">Dance Medicine</span>
+          </a>
+          <p class="cenit-about-text">
+            <span data-lang="de">Bringt langjährige Erfahrung aus Tanzmedizin und Präventionsforschung ein – mit Blick auf nachhaltige Versorgung.</span>
+            <span data-lang="en" style="display:none;">Brings extensive experience in dance medicine and prevention research – with a focus on sustainable care.</span>
+          </p>
+        </article>
+        <!-- Person 4 -->
+        <article class="cenit-about-person cenit-about-person--manfred">
+          <div class="cenit-about-photo">
+             <div class="cenit-about-photo-inner">
+                <img src="/assets/img/FotoManfredSW.png" alt="Manfred G. Schneider" loading="lazy">
+             </div>
+          </div>
 
-Tanzmedizin
-Bringt langjährige Erfahrung aus Tanzmedizin und Präventionsforschung ein – mit Blick auf nachhaltige Versorgung.
+          <p class="cenit-about-name">Manfred G. Schneider</p>
+          <p class="cenit-about-role">
+            <span data-lang="de">Vorstand · Schatzmeister</span>
+            <span data-lang="en" style="display:none;">Board · Treasurer</span>
+          </p>
+          <a href="/einblicke-entwicklungen#manfred" class="cenit-about-tag">
+            <span data-lang="de">Strukturen &amp; Wirkung</span>
+            <span data-lang="en" style="display:none;">Structures &amp; Impact</span>
+          </a>
+          <p class="cenit-about-text">
+            <span data-lang="de">Verbindet unternehmerische Erfahrung mit Präventionsanliegen – für stabile Strukturen und wirksame Förderung.</span>
+            <span data-lang="en" style="display:none;">Connects entrepreneurial experience with prevention goals – for stable structures and effective support.</span>
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
-Manfred G. Schneider
-Manfred G. Schneider
+<!-- =========================
+     EXPERTISE (clean + consistent)
+     ========================= -->
+<section class="cenit-section cenit-expertise" id="expertise">
+  <div class="cenit-container">
+    <h2 class="cenit-h2 reveal">
+      <span data-lang="de">Expertise, die Bewegung schützt.</span>
+      <span data-lang="en" style="display:none;">Expertise that protects movement.</span>
+    </h2>
+    <p class="cenit-lead reveal" style="--reveal-delay:60ms">
+      <span data-lang="de">Wir teilen Wissen aus Tanzmedizin, Prävention und Praxis – und schaffen Verbindungen, damit gesunde Karrieren möglich werden.</span>
+      <span data-lang="en" style="display:none;">We share knowledge from dance medicine, prevention, and practice – and build connections so healthy careers become possible.</span>
+    </p>
+    <div class="cenit-card cenit-expertise-card reveal" style="--reveal-delay:120ms">
+      <div class="cenit-expertise-main">
+        <div class="cenit-expertise-cards">
+           <div class="cenit-expertise-mini reveal" style="--reveal-delay:160ms">
+            <p class="cenit-expertise-mini-title">
+              <span data-lang="de">Wissen sichtbar machen</span>
+              <span data-lang="en" style="display:none;">Making knowledge accessible</span>
+            </p>
+            <p class="cenit-expertise-mini-text">
+              <span data-lang="de">Unser Glossar übersetzt tanzmedizinisches Fachwissen in eine Sprache, die im Studio ankommt – von Belastungssteuerung bis Verletzungsprävention.</span>
+              <span data-lang="en" style="display:none;">Our glossary translates dance-medicine expertise into language that works in the studio – from load management to injury prevention.</span>
+            </p>
+            <a href="/glossar/" class="cenit-expertise-mini-link">
+              <span data-lang="de">Zum Glossar ↗</span>
+              <span data-lang="en" style="display:none;">To the glossary ↗</span>
+            </a>
+          </div>
+          <div class="cenit-expertise-mini reveal" style="--reveal-delay:160ms">
+            <p class="cenit-expertise-mini-title">
+              <span data-lang="de">Forschung ermöglichen</span>
+              <span data-lang="en" style="display:none;">Enabling research</span>
+            </p>
+            <p class="cenit-expertise-mini-text">
+              <span data-lang="de">Wir bündeln öffentlich zugängliche EU-Förderprogramme für tanzmedizinische Forschung – als Orientierung für Hochschulen und Fachverbände.</span>
+              <span data-lang="en" style="display:none;">We curate publicly accessible EU funding programmes for dance-medicine research – as orientation for universities and professional associations.</span>
+            </p>
+            <a href="/foerderaufrufe/" class="cenit-expertise-mini-link">
+              <span data-lang="de">Zu den Förderaufrufen ↗</span>
+              <span data-lang="en" style="display:none;">To the funding calls ↗</span>
+            </a>
+          </div>
+          <div class="cenit-expertise-mini reveal" style="--reveal-delay:240ms">
+            <p class="cenit-expertise-mini-title">
+              <span data-lang="de">Aufklärung &amp; Bildung stärken</span>
+              <span data-lang="en" style="display:none;">Education &amp; awareness</span>
+            </p>
+            <p class="cenit-expertise-mini-text">
+              <span data-lang="de">Im monatlichen CENIT Radar ordnen wir aktuelle Forschung, Szene-Entwicklungen und Veranstaltungen ein – kompakt und verständlich.</span>
+              <span data-lang="en" style="display:none;">In the monthly CENIT Radar, we put current research, scene developments and events into context – compact and accessible.</span>
+            </p>
+            <a href="/einblicke-entwicklungen/" class="cenit-expertise-mini-link">
+              <span data-lang="de">Zum CENIT Radar ↗</span>
+              <span data-lang="en" style="display:none;">To the CENIT Radar ↗</span>
+            </a>
+          </div>
+          <div class="cenit-expertise-mini reveal" style="--reveal-delay:280ms">
+            <p class="cenit-expertise-mini-title">
+              <span data-lang="de">Strukturen fördern</span>
+              <span data-lang="en" style="display:none;">Building structures</span>
+            </p>
+            <p class="cenit-expertise-mini-text">
+              <span data-lang="de">Wir vernetzen Akteur:innen aus Tanz, Wissenschaft und Gesundheitswesen – im Austausch mit etablierten Partnern wie ta.med.</span>
+              <span data-lang="en" style="display:none;">We connect stakeholders from dance, science, and healthcare – in exchange with established partners such as ta.med.</span>
+            </p>
+            <a href="https://tamed.eu" target="_blank" rel="noopener" class="cenit-expertise-mini-link">ta.med ↗</a>
+          </div>
+        </div>
+        <div class="cenit-expertise-media reveal" style="--reveal-delay:200ms">
+          <img
+            src="/assets/img/FotoExpertise.jpg"
+            alt="Expertise visual"
+            class="cenit-img"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =====================================================
+  CONTACT (ruhige Abschlussfassung)
+===================================================== -->
+<section id="kontakt" class="cenit-section cenit-contact">
+  <div class="cenit-container">
+    <h2 class="cenit-h2">
+      <span data-lang="de">Kontakt &amp; Informationen</span>
+      <span data-lang="en" style="display:none;">Contact &amp; Information</span>
+    </h2>
+    <!-- Intro auf 760px, direkt auf #fafafa -->
+    <div class="cenit-axis-760">
+      <p class="cenit-contact-lead">
+        <span data-lang="de">
+          Wenn Sie Fragen zu CENIT e.V. oder zu einzelnen Projekten haben,
+          finden Sie hier die entsprechenden Kontaktmöglichkeiten.
+        </span>
+        <span data-lang="en" style="display:none;">
+          If you have questions about CENIT e.V. or specific projects,
+          you will find the relevant contact options here.
+        </span>
+      </p>
+      <p class="cenit-contact-body">
+        <span data-lang="de">
+          CENIT e.V. ist als gemeinnütziger Verein tätig.
+          Für fachliche Anfragen, Kooperationen oder organisatorische Informationen
+          stehen wir Ihnen gerne zur Verfügung.
+        </span>
+        <span data-lang="en" style="display:none;">
+          CENIT e.V. operates as a non-profit association.
+          For professional inquiries, cooperation, or organizational information,
+          we are available to you.
+        </span>
+      </p>
+    </div>
+    <!-- Grid-Card (wie Expertise, aber ruhiger) -->
+    <div class="cenit-card cenit-contact-card2 reveal" style="--reveal-delay:80ms">
+      <div class="cenit-contact-main">
+        <!-- Bild -->
+        <div class="cenit-contact-media">
+          <img
+            src="/assets/img/FotoKontakt.jpg"
+            alt="Contact visual"
+            class="cenit-img"
+            loading="lazy"
+          />
+        </div>
+        <!-- Content -->
+        <div class="cenit-contact-box">
+          <h3 class="cenit-contact-h3">
+            <span data-lang="de">Kontaktmöglichkeiten</span>
+            <span data-lang="en" style="display:none;">Contact Options</span>
+          </h3>
+          <p class="cenit-contact-text">
+            <span data-lang="de">
+              Weitere Informationen finden Sie in unseren häufigen Fragen
+              oder per direkter Kontaktaufnahme.
+            </span>
+            <span data-lang="en" style="display:none;">
+              Further information can be found in our FAQs
+              or by contacting us directly.
+            </span>
+          </p>
+          <div class="cenit-contact-cta">
+            <a href="/faqs" class="cenit-btn cenit-btn--light cenit-contact-btn">
+              <span data-lang="de">FAQs lesen</span>
+              <span data-lang="en" style="display:none;">Read FAQs</span>
+            </a>
+            <a href="mailto:info@cenit-ev.de" class="cenit-btn cenit-btn--light cenit-contact-btn">
+              <span data-lang="de">Kontakt aufnehmen</span>
+              <span data-lang="en" style="display:none;">Get in touch</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-Vorstand · Schatzmeister
+  <!-- @@FOOTER@@ -->
+  <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+  <!-- Main JS -->
+  <script src="/assets/js/main.js" defer></script>
+  <style>
+    /* Expertise-Kacheln: Belegte Links statt reiner Behauptung */
+    .cenit-expertise-mini-link{
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--cenit-purple);
+      text-decoration: none;
+    }
+    .cenit-expertise-mini-link:hover{
+      text-decoration: underline;
+    }
 
-Strukturen & Wirkung
-Verbindet unternehmerische Erfahrung mit Präventionsanliegen – für stabile Strukturen und wirksame Förderung.
+    /* Einstiegspfade-Sektion (lokal, kein Eingriff in main.css) */
+    .cenit-einstieg-row{
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 18px;
+      max-width: var(--cenit-axis-950);
+      margin: 0 auto;
+    }
+    .cenit-einstieg-card{
+      background: #f5f3f9;
+      border-radius: 18px;
+      padding: 30px 30px 26px 30px;
+      box-shadow: none;
+    }
+    .cenit-einstieg-card.is-dark{ background: #edebf5; }
+    .cenit-einstieg-title{
+      margin: 0 0 6px 0;
+      font-family: "EB Garamond", serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--cenit-purple);
+      font-size: 24px;
+      line-height: 1.25;
+      text-align: center;
+    }
+    .cenit-einstieg-subtitle{
+      font-size: 13.5px;
+      color: var(--muted-foreground);
+      text-align: center;
+      max-width: var(--cenit-axis-760);
+      margin: 0 auto 26px auto;
+      line-height: 1.6;
+    }
+    .cenit-einstieg-cols{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 24px;
+    }
+    @media (max-width: 560px){
+      .cenit-einstieg-cols{ grid-template-columns: 1fr; }
+    }
+    .cenit-einstieg-teaser{
+      display: block;
+      text-decoration: none;
+      color: var(--cenit-text);
+      transition: transform 0.15s ease;
+    }
+    .cenit-einstieg-teaser:hover{
+      transform: translateY(-2px);
+    }
+    .cenit-einstieg-teaser-title{
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: "EB Garamond", serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--cenit-purple);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .cenit-einstieg-teaser:hover .cenit-einstieg-teaser-title{
+      text-decoration: underline;
+    }
+    .cenit-einstieg-arrow{
+      color: var(--cenit-gold);
+    }
+    .cenit-einstieg-teaser-text{
+      display: block;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--muted-foreground);
+    }
+    .cenit-einstieg-teaser-text em{
+      font-style: normal;
+      color: var(--cenit-gold);
+    }
+  </style>
 
-Expertise, die Bewegung schützt.
-Wir teilen Wissen aus Tanzmedizin, Prävention und Praxis – und schaffen Verbindungen, damit gesunde Karrieren möglich werden.
-
-Wissen sichtbar machen
-
-Unser Glossar übersetzt tanzmedizinisches Fachwissen in eine Sprache, die im Studio ankommt – von Belastungssteuerung bis Verletzungsprävention.
-
-Zum Glossar ↗
-Forschung ermöglichen
-
-Wir bündeln öffentlich zugängliche EU-Förderprogramme für tanzmedizinische Forschung – als Orientierung für Hochschulen und Fachverbände.
-
-Zu den Förderaufrufen ↗
-Aufklärung & Bildung stärken
-
-Im monatlichen CENIT Radar ordnen wir aktuelle Forschung, Szene-Entwicklungen und Veranstaltungen ein – kompakt und verständlich.
-
-Zum CENIT Radar ↗
-Strukturen fördern
-
-Wir vernetzen Akteur:innen aus Tanz, Wissenschaft und Gesundheitswesen – im Austausch mit etablierten Partnern wie ta.med.
-
-ta.med ↗
-Expertise visual
-Kontakt & Informationen
-Wenn Sie Fragen zu CENIT e.V. oder zu einzelnen Projekten haben, finden Sie hier die entsprechenden Kontaktmöglichkeiten.
-
-CENIT e.V. ist als gemeinnütziger Verein tätig. Für fachliche Anfragen, Kooperationen oder organisatorische Informationen stehen wir Ihnen gerne zur Verfügung.
-
-Contact visual
-Kontaktmöglichkeiten
-Weitere Informationen finden Sie in unseren häufigen Fragen oder per direkter Kontaktaufnahme.
-
-FAQs lesen Kontakt aufnehmen
-↑
+</body>
+</html>
