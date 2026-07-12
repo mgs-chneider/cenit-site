@@ -230,6 +230,18 @@
             </span>
           </a>
 
+          <a class="cenit-einstieg-teaser" href="/zahlen-fakten/#kostentraeger">
+            <span class="cenit-einstieg-teaser-title">
+              <span data-lang="de">Kostenträger</span>
+              <span data-lang="en" style="display:none;">Payers</span>
+              <span class="cenit-einstieg-arrow">→</span>
+            </span>
+            <span class="cenit-einstieg-teaser-text">
+              <span data-lang="de">Prävention ist nicht nur gesundheitlich sinnvoll, sondern auch wirtschaftlich: strukturierte Präventionsarbeit senkt nachweislich Versicherungsfälle und Folgekosten. <em>…mehr</em></span>
+              <span data-lang="en" style="display:none;">Prevention isn't just good for health, it makes economic sense too: structured prevention work measurably reduces claims and downstream costs. <em>…more</em></span>
+            </span>
+          </a>
+
         </div>
       </div>
     </div>
@@ -571,11 +583,8 @@
     }
     .cenit-einstieg-cols{
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
       gap: 24px;
-    }
-    @media (max-width: 980px){
-      .cenit-einstieg-cols{ grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 560px){
       .cenit-einstieg-cols{ grid-template-columns: 1fr; }
