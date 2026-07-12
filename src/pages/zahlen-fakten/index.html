@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -230,8 +231,8 @@
   <!-- =========================
        ÖKONOMISCHER FALL (für Kostenträger)
        ========================= -->
-  <section class="cenit-section cenit-zf-econ">
-    <div class="cenit-container">
+  <section class="cenit-section cenit-zf-econ" id="kostentraeger">
+    <div class="cenit-axis-760">
       <div class="cenit-zf-transition">
         <h2 class="cenit-zf-chapter">
           <span data-lang="de">Prävention rechnet sich – auch für Kostenträger.</span>
@@ -239,20 +240,18 @@
         </h2>
       </div>
 
-      <div class="cenit-axis-760 cenit-zf-econ-intro">
-        <p>
-          <span data-lang="de">
-            Verletzungsprävention ist nicht nur eine gesundheitliche, sondern auch eine ökonomische Frage. Für private wie gesetzliche Kostenträger, Berufsgenossenschaften und Versicherer zeigt die Evidenz aus Tanz und Leistungssport: strukturierte Prävention senkt nicht nur das Verletzungsrisiko, sondern auch die Folgekosten.
-          </span>
-          <span data-lang="en" style="display:none;">
-            Injury prevention is not only a health question but an economic one. For private and statutory payers, accident insurers, and health insurance funds, evidence from dance and competitive sport points the same way: structured prevention reduces not only injury risk but also downstream costs.
-          </span>
-        </p>
-      </div>
+      <p class="cenit-zf-econ-intro">
+        <span data-lang="de">
+          Verletzungsprävention ist nicht nur eine gesundheitliche, sondern auch eine ökonomische Frage. Für private wie gesetzliche Kostenträger, Berufsgenossenschaften und Versicherer zeigt die Evidenz aus Tanz und Leistungssport: strukturierte Prävention senkt nicht nur das Verletzungsrisiko, sondern auch die Folgekosten.
+        </span>
+        <span data-lang="en" style="display:none;">
+          Injury prevention is not only a health question but an economic one. For private and statutory payers, accident insurers, and health insurance funds, evidence from dance and competitive sport points the same way: structured prevention reduces not only injury risk but also downstream costs.
+        </span>
+      </p>
 
-      <div class="cenit-facts-grid">
+      <div class="cenit-zf-econ-row">
         <!-- Stat 1: tanzspezifisch -->
-        <div class="cenit-embed-card cenit-zf-stat-card">
+        <div class="cenit-zf-econ-card is-dark">
           <p class="cenit-zf-stat-number">−66 %</p>
           <p class="cenit-zf-stat-label">
             <span data-lang="de">Versicherungsfälle</span>
@@ -269,7 +268,7 @@
         </div>
 
         <!-- Stat 2: Leistungssport allgemein -->
-        <div class="cenit-embed-card cenit-zf-stat-card">
+        <div class="cenit-zf-econ-card">
           <p class="cenit-zf-stat-number">−19 %</p>
           <p class="cenit-zf-stat-label">
             <span data-lang="de">Gesundheitskosten</span>
@@ -319,48 +318,67 @@
     /* Ökonomischer Fall / Kostenträger-Sektion (lokal, kein Eingriff in main.css) */
     .cenit-zf-econ-intro{
       text-align: center;
-      margin: 0 auto 28px auto;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted-foreground);
+      margin: 0 0 22px 0;
     }
-    .cenit-zf-stat-card{
-      text-align: center;
+
+    /* Kachellogik wie FAQ/Glossar: weißer Außenrahmen, helle/dunkle Innenkarten */
+    .cenit-zf-econ-row{
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
     }
+    @media (max-width: 640px){
+      .cenit-zf-econ-row{ grid-template-columns: 1fr; }
+    }
+    .cenit-zf-econ-card{
+      background: #f5f3f9;
+      border-radius: 18px;
+      padding: 20px 22px;
+      box-shadow: none;
+    }
+    .cenit-zf-econ-card.is-dark{ background: #edebf5; }
+
     .cenit-zf-stat-number{
       font-family: 'EB Garamond', serif;
       font-style: italic;
       font-weight: 400;
-      font-size: 40px;
+      font-size: 26px;
       line-height: 1;
       color: var(--cenit-purple);
-      margin: 0 0 6px 0;
+      margin: 0 0 4px 0;
     }
     .cenit-zf-stat-label{
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       color: var(--cenit-gold);
-      margin: 0 0 14px 0;
+      margin: 0 0 10px 0;
     }
     .cenit-zf-stat-text{
-      font-size: 14px;
-      line-height: 1.6;
+      font-size: 13px;
+      line-height: 1.55;
       color: var(--cenit-text);
-      margin: 0 0 14px 0;
-      text-align: left;
+      margin: 0 0 10px 0;
     }
     .cenit-zf-stat-source{
-      font-size: 12px;
+      font-size: 11.5px;
       font-style: italic;
       color: var(--muted-foreground);
       margin: 0;
-      text-align: left;
     }
     .cenit-zf-econ-note{
-      font-size: 13px;
-      line-height: 1.65;
+      font-size: 12.5px;
+      line-height: 1.6;
       color: var(--muted-foreground);
-      max-width: var(--cenit-axis-760);
-      margin: 28px auto 0 auto;
+      margin: 0;
       text-align: center;
     }
   </style>
