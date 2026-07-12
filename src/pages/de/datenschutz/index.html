@@ -3,28 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Datenschutz | CENIT e.V.</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" href="/assets/img/favicon/favicon.ico">
   <meta name="robots" content="noindex,follow" />
   <link rel="canonical" href="https://cenit-ev.de/de/datenschutz/" />
-
   <link rel="preload" href="/assets/fonts/eb-garamond-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-
-  <!-- @@HEADER@@ -->
-
+  <!-- CENIT TOP-BAR: Language | Social | Menu -->
+<div class="cenit-topbar">
+  <div class="cenit-topbar-inner">
+    <div class="cenit-langswitch" aria-label="Language switch">
+      <button type="button" class="cenit-langbtn" data-set-lang="de">DE</button>
+      <span class="cenit-langsep">|</span>
+      <button type="button" class="cenit-langbtn" data-set-lang="en">EN</button>
+    </div>
+    <a class="cenit-topbar-logo" href="/" aria-label="CENIT Home">
+      <img src="/assets/img/logo-cenit-transparent.png" alt="CENIT e.V." />
+    </a>
+    <button class="cenit-menutoggle" aria-expanded="false" aria-label="Menu">
+      ☰ <span class="cenit-menulabel" data-i18n="menuLabel">Menü</span>
+    </button>
+  </div>
+  <nav class="cenit-menu" aria-label="Site navigation">
+    <div class="cenit-menu-group">
+      <a class="cenit-menu-item cenit-menu-home" href="/" data-i18n="home">Home</a>
+      <a class="cenit-menu-subitem" href="/#vision" data-i18n="visionMission">Vision &amp; Mission</a>
+      <a class="cenit-menu-subitem" href="/#ueber-uns" data-i18n="about">Über uns</a>
+      <a class="cenit-menu-subitem" href="/#expertise" data-i18n="expertise">Expertise</a>
+      <a class="cenit-menu-subitem" href="/#kontakt" data-i18n="contact">Kontakt</a>
+    </div>
+    <div class="cenit-menu-divider" role="separator" aria-hidden="true"></div>
+    <a class="cenit-menu-item" href="/einblicke-entwicklungen" data-i18n="insights">Einblicke &amp; Entwicklungen</a>
+    <a class="cenit-menu-item" href="/glossar" data-i18n="glossary">Glossar</a>
+    <a class="cenit-menu-item" href="/foerderaufrufe" data-i18n="funding">Förderaufrufe</a>
+    <a class="cenit-menu-item" href="/faqs" data-i18n="faqs">FAQs</a>
+    <a class="cenit-menu-item" href="/satzung" data-i18n="statutes">Satzung</a>
+  </nav>
+</div>
   <main class="cenit-page">
     <section class="cenit-section cenit-section-narrow">
       <div class="cenit-container cenit-text">
-
         <header class="cenit-legal-header">
           <h1>Datenschutzerklärung</h1>
           <p>Informationen gemäß Art. 13 DSGVO</p>
         </header>
-
         <section>
           <h2>1. Allgemeine Hinweise</h2>
           <p>
@@ -33,7 +61,6 @@
             (DSGVO, BDSG).
           </p>
         </section>
-
         <section>
           <h2>2. Verantwortlicher</h2>
           <p>
@@ -44,7 +71,6 @@
             E-Mail: info@cenit-ev.de
           </p>
         </section>
-
         <section>
           <h2>3. Hosting</h2>
           <p>
@@ -80,7 +106,6 @@
             </a>
           </p>
         </section>
-
         <section>
           <h2>4. Eingebettete Inhalte (Infogram)</h2>
           <p>
@@ -111,7 +136,6 @@
             </a>
           </p>
         </section>
-
         <section>
           <h2>5. Eigene Medieninhalte (Video)</h2>
           <p>
@@ -122,7 +146,6 @@
             Dabei erfolgt keine Weitergabe personenbezogener Daten an Dritte.
           </p>
         </section>
-
         <section>
           <h2>6. Webanalyse (Google Analytics)</h2>
           <p>
@@ -158,7 +181,6 @@
             </a>
           </p>
         </section>
-
         <section>
           <h2>7. Ihre Rechte</h2>
           <p>
@@ -173,7 +195,6 @@
             <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
           </ul>
         </section>
-
         <section>
           <h2>8. Beschwerderecht</h2>
           <p>
@@ -190,15 +211,116 @@
             </a>
           </p>
         </section>
-
       </div>
     </section>
   </main>
+  <footer class="cenit-footer">
+  <div class="cenit-footer-inner">
+    <div class="cenit-footer-links">
+      <!-- DE -->
+      <span data-lang="de">
+        <a href="/de/impressum/">Impressum</a>
+        <span class="cenit-footer-sep">|</span>
+        <a href="/de/datenschutz/">Datenschutz</a>
+      </span>
+      <!-- EN -->
+      <span data-lang="en" style="display:none;">
+        <a href="/en/legal/">Legal Notice</a>
+        <span class="cenit-footer-sep">|</span>
+        <a href="/en/privacy/">Privacy</a>
+      </span>
+    </div>
+    <div class="cenit-footer-copy">
+      © <span id="cenit-year"></span>
+      CENIT – Verein zur Förderung interdisziplinärer Tanzmedizin e.V.
+    </div>
+    <p class="cenit-footer-note">
+      <span data-lang="de">
+        Website-Konzept und redaktionelle Verantwortung:
+        Manfred G. Schneider
+      </span>
+      <span data-lang="en" style="display:none;">
+        Website concept and editorial responsibility:
+        Manfred G. Schneider
+      </span>
+    </p>
+  </div>
+  <script>
+    // Jahr automatisch setzen (build-safe)
+    (function () {
+      var y = document.getElementById("cenit-year");
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
 
-  <!-- @@FOOTER@@ -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SP90GD9T33"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SP90GD9T33');
+  </script>
 
+</footer>
   <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
   <script src="/assets/js/main.js" defer></script>
-
+  <style>
+    /* CENIT-Stil für rechtliche Seiten (Impressum/Legal Notice/Privacy/Datenschutz) */
+    .cenit-page {
+      padding: 48px 0 64px;
+    }
+    .cenit-section-narrow .cenit-container {
+      max-width: var(--cenit-axis-760);
+      margin: 0 auto;
+    }
+    .cenit-legal-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .cenit-legal-header h1 {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 32px;
+      color: var(--cenit-purple);
+      margin: 0 0 8px 0;
+    }
+    .cenit-legal-header p {
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted-foreground);
+      margin: 0;
+    }
+    .cenit-container.cenit-text > section {
+      margin-bottom: 32px;
+    }
+    .cenit-container.cenit-text h2 {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 19px;
+      color: var(--cenit-purple);
+      margin: 0 0 10px 0;
+    }
+    .cenit-container.cenit-text p,
+    .cenit-container.cenit-text ul {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--cenit-text);
+      margin: 0 0 10px 0;
+    }
+    .cenit-container.cenit-text ul {
+      padding-left: 20px;
+    }
+    .cenit-container.cenit-text li {
+      margin-bottom: 4px;
+    }
+    .cenit-container.cenit-text a {
+      color: var(--cenit-purple);
+      text-decoration: underline;
+    }
+  </style>
 </body>
 </html>
