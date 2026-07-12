@@ -330,10 +330,20 @@
         </div>
       </div>
     </div>
- 
+  </section>
   <!-- @@FOOTER@@ -->
   <!-- Scroll-to-top button (global) -->
   <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
   <script src="/assets/js/main.js" defer></script>
+  <style>
+    /* Fix: in der breiten Reihe ("Was CENIT nicht macht") zentriert eine
+       max-width/margin:auto-Regel aus main.css die <p>-Texte, während die
+       <ul> davon unberührt bleibt – dadurch wirken Ein-/Ausleitung eingerückt. */
+    .cenit-faq-row--wide .cenit-faq-card .cenit-text {
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  </style>
 </body>
 </html>
