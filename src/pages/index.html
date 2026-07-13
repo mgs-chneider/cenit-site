@@ -8,6 +8,7 @@
   <link rel="preload" href="/assets/fonts/eb-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="https://cenit-ev.de/">
 </head>
 <body class="page-home">
 
@@ -383,8 +384,9 @@
               <span data-lang="en" style="display:none;">Our glossary translates dance-medicine expertise into language that works in the studio – from load management to injury prevention.</span>
             </p>
             <a href="/glossar/" class="cenit-expertise-mini-link">
-              <span data-lang="de">Zum Glossar ↗</span>
-              <span data-lang="en" style="display:none;">To the glossary ↗</span>
+              <span data-lang="de">Zum Glossar</span>
+              <span data-lang="en" style="display:none;">To the glossary</span>
+              <svg class="cenit-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
           </div>
           <div class="cenit-expertise-mini reveal" style="--reveal-delay:160ms">
@@ -397,8 +399,9 @@
               <span data-lang="en" style="display:none;">We curate publicly accessible EU funding programmes for dance-medicine research – as orientation for universities and professional associations.</span>
             </p>
             <a href="/foerderaufrufe/" class="cenit-expertise-mini-link">
-              <span data-lang="de">Zu den Förderaufrufen ↗</span>
-              <span data-lang="en" style="display:none;">To the funding calls ↗</span>
+              <span data-lang="de">Zu den Förderaufrufen</span>
+              <span data-lang="en" style="display:none;">To the funding calls</span>
+              <svg class="cenit-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
           </div>
           <div class="cenit-expertise-mini reveal" style="--reveal-delay:240ms">
@@ -411,8 +414,9 @@
               <span data-lang="en" style="display:none;">In the monthly CENIT Radar, we put current research, scene developments and events into context – compact and accessible.</span>
             </p>
             <a href="/einblicke-entwicklungen/" class="cenit-expertise-mini-link">
-              <span data-lang="de">Zum CENIT Radar ↗</span>
-              <span data-lang="en" style="display:none;">To the CENIT Radar ↗</span>
+              <span data-lang="de">Zum CENIT Radar</span>
+              <span data-lang="en" style="display:none;">To the CENIT Radar</span>
+              <svg class="cenit-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
           </div>
           <div class="cenit-expertise-mini reveal" style="--reveal-delay:280ms">
@@ -424,7 +428,7 @@
               <span data-lang="de">Wir vernetzen Akteur:innen aus Tanz, Wissenschaft und Gesundheitswesen – im Austausch mit etablierten Partnern wie ta.med.</span>
               <span data-lang="en" style="display:none;">We connect stakeholders from dance, science, and healthcare – in exchange with established partners such as ta.med.</span>
             </p>
-            <a href="https://tamed.eu" target="_blank" rel="noopener" class="cenit-expertise-mini-link">ta.med ↗</a>
+            <a href="https://tamed.eu" target="_blank" rel="noopener" class="cenit-expertise-mini-link">ta.med<svg class="cenit-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
           </div>
         </div>
         <div class="cenit-expertise-media reveal" style="--reveal-delay:200ms">
@@ -548,6 +552,15 @@
     }
     .cenit-expertise-mini-link:hover{
       text-decoration: underline;
+    }
+    /* Pfeil-Icon statt Unicode-Zeichen (↗ wird auf iOS/mobil als Farb-Emoji
+       in eigenem Kästchen dargestellt, passt nicht zum Layout) */
+    .cenit-arrow-icon{
+      width: 0.85em;
+      height: 0.85em;
+      margin-left: 4px;
+      vertical-align: -0.05em;
+      display: inline-block;
     }
 
     /* Einstiegspfade-Sektion (lokal, kein Eingriff in main.css) */
