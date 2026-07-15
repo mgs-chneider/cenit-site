@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de" data-page="privacy">
 <head>
@@ -264,11 +265,30 @@
 
   <!-- Klaro! Cookie-Consent-Manager (Open Source) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/klaro@0.7/dist/klaro.min.css" />
+  <style>
+    /* Klaro an CENIT-Farbwelt anpassen (Purple/Gold statt Standard-Grün/Grau) */
+    :root {
+      --green1: var(--cenit-purple, #4b2e83);
+      --green2: var(--cenit-purple, #4b2e83);
+      --green3: #ffffff;
+      --dark1: var(--cenit-purple, #4b2e83);
+    }
+    .klaro .cookie-notice .cn-buttons .cm-btn.cm-btn-success,
+    .klaro .cm-modal .cm-btn.cm-btn-success {
+      background-color: var(--cenit-purple, #4b2e83) !important;
+      border-color: var(--cenit-purple, #4b2e83) !important;
+    }
+    .klaro .cookie-notice .cn-buttons .cm-btn.cm-btn-success:hover,
+    .klaro .cm-modal .cm-btn.cm-btn-success:hover {
+      background-color: var(--cenit-gold, #b8964f) !important;
+      border-color: var(--cenit-gold, #b8964f) !important;
+    }
+  </style>
   <script>
     window.klaroConfig = {
       version: 1,
       elementID: 'klaro',
-      styling: { theme: ['light', 'top', 'wide'] },
+      styling: { theme: ['light', 'bottom', 'wide'] },
       default: false,
       mustConsent: false,
       acceptAll: true,
