@@ -588,6 +588,18 @@
     .cenit-zf-teaser{
       margin-top: 36px;
     }
+    /* Vision & Mission war früher die erste Sektion nach dem Hero und hat dafür in main.css
+       einen großzügigen Sonder-Abstand (padding-top: clamp(120px,14vh,220px)). Jetzt sitzt die
+       Zahlen & Fakten-Sektion dazwischen – V&M bekommt daher wieder das normale Section-Padding,
+       damit der Abstand zu den übrigen Sektionsübergängen passt. */
+    body.page-home #vision{
+      padding-top: var(--cenit-section-py);
+    }
+    @media (max-width: 600px){
+      body.page-home #vision{
+        padding-top: var(--cenit-section-py-mobile);
+      }
+    }
     .cenit-zf-teaser-row{
       max-width: var(--cenit-axis-950);
       margin: 28px auto 0 auto;
