@@ -113,7 +113,8 @@
             (Infogram Inc.) eingebunden.
           </p>
           <p>
-            Die Inhalte werden erst geladen, nachdem Sie aktiv auf „Grafik anzeigen" klicken.
+            Die Inhalte werden erst geladen, nachdem Sie über unser Cookie-Einstellungen-Tool
+            (siehe Ziffer 6) aktiv zugestimmt haben oder auf „Grafik anzeigen" klicken.
             Erst dann wird eine Verbindung zu den Servern von Infogram hergestellt.
           </p>
           <p>
@@ -125,9 +126,9 @@
             <li>Referrer-URL</li>
           </ul>
           <p>
-            Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO
-            (berechtigtes Interesse). Unser berechtigtes Interesse liegt in der
-            anschaulichen Darstellung wissenschaftlicher Inhalte.
+            Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO,
+            § 25 Abs. 1 TDDDG). Sie können Ihre Einwilligung jederzeit über den Link „Cookie-Einstellungen"
+            im Footer der Website widerrufen.
           </p>
           <p>
             Weitere Informationen finden Sie unter:
@@ -163,13 +164,17 @@
             über den Europäischen Wirtschaftsraum vor der Übermittlung gekürzt.
           </p>
           <p>
-            Die Nutzung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
-            Unser berechtigtes Interesse besteht in der Analyse des Nutzerverhaltens zur Optimierung
-            unseres Webangebots.
+            Google Analytics wird nur geladen, wenn Sie zuvor aktiv eingewilligt haben. Wir setzen dafür
+            das Open-Source-Einwilligungstool <strong>Klaro!</strong> ein, das Ihnen beim ersten Besuch
+            angezeigt wird. Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung
+            (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Ohne Ihre Einwilligung wird kein
+            Google-Analytics-Skript geladen und keine Verbindung zu Google-Servern hergestellt.
           </p>
           <p>
-            Sie können die Erfassung Ihrer Daten durch Google Analytics verhindern, indem Sie
-            das Browser-Plugin unter folgendem Link herunterladen und installieren:
+            Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie
+            auf den Link „Cookie-Einstellungen" im Footer jeder Seite klicken und die Auswahl anpassen.
+            Alternativ können Sie die Erfassung Ihrer Daten durch Google Analytics grundsätzlich
+            verhindern, indem Sie das Browser-Plugin unter folgendem Link herunterladen und installieren:
             <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">
               https://tools.google.com/dlpage/gaoptout
             </a>
@@ -222,12 +227,16 @@
         <a href="/de/impressum/">Impressum</a>
         <span class="cenit-footer-sep">|</span>
         <a href="/de/datenschutz/">Datenschutz</a>
+        <span class="cenit-footer-sep">|</span>
+        <a href="#" onclick="if(window.klaro){klaro.show();} return false;">Cookie-Einstellungen</a>
       </span>
       <!-- EN -->
       <span data-lang="en" style="display:none;">
         <a href="/en/legal/">Legal Notice</a>
         <span class="cenit-footer-sep">|</span>
         <a href="/en/privacy/">Privacy</a>
+        <span class="cenit-footer-sep">|</span>
+        <a href="#" onclick="if(window.klaro){klaro.show();} return false;">Cookie Settings</a>
       </span>
     </div>
     <div class="cenit-footer-copy">
@@ -253,9 +262,85 @@
     })();
   </script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SP90GD9T33"></script>
+  <!-- Klaro! Cookie-Consent-Manager (Open Source) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/klaro@0.7/dist/klaro.min.css" />
   <script>
+    window.klaroConfig = {
+      version: 1,
+      elementID: 'klaro',
+      styling: { theme: ['light', 'top', 'wide'] },
+      default: false,
+      mustConsent: false,
+      acceptAll: true,
+      hideDeclineAll: false,
+      lang: (document.documentElement.lang === 'en') ? 'en' : 'de',
+      translations: {
+        de: {
+          consentModal: {
+            title: 'Datenschutzeinstellungen',
+            description: 'Wir nutzen auf dieser Seite einzelne Dienste, die personenbezogene Daten verarbeiten können. Sie entscheiden selbst, welche Sie zulassen – die Auswahl können Sie hier jederzeit wieder ändern.'
+          },
+          consentNotice: {
+            description: 'Wir verwenden Google Analytics zur anonymisierten Reichweitenmessung und binden interaktive Grafiken von Infogram ein. Beides lädt erst nach Ihrer Zustimmung.',
+            learnMore: 'Einstellungen',
+            privacyPolicy: { name: 'Datenschutzerklärung', text: 'Mehr in unserer {privacyPolicy}.' }
+          },
+          acceptAll: 'Alle akzeptieren',
+          acceptSelected: 'Auswahl akzeptieren',
+          decline: 'Ablehnen',
+          close: 'Schließen',
+          purposes: { statistics: 'Statistik', content: 'Externe Inhalte' },
+          'google-analytics': { title: 'Google Analytics', description: 'Anonymisierte Auswertung der Website-Nutzung (Google Ireland Limited).' },
+          infogram: { title: 'Infogram', description: 'Interaktive Grafiken zur Darstellung von Studiendaten auf „Zahlen & Fakten" (Infogram Inc.).' }
+        },
+        en: {
+          consentModal: {
+            title: 'Privacy settings',
+            description: 'We use a small number of services on this site that may process personal data. You decide which ones to allow – you can change your choice here at any time.'
+          },
+          consentNotice: {
+            description: 'We use Google Analytics for anonymised traffic analysis and embed interactive charts from Infogram. Both only load after your consent.',
+            learnMore: 'Settings',
+            privacyPolicy: { name: 'Privacy Policy', text: 'Find out more in our {privacyPolicy}.' }
+          },
+          acceptAll: 'Accept all',
+          acceptSelected: 'Accept selection',
+          decline: 'Decline',
+          close: 'Close',
+          purposes: { statistics: 'Statistics', content: 'External content' },
+          'google-analytics': { title: 'Google Analytics', description: 'Anonymised analysis of website usage (Google Ireland Limited).' },
+          infogram: { title: 'Infogram', description: 'Interactive charts used to display study data on "Facts & Figures" (Infogram Inc.).' }
+        }
+      },
+      services: [
+        {
+          name: 'google-analytics',
+          title: 'Google Analytics',
+          purposes: ['statistics'],
+          cookies: [/^_ga/, '_gid', /^_gat/],
+          default: false,
+          onlyOnce: true
+        },
+        {
+          name: 'infogram',
+          title: 'Infogram',
+          purposes: ['content'],
+          default: false,
+          onlyOnce: false,
+          callback: function (consent, service) {
+            if (consent && typeof window.autoLoadAllInfogramEmbeds === 'function') {
+              window.autoLoadAllInfogramEmbeds();
+            }
+          }
+        }
+      ]
+    };
+  </script>
+  <script defer type="text/javascript" data-config="klaroConfig" src="https://cdn.jsdelivr.net/npm/klaro@0.7/dist/klaro.js"></script>
+
+  <!-- Google tag (gtag.js) – lädt erst nach Klaro-Einwilligung für "google-analytics" -->
+  <script type="text/plain" data-type="application/javascript" data-name="google-analytics" data-src="https://www.googletagmanager.com/gtag/js?id=G-SP90GD9T33"></script>
+  <script type="text/plain" data-type="application/javascript" data-name="google-analytics">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
