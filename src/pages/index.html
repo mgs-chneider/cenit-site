@@ -617,6 +617,21 @@
       color: var(--muted-foreground);
       opacity: 1;
     }
+
+    /* iPhone/iOS Safari: vh bezieht sich auf die größtmögliche Viewport-Höhe (Toolbars
+       ausgeblendet), nicht auf die tatsächlich sichtbare Fläche. Dadurch rutschen Claim +
+       Vereinsname unten aus dem Bild, sobald Adress-/Tab-Leiste eingeblendet sind.
+       dvh (dynamic viewport height) korrigiert das – Fallback-Wert davor für ältere Browser. */
+    @media (max-width: 600px){
+      body.page-home .cenit-hero-home-media{
+        min-height: 640px;
+        min-height: 78dvh;
+      }
+      body.page-home .cenit-hero-home-top{
+        margin-bottom: 70px;
+        margin-bottom: 12dvh;
+      }
+    }
     .cenit-zf-teaser-row{
       max-width: var(--cenit-axis-950);
       margin: 28px auto 0 auto;
