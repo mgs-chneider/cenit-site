@@ -38,23 +38,65 @@
           CENIT e.V. – Research. Advancement. Movement.
         </p>
       </div>
-      <!-- Transition (jetzt im Overlay) -->
-      <div class="cenit-hero-home-bottom">
-        <p class="cenit-hero-home-transition-text" data-lang="de">
-          Die körperlichen Anforderungen im Tanz sind hoch.<br>
-          Wie groß sind Belastung und Verletzungsrisiko?
-        </p>
-        <p class="cenit-hero-home-transition-text" data-lang="en" style="display:none;">
-          The physical demands in dance are high.<br>
-          How significant are strain and injury risks?
-        </p>
-        <div class="cenit-hero-home-divider cenit-hero-home-divider--thin"></div>
-        <div class="cenit-hero-home-cta">
-          <a href="/zahlen-fakten" data-lang="de" class="cenit-btn">Zahlen &amp; Fakten</a>
-          <a href="/zahlen-fakten" data-lang="en" class="cenit-btn" style="display:none;">Facts &amp; Figures</a>
-        </div>
-      </div>
     </div>
+  </div>
+</section>
+
+<!-- =========================
+     ZAHLEN & FAKTEN (Teaser)
+     ========================= -->
+<section class="cenit-section cenit-zf-teaser reveal" style="--reveal-delay:80ms" id="zahlen-fakten-teaser">
+  <div class="cenit-axis-760" style="text-align:center;">
+    <p class="cenit-radar-kicker" style="text-align:center; margin:0 0 8px 0;">
+      <span data-lang="de">Zahlen &amp; Fakten</span>
+      <span data-lang="en" style="display:none;">Facts &amp; Figures</span>
+    </p>
+    <h2 class="cenit-h2" style="margin:0 0 14px 0;">
+      <span data-lang="de">Die körperlichen Anforderungen im Tanz sind hoch. Wie groß sind Belastung und Verletzungsrisiko?</span>
+      <span data-lang="en" style="display:none;">The physical demands of dance are high. How significant are strain and injury risks?</span>
+    </h2>
+    <p class="cenit-zf-teaser-intro">
+      <span data-lang="de">Verletzungen sind im Tanz die Regel, nicht die Ausnahme – auf allen Ebenen, vom Kindertanz bis zum Profiensemble. Das ist der Ausgangspunkt unserer Arbeit.</span>
+      <span data-lang="en" style="display:none;">Injuries are the rule in dance, not the exception – at every level, from children's dance to professional companies. That is the starting point of our work.</span>
+    </p>
+  </div>
+
+  <div class="cenit-zf-econ-row cenit-zf-teaser-row">
+    <div class="cenit-zf-econ-card is-dark">
+      <p class="cenit-zf-stat-number">96 %</p>
+      <p class="cenit-zf-stat-label">
+        <span data-lang="de">Verletzungsprävalenz bei Profitänzer:innen</span>
+        <span data-lang="en" style="display:none;">Injury prevalence among professional dancers</span>
+      </p>
+      <p class="cenit-zf-stat-text">
+        <span data-lang="de">Bis zu 96 % der professionellen Tänzer:innen berichten von Verletzungen – doch schon bei Kindern (8–16 Jahre) sind es 42 %. Verletzungen sind auf allen Ebenen des Tanzes verbreitet, nicht nur im Spitzensport.</span>
+        <span data-lang="en" style="display:none;">Up to 96% of professional dancers report injuries – and even among children (ages 8–16) it's already 42%. Injuries are common at every level of dance, not only among professionals.</span>
+      </p>
+      <p class="cenit-zf-stat-source">
+        <span data-lang="de">Aggregierte Kohortenstudien · Quellen siehe Zahlen &amp; Fakten</span>
+        <span data-lang="en" style="display:none;">Aggregated cohort studies · sources on Facts &amp; Figures page</span>
+      </p>
+    </div>
+    <div class="cenit-zf-econ-card">
+      <p class="cenit-zf-stat-number">69 %</p>
+      <p class="cenit-zf-stat-label">
+        <span data-lang="de">Verletzungen am Sprunggelenk</span>
+        <span data-lang="en" style="display:none;">Ankle joint injuries</span>
+      </p>
+      <p class="cenit-zf-stat-text">
+        <span data-lang="de">Untere Extremität und Gelenke sind im Tanz besonders betroffen: Bei Profitänzer:innen entfallen bis zu 69 % der Verletzungen auf das Sprunggelenk – Fuß, Knie und unterer Rücken folgen.</span>
+        <span data-lang="en" style="display:none;">The lower limb and joints are especially vulnerable in dance: among professional dancers, up to 69% of injuries affect the ankle joint – with foot, knee, and lower back close behind.</span>
+      </p>
+      <p class="cenit-zf-stat-source">
+        <span data-lang="de">Aggregierte Kohortenstudien · Quellen siehe Zahlen &amp; Fakten</span>
+        <span data-lang="en" style="display:none;">Aggregated cohort studies · sources on Facts &amp; Figures page</span>
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:22px;">
+    <a href="/zahlen-fakten" data-lang="de" class="cenit-btn">Zahlen &amp; Fakten im Detail</a>
+    <a href="/zahlen-fakten" data-lang="en" class="cenit-btn" style="display:none;">Full Facts &amp; Figures</a>
   </div>
 </section>
 
@@ -525,6 +567,76 @@
   <!-- Main JS -->
   <script src="/assets/js/main.js" defer></script>
   <style>
+    /* Zahlen & Fakten – Teaser-Sektion (lokal, kein Eingriff in main.css) */
+    .cenit-radar-kicker{
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cenit-purple);
+      font-weight: 600;
+    }
+    .cenit-zf-teaser{
+      padding-top: 8px;
+    }
+    .cenit-zf-teaser-intro{
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--muted-foreground);
+      max-width: var(--cenit-axis-760);
+      margin: 0 auto;
+    }
+    .cenit-zf-teaser-row{
+      max-width: var(--cenit-axis-950);
+      margin: 28px auto 0 auto;
+    }
+    .cenit-zf-econ-row{
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    @media (max-width: 640px){
+      .cenit-zf-econ-row{ grid-template-columns: 1fr; }
+    }
+    .cenit-zf-econ-card{
+      background: #f5f3f9;
+      border-radius: 18px;
+      padding: 20px 22px;
+      box-shadow: none;
+    }
+    .cenit-zf-econ-card.is-dark{ background: #edebf5; }
+    .cenit-zf-stat-number{
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 1;
+      color: var(--cenit-purple);
+      margin: 0 0 4px 0;
+    }
+    .cenit-zf-stat-label{
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--cenit-gold);
+      margin: 0 0 10px 0;
+    }
+    .cenit-zf-stat-text{
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--cenit-text);
+      margin: 0 0 10px 0;
+    }
+    .cenit-zf-stat-source{
+      font-size: 11.5px;
+      font-style: italic;
+      color: var(--muted-foreground);
+      margin: 0;
+    }
+
     /* Vision & Mission: einheitliche, zentrierte Typografie statt Blockquote-Bruch */
     .cenit-vm-intro{
       text-align: center;
