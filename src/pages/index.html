@@ -600,6 +600,14 @@
         padding-top: var(--cenit-section-py-mobile);
       }
     }
+
+    /* Hero-Claim ist jetzt eine kurze, einzeilige Aussage. Der 28ch-Cap in main.css war für
+       den früheren, bewusst zweizeiligen Claim gedacht und erzwingt hier einen unnötigen
+       Umbruch. Lokal aufgehoben – auf schmalen Screens bricht der Text bei Bedarf weiterhin
+       ganz normal um. */
+    body.page-home .cenit-hero-home-claim{
+      max-width: none;
+    }
     .cenit-zf-teaser-row{
       max-width: var(--cenit-axis-950);
       margin: 28px auto 0 auto;
