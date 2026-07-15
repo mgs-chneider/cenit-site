@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de" data-page="privacy">
 <head>
@@ -293,7 +292,15 @@
       mustConsent: false,
       acceptAll: true,
       hideDeclineAll: false,
-      lang: (document.documentElement.lang === 'en') ? 'en' : 'de',
+      lang: (function () {
+        // Gleiche Spracheinstellung wie der Rest der Seite verwenden
+        // (main.js speichert die Wahl unter localStorage["cenit-lang"]).
+        try {
+          var stored = localStorage.getItem('cenit-lang');
+          if (stored === 'en' || stored === 'de') return stored;
+        } catch (e) {}
+        return (document.documentElement.lang === 'en') ? 'en' : 'de';
+      })(),
       translations: {
         de: {
           consentModal: {
