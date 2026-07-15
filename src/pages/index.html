@@ -608,6 +608,15 @@
     body.page-home .cenit-hero-home-claim{
       max-width: none;
     }
+
+    /* Sub-Zeile (vollständiger Vereinsname): ruhige Signatur statt zweiter Schlagzeile.
+       Gewicht reduziert (600 → 500), Farbe auf muted-foreground statt dunklem Fließtext –
+       bleibt bei ausreichend Kontrast gut lesbar, tritt aber hinter das Zitat zurück. */
+    body.page-home .cenit-hero-home-sub{
+      font-weight: 500;
+      color: var(--muted-foreground);
+      opacity: 1;
+    }
     .cenit-zf-teaser-row{
       max-width: var(--cenit-axis-950);
       margin: 28px auto 0 auto;
