@@ -53,7 +53,7 @@
           <span data-lang="de">Tanz zwischen Faszination und medizinischer Unterversorgung</span>
           <span data-lang="en" style="display:none;">Dance Between Fascination and Medical Underprovision</span>
         </h2>
-        <p class="cenit-einstieg-subtitle" style="max-width:var(--cenit-axis-760); margin-left:auto; margin-right:auto;">
+        <p class="cenit-zf-teaser-intro">
           <span data-lang="de">
             Tanz wirkt leicht und mühelos – ist für den Körper jedoch Schwerstarbeit. Sprünge, Landungen und
             repetitive Bewegungen belasten Gelenke und Muskulatur erheblich, und das Verletzungsrisiko bleibt
@@ -592,6 +592,16 @@
       max-width: var(--cenit-axis-950);
       margin: 28px auto 0 auto;
     }
+    /* Einleitungstext: gleiche Größe/Farbe wie Vision & Mission (.cenit-vm-vision/-mission),
+       statt der kleinen, grauen Kachel-Unterzeile (.cenit-einstieg-subtitle) */
+    .cenit-zf-teaser-intro{
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--cenit-text);
+      text-align: center;
+      max-width: var(--cenit-axis-760);
+      margin: 0 auto;
+    }
     .cenit-zf-teaser-bridge{
       font-family: 'EB Garamond', serif;
       font-style: italic;
@@ -639,8 +649,8 @@
     }
     .cenit-zf-stat-text{
       font-size: 13px;
-      line-height: 1.55;
-      color: var(--cenit-text);
+      line-height: 1.6;
+      color: var(--muted-foreground);
       margin: 0 0 10px 0;
     }
     .cenit-zf-stat-source{
