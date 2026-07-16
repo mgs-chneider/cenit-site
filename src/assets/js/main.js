@@ -55,6 +55,7 @@ if (menuBtn && menu) {
       vision: "Vision & Mission",
       about: "Über uns",
       expertise: "Expertise",
+      facts: "Zahlen & Fakten",
       insights: "Einblicke & Entwicklungen",
       glossary: "Glossar",
       funding: "Förderaufrufe",
@@ -70,6 +71,7 @@ if (menuBtn && menu) {
       vision: "Vision & Mission",
       about: "About us",
       expertise: "Expertise",
+      facts: "Facts & Figures",
       insights: "Insights & Updates",
       glossary: "Glossary",
       funding: "Funding Calls",
@@ -178,7 +180,20 @@ if (menuBtn && menu) {
       threshold: 0.12,
       rootMargin: "0px 0px -10% 0px"
     });
-    revealItems.forEach(el => observer.observe(el));
+    revealItems.forEach(el => {
+      observer.observe(el);
+      // Sicherheitsnetz: Auf Seiten wie den Einblicke/Radar-Artikeln liegt der
+      // gesamte Inhalt in einem einzigen, sehr großen .reveal-Wrapper. Löst der
+      // IntersectionObserver aus irgendeinem Grund nie aus (z. B. Tab im
+      // Hintergrund geöffnet, iOS Stromsparmodus, sehr große Zielgröße),
+      // bleibt die komplette Seite sonst dauerhaft unsichtbar ("blank").
+      // Nach spätestens 1.5s wird der Inhalt daher in jedem Fall eingeblendet.
+      setTimeout(() => {
+        if (!el.classList.contains("is-visible")) {
+          el.classList.add("is-visible");
+        }
+      }, 1500);
+    });
   }
 });
   /* =====================================================
