@@ -14,6 +14,7 @@ CENIT ist ein gemeinnütziger Verein, der sich für die gesundheitliche Prävent
 - Eigenes, leichtgewichtiges Build-System (`build.mjs`) zur Zusammenführung von Seiten und Partials
 - Deployment über [Vercel](https://vercel.com), automatischer Build bei jedem Push auf `main`
 - Mehrsprachigkeit (DE/EN) über clientseitige Sprachumschaltung (`data-lang` Attribute), nicht über getrennte Routen
+- Cookie-Consent über [Klaro!](https://kiprotect.com/klaro) (CDN, kein eigenes Hosting): gated Google Analytics und die Infogram-Grafiken auf `/zahlen-fakten/` hinter aktiver Einwilligung gemäß § 25 TDDDG / Art. 6(1)(a) DSGVO
 
 ## Projektstruktur
 
@@ -59,11 +60,21 @@ Unter `/einblicke-entwicklungen/radar-[monat]-[jahr]/` erscheint monatlich ein k
 
 ### Förderaufrufe
 
-Unter `/foerderaufrufe/` steht eine kuratierte, laufend aktualisierte Übersicht öffentlich zugänglicher EU-Förderprogramme (Horizon Europe, Erasmus+ Sport, COST u. a.) mit Relevanz für tanzmedizinische Forschung. Gegliedert in „Aktuell offen" und „Im Blick behalten" (Calls, deren nächste Runde noch nicht veröffentlicht ist). CENIT tritt hier nicht als Antragsteller auf, sondern als Orientierungshilfe für Hochschulen und Fachverbände im eigenen Netzwerk.
+Unter `/foerderaufrufe/` steht eine kuratierte, laufend aktualisierte Übersicht öffentlich zugänglicher EU-Förderprogramme (Horizon Europe, Erasmus+ Sport, COST u. a.) mit Relevanz für tanzmedizinische Forschung. Gegliedert in „Aktuell offen" und „Im Blick behalten" (Calls, deren nächste Runde noch nicht veröffentlicht ist). CENIT tritt hier nicht als Antragsteller auf, sondern als Orientierungshilfe für Hochschulen und Fachverbände im eigenen Netzwerk. Der Disclaimer nennt ausschließlich die tatsächlich zuständigen EU-Stellen je Programm (COST Association, REA, EACEA) — die Zuordnung wird bei jeder Aktualisierung geprüft, nicht pauschal übernommen.
+
+### Zahlen & Fakten
+
+Unter `/zahlen-fakten/` liegt die evidenzbasierte Beleg-Seite der Website, mit zwei redaktionell getrennten Kapiteln: Verletzungsprävalenz/-häufigkeit im Tanz (Infogram-Grafiken, Anker `#verletzungen` implizit über die Chart-Sektion) und „Prävention rechnet sich" für Kostenträger (`#kostentraeger`, ökonomische Evidenz plus Praxisbeispiele wie die VBG-Tanzpräventionsinitiative). Die Seite ist im Hauptmenü verlinkt und wird zusätzlich auf der Startseite in einer Teaser-Sektion zwischen Hero und Vision & Mission zusammengefasst (Problemseite: Verletzungszahlen als Auslöser für die Vision; die Kostenträger-Ökonomie bleibt bewusst exklusiv auf der Unterseite). Die Infogram-Charts laden erst nach Klaro-Einwilligung (Consent-Gate, siehe Tech-Stack); bei bereits erteilter Einwilligung laden sie beim Seitenaufruf automatisch nach.
 
 ### Rechtliches
 
 Bilinguale rechtliche Hinweise liegen unter `src/pages/de/impressum/` (DE) und `src/pages/en/legal-notice/` (EN), inklusive Anker-IDs für die Abschnitte Haftung für Links (`#haftung-fuer-links` / `#liability-for-links`) und Urheberrecht (`#urheberrecht` / `#copyright`). Glossar-Einträge mit externen Quellenverweisen verlinken auf diese Abschnitte.
+
+Datenschutzerklärung/Privacy Policy liegen unter `src/pages/de/datenschutz/` (DE) und `src/pages/en/privacy/` (EN) und dokumentieren Google Analytics sowie die Infogram-Einbindung auf Consent-Basis (Klaro!, siehe Tech-Stack). Diese vier Rechts-Seiten binden Header/Footer nicht über `@@HEADER@@`/`@@FOOTER@@` ein, sondern direkt inline — Änderungen an Header oder Footer müssen hier manuell nachgezogen werden.
+
+### UI-Konventionen
+
+Externe Link-Buttons und Inline-Links verwenden statt des Unicode-Zeichens „↗" ein inline-SVG (`.cenit-arrow-icon`, `currentColor`-Stroke), da „↗" auf iOS/mobilen Geräten als großes, kastenförmiges Farb-Emoji dargestellt wird. Ausnahme: auf den CENIT-Radar-Seiten (`/einblicke-entwicklungen/radar-*/`) werden Link-Buttons bewusst ganz ohne Pfeil-Symbol gesetzt (weder Unicode noch SVG), auf Wunsch schlankerer Optik bei vielen Links pro Ausgabe.
 
 ## Build
 
