@@ -633,15 +633,15 @@
         min-height: 78dvh;
       }
       body.page-home .cenit-hero-home-top{
-        margin-bottom: 70px;
-        margin-bottom: 12dvh;
+        margin-bottom: 30px;
+        margin-bottom: 4dvh;
       }
-      /* Auf dem iPhone sitzt der (ggf. zweizeilig umbrechende) Claim durch die
-         dvh-Anpassung noch nicht ganz im ausgeblichenen unteren Bereich des Hero-Fotos –
-         dort reicht der Kontrast ohne Schatten nicht. Kompakterer Schatten als das
-         ursprüngliche main.css-Original (weniger Blur), nur für Mobile. */
+      /* Statt mit einem stärkeren Schatten gegenzusteuern (wirkt schnell schmuddelig
+         und bringt kaum echten Lesbarkeits-Gewinn): der Claim rutscht durch das kleinere
+         margin-bottom tiefer in den bereits stark ausgeblichenen unteren Bereich des
+         Verlaufs. Nur ein minimaler heller Schatten als Sicherheitsnetz, kein dunkler Blur. */
       body.page-home .cenit-hero-home-claim{
-        text-shadow: 0 1px 7px rgba(0,0,0,0.48), 0 1px 0 rgba(250,250,250,0.5);
+        text-shadow: 0 1px 2px rgba(250,250,250,0.6);
       }
     }
     .cenit-zf-teaser-row{
