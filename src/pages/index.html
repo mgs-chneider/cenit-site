@@ -607,6 +607,11 @@
        ganz normal um. */
     body.page-home .cenit-hero-home-claim{
       max-width: none;
+      /* Der dunkle Blur-Schatten aus main.css (0 2px 10px rgba(0,0,0,0.22)) wirkte
+         auf dem kursiven Violett wie ein grauer Schmutzrand. Der Claim sitzt seit der
+         Kürzung auf eine Zeile ohnehin im bereits stark aufgehellten unteren Bereich
+         des Hero-Verlaufs – der Kontrast reicht auch ohne Schatten. */
+      text-shadow: none;
     }
 
     /* Sub-Zeile (vollständiger Vereinsname): ruhige Signatur statt zweiter Schlagzeile.
