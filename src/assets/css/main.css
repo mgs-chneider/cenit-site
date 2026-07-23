@@ -968,6 +968,11 @@ body.page-home #vision{
   object-position: center;
   border-radius: 0;
 }
+.cenit-about-photo-inner{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 
 .cenit-about-name{
   font-family:'EB Garamond', serif;
