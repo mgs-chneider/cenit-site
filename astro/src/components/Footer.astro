@@ -1,39 +1,46 @@
 ---
+import { getLocale } from "../i18n";
+
+const locale = getLocale(Astro.url.pathname);
 ---
 
 <footer class="cenit-footer">
   <div class="cenit-footer-inner">
     <div class="cenit-footer-links">
-      <!-- DE -->
-      <span data-lang="de">
-        <a href="/de/impressum/">Impressum</a>
-        <span class="cenit-footer-sep">|</span>
-        <a href="/de/datenschutz/">Datenschutz</a>
-        <span class="cenit-footer-sep">|</span>
-        <a href="#" onclick="if(window.klaro){klaro.show();} return false;">Cookie-Einstellungen</a>
-      </span>
-      <!-- EN -->
-      <span data-lang="en" style="display:none;">
-        <a href="/en/legal-notice/">Legal Notice</a>
-        <span class="cenit-footer-sep">|</span>
-        <a href="/en/privacy/">Privacy</a>
-        <span class="cenit-footer-sep">|</span>
-        <a href="#" onclick="if(window.klaro){klaro.show();} return false;">Cookie Settings</a>
-      </span>
+      {locale === "de" ? (
+        <span>
+          <a href="/impressum/">Impressum</a>
+          <span class="cenit-footer-sep">|</span>
+          <a href="/datenschutz/">Datenschutz</a>
+          <span class="cenit-footer-sep">|</span>
+          <a href="#" onclick="if(window.klaro){klaro.show();} return false;">Cookie-Einstellungen</a>
+        </span>
+      ) : (
+        <span>
+          <a href="/en/legal-notice/">Legal Notice</a>
+          <span class="cenit-footer-sep">|</span>
+          <a href="/en/privacy/">Privacy</a>
+          <span class="cenit-footer-sep">|</span>
+          <a href="#" onclick="if(window.klaro){klaro.show();} return false;">Cookie Settings</a>
+        </span>
+      )}
     </div>
     <div class="cenit-footer-copy">
       © <span id="cenit-year"></span>
       CENIT – Verein zur Förderung interdisziplinärer Tanzmedizin e.V.
     </div>
     <p class="cenit-footer-note">
-      <span data-lang="de">
-        Website-Konzept und redaktionelle Verantwortung:
-        Manfred G. Schneider
-      </span>
-      <span data-lang="en" style="display:none;">
-        Website concept and editorial responsibility:
-        Manfred G. Schneider
-      </span>
+      {locale === "de" ? (
+        <span>
+          Website-Konzept und redaktionelle Verantwortung:
+          Manfred G. Schneider
+        </span>
+      ) : (
+        <span>
+          Website concept and editorial responsibility:
+          Manfred G. Schneider
+        </span>
+      )}
     </p>
   </div>
   <script is:inline>

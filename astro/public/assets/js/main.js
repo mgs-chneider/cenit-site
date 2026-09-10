@@ -46,105 +46,12 @@ if (menuBtn && menu) {
 }
   /* =====================================================
      LANGUAGE SWITCH + i18n
+     Removed for the Astro build: language is now a real route
+     (/ vs /en/...) set server-side by Layout.astro, not a client-side
+     toggle. The old localStorage-driven toggle used to clobber
+     document.documentElement.lang on every page load regardless of
+     the actual route - see project memory for details.
   ===================================================== */
-  const langButtons = document.querySelectorAll(".cenit-langbtn[data-set-lang]");
-  const dict = {
-    de: {
-      home: "Home",
-      menuLabel: "Menü",
-      vision: "Vision & Mission",
-      about: "Über uns",
-      expertise: "Expertise",
-      facts: "Zahlen & Fakten",
-      insights: "Einblicke & Entwicklungen",
-      glossary: "Glossar",
-      funding: "Förderaufrufe",
-      faqs: "FAQs",
-      glossary: "Glossar",
-      faqs: "FAQs",
-      contact: "Kontakt",
-      statutes: "Satzung"
-    },
-    en: {
-      home: "Home",
-      menuLabel: "Menu",
-      vision: "Vision & Mission",
-      about: "About us",
-      expertise: "Expertise",
-      facts: "Facts & Figures",
-      insights: "Insights & Updates",
-      glossary: "Glossary",
-      funding: "Funding Calls",
-      faqs: "FAQs",
-      glossary: "Glossary",
-      faqs: "FAQs",
-      contact: "Contact",
-      statutes: "Statutes"
-    }
-  };
-  function applyLang(lang) {
-    const L = dict[lang] ? lang : "de";
-    document.documentElement.lang = L;
-    // Content Switch
-    document.querySelectorAll("[data-lang]").forEach(el => {
-      el.style.display = el.getAttribute("data-lang") === L ? "" : "none";
-    });
-    // UI Labels
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (dict[L] && dict[L][key]) {
-        el.textContent = dict[L][key];
-      }
-    });
-   // Button Active State
-   langButtons.forEach(btn => {
-     btn.classList.toggle("is-active", btn.dataset.setLang === L);
-   });
-   try {
-     localStorage.setItem("cenit-lang", L);
-   } catch(e){}
-   }
-   const routeMap = {
-     "/de/impressum/": "/en/legal-notice/",
-     "/en/legal-notice/": "/de/impressum/",
-     "/de/datenschutz/": "/en/privacy/",
-     "/en/privacy/": "/de/datenschutz/"
-   };
-   langButtons.forEach(btn => {
-     btn.addEventListener("click", () => {
-       const targetLang = btn.dataset.setLang;
-       const path = window.location.pathname;
-       // zuerst Spezialfälle mit unterschiedlichen Slugs
-       if (routeMap[path]) {
-         try {
-           localStorage.setItem("cenit-lang", targetLang);
-         } catch(e){}
-         window.location.href = routeMap[path];
-         return;
-       }
-       // generischer Wechsel für /de/... und /en/...
-       let newPath = path;
-       if (targetLang === "en" && path.startsWith("/de/")) {
-         newPath = path.replace(/^\/de\//, "/en/");
-       } else if (targetLang === "de" && path.startsWith("/en/")) {
-         newPath = path.replace(/^\/en\//, "/de/");
-       }
-       if (newPath !== path) {
-         try {
-         localStorage.setItem("cenit-lang", targetLang);
-         } catch(e){}
-         window.location.href = newPath;
-         return;
-       }
-       // Fallback für Seiten ohne /de/ oder /en/
-       applyLang(targetLang);
-     });
-   });
-  let initialLang = "de";
-  try {
-    initialLang = localStorage.getItem("cenit-lang") || "de";
-  } catch(e){}
-  applyLang(initialLang);
   /* =====================================================
      SCROLL TO TOP
   ===================================================== */

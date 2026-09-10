@@ -1,12 +1,13 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { getLocale, getAltPath } from "../i18n";
 
 interface Props {
   title: string;
   canonical: string;
+  description?: string;
   bodyClass?: string;
-  lang?: string;
   bodyDataTitleDe?: string;
   bodyDataTitleEn?: string;
   htmlDataPages?: string;
@@ -16,21 +17,29 @@ interface Props {
 const {
   title,
   canonical,
+  description,
   bodyClass,
-  lang = "de",
   bodyDataTitleDe,
   bodyDataTitleEn,
   htmlDataPages,
   robotsNoindex = false,
 } = Astro.props;
+
+const pathname = Astro.url.pathname;
+const locale = getLocale(pathname);
+const altPath = getAltPath(pathname);
+const altHref = new URL(altPath, Astro.site).toString();
+const deHref = locale === "de" ? canonical : altHref;
+const enHref = locale === "en" ? canonical : altHref;
 ---
 
 <!DOCTYPE html>
-<html lang={lang} data-pages={htmlDataPages}>
+<html lang={locale} data-pages={htmlDataPages}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
+  {description && <meta name="description" content={description} />}
   {robotsNoindex && <meta name="robots" content="noindex,follow" />}
   <link rel="preload" href="/assets/fonts/eb-garamond-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/eb-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
@@ -38,6 +47,9 @@ const {
 
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="canonical" href={canonical}>
+  <link rel="alternate" hreflang="de" href={deHref}>
+  <link rel="alternate" hreflang="en" href={enHref}>
+  <link rel="alternate" hreflang="x-default" href={deHref}>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">

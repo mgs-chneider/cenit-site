@@ -1,4 +1,44 @@
 ---
+import { getLocale, getAltPath, localize } from "../i18n";
+
+const pathname = Astro.url.pathname;
+const locale = getLocale(pathname);
+const altPath = getAltPath(pathname);
+const dePath = locale === "de" ? pathname : altPath;
+const enPath = locale === "en" ? pathname : altPath;
+
+const l = (path: string) => localize(path, locale);
+
+const labels =
+  locale === "de"
+    ? {
+        menu: "Menü",
+        home: "Home",
+        vision: "Vision & Mission",
+        about: "Über uns",
+        expertise: "Expertise",
+        contact: "Kontakt",
+        insights: "Einblicke & Entwicklungen",
+        facts: "Zahlen & Fakten",
+        glossary: "Glossar",
+        funding: "Förderaufrufe",
+        faqs: "FAQs",
+        statutes: "Satzung",
+      }
+    : {
+        menu: "Menu",
+        home: "Home",
+        vision: "Vision & Mission",
+        about: "About us",
+        expertise: "Expertise",
+        contact: "Contact",
+        insights: "Insights & Updates",
+        facts: "Facts & Figures",
+        glossary: "Glossary",
+        funding: "Funding Calls",
+        faqs: "FAQs",
+        statutes: "Statutes",
+      };
 ---
 
 <!-- CENIT TOP-BAR: Language | Social | Menu -->
@@ -7,37 +47,37 @@
   <div class="cenit-topbar-inner">
 
     <div class="cenit-langswitch" aria-label="Language switch">
-      <button type="button" class="cenit-langbtn" data-set-lang="de">DE</button>
+      <a class:list={["cenit-langbtn", { "is-active": locale === "de" }]} href={dePath}>DE</a>
       <span class="cenit-langsep">|</span>
-      <button type="button" class="cenit-langbtn" data-set-lang="en">EN</button>
+      <a class:list={["cenit-langbtn", { "is-active": locale === "en" }]} href={enPath}>EN</a>
     </div>
 
-    <a class="cenit-topbar-logo" href="/" aria-label="CENIT Home">
+    <a class="cenit-topbar-logo" href={l("/")} aria-label="CENIT Home">
       <img src="/assets/img/logo-cenit-transparent.png" alt="CENIT e.V." />
     </a>
 
     <button class="cenit-menutoggle" aria-expanded="false" aria-label="Menu">
-      ☰ <span class="cenit-menulabel" data-i18n="menuLabel">Menü</span>
+      ☰ <span class="cenit-menulabel">{labels.menu}</span>
     </button>
 
   </div>
 
   <nav class="cenit-menu" aria-label="Site navigation">
     <div class="cenit-menu-group">
-      <a class="cenit-menu-item cenit-menu-home" href="/" data-i18n="home">Home</a>
-      <a class="cenit-menu-subitem" href="/#vision" data-i18n="visionMission">Vision &amp; Mission</a>
-      <a class="cenit-menu-subitem" href="/#ueber-uns" data-i18n="about">Über uns</a>
-      <a class="cenit-menu-subitem" href="/#expertise" data-i18n="expertise">Expertise</a>
-      <a class="cenit-menu-subitem" href="/#kontakt" data-i18n="contact">Kontakt</a>
+      <a class="cenit-menu-item cenit-menu-home" href={l("/")}>{labels.home}</a>
+      <a class="cenit-menu-subitem" href={l("/#vision")}>{labels.vision}</a>
+      <a class="cenit-menu-subitem" href={l("/#ueber-uns")}>{labels.about}</a>
+      <a class="cenit-menu-subitem" href={l("/#expertise")}>{labels.expertise}</a>
+      <a class="cenit-menu-subitem" href={l("/#kontakt")}>{labels.contact}</a>
     </div>
 
     <div class="cenit-menu-divider" role="separator" aria-hidden="true"></div>
 
-    <a class="cenit-menu-item" href="/einblicke-entwicklungen" data-i18n="insights">Einblicke &amp; Entwicklungen</a>
-    <a class="cenit-menu-item" href="/zahlen-fakten" data-i18n="facts">Zahlen &amp; Fakten</a>
-    <a class="cenit-menu-item" href="/glossar" data-i18n="glossary">Glossar</a>
-    <a class="cenit-menu-item" href="/foerderaufrufe" data-i18n="funding">Förderaufrufe</a>
-    <a class="cenit-menu-item" href="/faqs" data-i18n="faqs">FAQs</a>
-    <a class="cenit-menu-item" href="/satzung" data-i18n="statutes">Satzung</a>
+    <a class="cenit-menu-item" href={l("/einblicke-entwicklungen")}>{labels.insights}</a>
+    <a class="cenit-menu-item" href={l("/zahlen-fakten")}>{labels.facts}</a>
+    <a class="cenit-menu-item" href={l("/glossar")}>{labels.glossary}</a>
+    <a class="cenit-menu-item" href={l("/foerderaufrufe")}>{labels.funding}</a>
+    <a class="cenit-menu-item" href={l("/faqs")}>{labels.faqs}</a>
+    <a class="cenit-menu-item" href={l("/satzung")}>{labels.statutes}</a>
   </nav>
 </div>
