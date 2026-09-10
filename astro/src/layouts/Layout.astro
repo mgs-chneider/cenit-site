@@ -7,9 +7,11 @@ interface Props {
   canonical: string;
   bodyClass: string;
   lang?: string;
+  bodyDataTitleDe?: string;
+  bodyDataTitleEn?: string;
 }
 
-const { title, canonical, bodyClass, lang = "de" } = Astro.props;
+const { title, canonical, bodyClass, lang = "de", bodyDataTitleDe, bodyDataTitleEn } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -30,7 +32,7 @@ const { title, canonical, bodyClass, lang = "de" } = Astro.props;
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
   <link rel="icon" href="/assets/img/favicon/favicon.ico">
 </head>
-<body class={bodyClass}>
+<body class={bodyClass} data-title-de={bodyDataTitleDe} data-title-en={bodyDataTitleEn}>
   <Header />
 
   <slot />
