@@ -56,7 +56,11 @@ Die Übersichtsseite `src/pages/glossar/index.html` gruppiert die Begriffe in Ka
 
 ### CENIT Radar
 
-Unter `/einblicke-entwicklungen/radar-[monat]-[jahr]/` erscheint monatlich ein kuratierter Newsletter mit aktuellen Entwicklungen aus Forschung, Szene und Veranstaltungen der Tanzmedizin (Rubriken: Veranstaltung des Monats, Szene & Kontext, Forschung, Glossar-Begriff des Monats, Im Kalender). Der Glossar-Begriff des Monats verweist jeweils auf einen noch nicht vorgestellten Eintrag im Glossar; welcher Begriff bereits verwendet wurde, wird pro Ausgabe dokumentiert, um Wiederholungen zu vermeiden.
+Unter `/einblicke-entwicklungen/radar-[monat]-[jahr]/` erscheint monatlich ein kuratierter Newsletter mit aktuellen Entwicklungen aus Forschung, Szene und Veranstaltungen der Tanzmedizin (Rubriken: Veranstaltung des Monats, Szene & Kontext, Forschung, Glossar-Begriff des Monats, Im Kalender). Der Glossar-Begriff des Monats stellt einen noch nicht vorgestellten Eintrag im Glossar als Teaser vor und verlinkt auf die vollständige Glossar-Seite, um die Verweildauer zu erhöhen.
+
+### LinkedIn-Begriff des Monats
+
+Zusätzlich zum Teaser im CENIT Radar wird derselbe monatliche Glossar-Begriff direkt an die rund 19.000 Mitglieder der LinkedIn-Gruppe „Dance Teaching, Coaching and Training" herangetragen. Welcher Begriff bereits verwendet wurde, wird dokumentiert, um Wiederholungen in beiden Kanälen zu vermeiden.
 
 ### Förderaufrufe
 
