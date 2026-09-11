@@ -1,0 +1,9 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/de/impressum", "destination": "/impressum/", "permanent": true },
+    { "source": "/de/impressum/", "destination": "/impressum/", "permanent": true },
+    { "source": "/de/datenschutz", "destination": "/datenschutz/", "permanent": true },
+    { "source": "/de/datenschutz/", "destination": "/datenschutz/", "permanent": true }
+  ]
+}
