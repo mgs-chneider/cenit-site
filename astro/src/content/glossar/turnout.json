@@ -1,0 +1,63 @@
+{
+  "category": "anatomie-technik",
+  "title": {
+    "de": "Turnout (en dehors)",
+    "en": "Turnout (en dehors)"
+  },
+  "subtitle": {
+    "de": "Die Auswärtsdrehung der Beine – warum nicht jedes Maß an Turnout trainierbar ist",
+    "en": "The outward rotation of the legs – why not every degree of turnout can be trained"
+  },
+  "kurzdefinition": {
+    "de": "Turnout (französisch „en dehors\") bezeichnet die Auswärtsdrehung der Beine aus der Hüfte heraus – eine zentrale technische Voraussetzung in fast allen klassischen und vielen zeitgenössischen Tanzstilen.",
+    "en": "Turnout (French \"en dehors\") refers to the outward rotation of the legs from the hip – a central technical requirement in almost all classical and many contemporary dance styles."
+  },
+  "imTanzkontext": {
+    "de": "Echter Turnout entsteht primär aus der Außenrotationsfähigkeit des Hüftgelenks, die zu einem erheblichen Teil anatomisch vorgegeben und nur begrenzt trainierbar ist – die Rotationsfähigkeit im Knie ist dabei deutlich enger begrenzt als in der Hüfte. Wird der optisch gewünschte Turnout-Grad nicht durch die Hüfte, sondern durch zusätzliche Drehung im Knie oder durch Verschieben der Fußstellung erzwungen, entsteht eine Fehlbelastung, die langfristig Knie und Sprunggelenk belasten kann. Das macht Turnout zu einem Beispiel dafür, wie ästhetischer Anspruch und anatomische Realität im Tanz in Konflikt geraten können – und warum eine frühzeitige, individuelle Einschätzung der eigenen Beweglichkeit Teil einer gesunden Tanzausbildung sein sollte.",
+    "en": "True turnout primarily originates from the external rotation capacity of the hip joint, which is largely anatomically predetermined and only trainable to a limited degree – rotational capacity in the knee is considerably more limited than in the hip. When the visually desired degree of turnout is forced not through the hip but through additional rotation at the knee or by shifting foot placement, it creates a load pattern that can stress the knee and ankle over time. This makes turnout an example of how aesthetic demands and anatomical reality can come into conflict in dance – and why early, individual assessment of one's own mobility should be part of healthy dance training."
+  },
+  "warumWichtig": {
+    "de": "Weil erzwungener Turnout zu Fehlbelastungen an Knie und Sprunggelenk führen kann, ist eine realistische Einschätzung der eigenen Hüftbeweglichkeit ein wichtiger Baustein der Präventionsarbeit von CENIT e.V. Ein möglicher Hinweis auf erzwungenen statt anatomischen Turnout ist, wenn die Fußspitzen bei gestrecktem Bein deutlich weiter nach außen zeigen als die Kniescheiben – ein sogenanntes „Screwing\" des Knies. Eine individuelle Einschätzung der Hüftbeweglichkeit durch geschultes Fachpersonal kann helfen, das eigene anatomische Limit realistisch einzuordnen, statt es durch Zwang zu überschreiten.",
+    "en": "Because forced turnout can create harmful load patterns at the knee and ankle, a realistic assessment of one's own hip mobility is an important part of CENIT e.V.'s prevention work. One possible sign of forced rather than anatomical turnout is when the toes point noticeably further outward than the kneecaps when the leg is straight – sometimes called \"screwing\" the knee. An individual assessment of hip mobility by trained professionals can help realistically gauge one's own anatomical limits rather than forcing past them."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine medizinische oder therapeutische Beratung. Für eine individuelle Einschätzung der Hüftbeweglichkeit empfehlen wir, sich an tanzmedizinisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for medical or therapeutic advice. For an individual assessment of hip mobility, we recommend consulting professionals experienced in dance medicine – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Coplan JA. Ballet Dancer's Turnout and its Relationship to Self-Reported Injury. <em>J Orthop Sports Phys Ther.</em> 2002;32(11):579–584. <a href=\"https://doi.org/10.2519/jospt.2002.32.11.579\" rel=\"noopener\" target=\"_blank\">doi.org/10.2519/jospt.2002.32.11.579</a> · IADMS Resource Paper: Turnout for Dancers – Hip Anatomy and Factors Affecting Turnout. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/5789/iadms-resource-paper-turnout-anatomy.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>",
+    "en": "Coplan JA. Ballet Dancer's Turnout and its Relationship to Self-Reported Injury. <em>J Orthop Sports Phys Ther.</em> 2002;32(11):579–584. <a href=\"https://doi.org/10.2519/jospt.2002.32.11.579\" rel=\"noopener\" target=\"_blank\">doi.org/10.2519/jospt.2002.32.11.579</a> · IADMS Resource Paper: Turnout for Dancers – Hip Anatomy and Factors Affecting Turnout. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/5789/iadms-resource-paper-turnout-anatomy.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "hyperextension-knie"
+    },
+    {
+      "type": "internal",
+      "slug": "en-pointe-spitzentanz-reife"
+    }
+  ],
+  "metaDescriptionDe": "Turnout im Tanz: anatomische Grenzen der Auswärtsdrehung und Bedeutung für die Präventionsarbeit – Glossar von CENIT e.V.",
+  "slug": "turnout",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

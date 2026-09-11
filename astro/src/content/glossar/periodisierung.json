@@ -1,0 +1,63 @@
+{
+  "category": "physiologie-gesundheit",
+  "title": {
+    "de": "Periodisierung",
+    "en": "Periodization"
+  },
+  "subtitle": {
+    "de": "Leistungsfähigkeit planen, statt sie dem Zufall zu überlassen",
+    "en": "Planning performance readiness rather than leaving it to chance"
+  },
+  "kurzdefinition": {
+    "de": "Periodisierung bezeichnet die systematische Planung von Trainingsinhalten, -umfang und -intensität über einen längeren Zeitraum. Üblich ist eine Unterteilung in kurze Mikrozyklen von etwa einer Woche, mittlere Mesozyklen von mehreren Wochen und übergeordnete Makrozyklen, die etwa eine ganze Spielzeit umfassen können. Ziel ist es, Leistungsfähigkeit gezielt zum richtigen Zeitpunkt aufzubauen und Übertraining zu vermeiden.",
+    "en": "Periodization refers to the systematic planning of training content, volume, and intensity over an extended period of time. A common structure divides this into short microcycles of about one week, medium-length mesocycles of several weeks, and overarching macrocycles that can span an entire season. The goal is to build performance readiness deliberately at the right time while avoiding overtraining."
+  },
+  "imTanzkontext": {
+    "de": "Im Vergleich zum Leistungssport wird der Tanzalltag traditionell seltener systematisch periodisiert: Technikunterricht, Proben und Vorstellungen laufen bei vielen Compagnien und Ausbildungsstätten über weite Teile des Jahres mit ähnlich hoher Intensität weiter, ohne klar geplante Erholungsphasen. Fachliteratur, die Periodisierungskonzepte aus dem Sport auf den Tanz überträgt, beschreibt, wie sich Vorbereitung, Aufbau und ein gezieltes „Tapering\" – also eine bewusste Reduzierung der Trainingsbelastung kurz vor der Premiere – planen lassen, um Tänzer:innen zum richtigen Zeitpunkt leistungsbereit zu machen, statt sie fortlaufend an der Belastungsgrenze zu halten. Auch ergänzendes Krafttraining, das lange Zeit im Verdacht stand, Beweglichkeit und Ästhetik zu beeinträchtigen, wird in einer durchdachten Periodisierung gezielt eingesetzt und kann nachweislich zu besserer Tanzleistung und weniger Verletzungen beitragen. Ohne eine solche Planung riskieren Compagnien und Schulen, dass sich Ermüdung über Wochen und Monate unbemerkt aufbaut.",
+    "en": "Compared with elite sport, everyday dance training has traditionally been less systematically periodized: technique class, rehearsals, and performances continue at similarly high intensity for many companies and training institutions throughout much of the year, without clearly planned recovery phases. Literature applying periodization concepts from sport to dance describes how preparation, build-up, and deliberate \"tapering\" – a conscious reduction of training load shortly before the premiere – can be planned to make dancers performance-ready at the right time, rather than keeping them continuously at the edge of their load capacity. Supplemental strength training, long suspected of compromising flexibility and aesthetics, is used deliberately within a well-thought-out periodization plan and has been shown to contribute to better dancing and fewer injuries. Without such planning, companies and schools risk fatigue building up unnoticed over weeks and months."
+  },
+  "warumWichtig": {
+    "de": "Weil kontinuierlich hohe Belastung ohne geplante Erholung zu den zentralen Risikofaktoren für Überlastungsverletzungen zählt, setzt sich CENIT e.V. dafür ein, Periodisierung als festen Bestandteil der Trainingskultur im Tanz zu verankern. Wer Spielzeiten, Ausbildungsjahre oder Trainingsblöcke vorausschauend plant, statt durchgängig an der Belastungsgrenze zu trainieren, schafft die Grundlage für eine gesunde, langfristig tragfähige Tanzkarriere.",
+    "en": "Because continuously high load without planned recovery is among the central risk factors for overuse injury, CENIT e.V. is committed to establishing periodization as a standard part of training culture in dance. Planning seasons, training years, or training blocks with foresight, rather than training continuously at the edge of capacity, lays the foundation for a healthy, sustainable dance career."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine individuelle trainingswissenschaftliche oder medizinische Beratung. Für eine auf deine Compagnie oder Schule abgestimmte Trainingsplanung empfehlen wir, sich an tanzmedizinisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for individual training-science or medical advice. For training planning tailored to your company or school, we recommend consulting professionals experienced in dance medicine – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Wyon M. Preparing to perform: periodization and dance. <em>J Dance Med Sci.</em> 2010;14(2):67–72. <a href=\"https://doi.org/10.1177/1089313X1001400205\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/1089313X1001400205</a> · Irvine S, Redding E, Rafferty S. IADMS Resource Paper: Dance Fitness. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/5777/iadms-resource-paper-dance-fitness.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>",
+    "en": "Wyon M. Preparing to perform: periodization and dance. <em>J Dance Med Sci.</em> 2010;14(2):67–72. <a href=\"https://doi.org/10.1177/1089313X1001400205\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/1089313X1001400205</a> · Irvine S, Redding E, Rafferty S. IADMS Resource Paper: Dance Fitness. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/5777/iadms-resource-paper-dance-fitness.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "belastungssteuerung"
+    },
+    {
+      "type": "internal",
+      "slug": "aufwaermen-vs-statisches-dehnen"
+    }
+  ],
+  "metaDescriptionDe": "Periodisierung im Tanz: Trainingsplanung über die Spielzeit und Bedeutung für die Präventionsarbeit – Glossar von CENIT e.V.",
+  "slug": "periodisierung",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

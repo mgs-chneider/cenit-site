@@ -1,0 +1,67 @@
+{
+  "category": "anatomie-technik",
+  "title": {
+    "de": "En Pointe / Spitzentanz-Reife",
+    "en": "En Pointe / Pointe Readiness"
+  },
+  "subtitle": {
+    "de": "Mehr als eine Frage des Alters",
+    "en": "More than a question of age"
+  },
+  "kurzdefinition": {
+    "de": "En Pointe bezeichnet das Tanzen auf der Spitze der Zehen in speziell angefertigten Spitzenschuhen – eine Technik des klassischen Balletts. Spitzentanz-Reife beschreibt den Zeitpunkt, an dem eine Tänzerin körperlich, motorisch und trainingsbezogen so weit entwickelt ist, dass sie diese besondere Belastung sicher aufnehmen kann.",
+    "en": "Dancing en pointe means dancing on the tips of the toes in specially made pointe shoes – a technique of classical ballet. Pointe readiness describes the point at which a dancer is physically, motorically, and in terms of training experience developed enough to safely take on this particular load."
+  },
+  "imTanzkontext": {
+    "de": "Lange Zeit galt ein chronologisches Alter von etwa zwölf Jahren als gängiges Kriterium für den Beginn des Spitzentanzes. Fachliteratur weist jedoch darauf hin, dass sich Tänzerinnen dieses Alters stark in ihrer körperlichen Reife von Knochen und Muskulatur sowie in ihrer motorischen Kontrolle unterscheiden können, weshalb das Alter allein wenig aussagekräftig ist. Stattdessen werden heute Kriterien wie Rumpfstabilität, die Ausrichtung von Hüfte, Knie, Sprunggelenk und Fuß, ausreichende Kraft und Beweglichkeit von Fuß und Sprunggelenk sowie die bisherige Trainingsdauer und -häufigkeit herangezogen. Funktionelle Tests, etwa zur Balance auf einem Bein, zur Kontrolle beim Relevé oder zur Ausrichtung bei komplexeren Bewegungen, wurden entwickelt, um diese Einschätzung zu unterstützen. Eine systematische Übersichtsarbeit kommt jedoch zu dem Schluss, dass bislang kein einheitliches, standardisiertes Testverfahren existiert – die Einschätzung bleibt eine Kombination aus objektiven Tests und der Erfahrung der unterrichtenden Person.",
+    "en": "For a long time, a chronological age of around twelve was the common criterion for starting pointe work. The literature notes, however, that dancers of this age can differ greatly in the physical maturity of their bones and muscles as well as in motor control, making age alone a poor indicator. Instead, criteria used today include core stability, the alignment of hip, knee, ankle, and foot, sufficient strength and mobility of the foot and ankle, and prior training duration and frequency. Functional tests, for example assessing single-leg balance, control during relevé, or alignment during more complex movement, have been developed to support this assessment. A systematic review concludes, however, that no standardized testing procedure yet exists – the assessment remains a combination of objective tests and the teacher's experience."
+  },
+  "warumWichtig": {
+    "de": "Weil ein verfrühter Beginn des Spitzentanzes mit einem erhöhten Verletzungsrisiko in Verbindung gebracht wird, ist es CENIT e.V. wichtig, Lehrende, Eltern und Tänzerinnen dabei zu unterstützen, individuelle Reifekriterien statt eines starren Alters in den Mittelpunkt zu stellen. Eine sorgfältige, funktionsbasierte Einschätzung kann helfen, den Einstieg in den Spitzentanz sicherer zu gestalten.",
+    "en": "Because starting pointe work too early is associated with increased injury risk, CENIT e.V. considers it important to support teachers, parents, and dancers in focusing on individual readiness criteria rather than a fixed age. A careful, function-based assessment can help make the start of pointe work safer."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine individuelle Beurteilung durch tanzmedizinisch erfahrene Fachpersonen. Für eine Einschätzung der Spitzentanz-Reife empfehlen wir, sich an entsprechende Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for an individual assessment by professionals experienced in dance medicine. For an assessment of pointe readiness, we recommend consulting appropriate professionals – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Richardson M, Liederbach M, Sandow E. Functional Criteria for Assessing Pointe-Readiness. <em>J Dance Med Sci.</em> 2010;14(3):82–88. <a href=\"https://doi.org/10.1177/1089313X1001400302\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/1089313X1001400302</a> · Hough-Coles K, Wyon M. Determining Pointe Readiness in Young Adolescent Female Dancers: A Systematic Review. <em>J Dance Med Sci.</em> 2022;26(4):213–225. <a href=\"https://doi.org/10.12678/1089-313X.121522b\" rel=\"noopener\" target=\"_blank\">doi.org/10.12678/1089-313X.121522b</a> · IADMS Resource Paper: Guidelines for Initiating Pointe Training. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/2842/iadms-resource-paper-guidelines-for-initiating-pointe-training.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>",
+    "en": "Richardson M, Liederbach M, Sandow E. Functional Criteria for Assessing Pointe-Readiness. <em>J Dance Med Sci.</em> 2010;14(3):82–88. <a href=\"https://doi.org/10.1177/1089313X1001400302\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/1089313X1001400302</a> · Hough-Coles K, Wyon M. Determining Pointe Readiness in Young Adolescent Female Dancers: A Systematic Review. <em>J Dance Med Sci.</em> 2022;26(4):213–225. <a href=\"https://doi.org/10.12678/1089-313X.121522b\" rel=\"noopener\" target=\"_blank\">doi.org/10.12678/1089-313X.121522b</a> · IADMS Resource Paper: Guidelines for Initiating Pointe Training. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/2842/iadms-resource-paper-guidelines-for-initiating-pointe-training.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "tarsaltunnelsyndrom"
+    },
+    {
+      "type": "internal",
+      "slug": "hypermobilitaet"
+    },
+    {
+      "type": "internal",
+      "slug": "turnout"
+    }
+  ],
+  "metaDescriptionDe": "Spitzentanz-Reife: Kriterien jenseits des Alters – Bedeutung für die Präventionsarbeit. Glossar von CENIT e.V.",
+  "slug": "en-pointe-spitzentanz-reife",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

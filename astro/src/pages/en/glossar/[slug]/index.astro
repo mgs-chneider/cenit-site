@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+import GlossarEntry from "../../../../components/GlossarEntry.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("glossar");
+  return entries.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+---
+
+<GlossarEntry entry={entry} locale="en" />

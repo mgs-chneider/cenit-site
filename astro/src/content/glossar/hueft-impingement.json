@@ -1,0 +1,63 @@
+{
+  "category": "verletzung-praevention",
+  "title": {
+    "de": "Hüft-Impingement (FAI)",
+    "en": "Hip Impingement (FAI)"
+  },
+  "subtitle": {
+    "de": "Wenn Hüftkopf und Hüftpfanne aneinanderstoßen",
+    "en": "When femoral head and socket meet where they shouldn't"
+  },
+  "kurzdefinition": {
+    "de": "Ein Hüft-Impingement, auch femoroacetabuläres Impingement (FAI) genannt, beschreibt ein mechanisches Anschlagen zwischen Oberschenkelhals und Hüftpfannenrand, das durch knöcherne Formvarianten an einer oder beiden Strukturen begünstigt wird. Es kann zu Bewegungseinschränkungen und Reizungen der Gelenklippe – dem knorpeligen Rand der Hüftpfanne – führen, muss aber nicht zwangsläufig Beschwerden verursachen: auch beschwerdefreie Hüften können solche Formvarianten aufweisen.",
+    "en": "Hip impingement, also known as femoroacetabular impingement (FAI), describes a mechanical conflict between the femoral neck and the rim of the hip socket, favored by bony shape variations of one or both structures. It can lead to restricted movement and irritation of the labrum – the ring of cartilage lining the socket – though it does not necessarily cause symptoms: hips without complaints can show the same shape variations."
+  },
+  "imTanzkontext": {
+    "de": "Tanzformen wie Ballett verlangen ein Ausmaß an Hüftbeweglichkeit – etwa für Turnout, Développé, Grand Écart oder eine hohe Arabeske – das die anatomischen Grenzen des Hüftgelenks regelmäßig ausreizt. Interessanterweise zeigen Studien, dass professionelle Tänzer:innen mit FAI-Beschwerden oft unauffälligere knöcherne Formen aufweisen als nicht-tänzerische Athlet:innen mit vergleichbaren Symptomen – die Beschwerden entstehen hier eher aus der wiederholten Bewegung am äußersten Rand der Beweglichkeit selbst. Ein typisches Muster ist ein einschießender oder ziehender Leistenschmerz bei tiefer Hüftbeugung, etwa in der Passé- oder Développé-Position, oder ein Schnappen an der Hüftvorderseite, das von einem Schnapp-Hüfte-Syndrom (Snapping Hip) abgegrenzt werden sollte. Häufig wird versucht, fehlende Hüftbeweglichkeit über eine erzwungene Rotation im Knie oder Fuß zu kompensieren, was das Hüftgelenk zusätzlich belasten kann. Beschwerden treten oft schleichend auf und werden anfangs leicht mit allgemeiner muskulärer Ermüdung verwechselt.",
+    "en": "Dance forms such as ballet require a degree of hip mobility – for turnout, développé, grand écart, or a high arabesque – that regularly pushes the anatomical limits of the hip joint. Interestingly, studies show that professional dancers with FAI symptoms often present less pronounced bony shape variations than non-dance athletes with comparable symptoms – here, complaints appear to arise more from the repeated movement at the very edge of the joint's range of motion itself. A typical pattern is sharp or pulling groin pain during deep hip flexion, for example in passé or développé, or a snapping sensation at the front of the hip, which should be distinguished from snapping hip syndrome. Dancers often try to compensate for limited hip mobility by forcing rotation through the knee or foot, which can place additional strain on the hip joint. Symptoms tend to develop gradually and are initially easy to mistake for general muscular fatigue."
+  },
+  "warumWichtig": {
+    "de": "Weil erzwungener Turnout und kompensatorische Bewegungsmuster das Hüftgelenk über Jahre hinweg zusätzlich belasten können, ist das frühzeitige Erkennen individueller Beweglichkeitsgrenzen ein zentrales Anliegen der Präventionsarbeit von CENIT e.V. Wer die eigene Hüftanatomie kennt und Bewegung entsprechend anpasst, statt sie zu erzwingen, kann Überlastungsreaktionen vorbeugen und die Tanzkarriere langfristig schützen.",
+    "en": "Because forced turnout and compensatory movement patterns can place additional strain on the hip joint over the years, recognizing individual mobility limits early is a central concern of CENIT e.V.'s prevention work. Understanding one's own hip anatomy and adapting movement accordingly, rather than forcing it, can help prevent overload reactions and protect a dance career in the long run."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine medizinische Diagnostik oder Beratung. Bei anhaltendem Leisten- oder Hüftschmerz empfehlen wir, sich an tanzmedizinisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>, unter anderem zum Thema Turnout-Anatomie.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for medical diagnosis or advice. For persistent groin or hip pain, we recommend consulting professionals experienced in dance medicine – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>, including their work on turnout anatomy."
+  },
+  "quellen": {
+    "de": "Fraser JL et al. Bony Morphology of Femoroacetabular Impingement in Young Female Dancers and Single-Sport Athletes. <em>Orthop J Sports Med.</em> 2017;5(8). <a href=\"https://doi.org/10.1177/2325967117723108\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/2325967117723108</a> · Mayes S et al. Bony morphology of the hip in professional ballet dancers compared to athletes. <em>Eur Radiol.</em> 2016;26(7):2467–2474. <a href=\"https://doi.org/10.1007/s00330-016-4667-x\" rel=\"noopener\" target=\"_blank\">doi.org/10.1007/s00330-016-4667-x</a> · IADMS Resource Paper: Turnout for Dancers – Hip Anatomy and Factors Affecting Turnout. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/rxngdhap/iadms-resource-paper-turnout-for-dancers-hip-anatomy-and-factors-affecting-turnout.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>",
+    "en": "Fraser JL et al. Bony Morphology of Femoroacetabular Impingement in Young Female Dancers and Single-Sport Athletes. <em>Orthop J Sports Med.</em> 2017;5(8). <a href=\"https://doi.org/10.1177/2325967117723108\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/2325967117723108</a> · Mayes S et al. Bony morphology of the hip in professional ballet dancers compared to athletes. <em>Eur Radiol.</em> 2016;26(7):2467–2474. <a href=\"https://doi.org/10.1007/s00330-016-4667-x\" rel=\"noopener\" target=\"_blank\">doi.org/10.1007/s00330-016-4667-x</a> · IADMS Resource Paper: Turnout for Dancers – Hip Anatomy and Factors Affecting Turnout. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/rxngdhap/iadms-resource-paper-turnout-for-dancers-hip-anatomy-and-factors-affecting-turnout.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "hypermobilitaet"
+    },
+    {
+      "type": "internal",
+      "slug": "stressfraktur"
+    }
+  ],
+  "metaDescriptionDe": "Hüft-Impingement (FAI) im Tanz: Bedeutung für Turnout, Beweglichkeit und Präventionsarbeit – Glossar von CENIT e.V.",
+  "slug": "hueft-impingement",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

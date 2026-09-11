@@ -1,0 +1,329 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import { CATEGORY_LABELS } from "../glossar-categories";
+import { localize } from "../i18n";
+
+interface Props {
+  locale: "de" | "en";
+}
+
+const { locale } = Astro.props;
+
+const allEntries = await getCollection("glossar");
+const byCategory = {
+  grundlagen: allEntries.filter((e) => e.data.category === "grundlagen"),
+  "verletzung-praevention": allEntries
+    .filter((e) => e.data.category === "verletzung-praevention")
+    .sort((a, b) => a.data.title[locale].localeCompare(b.data.title[locale])),
+  "physiologie-gesundheit": allEntries
+    .filter((e) => e.data.category === "physiologie-gesundheit")
+    .sort((a, b) => a.data.title[locale].localeCompare(b.data.title[locale])),
+  "psychische-gesundheit": allEntries
+    .filter((e) => e.data.category === "psychische-gesundheit")
+    .sort((a, b) => a.data.title[locale].localeCompare(b.data.title[locale])),
+  "anatomie-technik": allEntries
+    .filter((e) => e.data.category === "anatomie-technik")
+    .sort((a, b) => a.data.title[locale].localeCompare(b.data.title[locale])),
+};
+
+const title =
+  locale === "de"
+    ? "Glossar – Tanzmedizin von A bis Z | CENIT e.V."
+    : "Glossary – Dance Medicine from A to Z | CENIT e.V.";
+const description =
+  locale === "de"
+    ? "Tanzmedizinische Begriffe einfach erklärt – im Kontext von Prävention und Tanz. Ein Wissensangebot von CENIT e.V."
+    : "Dance-medicine terms explained clearly, in the context of dance and prevention. A knowledge resource from CENIT e.V.";
+const canonical = `https://cenit-ev.de${localize("/glossar/", locale)}`;
+
+const termCountLabel = (n: number) => (locale === "de" ? `${n} Begriffe` : `${n} terms`);
+
+const legalHref =
+  locale === "de" ? "/impressum/#haftung-fuer-links" : "/en/legal-notice/#liability-for-links";
+---
+
+<Layout title={title} canonical={canonical} description={description} bodyClass="page-einblicke">
+  <!-- HERO -->
+  <section class="cenit-section page-einblicke-hero">
+    <div class="cenit-container">
+      <div class="cenit-heroimg reveal" style="--reveal-delay:0ms">
+        <img src="/assets/img/hero-glossar.jpg" alt="Abstract dance movement in black and white" loading="eager">
+        <div class="cenit-heroimg-overlay">
+          <h1 class="cenit-heroimg-title reveal" style="--reveal-delay:140ms">
+            {locale === "de" ? "Tanzmedizin von A bis Z" : "Dance Medicine from A to Z"}
+          </h1>
+          <p class="cenit-lead reveal" style="--reveal-delay:220ms; text-align:left; margin:0;">
+            {locale === "de"
+              ? "Fachbegriffe aus der Tanzmedizin – verständlich erklärt und im Kontext von Tanz und Prävention eingeordnet."
+              : "Dance medicine terms explained clearly and put into the context of dance and prevention."}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cenit-section">
+    <div class="cenit-container">
+
+      <!-- Intro-Panel -->
+      <div class="cenit-card cenit-einblicke-panel reveal" style="--reveal-delay:80ms; margin-bottom:24px;">
+        <p style="font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--cenit-purple); margin:0 0 10px 0; font-weight:600;">
+          CENIT {locale === "de" ? "Glossar" : "Glossary"}
+        </p>
+        <div class="cenit-glossar-intro">
+          <p class="cenit-glossar-intro-quote">
+            {locale === "de" ? "Wissen einordnen, nicht nur definieren." : "Putting knowledge in context, not just defining it."}
+          </p>
+          <div class="cenit-gold-divider" style="margin:14px auto;"></div>
+          <p class="cenit-glossar-intro-note">
+            {locale === "de" ? (
+              <>Dieses Glossar dient der Wissensvermittlung im Präventionskontext und ersetzt keine medizinische
+              oder therapeutische Beratung. Bei Beschwerden oder Verletzungen empfehlen wir den Weg zu Ärztinnen,
+              Ärzten oder Physiotherapeut:innen – etwa über das <a href="https://tamed.eu" target="_blank" rel="noopener" style="color:var(--cenit-purple);">Verzeichnis von ta.med</a>.</>
+            ) : (
+              <>This glossary provides general knowledge in a prevention context and does not replace medical or
+              therapeutic advice. For pain or injury, we recommend consulting a physician or physiotherapist –
+              for example via the <a href="https://tamed.eu" target="_blank" rel="noopener" style="color:var(--cenit-purple);">ta.med directory</a>.</>
+            )}
+          </p>
+        </div>
+      </div>
+
+      <!-- Gruppenkarten -->
+      <div class="cenit-glossar-groups">
+
+        <!-- Grundlagen (Dach-Kategorie, volle Breite, 3 Spalten mit Teaser) -->
+        <div class="cenit-glossar-row cenit-glossar-row--wide">
+          <div class="cenit-glossar-group is-dark">
+            <h2 class="cenit-glossar-group-title">{CATEGORY_LABELS.grundlagen[locale]}</h2>
+            <p class="cenit-glossar-group-count">{termCountLabel(byCategory.grundlagen.length)}</p>
+            <div class="cenit-glossar-grundlagen-cols">
+              {byCategory.grundlagen.map((entry) => (
+                <a class="cenit-glossar-teaser" href={localize(`/glossar/${entry.data.slug}/`, locale)}>
+                  <span class="cenit-glossar-teaser-title">
+                    {entry.data.title[locale]}
+                    <span class="cenit-glossar-term-arrow">→</span>
+                  </span>
+                  <span class="cenit-glossar-teaser-text" set:html={entry.data.teaser[locale]} />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="cenit-glossar-row">
+          <div class="cenit-glossar-group is-dark">
+            <h2 class="cenit-glossar-group-title">{CATEGORY_LABELS["verletzung-praevention"][locale]}</h2>
+            <p class="cenit-glossar-group-count">{termCountLabel(byCategory["verletzung-praevention"].length)}</p>
+            <div class="cenit-glossar-terms">
+              {byCategory["verletzung-praevention"].map((entry) => (
+                <a class="cenit-glossar-term-link" href={localize(`/glossar/${entry.data.slug}/`, locale)}>
+                  <span>{entry.data.title[locale]}</span>
+                  <span class="cenit-glossar-term-arrow">→</span>
+                </a>
+              ))}
+            </div>
+          </div>
+          <div class="cenit-glossar-group">
+            <h2 class="cenit-glossar-group-title">{CATEGORY_LABELS["physiologie-gesundheit"][locale]}</h2>
+            <p class="cenit-glossar-group-count">{termCountLabel(byCategory["physiologie-gesundheit"].length)}</p>
+            <div class="cenit-glossar-terms">
+              {byCategory["physiologie-gesundheit"].map((entry) => (
+                <a class="cenit-glossar-term-link" href={localize(`/glossar/${entry.data.slug}/`, locale)}>
+                  <span>{entry.data.title[locale]}</span>
+                  <span class="cenit-glossar-term-arrow">→</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="cenit-glossar-row">
+          <div class="cenit-glossar-group">
+            <h2 class="cenit-glossar-group-title">{CATEGORY_LABELS["psychische-gesundheit"][locale]}</h2>
+            <p class="cenit-glossar-group-count">{termCountLabel(byCategory["psychische-gesundheit"].length)}</p>
+            <div class="cenit-glossar-terms">
+              {byCategory["psychische-gesundheit"].map((entry) => (
+                <a class="cenit-glossar-term-link" href={localize(`/glossar/${entry.data.slug}/`, locale)}>
+                  <span>{entry.data.title[locale]}</span>
+                  <span class="cenit-glossar-term-arrow">→</span>
+                </a>
+              ))}
+            </div>
+          </div>
+          <div class="cenit-glossar-group is-dark">
+            <h2 class="cenit-glossar-group-title">{CATEGORY_LABELS["anatomie-technik"][locale]}</h2>
+            <p class="cenit-glossar-group-count">{termCountLabel(byCategory["anatomie-technik"].length)}</p>
+            <div class="cenit-glossar-terms">
+              {byCategory["anatomie-technik"].map((entry) => (
+                <a class="cenit-glossar-term-link" href={localize(`/glossar/${entry.data.slug}/`, locale)}>
+                  <span>{entry.data.title[locale]}</span>
+                  <span class="cenit-glossar-term-arrow">→</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quellenhinweis & Disclaimer -->
+      <div class="cenit-card cenit-einblicke-panel reveal" style="--reveal-delay:80ms; margin-top:24px;">
+        <p style="font-size:12px; color:var(--muted-foreground); line-height:1.6; max-width:var(--cenit-axis-760);">
+          {locale === "de"
+            ? "Die Einträge basieren auf öffentlich zugänglicher Fachliteratur und Quellen anerkannter Organisationen wie IADMS und ta.med. Sie sind kein Ersatz für individuelle medizinische Diagnostik oder Beratung."
+            : "Entries are based on publicly available literature and sources from recognised organisations such as IADMS and ta.med. They do not replace individual medical diagnosis or advice."}
+        </p>
+        <p style="font-size:12px; color:var(--muted-foreground); line-height:1.6; max-width:var(--cenit-axis-760); margin-top:8px;">
+          {locale === "de" ? (
+            <>Für Inhalte verlinkter externer Seiten (etwa von ta.med oder IADMS) übernehmen wir keine Verantwortung;
+            eine Urheberrechtsverletzung ist zu keinem Zeitpunkt beabsichtigt. Näheres dazu sowie eine Meldemöglichkeit
+            finden Sie im <a href={legalHref} style="color:var(--cenit-purple);">Impressum</a>.</>
+          ) : (
+            <>We take no responsibility for the content of linked external sites (such as ta.med or IADMS); no copyright
+            infringement is ever intended. Further details and a way to notify us are provided in our
+            <a href={legalHref} style="color:var(--cenit-purple);">legal notice</a>.</>
+          )}
+        </p>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .cenit-glossar-intro{
+    text-align: center;
+    max-width: var(--cenit-axis-760);
+    margin: 0 auto 8px auto;
+  }
+  .cenit-glossar-intro-quote{
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--cenit-purple);
+    margin: 0;
+  }
+  .cenit-glossar-intro-note{
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--muted-foreground);
+    margin: 0;
+  }
+
+  .cenit-glossar-groups{
+    max-width: var(--cenit-axis-950);
+    margin: 0 auto;
+  }
+  .cenit-glossar-row{
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 20px;
+    align-items: stretch;
+  }
+  .cenit-glossar-row--wide{ grid-template-columns: 1fr; }
+  @media (max-width: 860px){
+    .cenit-glossar-row{ grid-template-columns: 1fr; }
+  }
+  .cenit-glossar-group{
+    background:#f5f3f9;
+    border-radius: 18px;
+    padding: 22px 26px;
+    box-shadow: none;
+  }
+  .cenit-glossar-group.is-dark{  background:#edebf5; }
+  .cenit-glossar-group-title{
+    margin: 0 0 4px 0;
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--cenit-purple);
+    font-size: 18px;
+    line-height: 1.25;
+  }
+  .cenit-glossar-group-count{
+    font-size: 12.5px;
+    color: var(--muted-foreground);
+    margin: 0 0 18px 0;
+  }
+  .cenit-glossar-terms{
+    display: flex;
+    flex-direction: column;
+  }
+  .cenit-glossar-term-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 2px;
+    color: var(--cenit-text);
+    text-decoration: none;
+    font-size: 14.5px;
+    line-height: 1.55;
+    background: none;
+    transition: color 0.15s ease, transform 0.15s ease;
+  }
+  .cenit-glossar-term-link:hover,
+  .cenit-glossar-term-link:active{
+    color: var(--cenit-purple);
+    transform: translateX(3px);
+  }
+  .cenit-glossar-term-arrow{
+    color: var(--cenit-gold);
+    margin-left: 10px;
+    flex-shrink: 0;
+  }
+
+  .cenit-glossar-grundlagen-cols{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 6px;
+  }
+  @media (max-width: 720px){
+    .cenit-glossar-grundlagen-cols{ grid-template-columns: 1fr; }
+  }
+  .cenit-glossar-teaser{
+    display: block;
+    text-decoration: none;
+    color: var(--cenit-text);
+    transition: transform 0.15s ease;
+  }
+  .cenit-glossar-teaser:hover{
+    transform: translateY(-2px);
+  }
+  .cenit-glossar-teaser-title{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--cenit-purple);
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .cenit-glossar-teaser:hover .cenit-glossar-teaser-title{
+    text-decoration: underline;
+  }
+  .cenit-glossar-teaser-text{
+    display: block;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--muted-foreground);
+  }
+  .cenit-glossar-teaser-text em{
+    font-style: normal;
+    color: var(--cenit-gold);
+  }
+
+  @media (max-width: 480px){
+    .cenit-glossar-group{ padding: 20px; }
+  }
+</style>

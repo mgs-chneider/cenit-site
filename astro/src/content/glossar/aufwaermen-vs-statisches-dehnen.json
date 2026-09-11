@@ -1,0 +1,63 @@
+{
+  "category": "physiologie-gesundheit",
+  "title": {
+    "de": "Aufwärmen vs. statisches Dehnen",
+    "en": "Warm-Up vs. Static Stretching"
+  },
+  "subtitle": {
+    "de": "Zwei verschiedene Werkzeuge – nicht austauschbar",
+    "en": "Two different tools – not interchangeable"
+  },
+  "kurzdefinition": {
+    "de": "Ein Aufwärmen bereitet Muskeln, Gelenke und Nervensystem aktiv auf Belastung vor – meist durch dynamische Bewegungen, die Körpertemperatur, Durchblutung und Beweglichkeit gezielt steigern. Statisches Dehnen bezeichnet dagegen das Halten einer gedehnten Position über einen längeren Zeitraum, ohne aktive Bewegung. Beide haben unterschiedliche Wirkungen und eignen sich daher nicht gleichermaßen für jeden Zeitpunkt im Trainingsablauf.",
+    "en": "A warm-up actively prepares muscles, joints, and the nervous system for activity – typically through dynamic movements that deliberately raise body temperature, blood flow, and mobility. Static stretching, by contrast, refers to holding a stretched position for an extended period without active movement. The two have different effects and are therefore not equally suited to every point in a training session."
+  },
+  "imTanzkontext": {
+    "de": "Lange statische Dehnroutinen unmittelbar vor dem Training gehören in vielen Tanzformen zur Tradition. Übersichtsarbeiten zeigen jedoch, dass isoliertes, länger gehaltenes statisches Dehnen unmittelbar vor explosiven Bewegungen die Kraftentfaltung kurzfristig verringern kann, während dynamisches Dehnen die Leistungsfähigkeit eher erhält oder sogar verbessert. Eine aktuelle Studie mit zeitgenössischen Tänzer:innen fand, dass sowohl eine Dehntechnik mit wechselnder An- und Entspannung der Muskulatur (propriozeptive neuromuskuläre Fazilitation, kurz PNF) als auch dynamisches Dehnen zu deutlicheren und länger anhaltenden Verbesserungen der Beweglichkeit führten als statisches Dehnen allein. Das bedeutet nicht, dass statisches Dehnen im Tanz keinen Platz hat – kurze Einheiten von bis zu etwa 60 Sekunden pro Muskelgruppe innerhalb eines umfassenderen, aktiven Aufwärmprogramms zeigen kaum negative Effekte. Entscheidend ist die Reihenfolge: ein aktives, dynamisches Aufwärmen vor technisch anspruchsvoller oder sprungintensiver Arbeit, längere statische Dehneinheiten eher zu einem separaten Zeitpunkt, etwa am Ende des Trainings.",
+    "en": "Long static stretching routines immediately before class are part of tradition in many dance forms. Reviews show, however, that isolated, longer-held static stretching immediately before explosive movement can briefly reduce force output, while dynamic stretching tends to maintain or even improve performance. A recent study of contemporary dancers found that both a stretching technique alternating muscle contraction and relaxation (proprioceptive neuromuscular facilitation, or PNF) and dynamic stretching led to greater and more lasting improvements in flexibility than static stretching alone. This does not mean static stretching has no place in dance – short bouts of up to about 60 seconds per muscle group within a broader, active warm-up show little negative effect. What matters is sequencing: an active, dynamic warm-up before technically demanding or jump-intensive work, with longer static stretching sessions placed at a separate time, for example at the end of training."
+  },
+  "warumWichtig": {
+    "de": "Weil ein unpassend getimtes Aufwärmen die Vorbereitung des Körpers auf Belastung schwächen kann, ist es CENIT e.V. wichtig, den Unterschied zwischen aktivem Aufwärmen und statischem Dehnen verständlich zu vermitteln. Wer weiß, welches Werkzeug wann sinnvoll ist, kann sowohl die Beweglichkeit langfristig fördern als auch das Verletzungsrisiko bei technisch anspruchsvoller Arbeit reduzieren.",
+    "en": "Because a poorly timed warm-up can weaken the body's preparation for activity, CENIT e.V. considers it important to clearly convey the difference between active warm-up and static stretching. Knowing which tool serves which purpose supports long-term flexibility development while also reducing injury risk during technically demanding work."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine individuelle trainingswissenschaftliche oder medizinische Beratung. Für ein auf dich abgestimmtes Aufwärmprogramm empfehlen wir, sich an tanzmedizinisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for individual training-science or medical advice. For a warm-up program tailored to you, we recommend consulting professionals experienced in dance medicine – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Behm DG, Chaouachi A. A review of the acute effects of static and dynamic stretching on performance. <em>Eur J Appl Physiol.</em> 2011;111(11):2633–2651. <a href=\"https://doi.org/10.1007/s00421-011-1879-2\" rel=\"noopener\" target=\"_blank\">doi.org/10.1007/s00421-011-1879-2</a> · Yan R, Lin G, Peng W et al. Time-dependent effects of acute stretching on power, balance, and flexibility in contemporary dancers: a randomized crossover trial. <em>Sci Rep.</em> 2025;15:15489. <a href=\"https://doi.org/10.1038/s41598-025-00027-0\" rel=\"noopener\" target=\"_blank\">doi.org/10.1038/s41598-025-00027-0</a> · IADMS Resource Paper: The Importance of a Good Warm-Up. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/3598/iadms-resource-paper-the-importance-of-a-good-warm-up.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>",
+    "en": "Behm DG, Chaouachi A. A review of the acute effects of static and dynamic stretching on performance. <em>Eur J Appl Physiol.</em> 2011;111(11):2633–2651. <a href=\"https://doi.org/10.1007/s00421-011-1879-2\" rel=\"noopener\" target=\"_blank\">doi.org/10.1007/s00421-011-1879-2</a> · Yan R, Lin G, Peng W et al. Time-dependent effects of acute stretching on power, balance, and flexibility in contemporary dancers: a randomized crossover trial. <em>Sci Rep.</em> 2025;15:15489. <a href=\"https://doi.org/10.1038/s41598-025-00027-0\" rel=\"noopener\" target=\"_blank\">doi.org/10.1038/s41598-025-00027-0</a> · IADMS Resource Paper: The Importance of a Good Warm-Up. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/3598/iadms-resource-paper-the-importance-of-a-good-warm-up.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "hypermobilitaet"
+    },
+    {
+      "type": "internal",
+      "slug": "belastungssteuerung"
+    }
+  ],
+  "metaDescriptionDe": "Aufwärmen und statisches Dehnen im Tanz: Unterschiede, Timing und Bedeutung für die Präventionsarbeit – Glossar von CENIT e.V.",
+  "slug": "aufwaermen-vs-statisches-dehnen",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

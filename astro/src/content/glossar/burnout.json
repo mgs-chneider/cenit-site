@@ -1,0 +1,63 @@
+{
+  "category": "psychische-gesundheit",
+  "title": {
+    "de": "Burnout",
+    "en": "Burnout"
+  },
+  "subtitle": {
+    "de": "Erschöpfung erkennen, bevor sie chronisch wird",
+    "en": "Recognizing exhaustion before it becomes chronic"
+  },
+  "kurzdefinition": {
+    "de": "Burnout beschreibt einen Zustand emotionaler, körperlicher und geistiger Erschöpfung, der durch anhaltenden, unzureichend bewältigten Stress entsteht. Das klassische Modell unterscheidet drei Kernmerkmale: emotionale Erschöpfung, eine zunehmend distanzierte oder zynische Haltung gegenüber der eigenen Tätigkeit sowie das Gefühl verminderter Wirksamkeit oder Leistungsfähigkeit.",
+    "en": "Burnout describes a state of emotional, physical, and mental exhaustion caused by prolonged, inadequately managed stress. The classic model distinguishes three core features: emotional exhaustion, an increasingly detached or cynical attitude toward one's own activity, and a reduced sense of effectiveness or accomplishment."
+  },
+  "imTanzkontext": {
+    "de": "Eine über 44 Wochen angelegte Studie mit professionellen Ballett-Tänzer:innen fand, dass mehr als ein Viertel der Tänzer:innen im Laufe einer Spielzeit mindestens ein psychisches Gesundheitsproblem berichtete, während gleichzeitig nahezu alle mindestens eine Verletzung und rund zwei Drittel eine Erkrankung angaben – ein Hinweis darauf, wie eng körperliche und psychische Erschöpfung im Tanzalltag miteinander verwoben sind. Als häufige subjektive Ursachen für Verletzungen wurden dabei unter anderem zu hohe Trainingsbelastung, Müdigkeit und unzureichende Erholung genannt. Burnout entwickelt sich im Tanz oft schleichend über Wochen und Monate, begünstigt durch dichte Probenpläne, wenig planbare Erholungsphasen und einen Berufskontext, in dem Erschöpfung gelegentlich als notwendiger Teil des Engagements missverstanden wird. Auch ein von außen getriebener Leistungsanspruch kann das Risiko für Erschöpfung erhöhen.",
+    "en": "A 44-week study of professional ballet dancers found that more than a quarter reported at least one mental health problem over the course of a season, while nearly all reported at least one injury and around two-thirds an illness – a sign of how closely physical and psychological exhaustion are intertwined in everyday dance life. Frequently cited subjective causes of injury included excessive training load, fatigue, and insufficient recovery. Burnout in dance often develops gradually over weeks and months, encouraged by dense rehearsal schedules, little plannable recovery time, and a professional context in which exhaustion is sometimes misunderstood as a necessary part of commitment. Externally driven performance pressure can also increase the risk of exhaustion."
+  },
+  "warumWichtig": {
+    "de": "Weil Burnout und körperliche Überlastung im Tanz eng zusammenhängen, ist es CENIT e.V. wichtig, psychische Erschöpfung mit derselben Ernsthaftigkeit zu behandeln wie eine körperliche Verletzung. Wer frühe Anzeichen wie anhaltende Müdigkeit, Rückzug oder abnehmende Freude am Tanzen erkennt und ernst nimmt, kann rechtzeitig gegensteuern, statt bis zu einem vollständigen Zusammenbruch der Leistungsfähigkeit zu warten.",
+    "en": "Because burnout and physical overload are closely linked in dance, CENIT e.V. considers it important to treat psychological exhaustion with the same seriousness as a physical injury. Recognizing and taking seriously early signs such as persistent fatigue, withdrawal, or diminishing enjoyment of dancing makes it possible to intervene in time, rather than waiting until performance capacity collapses entirely."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine psychologische oder medizinische Beratung. Bei anhaltender Erschöpfung empfehlen wir, sich an tanzmedizinisch oder psychologisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for psychological or medical advice. For persistent exhaustion, we recommend consulting professionals experienced in dance medicine or psychology – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Maslach C, Jackson SE. The measurement of experienced burnout. <em>J Organ Behav.</em> 1981;2(2):99–113. <a href=\"https://doi.org/10.1002/job.4030020205\" rel=\"noopener\" target=\"_blank\">doi.org/10.1002/job.4030020205</a> · Junge A, Hauschild A, Stubbe JH, van Rijn RM. Health Problems of Professional Ballet Dancers: an Analysis of 1627 Weekly Self-Reports on Injuries, Illnesses and Mental Health Problems During One Season. <em>Sports Med Open.</em> 2024;10:80. <a href=\"https://doi.org/10.1186/s40798-024-00753-1\" rel=\"noopener\" target=\"_blank\">doi.org/10.1186/s40798-024-00753-1</a>",
+    "en": "Maslach C, Jackson SE. The measurement of experienced burnout. <em>J Organ Behav.</em> 1981;2(2):99–113. <a href=\"https://doi.org/10.1002/job.4030020205\" rel=\"noopener\" target=\"_blank\">doi.org/10.1002/job.4030020205</a> · Junge A, Hauschild A, Stubbe JH, van Rijn RM. Health Problems of Professional Ballet Dancers: an Analysis of 1627 Weekly Self-Reports on Injuries, Illnesses and Mental Health Problems During One Season. <em>Sports Med Open.</em> 2024;10:80. <a href=\"https://doi.org/10.1186/s40798-024-00753-1\" rel=\"noopener\" target=\"_blank\">doi.org/10.1186/s40798-024-00753-1</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "perfektionismus-im-leistungstanz"
+    },
+    {
+      "type": "internal",
+      "slug": "belastungssteuerung"
+    }
+  ],
+  "metaDescriptionDe": "Burnout im Tanz: Erschöpfung erkennen, bevor sie chronisch wird – Bedeutung für die Präventionsarbeit. Glossar von CENIT e.V.",
+  "slug": "burnout",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

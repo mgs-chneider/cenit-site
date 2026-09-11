@@ -1,0 +1,63 @@
+{
+  "category": "verletzung-praevention",
+  "title": {
+    "de": "Return-to-Dance",
+    "en": "Return-to-Dance"
+  },
+  "subtitle": {
+    "de": "Der Weg zurück – strukturiert statt überstürzt",
+    "en": "The way back – structured, not rushed"
+  },
+  "kurzdefinition": {
+    "de": "Return-to-Dance bezeichnet den strukturierten Prozess der Rückkehr in den vollen Tanzumfang nach einer Verletzung oder Erkrankung. Er umfasst mehrere Stufen, in denen Belastung, Bewegungsumfang und tänzerische Anforderungen schrittweise gesteigert werden, bis die volle Leistungsfähigkeit ohne erhöhtes Risiko für eine erneute Verletzung erreicht ist.",
+    "en": "Return-to-dance refers to the structured process of returning to full dance activity after an injury or illness. It involves several stages in which load, range of motion, and dance-specific demands are gradually increased until full performance capacity is reached without an elevated risk of re-injury."
+  },
+  "imTanzkontext": {
+    "de": "Anders als in vielen Mannschaftssportarten fehlen im Tanz bislang breit validierte, standardisierte Kriterien für die Rückkehr nach einer Verletzung. Tänzer:innen orientieren sich deshalb häufig am subjektiven Gefühl oder an äußerem Druck, etwa einer bevorstehenden Premiere oder einem befristeten Vertrag, statt an objektiven Kriterien. Ein aktueller Vorschlag für ein ballettspezifisches Return-to-Sport-Protokoll aus der Fachliteratur beschreibt zeitliche Orientierungswerte und Stufen für eine schrittweise Belastungssteigerung, um erneuten Verletzungen vorzubeugen. Eine Untersuchung physiotherapeutisch begleiteter Rückkehrprozesse bei typischen Tanzverletzungen zeigte zudem, dass der Grad der wiederhergestellten Funktion von Fall zu Fall stark variiert. Aus tanzmedizinischer Sicht wird empfohlen, verletzte Tänzer:innen, wo medizinisch vertretbar, in angepasster Form am Technikunterricht teilhaben zu lassen, statt sie vollständig aus dem Trainingsalltag herauszunehmen – auch um Bewegungsmuster und psychische Anbindung an das Training zu erhalten.",
+    "en": "Unlike many team sports, dance still lacks broadly validated, standardized criteria for returning after an injury. Dancers therefore often rely on subjective feeling or external pressure, such as an upcoming premiere or a fixed-term contract, rather than objective criteria. A recent proposal for a ballet-specific return-to-sport protocol in the literature describes time-based guidelines and stages for gradually increasing load in order to prevent re-injury. A study of physiotherapy-guided return processes for common dance injuries also found that the degree of restored function varied considerably from case to case. From a dance medicine perspective, it is recommended that injured dancers, where medically appropriate, participate in technique class in an adapted form rather than being fully removed from daily training – partly to preserve movement patterns and psychological connection to training."
+  },
+  "warumWichtig": {
+    "de": "Weil eine verfrühte, ausschließlich terminlich motivierte Rückkehr das Risiko einer erneuten Verletzung deutlich erhöht, setzt sich CENIT e.V. dafür ein, Return-to-Dance als eigenständigen, kriteriengeleiteten Prozess zu verstehen statt als reines Abwarten der Heilungszeit. Wer körperliche, funktionelle und psychische Bereitschaft gemeinsam berücksichtigt, statt sich allein auf Kalender oder Bauchgefühl zu verlassen, schützt Tänzer:innen langfristig besser vor Rückfällen.",
+    "en": "Because a premature return driven purely by scheduling pressure significantly increases the risk of re-injury, CENIT e.V. is committed to understanding return-to-dance as its own criteria-based process rather than simply waiting out a healing period. Considering physical, functional, and psychological readiness together, rather than relying solely on a calendar or gut feeling, better protects dancers from setbacks in the long run."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine individuelle medizinische oder physiotherapeutische Beurteilung. Für die Planung einer Rückkehr nach Verletzung empfehlen wir, sich an tanzmedizinisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for an individual medical or physiotherapy assessment. For planning a return after injury, we recommend consulting professionals experienced in dance medicine – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Glasser L, Frey M, Frias GC et al. Ballet Rehabilitation: A Novel Return to Sport Protocol. <em>Cureus.</em> 2022;14(8):e27896. <a href=\"https://doi.org/10.7759/cureus.27896\" rel=\"noopener\" target=\"_blank\">doi.org/10.7759/cureus.27896</a> · Junck E, Richardson M, Dilgen F, Liederbach M. A Retrospective Assessment of Return to Function in Dance After Physical Therapy for Common Dance Injuries. <em>J Dance Med Sci.</em> 2017;21(4):156–167. <a href=\"https://doi.org/10.12678/1089-313X.21.4.156\" rel=\"noopener\" target=\"_blank\">doi.org/10.12678/1089-313X.21.4.156</a> · IADMS Resource Paper: Technique Class Participation for Injured Dancers. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/2843/iadms-resource-paper-technique-class-participation-for-injured-dancers.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>",
+    "en": "Glasser L, Frey M, Frias GC et al. Ballet Rehabilitation: A Novel Return to Sport Protocol. <em>Cureus.</em> 2022;14(8):e27896. <a href=\"https://doi.org/10.7759/cureus.27896\" rel=\"noopener\" target=\"_blank\">doi.org/10.7759/cureus.27896</a> · Junck E, Richardson M, Dilgen F, Liederbach M. A Retrospective Assessment of Return to Function in Dance After Physical Therapy for Common Dance Injuries. <em>J Dance Med Sci.</em> 2017;21(4):156–167. <a href=\"https://doi.org/10.12678/1089-313X.21.4.156\" rel=\"noopener\" target=\"_blank\">doi.org/10.12678/1089-313X.21.4.156</a> · IADMS Resource Paper: Technique Class Participation for Injured Dancers. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/2843/iadms-resource-paper-technique-class-participation-for-injured-dancers.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "belastungssteuerung"
+    },
+    {
+      "type": "internal",
+      "slug": "burnout"
+    }
+  ],
+  "metaDescriptionDe": "Return-to-Dance: strukturierte Rückkehr nach Verletzung – Bedeutung für die Präventionsarbeit. Glossar von CENIT e.V.",
+  "slug": "return-to-dance",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

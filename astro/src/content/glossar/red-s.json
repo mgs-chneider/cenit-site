@@ -1,0 +1,63 @@
+{
+  "category": "physiologie-gesundheit",
+  "title": {
+    "de": "RED-S",
+    "en": "RED-S"
+  },
+  "subtitle": {
+    "de": "Relative Energy Deficiency in Sport – ein oft unsichtbares Risiko mit weitreichenden Folgen",
+    "en": "Relative Energy Deficiency in Sport – an often invisible risk with far-reaching consequences"
+  },
+  "kurzdefinition": {
+    "de": "RED-S beschreibt einen Zustand, bei dem dem Körper über längere Zeit weniger Energie zur Verfügung steht, als er für Training, Alltag und grundlegende Körperfunktionen benötigt. Das kann durch zu geringe Nahrungsaufnahme im Verhältnis zum Energieverbrauch entstehen – oft unbeabsichtigt, etwa wenn das Training stark zunimmt, ohne dass die Ernährung entsprechend angepasst wird.",
+    "en": "RED-S describes a state in which the body has less energy available over an extended period than it needs for training, daily life, and basic bodily functions. This can result from insufficient food intake relative to energy expenditure – often unintentionally, for example when training increases significantly without a corresponding adjustment in nutrition."
+  },
+  "imTanzkontext": {
+    "de": "Tanz vereint hohen körperlichen Energieverbrauch mit einem ästhetischen Ideal, das in vielen Stilrichtungen – insbesondere im klassischen Ballett – mit Schlankheit assoziiert wird. Das macht Tänzer:innen zu einer Gruppe mit erhöhtem RED-S-Risiko, unabhängig vom Geschlecht. Anders als beim klassischen Verständnis von „Essstörungen\" betrifft RED-S auch Personen ohne bewusste Kalorienrestriktion – etwa wenn Trainingsumfang und Energiezufuhr schlicht nicht zusammenpassen. Mögliche Folgen reichen von eingeschränkter Leistungsfähigkeit über erhöhtes Verletzungsrisiko, insbesondere <a href=\"/glossar/stressfraktur/\">Stressfrakturen</a>, bis zu hormonellen Veränderungen wie Zyklusstörungen.",
+    "en": "Dance combines high physical energy expenditure with an aesthetic ideal that, in many styles – particularly classical ballet – is associated with thinness. This makes dancers a group at elevated risk for RED-S, regardless of gender. Unlike the classic understanding of \"eating disorders,\" RED-S can also affect people without conscious calorie restriction – for example when training volume and energy intake simply don't match up. Possible consequences range from reduced performance to increased injury risk, particularly <a href=\"/glossar/stressfraktur/\">stress fractures</a>, to hormonal changes such as menstrual cycle disruptions."
+  },
+  "warumWichtig": {
+    "de": "Weil RED-S schleichend entsteht und oft erst spät erkannt wird, ist Sensibilisierung ein zentrales Anliegen der Präventionsarbeit von CENIT e.V. Mögliche Hinweise sind anhaltende Erschöpfung trotz ausreichend Schlaf, häufige kleinere Verletzungen, eine ausbleibende oder unregelmäßige <a href=\"/glossar/amenorrhoe/\">Menstruation</a> oder das Gefühl, im Training nicht mehr die gewohnte Leistung abrufen zu können. Solche Anzeichen sollten ernst genommen und fachlich abgeklärt werden, statt sie als „normalen\" Teil des Trainingsalltags abzutun.",
+    "en": "Because RED-S develops gradually and is often recognized late, raising awareness is a central concern of CENIT e.V.'s prevention work. Possible indicators include persistent fatigue despite adequate sleep, frequent minor injuries, absent or irregular <a href=\"/glossar/amenorrhoe/\">menstruation</a>, or a feeling of being unable to perform at the usual level in training. Such signs should be taken seriously and assessed by a professional, rather than dismissed as a \"normal\" part of training life."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine medizinische oder therapeutische Beratung. Bei anhaltenden oder wiederkehrenden Beschwerden empfehlen wir, sich an tanzmedizinisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for medical or therapeutic advice. For persistent or recurring symptoms, we recommend consulting professionals experienced in dance medicine – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Mountjoy M, Ackerman KE, Bailey DM et al. 2023 International Olympic Committee's (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs). <em>Br J Sports Med.</em> 2023;57(17):1073–1097. <a href=\"https://doi.org/10.1136/bjsports-2023-106994\" rel=\"noopener\" target=\"_blank\">doi.org/10.1136/bjsports-2023-106994</a>",
+    "en": "Mountjoy M, Ackerman KE, Bailey DM et al. 2023 International Olympic Committee's (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs). <em>Br J Sports Med.</em> 2023;57(17):1073–1097. <a href=\"https://doi.org/10.1136/bjsports-2023-106994\" rel=\"noopener\" target=\"_blank\">doi.org/10.1136/bjsports-2023-106994</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "amenorrhoe"
+    },
+    {
+      "type": "internal",
+      "slug": "stressfraktur"
+    }
+  ],
+  "metaDescriptionDe": "RED-S im Tanz: unsichtbares Risiko durch Energiemangel und Bedeutung für die Präventionsarbeit – Glossar von CENIT e.V.",
+  "slug": "red-s",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

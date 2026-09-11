@@ -1,0 +1,129 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import { CATEGORY_LABELS } from "../glossar-categories";
+import { localize } from "../i18n";
+
+interface Props {
+  entry: CollectionEntry<"glossar">;
+  locale: "de" | "en";
+}
+
+const { entry, locale } = Astro.props;
+const d = entry.data;
+
+const allEntries = await getCollection("glossar");
+const bySlug = new Map(allEntries.map((e) => [e.data.slug, e.data]));
+
+const categoryLabel = CATEGORY_LABELS[d.category][locale];
+
+const title =
+  locale === "de"
+    ? `${d.title.de} – Glossar Tanzmedizin | CENIT e.V.`
+    : `${d.title.en} – Glossary of Dance Medicine | CENIT e.V.`;
+
+const description =
+  locale === "de" ? d.metaDescriptionDe : `${d.subtitle.en} – Glossary by CENIT e.V.`;
+
+const canonical = `https://cenit-ev.de${localize(`/glossar/${d.slug}/`, locale)}`;
+
+const backLabel = locale === "de" ? "← Glossar" : "← Glossary";
+const backLower = locale === "de" ? "← Zurück zum Glossar" : "← Back to glossary";
+const sectionLabels =
+  locale === "de"
+    ? {
+        kurzdefinition: "Kurzdefinition",
+        imTanzkontext: "Im Tanzkontext",
+        warumWichtig: "Warum das für Prävention wichtig ist",
+        quellen: "Quellen",
+        weiterfuehrend: "Weiterführend",
+      }
+    : {
+        kurzdefinition: "Short Definition",
+        imTanzkontext: "In the Dance Context",
+        warumWichtig: "Why This Matters for Prevention",
+        quellen: "Sources",
+        weiterfuehrend: "Further Reading",
+      };
+---
+
+<Layout title={title} canonical={canonical} description={description} bodyClass="page-einblicke">
+  <section class="cenit-section">
+    <div class="cenit-container">
+      <p style="font-size:13px; color:var(--muted-foreground); margin-bottom:28px;">
+        <a href={localize("/glossar/", locale)} style="color:var(--muted-foreground); text-decoration:none;">{backLabel}</a>
+      </p>
+      <div class="cenit-card cenit-einblicke-panel reveal" style="--reveal-delay:80ms">
+        <p style="font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--cenit-purple); margin:0 0 10px 0; font-weight:600;">
+          {locale === "de" ? "Glossar" : "Glossary"} · {categoryLabel}
+        </p>
+        <h1 class="cenit-h2 cenit-einblicke-title">{d.title[locale]}</h1>
+        <p class="cenit-text-body cenit-einblicke-subtitle" style="color:var(--muted-foreground);">{d.subtitle[locale]}</p>
+        <div style="height:1px; background:rgba(0,0,0,0.07); margin:22px 0;"></div>
+
+        <h2 class="cenit-h3 cenit-einblicke-h" style="margin-top:0;">{sectionLabels.kurzdefinition}</h2>
+        <p class="cenit-text-body cenit-einblicke-body" set:html={d.kurzdefinition[locale]} />
+
+        <h2 class="cenit-h3 cenit-einblicke-h">{sectionLabels.imTanzkontext}</h2>
+        <p class="cenit-text-body cenit-einblicke-body" set:html={d.imTanzkontext[locale]} />
+
+        <h2 class="cenit-h3 cenit-einblicke-h">{sectionLabels.warumWichtig}</h2>
+        <p class="cenit-text-body cenit-einblicke-body" set:html={d.warumWichtig[locale]} />
+
+        <div class="cenit-glossar-note">
+          <p class="cenit-text-body" style="margin:0; font-size:14px; color:var(--muted-foreground);" set:html={d.hinweis[locale]} />
+        </div>
+
+        <h2 class="cenit-h3 cenit-einblicke-h">{sectionLabels.quellen}</h2>
+        <p style="font-size:12px; color:var(--muted-foreground); line-height:1.7; max-width:var(--cenit-axis-760); font-style:italic;" set:html={d.quellen[locale]} />
+
+        <h2 class="cenit-h3 cenit-einblicke-h">{sectionLabels.weiterfuehrend}</h2>
+        <div class="cenit-glossar-links">
+          {d.weiterfuehrend.map((link) => {
+            if (link.type === "external") {
+              return (
+                <a class="cenit-btn" href={link.href} target="_blank" rel="noopener">
+                  {link.label[locale]}
+                  <svg class="cenit-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              );
+            }
+            const target = bySlug.get(link.slug);
+            if (!target) return null;
+            return (
+              <a class="cenit-btn" href={localize(`/glossar/${link.slug}/`, locale)}>
+                {target.title[locale]}
+              </a>
+            );
+          })}
+        </div>
+
+        <p style="margin-top:24px; padding-top:20px; border-top:1px solid rgba(0,0,0,0.06);">
+          <a href={localize("/glossar/", locale)} style="font-size:13px; color:var(--muted-foreground); text-decoration:none;">{backLower}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .cenit-glossar-note{
+    margin: 18px 0 26px 0;
+    padding-left: 18px;
+    border-left: 3px solid var(--cenit-gold);
+    max-width: var(--cenit-axis-760);
+  }
+  .cenit-glossar-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .cenit-arrow-icon{
+    width: 0.85em;
+    height: 0.85em;
+    margin-left: 4px;
+    vertical-align: -0.05em;
+    display: inline-block;
+  }
+</style>

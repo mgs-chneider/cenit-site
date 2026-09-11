@@ -1,0 +1,63 @@
+{
+  "category": "grundlagen",
+  "title": {
+    "de": "Interdisziplinäre Versorgung",
+    "en": "Interdisciplinary Care"
+  },
+  "subtitle": {
+    "de": "Wenn mehrere Fachrichtungen zusammen auf ein Ziel hinarbeiten",
+    "en": "When multiple disciplines work together toward one goal"
+  },
+  "kurzdefinition": {
+    "de": "Interdisziplinäre Versorgung bezeichnet die abgestimmte Zusammenarbeit unterschiedlicher Fachrichtungen – etwa Medizin, Physiotherapie, Sportwissenschaft und Tanzpädagogik – bei der Betreuung von Tänzer:innen. Statt Beschwerden isoliert aus nur einer Perspektive zu betrachten, fließen die Einschätzungen verschiedener Fachpersonen zu einem gemeinsamen Vorgehen zusammen.",
+    "en": "Interdisciplinary care refers to the coordinated collaboration of different disciplines – such as medicine, physiotherapy, sports science, and dance pedagogy – in the care of dancers. Rather than viewing complaints in isolation from a single perspective, the assessments of different professionals are combined into a shared approach."
+  },
+  "imTanzkontext": {
+    "de": "Der tanzende Körper ist gleichzeitig künstlerisches Ausdrucksmittel und hochbelastetes Bewegungsinstrument, weshalb Beschwerden selten aus einer einzigen Ursache entstehen: Eine Tendinopathie kann mit Trainingsbelastung, Technik, Ernährung und psychischem Druck zusammenhängen, eine Fußverletzung betrifft neben der Orthopädie auch den Wiedereinstieg ins Training und die mentale Belastung durch eine erzwungene Pause. Genau deshalb gilt interdisziplinäre Zusammenarbeit in der Tanzmedizin als entscheidend: Ärzt:innen, Physiotherapeut:innen, Ernährungs- und Sportwissenschaftler:innen sowie Tanzpädagog:innen und Choreograf:innen bringen je eigene Perspektiven ein, die sich gegenseitig ergänzen statt ersetzen. Idealerweise arbeiten diese Fachpersonen als gleichberechtigtes Team mit dem Ziel, Tänzer:innen ganzheitlich zu begleiten.",
+    "en": "The dancing body is simultaneously a means of artistic expression and a highly loaded instrument of movement, which is why complaints rarely have a single cause: a tendinopathy can be linked to training load, technique, nutrition, and psychological pressure, while a foot injury affects not only orthopedic care but also the return to training and the mental strain of an enforced break. This is precisely why interdisciplinary collaboration is considered essential in dance medicine: physicians, physiotherapists, nutrition and sports scientists, as well as dance teachers and choreographers each contribute their own perspective, complementing rather than replacing one another. Ideally, these professionals work as an equal team with the goal of supporting dancers holistically."
+  },
+  "warumWichtig": {
+    "de": "Prävention ist per Definition vorausschauend: Sie greift, bevor Verletzungen entstehen – und das gelingt nur, wenn verschiedene Fachperspektiven zusammenwirken, etwa wenn Physiotherapie Bewegungsmuster erkennt, die zur Überlastung führen können, während Sportwissenschaft Belastungsumfang und Erholungszeiten im Blick behält und Medizin Risikofaktoren wie Knochendichte oder hormonelle Veränderungen beurteilt. Interdisziplinäre Versorgung ist damit keine Frage des Luxus, sondern eine strukturelle Voraussetzung für wirksame Prävention. Dass sie bislang vor allem in großen Compagnien und spezialisierten Zentren existiert, ist eine der Lücken, die tanzmedizinisches Engagement wie das von CENIT e.V. adressieren möchte.",
+    "en": "Prevention is by definition forward-looking: it takes effect before injuries occur – and that only works if different professional perspectives interact, for example when physiotherapy identifies movement patterns that can lead to overload, while sports science keeps an eye on training load and recovery time, and medicine assesses risk factors such as bone density or hormonal changes. Interdisciplinary care is therefore not a matter of luxury but a structural prerequisite for effective prevention. The fact that it currently exists mainly in large companies and specialized centers is one of the gaps that dance-medicine efforts such as CENIT e.V.'s aim to address."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine individuelle medizinische oder therapeutische Beratung. Für eine interdisziplinäre Betreuung empfehlen wir, sich an tanzmedizinisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for individual medical or therapeutic advice. For interdisciplinary care, we recommend consulting professionals experienced in dance medicine – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Exner-Grave E. Tanzmedizin. <em>Sportärztezeitung.</em> 2020. <a href=\"https://sportaerztezeitung.com/rubriken/therapie/4122/tanzmedizin/\" rel=\"noopener\" target=\"_blank\">sportaerztezeitung.com</a> · Kompetenzzentrum TanzMedizin, medicos.AufSchalke. <a href=\"https://www.zar.de/medicos-aufschalke/kompetenzzentrum-tanzmedizin\" rel=\"noopener\" target=\"_blank\">zar.de</a>",
+    "en": "Exner-Grave E. Tanzmedizin [Dance Medicine]. <em>Sportärztezeitung.</em> 2020. <a href=\"https://sportaerztezeitung.com/rubriken/therapie/4122/tanzmedizin/\" rel=\"noopener\" target=\"_blank\">sportaerztezeitung.com</a> · Kompetenzzentrum TanzMedizin (Center of Competence for Dance Medicine), medicos.AufSchalke. <a href=\"https://www.zar.de/medicos-aufschalke/kompetenzzentrum-tanzmedizin\" rel=\"noopener\" target=\"_blank\">zar.de</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "tanzmedizin"
+    },
+    {
+      "type": "internal",
+      "slug": "screening"
+    }
+  ],
+  "metaDescriptionDe": "Interdisziplinäre Versorgung im Tanz: Zusammenarbeit verschiedener Fachgruppen und Bedeutung für die Präventionsarbeit – Glossar von CENIT e.V.",
+  "slug": "interdisziplinaere-versorgung",
+  "teaser": {
+    "de": "Interdisziplinäre Versorgung bezeichnet die abgestimmte Zusammenarbeit unterschiedlicher Fachrichtungen – etwa Medizin, Physiotherapie, Sportwissenschaft und Tanzpädagogik – bei der Betreuung von Tänzer:innen. <em>…mehr</em>",
+    "en": "Interdisciplinary care refers to the coordinated collaboration of different disciplines – such as medicine, physiotherapy, sports science, and dance pedagogy – in the care of dancers. <em>…more</em>"
+  }
+}

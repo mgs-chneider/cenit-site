@@ -1,0 +1,63 @@
+{
+  "category": "psychische-gesundheit",
+  "title": {
+    "de": "Performance-Anxiety",
+    "en": "Performance Anxiety"
+  },
+  "subtitle": {
+    "de": "Wenn Aufregung zur belastenden Angst wird",
+    "en": "When excitement turns into burdensome anxiety"
+  },
+  "kurzdefinition": {
+    "de": "Performance-Anxiety, im Deutschen auch als Auftrittsangst bezeichnet, meint eine ausgeprägte Nervosität oder Angst vor und während einer Aufführung, die über die übliche Aufregung vor einem Auftritt hinausgeht. Sie kann sich körperlich, etwa durch Herzrasen, Zittern oder Übelkeit, gedanklich durch Angst vor Fehlern oder Bewertung sowie im Verhalten zeigen.",
+    "en": "Performance anxiety refers to pronounced nervousness or fear before and during a performance that goes beyond the usual excitement of appearing on stage. It can show up physically, for example through a racing heart, trembling, or nausea, mentally through fear of mistakes or judgment, and behaviorally."
+  },
+  "imTanzkontext": {
+    "de": "Ein gewisses Maß an Nervosität vor Vorstellungen, Vorsprechen oder Aufnahmeprüfungen ist normal und kann sogar leistungsförderlich wirken. Davon zu unterscheiden ist eine ausgeprägtere Auftrittsangst, die die Bewegungsqualität, Konzentration oder das Erleben der eigenen Leistung spürbar beeinträchtigt. Eine Studie mit 147 professionellen Tänzer:innen aus Opernhäusern und Staatstheatern fand bei rund 16 Prozent der Frauen und gut 6 Prozent der Männer zumindest mittelgradige Symptome einer generalisierten Angststörung – einer andauernden, nicht nur auf den Auftritt begrenzten Angsterkrankung – deutlich mehr als in der Allgemeinbevölkerung. Da Aufführungen im Tanz oft mit Bewertung durch Publikum, Jury oder Vorgesetzte verbunden sind und Fehler unmittelbar sichtbar werden, kann sich Auftrittsangst hier besonders stark auswirken – bis hin zu erhöhter muskulärer Anspannung, die wiederum das Verletzungsrisiko beeinflussen kann. Ansätze wie mentales Training, Selbstgespräche, Zielsetzung und Entspannungstechniken werden in der Forschung eingesetzt, um Auftrittsangst zu reduzieren, wobei ihre Wirksamkeit je nach Methode und Umsetzung unterschiedlich ausfällt.",
+    "en": "A certain amount of nervousness before performances, auditions, or entrance exams is normal and can even enhance performance. This should be distinguished from more pronounced performance anxiety that noticeably impairs movement quality, concentration, or the experience of one's own performance. A study of 147 professional dancers from opera houses and state theatres found at least moderate symptoms of generalized anxiety disorder – a persistent anxiety condition not limited to performance situations – in around 16 percent of women and just over 6 percent of men, markedly more than in the general population. Because performances in dance are often tied to evaluation by an audience, jury, or superiors, and mistakes become immediately visible, performance anxiety can have a particularly strong effect here – including increased muscular tension, which in turn can influence injury risk. Approaches such as mental training, self-talk, goal setting, and relaxation techniques are used in research to reduce performance anxiety, though their effectiveness varies depending on method and implementation."
+  },
+  "warumWichtig": {
+    "de": "Weil Auftrittsangst im Tanz häufiger auftritt als oft angenommen und sich auch auf die körperliche Sicherheit auswirken kann, ist es CENIT e.V. wichtig, zwischen normaler Aufregung und belastender Angst zu unterscheiden und für Letztere zu sensibilisieren. Wer psychische Belastung genauso ernst nimmt wie körperliche Beschwerden, trägt dazu bei, dass sich Tänzer:innen frühzeitig Unterstützung holen, statt Auftrittsangst stillschweigend hinzunehmen.",
+    "en": "Because performance anxiety occurs more often in dance than is often assumed and can also affect physical safety, CENIT e.V. considers it important to distinguish between normal excitement and burdensome anxiety and to raise awareness of the latter. Taking psychological strain as seriously as physical complaints helps dancers seek support early rather than quietly accepting performance anxiety."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine psychologische oder medizinische Beratung. Bei anhaltender, belastender Auftrittsangst empfehlen wir, sich an tanzmedizinisch oder psychologisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for psychological or medical advice. For persistent, burdensome performance anxiety, we recommend consulting professionals experienced in dance medicine or psychology – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Junge A, Hauschild A. Behind the Curtain: Prevalence of Symptoms of Depression, Generalised Anxiety and Eating Disorders in 147 Professional Dancers from Six Opera Houses or State Theatres. <em>Sports Med Open.</em> 2023;9:92. <a href=\"https://doi.org/10.1186/s40798-023-00638-9\" rel=\"noopener\" target=\"_blank\">doi.org/10.1186/s40798-023-00638-9</a> · Zhang Y, Noh YE, Liu S. Psychological interventions for dancers' mental health: a systematic review. <em>BMC Psychol.</em> 2025;13. <a href=\"https://doi.org/10.1186/s40359-025-03724-7\" rel=\"noopener\" target=\"_blank\">doi.org/10.1186/s40359-025-03724-7</a>",
+    "en": "Junge A, Hauschild A. Behind the Curtain: Prevalence of Symptoms of Depression, Generalised Anxiety and Eating Disorders in 147 Professional Dancers from Six Opera Houses or State Theatres. <em>Sports Med Open.</em> 2023;9:92. <a href=\"https://doi.org/10.1186/s40798-023-00638-9\" rel=\"noopener\" target=\"_blank\">doi.org/10.1186/s40798-023-00638-9</a> · Zhang Y, Noh YE, Liu S. Psychological interventions for dancers' mental health: a systematic review. <em>BMC Psychol.</em> 2025;13. <a href=\"https://doi.org/10.1186/s40359-025-03724-7\" rel=\"noopener\" target=\"_blank\">doi.org/10.1186/s40359-025-03724-7</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "burnout"
+    },
+    {
+      "type": "internal",
+      "slug": "perfektionismus-im-leistungstanz"
+    }
+  ],
+  "metaDescriptionDe": "Performance-Anxiety im Tanz: Auftrittsangst erkennen und einordnen – Bedeutung für die Präventionsarbeit. Glossar von CENIT e.V.",
+  "slug": "performance-anxiety",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

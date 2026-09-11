@@ -1,0 +1,63 @@
+{
+  "category": "verletzung-praevention",
+  "title": {
+    "de": "Hypermobilität",
+    "en": "Hypermobility"
+  },
+  "subtitle": {
+    "de": "Zwischen Gabe und Risiko: außergewöhnliche Beweglichkeit",
+    "en": "Between gift and risk: exceptional range of motion"
+  },
+  "kurzdefinition": {
+    "de": "Hypermobilität bezeichnet ein Bewegungsausmaß in einem oder mehreren Gelenken, das über das für Alter und Geschlecht übliche Maß hinausgeht. Sie wird häufig mit dem Beighton-Score erfasst, einem einfachen klinischen Test, der die Beweglichkeit von Fingern, Ellbogen, Knien und Rumpf prüft. Hypermobilität kann einzelne Gelenke betreffen oder generalisiert im ganzen Körper auftreten und ist teils genetisch bedingt.",
+    "en": "Hypermobility refers to a range of motion in one or more joints that exceeds what is typical for a person's age and sex. It is often assessed using the Beighton score, a simple clinical test examining the mobility of fingers, elbows, knees, and trunk. Hypermobility can affect individual joints or occur throughout the body (generalized), and is partly genetically determined."
+  },
+  "imTanzkontext": {
+    "de": "In vielen Tanzstilen gilt außergewöhnliche Beweglichkeit als ästhetisches Ideal – für eine hohe Beinextension, eine tiefe Rückbeuge oder eine weiche Fußlinie. Hypermobilität wird deshalb oft als „Gabe\" wahrgenommen, ist aber gleichzeitig Gegenstand differenzierter Forschung: Eine Studie mit 185 vorprofessionellen zeitgenössischen Tänzer:innen fand keinen direkten Zusammenhang zwischen generalisierter Hypermobilität und Verletzungshäufigkeit, obwohl beide Phänomene in dieser Gruppe verbreitet waren. Eine fünfjährige Verlaufsstudie mit professionellen Ballett-Tänzer:innen zeigte sogar, dass hypermobile Hüftgelenke nicht häufiger Knorpelschäden oder Hüftschmerzen entwickelten als nicht-hypermobile. Entscheidend scheint weniger das passive Bewegungsausmaß selbst zu sein, sondern ob die zusätzliche Beweglichkeit durch Kraft, Rumpfkontrolle und Bewegungsqualität aktiv abgesichert wird. Bei stark ausgeprägter, generalisierter Hypermobilität mit weiteren Symptomen wird in der Fachliteratur auch das Spektrum hypermobiler Bindegewebsvarianten diskutiert, etwa das hypermobile Ehlers-Danlos-Syndrom, eine erbliche Erkrankung des Bindegewebes.",
+    "en": "In many dance styles, exceptional flexibility is considered an aesthetic ideal – for a high leg extension, a deep backbend, or a soft foot line. Hypermobility is therefore often perceived as a \"gift\", but it is also the subject of nuanced research: a study of 185 pre-professional contemporary dancers found no direct association between generalized hypermobility and injury frequency, even though both were common in this group. A five-year follow-up study of professional ballet dancers even found that hypermobile hips were not more likely to develop cartilage damage or hip pain than non-hypermobile ones. What appears to matter more than passive range of motion itself is whether the additional mobility is actively supported by strength, trunk control, and movement quality. In cases of pronounced generalized hypermobility with additional symptoms, the literature also discusses the broader spectrum of hypermobile connective tissue variants, such as hypermobile Ehlers-Danlos syndrome, an inherited connective tissue disorder."
+  },
+  "warumWichtig": {
+    "de": "Weil Hypermobilität weder pauschal als Gefahr noch als reiner Vorteil verstanden werden sollte, setzt sich CENIT e.V. dafür ein, ein differenziertes Bild zu vermitteln: Beweglichkeit braucht aktive Kontrolle, nicht nur Dehnbarkeit. Wer hypermobile Gelenke kennt und gezielt stabilisiert, statt sie unreflektiert weiter zu fördern, unterstützt eine gesunde, langfristig tragfähige Tanzpraxis.",
+    "en": "Because hypermobility should be understood neither as a blanket risk nor as a pure advantage, CENIT e.V. is committed to conveying a nuanced picture: mobility requires active control, not just extensibility. Recognizing hypermobile joints and stabilizing them deliberately, rather than encouraging them without reflection, supports a healthy and sustainable dance practice."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine medizinische Diagnostik oder Beratung. Bei Verdacht auf ausgeprägte generalisierte Hypermobilität oder Begleitsymptomen empfehlen wir, sich an tanzmedizinisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for medical diagnosis or advice. If pronounced generalized hypermobility or accompanying symptoms are suspected, we recommend consulting professionals experienced in dance medicine – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "van Rijn RM, Stubbe JH. Generalized Joint Hypermobility and Injuries: A Prospective Cohort Study of 185 Pre-Professional Contemporary Dancers. <em>J Clin Med.</em> 2021;10(5):1007. <a href=\"https://doi.org/10.3390/jcm10051007\" rel=\"noopener\" target=\"_blank\">doi.org/10.3390/jcm10051007</a> · Mayes S, Smith P, Stuart D, Cook J. Joint Hypermobility Does Not Increase the Risk of Developing Hip Pain, Cartilage Defects, or Retirement in Professional Ballet Dancers Over 5 Years. <em>Clin J Sport Med.</em> 2020;30(4):341–347. <a href=\"https://doi.org/10.1097/JSM.0000000000000862\" rel=\"noopener\" target=\"_blank\">doi.org/10.1097/JSM.0000000000000862</a> · Malek S, Reinhold EJ, Pearce GS. The Beighton Score as a measure of generalised joint hypermobility. <em>Rheumatol Int.</em> 2021;41(10):1707–1716. <a href=\"https://doi.org/10.1007/s00296-020-04773-w\" rel=\"noopener\" target=\"_blank\">doi.org/10.1007/s00296-020-04773-w</a>",
+    "en": "van Rijn RM, Stubbe JH. Generalized Joint Hypermobility and Injuries: A Prospective Cohort Study of 185 Pre-Professional Contemporary Dancers. <em>J Clin Med.</em> 2021;10(5):1007. <a href=\"https://doi.org/10.3390/jcm10051007\" rel=\"noopener\" target=\"_blank\">doi.org/10.3390/jcm10051007</a> · Mayes S, Smith P, Stuart D, Cook J. Joint Hypermobility Does Not Increase the Risk of Developing Hip Pain, Cartilage Defects, or Retirement in Professional Ballet Dancers Over 5 Years. <em>Clin J Sport Med.</em> 2020;30(4):341–347. <a href=\"https://doi.org/10.1097/JSM.0000000000000862\" rel=\"noopener\" target=\"_blank\">doi.org/10.1097/JSM.0000000000000862</a> · Malek S, Reinhold EJ, Pearce GS. The Beighton Score as a measure of generalised joint hypermobility. <em>Rheumatol Int.</em> 2021;41(10):1707–1716. <a href=\"https://doi.org/10.1007/s00296-020-04773-w\" rel=\"noopener\" target=\"_blank\">doi.org/10.1007/s00296-020-04773-w</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "hueft-impingement"
+    },
+    {
+      "type": "internal",
+      "slug": "bandscheibenproblematik"
+    }
+  ],
+  "metaDescriptionDe": "Hypermobilität im Tanz: Beweglichkeit zwischen Gabe und Risiko – Bedeutung für die Präventionsarbeit. Glossar von CENIT e.V.",
+  "slug": "hypermobilitaet",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

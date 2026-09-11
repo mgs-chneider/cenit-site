@@ -1,0 +1,63 @@
+{
+  "category": "verletzung-praevention",
+  "title": {
+    "de": "Bandscheibenproblematik",
+    "en": "Disc-Related Issues"
+  },
+  "subtitle": {
+    "de": "Wenn der Puffer zwischen den Wirbeln unter Druck gerät",
+    "en": "When the cushion between the vertebrae comes under pressure"
+  },
+  "kurzdefinition": {
+    "de": "Als Bandscheibenproblematik werden Veränderungen der knorpeligen Puffer zwischen den Wirbelkörpern bezeichnet – von altersbedingter Höhenminderung über Vorwölbungen (Protrusion) bis hin zum Bandscheibenvorfall, bei dem Gewebe aus der äußeren, faserigen Hülle der Bandscheibe austritt. Nicht jede in der Bildgebung sichtbare Veränderung geht mit Beschwerden einher: Viele Menschen ohne Rückenschmerzen zeigen ähnliche Befunde.",
+    "en": "Disc-related issues refer to changes in the cartilaginous cushions between the vertebral bodies – ranging from age-related loss of disc height to bulging (protrusion) and disc herniation, where tissue escapes through the disc's outer fibrous casing. Not every change visible on imaging is accompanied by symptoms: many people without back pain show similar findings."
+  },
+  "imTanzkontext": {
+    "de": "Rückenschmerz gehört zu den häufigsten Beschwerdebildern im Tanz: Eine systematische Übersichtsarbeit fand eine Jahresprävalenz von rund 73 Prozent bei Tänzer:innen. Bewegungen wie die tiefe Rückbeuge (Cambré), die hohe Arabeske oder wiederholte Kombinationen aus Rumpfbeugung und -rotation im zeitgenössischen Tanz belasten die Lendenwirbelsäule und die angrenzenden Bandscheiben besonders. Bei Jugendlichen wird zudem eine bis zu vierfach erhöhte Häufigkeit von Stressreaktionen im Bereich der Wirbelsäule (medizinisch Spondylolyse genannt) beschrieben, die oft mit forcierter Hyperextension bei unzureichender Rumpfkontrolle in Zusammenhang gebracht wird. Interessant ist, dass Studien mit bildgebenden Verfahren bei erwachsenen Tänzerinnen keine erhöhte Bandscheibendegeneration im Vergleich zu Nicht-Tänzerinnen zeigten – ein Hinweis darauf, dass Technik, Rumpfstabilität und individuelle Bewegungsqualität eine größere Rolle spielen als die tänzerische Belastung an sich. Rückenschmerz im Tanz entsteht daher selten durch ein einzelnes Ereignis, sondern meist durch ein Zusammenspiel aus Technik, Trainingsumfang und muskulärer Kontrolle.",
+    "en": "Back pain is one of the most common complaints in dance: a systematic review found a yearly prevalence of around 73 percent among dancers. Movements such as the deep backbend (cambré), a high arabesque, or repeated combinations of trunk flexion and rotation in contemporary dance place particular strain on the lumbar spine and its discs. In adolescents, a rate of stress reactions in the spine (medically known as spondylolysis) up to four times higher than in the general population has also been described, often linked to forced hyperextension combined with insufficient trunk control. Interestingly, imaging studies in adult dancers have not shown greater disc degeneration compared with non-dancers – suggesting that technique, core stability, and individual movement quality play a larger role than dance loading itself. Back pain in dance therefore rarely results from a single event, but more often from an interplay of technique, training volume, and muscular control."
+  },
+  "warumWichtig": {
+    "de": "Angesichts der hohen Prävalenz von Rückenbeschwerden im Tanz ist die frühzeitige Förderung von Rumpfkontrolle, sauberer Technik und angepasster Belastungssteuerung ein wichtiger Baustein der Präventionsarbeit von CENIT e.V. Wer weiß, wie Hyperextension sicher unterstützt werden kann, statt sie zu forcieren, trägt aktiv dazu bei, langfristige Rückenprobleme zu vermeiden.",
+    "en": "Given the high prevalence of back complaints in dance, early attention to core control, clean technique, and adapted load management is an important part of CENIT e.V.'s prevention work. Understanding how hyperextension can be supported safely, rather than forced, actively helps to avoid long-term back problems."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine medizinische Diagnostik oder Beratung. Bei anhaltendem oder ausstrahlendem Rückenschmerz empfehlen wir, sich an tanzmedizinisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for medical diagnosis or advice. For persistent or radiating back pain, we recommend consulting professionals experienced in dance medicine – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Swain CTV, Bradshaw EJ, Ekegren CL, Whyte DG. The Epidemiology of Low Back Pain and Injury in Dance: A Systematic Review. <em>J Orthop Sports Phys Ther.</em> 2019;49(4):239–252. <a href=\"https://doi.org/10.2519/jospt.2019.8609\" rel=\"noopener\" target=\"_blank\">doi.org/10.2519/jospt.2019.8609</a> · Capel A, Medina FS, Medina D, Gómez S. Magnetic Resonance Study of Lumbar Disks in Female Dancers. <em>Am J Sports Med.</em> 2009;37(6):1208–1213. <a href=\"https://doi.org/10.1177/0363546508330128\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/0363546508330128</a> · Seitsalo S et al. Spondylolysis in Ballet Dancers. <em>J Dance Med Sci.</em> 1997;1(2):51–54. <a href=\"https://doi.org/10.1177/1089313X9700100204\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/1089313X9700100204</a>",
+    "en": "Swain CTV, Bradshaw EJ, Ekegren CL, Whyte DG. The Epidemiology of Low Back Pain and Injury in Dance: A Systematic Review. <em>J Orthop Sports Phys Ther.</em> 2019;49(4):239–252. <a href=\"https://doi.org/10.2519/jospt.2019.8609\" rel=\"noopener\" target=\"_blank\">doi.org/10.2519/jospt.2019.8609</a> · Capel A, Medina FS, Medina D, Gómez S. Magnetic Resonance Study of Lumbar Disks in Female Dancers. <em>Am J Sports Med.</em> 2009;37(6):1208–1213. <a href=\"https://doi.org/10.1177/0363546508330128\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/0363546508330128</a> · Seitsalo S et al. Spondylolysis in Ballet Dancers. <em>J Dance Med Sci.</em> 1997;1(2):51–54. <a href=\"https://doi.org/10.1177/1089313X9700100204\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/1089313X9700100204</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "hypermobilitaet"
+    },
+    {
+      "type": "internal",
+      "slug": "stressfraktur"
+    }
+  ],
+  "metaDescriptionDe": "Bandscheibenproblematik im Tanz: Rückenschmerz, Hyperextension und Bedeutung für die Präventionsarbeit – Glossar von CENIT e.V.",
+  "slug": "bandscheibenproblematik",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

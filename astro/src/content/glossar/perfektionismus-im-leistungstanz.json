@@ -1,0 +1,63 @@
+{
+  "category": "psychische-gesundheit",
+  "title": {
+    "de": "Perfektionismus im Leistungstanz",
+    "en": "Perfectionism in Competitive Dance"
+  },
+  "subtitle": {
+    "de": "Zwischen hohem Anspruch und belastendem Druck",
+    "en": "Between high standards and burdensome pressure"
+  },
+  "kurzdefinition": {
+    "de": "Perfektionismus bezeichnet das Streben nach fehlerfreier Leistung, verbunden mit hohen persönlichen Ansprüchen und einer kritischen Selbstbewertung. In der Forschung wird zwischen einem eher konstruktiven Streben nach hoher Qualität und einer belastenden Form unterschieden, bei der Fehler als inakzeptabel erlebt werden und der eigene Wert stark an Leistung geknüpft ist.",
+    "en": "Perfectionism refers to the pursuit of flawless performance, combined with high personal standards and critical self-evaluation. Research distinguishes between a more constructive striving for high quality and a burdensome form in which mistakes feel unacceptable and self-worth becomes strongly tied to performance."
+  },
+  "imTanzkontext": {
+    "de": "Tanz verlangt ein hohes Maß an Detailgenauigkeit und wird häufig in einem Umfeld unterrichtet, das ständige Korrektur und Vergleich mit einem Ideal einschließt – ein Nährboden für perfektionistische Denkmuster. Studien mit Tänzer:innen unterscheiden dabei zwischen einem eher persönlichen Leistungsanspruch, der mit psychischem Wohlbefinden einhergehen kann, und einer stärker von außen geprägten Form, bei der die wahrgenommenen Erwartungen von Lehrenden, Eltern oder dem Umfeld im Vordergrund stehen und die mit Burnout und geringerer Vitalität in Verbindung gebracht wird. Die Art der Motivation scheint dabei eine vermittelnde Rolle zu spielen: Wird Tanz aus eigenem Antrieb betrieben, geht Perfektionismus seltener mit Erschöpfung einher, als wenn er stark von äußerem Druck getragen wird. Fachliteratur unterscheidet in diesem Zusammenhang zwischen dem „Streben nach Exzellenz\", das motivierend wirken kann, und dem „Streben nach Perfektion\", das eher entmutigend wirkt und mit Angst, depressiver Verstimmung oder gestörtem Essverhalten in Verbindung gebracht wurde.",
+    "en": "Dance demands a high degree of precision and is often taught in an environment involving constant correction and comparison to an ideal – fertile ground for perfectionistic thinking. Studies with dancers distinguish between a more personal standard of achievement, which can coexist with psychological well-being, and a more externally driven form, centered on perceived expectations from teachers, parents, or the wider environment, which has been linked to burnout and lower vitality. The type of motivation appears to play a mediating role: when dance is pursued from internal drive, perfectionism is less often accompanied by exhaustion than when it is strongly carried by external pressure. The literature distinguishes in this context between \"striving for excellence\", which can be motivating, and \"striving for perfection\", which tends to be discouraging and has been linked to anxiety, low mood, or disordered eating."
+  },
+  "warumWichtig": {
+    "de": "Weil belastender Perfektionismus ein anerkannter Risikofaktor für Burnout und weitere psychische Belastungen im Tanz ist, setzt sich CENIT e.V. dafür ein, Unterrichts- und Feedbackkultur so zu gestalten, dass hohe Ansprüche nicht zulasten des psychischen Wohlbefindens gehen. Wer den Unterschied zwischen förderlichem Anspruch und belastendem Perfektionismus kennt, kann frühzeitig gegensteuern, statt Erschöpfung als selbstverständlichen Preis für hohe Leistung hinzunehmen.",
+    "en": "Because burdensome perfectionism is a recognized risk factor for burnout and further psychological strain in dance, CENIT e.V. is committed to shaping teaching and feedback culture so that high standards do not come at the expense of psychological well-being. Knowing the difference between constructive striving and burdensome perfectionism makes it possible to intervene early, rather than accepting exhaustion as an inevitable price of high achievement."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine psychologische oder medizinische Beratung. Bei anhaltender Erschöpfung oder belastendem Leistungsdruck empfehlen wir, sich an tanzmedizinisch oder psychologisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for psychological or medical advice. For persistent exhaustion or burdensome performance pressure, we recommend consulting professionals experienced in dance medicine or psychology – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Atienza FL, Castillo I, Appleton PR, Balaguer I. Examining the Mediating Role of Motivation in the Relationship between Multidimensional Perfectionism and Well- and Ill-Being in Vocational Dancers. <em>Int J Environ Res Public Health.</em> 2020;17(14):4945. <a href=\"https://doi.org/10.3390/ijerph17144945\" rel=\"noopener\" target=\"_blank\">doi.org/10.3390/ijerph17144945</a> · Nordin-Bates S. IADMS Resource Paper: Perfectionism. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/5910/iadms-resource-paper-perfectionism.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>",
+    "en": "Atienza FL, Castillo I, Appleton PR, Balaguer I. Examining the Mediating Role of Motivation in the Relationship between Multidimensional Perfectionism and Well- and Ill-Being in Vocational Dancers. <em>Int J Environ Res Public Health.</em> 2020;17(14):4945. <a href=\"https://doi.org/10.3390/ijerph17144945\" rel=\"noopener\" target=\"_blank\">doi.org/10.3390/ijerph17144945</a> · Nordin-Bates S. IADMS Resource Paper: Perfectionism. International Association for Dance Medicine & Science. <a href=\"https://iadms.org/media/5910/iadms-resource-paper-perfectionism.pdf\" rel=\"noopener\" target=\"_blank\">iadms.org</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "burnout"
+    },
+    {
+      "type": "internal",
+      "slug": "koerperbild"
+    }
+  ],
+  "metaDescriptionDe": "Perfektionismus im Leistungstanz: zwischen Anspruch und Belastung – Bedeutung für die Präventionsarbeit. Glossar von CENIT e.V.",
+  "slug": "perfektionismus-im-leistungstanz",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

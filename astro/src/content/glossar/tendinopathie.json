@@ -1,0 +1,63 @@
+{
+  "category": "verletzung-praevention",
+  "title": {
+    "de": "Tendinopathie",
+    "en": "Tendinopathy"
+  },
+  "subtitle": {
+    "de": "Eine der häufigsten Überlastungsreaktionen im Tanz – und warum sie oft unterschätzt wird",
+    "en": "One of the most common overuse reactions in dance – and why it's often underestimated"
+  },
+  "kurzdefinition": {
+    "de": "Tendinopathie bezeichnet eine schmerzhafte Reizung oder strukturelle Veränderung einer Sehne, meist durch wiederholte Überlastung statt durch ein einzelnes Trauma. Anders als eine akute Sehnenentzündung entwickelt sich eine Tendinopathie häufig schleichend über Wochen oder Monate.",
+    "en": "Tendinopathy refers to a painful irritation or structural change in a tendon, usually caused by repeated overload rather than a single traumatic event. Unlike acute tendon inflammation, tendinopathy often develops gradually over weeks or months."
+  },
+  "imTanzkontext": {
+    "de": "Im Tanz sind vor allem die Achillessehne (bei Sprüngen und Relevé-Arbeit), die Patellasehne (bei Pliés und Landungen) und die Hüftbeugersehne (bei hohen Beinhebungen und Grand Battements) betroffen. Tänzer:innen sind besonders gefährdet, weil hohe Wiederholungszahlen, wenig Erholungszeit zwischen Trainingseinheiten und der ästhetische Anspruch an Bewegungsqualität oft zusammentreffen.",
+    "en": "In dance, the Achilles tendon (jumps and relevé work), the patellar tendon (pliés and landings), and the hip flexor tendon (high leg lifts and grand battements) are most commonly affected. Dancers are particularly at risk because high repetition counts, limited recovery time between sessions, and the aesthetic demands on movement quality often coincide."
+  },
+  "warumWichtig": {
+    "de": "Weil sich eine Tendinopathie schleichend entwickelt, ist frühzeitiges Erkennen ein zentraler Baustein der Präventionsarbeit von CENIT e.V. Ein möglicher erster Hinweis sind belastungsabhängige Schmerzen, die zu Trainingsbeginn auftreten, sich nach dem Aufwärmen bessern und danach zurückkehren – ein Muster, das fachlich abgeklärt werden sollte, statt es zu ignorieren. Aktuelle Übersichtsarbeiten zu Präventionsstrategien im Tanz zeigen zudem, dass gezieltes Kraft- und Konditionstraining, statt reinem Stilllegen, heute als sinnvoller Ansatz bei Sehnenproblemen gilt.",
+    "en": "Because tendinopathy develops gradually, early recognition is a central part of CENIT e.V.'s prevention work. One possible early sign is load-dependent pain that appears at the start of training, improves after warming up, and then returns – a pattern that should be assessed by a professional rather than ignored. Current reviews of prevention strategies in dance also show that targeted strength and conditioning, rather than simple rest, is now considered a sensible approach to tendon issues."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine medizinische oder therapeutische Beratung. Bei anhaltenden oder wiederkehrenden Beschwerden empfehlen wir, sich an tanzmedizinisch erfahrene Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for medical or therapeutic advice. For persistent or recurring symptoms, we recommend consulting professionals experienced in dance medicine – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Critchley ML, Davis I, Zhang X et al. Systematic Review of Dance-Specific Injury Prevention Strategies. <em>J Dance Med Sci.</em> 2025. <a href=\"https://doi.org/10.1177/1089313X251314987\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/1089313X251314987</a> · Lei Y, Wang Y, Tang X. Dance Injuries: Epidemiology, Mechanisms, and Prevention. <em>Curr Phys Med Rehabil Rep.</em> 2025. <a href=\"https://doi.org/10.1007/s40141-025-00523-4\" rel=\"noopener\" target=\"_blank\">doi.org/10.1007/s40141-025-00523-4</a>",
+    "en": "Critchley ML, Davis I, Zhang X et al. Systematic Review of Dance-Specific Injury Prevention Strategies. <em>J Dance Med Sci.</em> 2025. <a href=\"https://doi.org/10.1177/1089313X251314987\" rel=\"noopener\" target=\"_blank\">doi.org/10.1177/1089313X251314987</a> · Lei Y, Wang Y, Tang X. Dance Injuries: Epidemiology, Mechanisms, and Prevention. <em>Curr Phys Med Rehabil Rep.</em> 2025. <a href=\"https://doi.org/10.1007/s40141-025-00523-4\" rel=\"noopener\" target=\"_blank\">doi.org/10.1007/s40141-025-00523-4</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "belastungssteuerung"
+    },
+    {
+      "type": "internal",
+      "slug": "interdisziplinaere-versorgung"
+    }
+  ],
+  "metaDescriptionDe": "Tendinopathie im Tanz: schleichende Sehnenüberlastung erkennen und Bedeutung für die Präventionsarbeit – Glossar von CENIT e.V.",
+  "slug": "tendinopathie",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

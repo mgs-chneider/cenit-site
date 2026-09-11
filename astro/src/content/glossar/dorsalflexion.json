@@ -1,0 +1,63 @@
+{
+  "category": "anatomie-technik",
+  "title": {
+    "de": "Dorsalflexion",
+    "en": "Dorsiflexion"
+  },
+  "subtitle": {
+    "de": "Die oft unterschätzte Voraussetzung für einen tiefen Plié",
+    "en": "The often underestimated prerequisite for a deep plié"
+  },
+  "kurzdefinition": {
+    "de": "Dorsalflexion bezeichnet die Bewegung des Fußes in Richtung Schienbein, bei der sich der Winkel zwischen Fußrücken und Unterschenkel verkleinert – das Gegenstück zur Plantarflexion. Ausreichende Dorsalflexion im oberen Sprunggelenk ist Voraussetzung für viele alltägliche wie tänzerische Bewegungen.",
+    "en": "Dorsiflexion refers to the movement of the foot toward the shin, reducing the angle between the top of the foot and the lower leg – the counterpart to plantarflexion. Sufficient dorsiflexion in the ankle joint is a prerequisite for many everyday and dance-specific movements."
+  },
+  "imTanzkontext": {
+    "de": "Im Ballett ist ausreichende Dorsalflexion vor allem für die Tiefe von Demi-Plié und Grand Plié entscheidend, da sich das Knie beim Beugen weit nach vorn über die Zehenspitzen hinausbewegen muss. Eine Studie mit professionellen Ballett-Tänzerinnen fand, dass mit zunehmendem technischem Niveau die Plantarflexion – etwa für die Spitzen- oder Relevé-Position – tendenziell zunahm, während die Dorsalflexion eher abnahm, was auf eine Art Kompromiss zwischen den beiden Bewegungsrichtungen hindeutet. Reicht die Dorsalflexion im Sprunggelenk für einen tiefen Plié nicht aus, wird die fehlende Tiefe häufig andernorts kompensiert: durch ein Abheben der Ferse, eine Einwärtsdrehung des Knies oder eine verstärkte Krümmung der unteren Wirbelsäule. Aus dem allgemeinen Sport ist zudem bekannt, dass eine eingeschränkte Dorsalflexion mit einer steiferen Landetechnik und höheren Belastungsspitzen beim Landen aus dem Sprung einhergehen kann.",
+    "en": "In ballet, sufficient dorsiflexion is particularly important for the depth of demi-plié and grand plié, since the knee must track forward past the toes as it bends. A study of professional ballet dancers found that as technical level increased, plantarflexion – needed for pointe or relevé, for example – tended to increase, while dorsiflexion tended to decrease, suggesting a kind of trade-off between the two directions of movement. If ankle dorsiflexion is insufficient for a deep plié, the missing depth is often compensated for elsewhere: by lifting the heel, rotating the knee inward, or increasing curvature of the lower spine. General sports research has also shown that limited dorsiflexion can be associated with a stiffer landing technique and higher peak loads when landing from a jump."
+  },
+  "warumWichtig": {
+    "de": "Weil eine unzureichende Dorsalflexion häufig durch Ausweichbewegungen an Knie, Ferse oder unterer Wirbelsäule kompensiert wird, ist es CENIT e.V. wichtig, auf gezieltes Beweglichkeitstraining des Sprunggelenks hinzuweisen. Wer typische Kompensationsmuster wie ein Abheben der Ferse im Plié früh erkennt, kann die zugrunde liegende Bewegungseinschränkung angehen, statt langfristig Knie oder Rücken zusätzlich zu belasten.",
+    "en": "Because insufficient dorsiflexion is often compensated for through avoidance movements at the knee, heel, or lower spine, CENIT e.V. considers it important to highlight the value of targeted ankle mobility training. Recognizing typical compensation patterns, such as lifting the heel during plié, early on makes it possible to address the underlying mobility restriction rather than placing additional long-term strain on the knee or back."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext und ersetzt keine individuelle Beurteilung durch tanzmedizinisch erfahrene Fachpersonen. Für eine Einschätzung der Sprunggelenkbeweglichkeit empfehlen wir, sich an entsprechende Fachpersonen zu wenden – etwa über die Vermittlung von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> oder die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context and is not a substitute for an individual assessment by professionals experienced in dance medicine. For an assessment of ankle mobility, we recommend consulting appropriate professionals – for example through <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med's</a> referral network or the resources provided by <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Russell JA, Shave RM, Kruse DW, Koutedakis Y, Wyon MA. Ankle and foot contributions to extreme plantar- and dorsiflexion in female ballet dancers. <em>Foot Ankle Int.</em> 2011;32(2):183–188. <a href=\"https://doi.org/10.3113/FAI.2011.0183\" rel=\"noopener\" target=\"_blank\">doi.org/10.3113/FAI.2011.0183</a> · Fong CM, Blackburn JT, Norcross MF, McGrath M, Padua DA. Ankle-dorsiflexion range of motion and landing biomechanics. <em>J Athl Train.</em> 2011;46(1):5–10. <a href=\"https://doi.org/10.4085/1062-6050-46.1.5\" rel=\"noopener\" target=\"_blank\">doi.org/10.4085/1062-6050-46.1.5</a>",
+    "en": "Russell JA, Shave RM, Kruse DW, Koutedakis Y, Wyon MA. Ankle and foot contributions to extreme plantar- and dorsiflexion in female ballet dancers. <em>Foot Ankle Int.</em> 2011;32(2):183–188. <a href=\"https://doi.org/10.3113/FAI.2011.0183\" rel=\"noopener\" target=\"_blank\">doi.org/10.3113/FAI.2011.0183</a> · Fong CM, Blackburn JT, Norcross MF, McGrath M, Padua DA. Ankle-dorsiflexion range of motion and landing biomechanics. <em>J Athl Train.</em> 2011;46(1):5–10. <a href=\"https://doi.org/10.4085/1062-6050-46.1.5\" rel=\"noopener\" target=\"_blank\">doi.org/10.4085/1062-6050-46.1.5</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "en-pointe-spitzentanz-reife"
+    },
+    {
+      "type": "internal",
+      "slug": "hyperextension-knie"
+    }
+  ],
+  "metaDescriptionDe": "Dorsalflexion im Tanz: Sprunggelenkbeweglichkeit für Plié und Landung – Bedeutung für die Präventionsarbeit. Glossar von CENIT e.V.",
+  "slug": "dorsalflexion",
+  "teaser": {
+    "de": "",
+    "en": ""
+  }
+}

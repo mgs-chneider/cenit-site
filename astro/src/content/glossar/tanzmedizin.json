@@ -1,0 +1,63 @@
+{
+  "category": "grundlagen",
+  "title": {
+    "de": "Tanzmedizin",
+    "en": "Dance Medicine"
+  },
+  "subtitle": {
+    "de": "Ein Fachgebiet an der Schnittstelle von Kunst, Körper und Gesundheitswissenschaft",
+    "en": "A field at the intersection of art, the body, and health science"
+  },
+  "kurzdefinition": {
+    "de": "Tanzmedizin ist ein spezialisiertes, interdisziplinäres Fachgebiet, das sich mit der Gesundheit, der Prävention von Verletzungen und der medizinischen Versorgung von Tänzer:innen aller Stile, Altersgruppen und Leistungsniveaus befasst. Sie verbindet Erkenntnisse aus Orthopädie, Sportmedizin, Physiotherapie, Psychologie und Ernährungswissenschaft mit einem spezifischen Verständnis der körperlichen und künstlerischen Anforderungen des Tanzes.",
+    "en": "Dance medicine is a specialised, interdisciplinary field concerned with the health, injury prevention, and medical care of dancers across all styles, age groups, and performance levels. It combines knowledge from orthopaedics, sports medicine, physiotherapy, psychology, and nutritional science with a specific understanding of the physical and artistic demands of dance."
+  },
+  "imTanzkontext": {
+    "de": "Tanz ist in der öffentlichen Wahrnehmung oft mit Leichtigkeit verbunden, tatsächlich aber eine Form intensiver körperlicher Arbeit: Professionelle Tänzer:innen gelten als stark verletzungsbelastet, und muskuloskelettale Beschwerden sind in allen Tanzrichtungen verbreitet. Gleichzeitig erhalten viele Tanzende – insbesondere im Amateurbereich, in Schulen und Vereinen – keine spezifische medizinische Begleitung. Genau hier setzt Tanzmedizin an: Sie beschäftigt sich nicht nur mit der Behandlung nach Verletzungen, sondern vor allem mit Prävention, Aufklärung und der Frage, wie gesundes Tanzen strukturell verankert werden kann – über einzelne Institutionen hinaus und für alle Tanzenden, unabhängig von Leistungsniveau oder Milieu.",
+    "en": "Dance is often perceived as effortless, yet it constitutes a form of intensive physical work: professional dancers are considered highly injury-prone, and musculoskeletal complaints are widespread across all dance styles. At the same time, many dancers – particularly in amateur settings, schools, and clubs – receive no specific medical support. This is precisely where dance medicine comes in: it is concerned not only with treatment after injury but above all with prevention, education, and the question of how healthy dance practice can be structurally embedded – beyond individual institutions and for all dancers, regardless of performance level or background."
+  },
+  "warumWichtig": {
+    "de": "Tanzmedizin als Fachgebiet ist die Grundlage, auf der Prävention im Tanz aufbaut. Das Wissen darum, wie Tanz den Körper belastet, welche Risikofaktoren existieren und welche Maßnahmen wirksam sind, entsteht in der tanzmedizinischen Forschung und Praxis. Prävention ohne tanzmedizinisches Fundament bleibt allgemein – mit ihm wird sie tänzerspezifisch, evidenzbasiert und damit wirkungsvoller.",
+    "en": "Dance medicine as a field is the foundation on which prevention in dance is built. Knowledge of how dance loads the body, which risk factors exist, and which measures are effective emerges from dance medicine research and practice. Prevention without a dance medicine foundation remains generic – with it, it becomes dancer-specific, evidence-based, and therefore more effective."
+  },
+  "hinweis": {
+    "de": "Dieser Eintrag dient der Wissensvermittlung im Präventionskontext. Für weiterführende Informationen zu Aus- und Fortbildung in der Tanzmedizin sowie zur Vermittlung von Fachpersonal empfehlen wir das Angebot von <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> und die Ressourcen der <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>.",
+    "en": "This entry serves to convey knowledge in a prevention context. For further information on training and education in dance medicine and professional referrals, we recommend the resources of <a href=\"https://tamed.eu\" rel=\"noopener\" target=\"_blank\">ta.med</a> and the <a href=\"https://iadms.org\" rel=\"noopener\" target=\"_blank\">IADMS</a>."
+  },
+  "quellen": {
+    "de": "Russell JA. Preventing Dance Injuries: Current Perspectives. <em>Open Access J Sports Med.</em> 2013;4:199–210. <a href=\"https://doi.org/10.2147/OAJSM.S36529\" rel=\"noopener\" target=\"_blank\">doi.org/10.2147/OAJSM.S36529</a> · Exner-Grave E. Tanzmedizin. <em>Sportärztezeitung.</em> 2020. <a href=\"https://sportaerztezeitung.com/rubriken/therapie/4122/tanzmedizin/\" rel=\"noopener\" target=\"_blank\">sportaerztezeitung.com</a>",
+    "en": "Russell JA. Preventing Dance Injuries: Current Perspectives. <em>Open Access J Sports Med.</em> 2013;4:199–210. <a href=\"https://doi.org/10.2147/OAJSM.S36529\" rel=\"noopener\" target=\"_blank\">doi.org/10.2147/OAJSM.S36529</a> · Exner-Grave E. Tanzmedizin [Dance Medicine, German-language overview]. <em>Sportärztezeitung.</em> 2020. <a href=\"https://sportaerztezeitung.com/rubriken/therapie/4122/tanzmedizin/\" rel=\"noopener\" target=\"_blank\">sportaerztezeitung.com</a>"
+  },
+  "weiterfuehrend": [
+    {
+      "type": "external",
+      "href": "https://tamed.eu",
+      "label": {
+        "de": "ta.med",
+        "en": "ta.med"
+      }
+    },
+    {
+      "type": "external",
+      "href": "https://iadms.org",
+      "label": {
+        "de": "IADMS",
+        "en": "IADMS"
+      }
+    },
+    {
+      "type": "internal",
+      "slug": "interdisziplinaere-versorgung"
+    },
+    {
+      "type": "internal",
+      "slug": "screening"
+    }
+  ],
+  "metaDescriptionDe": "Tanzmedizin als Fachgebiet: was sie umfasst und warum sie das Fundament der Präventionsarbeit ist – Glossar von CENIT e.V.",
+  "slug": "tanzmedizin",
+  "teaser": {
+    "de": "Tanzmedizin ist ein spezialisiertes, interdisziplinäres Fachgebiet, das sich mit der Gesundheit, der Prävention von Verletzungen und der medizinischen Versorgung von Tänzer:innen aller Stile, Altersgruppen und Leistungsniveaus befasst. <em>…mehr</em>",
+    "en": "Dance medicine is a specialised, interdisciplinary field concerned with the health, injury prevention, and medical care of dancers across all styles, age groups, and performance levels. <em>…more</em>"
+  }
+}
