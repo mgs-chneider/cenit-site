@@ -1,0 +1,139 @@
+{
+  "monthLabel": "August 2026",
+  "title": {
+    "de": "Prävention im Fokus",
+    "en": "Focus on Prevention"
+  },
+  "subtitle": {
+    "de": "Kuratierte Einblicke in Forschung, Szene und Veranstaltungen – von CENIT e.V.",
+    "en": "Curated insights into research, events and developments in dance medicine – from CENIT e.V."
+  },
+  "highlight": {
+    "kicker": "★ Highlight · 24.–27. September 2026 · Melbourne, Australien",
+    "title": {
+      "de": "IADMS 36th Annual Conference",
+      "en": "IADMS 36th Annual Conference"
+    },
+    "body": {
+      "de": "Vom 24. bis 27. September 2026 richtet die IADMS ihre 36. Jahreskonferenz am Victorian College of the Arts in Melbourne aus –\n              in wenigen Wochen ist es so weit. Das viertägige, CME-zertifizierte Programm vereint über 100 Vorträge, rund 50 Bewegungssessions\n              sowie Networking-Veranstaltungen und Special-Interest-Groups. Die Registrierung ist inzwischen freigeschaltet, das\n              Abstract-Einreichungsfenster ist mittlerweile geschlossen. Für die internationale Tanzmedizin-Community bleibt die Konferenz\n              die wichtigste jährliche Plattform für Forschungsaustausch – ein Termin, den wir bereits in der Juli-Ausgabe angekündigt hatten\n              und der jetzt in greifbare Nähe rückt.",
+      "en": "From 24 to 27 September 2026, IADMS holds its 36th Annual Conference at the Victorian College of the Arts in Melbourne –\n              just weeks away now. The four-day, CME-certified programme brings together over 100 lectures, around 50 movement sessions,\n              networking events and special interest groups. Registration has since opened, and the abstract submission window has now\n              closed. For the international dance medicine community, the conference remains the key annual platform for research exchange –\n              a date we first flagged in our July issue that is now drawing close."
+    },
+    "linkHref": "https://iadms.org/meetings-events/annual-conference-2026/",
+    "linkLabel": {
+      "de": "Mehr erfahren",
+      "en": "Learn more"
+    }
+  },
+  "szeneKontext": [
+    {
+      "kicker": {
+        "de": "VBG – Verwaltungs-Berufsgenossenschaft",
+        "en": "VBG – Statutory Accident Insurance"
+      },
+      "headline": {
+        "de": "Eigenes Ausbildungsmodul zur Tanzprävention – von einem gesetzlichen Unfallversicherer",
+        "en": "A statutory accident insurer's own dance-prevention training module"
+      },
+      "body": {
+        "de": "Die VBG, gesetzlicher Unfallversicherungsträger für den Bereich Bühnen und Studios, stellt Lehrkräften an Musical- und\n              Tanzschulen sowie Multiplikator*innen im Theater ein vollständiges, kostenloses Ausbildungsmodul zur Unfall- und\n              Verletzungsprävention zur Verfügung: Broschüre, Unterrichtsfolien und ein Poster mit Ernährungstipps, aufgebaut nach dem\n              Prinzip des „Self Care Orientated Teaching Syllabus\" (Scotsy). Hintergrund ist eine ernüchternde Zahl: Rund 20 Prozent aller\n              Arbeitsunfälle in der Branche Bühnen und Studios sind Darstellerunfälle. Für CENIT ist das ein konkretes Beispiel dafür, dass\n              Kostenträger das Thema Tanzprävention bereits aktiv vorantreiben – und ein Beleg für das, was wir seit Langem fordern:\n              strukturierte, tanzspezifische Prävention statt Zufall.",
+        "en": "VBG, the statutory accident insurer for the stage and studio sector, provides teachers at musical and dance schools, as well\n              as multipliers in theatre, with a complete, free training module on accident and injury prevention: a brochure, teaching\n              slides, and a poster with nutrition tips, built on the „Self Care Orientated Teaching Syllabus\" (Scotsy) principle. The\n              background is a sobering figure: around 20 percent of all workplace accidents in the stage and studio sector are performer\n              accidents. For CENIT, this is a concrete example of a statutory insurer already actively driving dance prevention forward –\n              and evidence for what we have long called for: structured, dance-specific prevention instead of leaving it to chance."
+      },
+      "linkHref": "https://www.vbg.de/cms/buehnen-und-studios/praevention-fuer-tanz",
+      "linkLabel": "Prävention für Tanz, VBGPrevention for Dance, VBG"
+    },
+    {
+      "kicker": {
+        "de": "Produktionszentrum Tanz + Performance, Stuttgart",
+        "en": "Produktionszentrum Tanz + Performance, Stuttgart"
+      },
+      "headline": {
+        "de": "Gesundheitsförderung für die freie Szene – jetzt mit ta.med als Kooperationspartner",
+        "en": "Health promotion for the independent scene – now with ta.med as a cooperation partner"
+      },
+      "body": {
+        "de": "Mit Förderung durch das Programm „Entwicklungstreiber Kultur\" der Stadt Stuttgart hat das Produktionszentrum\n              Tanz + Performance 2025 die Initiative „Gesundheitsförderung für die freie Tanz- und Performanceszene\" gestartet:\n              fünf Workshops mit Expert*innen aus Tanzmedizin, Sportwissenschaft, Ernährung und Psychologie, mit dem Ziel,\n              Gesundheitsbewusstsein zu schärfen und ein Netzwerk aufzubauen. Die Initiative wird inzwischen langfristig verankert –\n              unter anderem durch eine neue Kooperation mit ta.med. Mitglieder erhalten zudem regelmäßige tanzmedizinische\n              Einzelberatungen bei einer erfahrenen Fachärztin sowie vergünstigten Zugang zur Fortbildung „Zertifikat Tanzmedizin\".\n              Ein Beispiel dafür, wie freie Kompanien abseits fest institutionalisierter Häuser eigene Präventionsstrukturen aufbauen können.",
+        "en": "With funding from the City of Stuttgart's „Entwicklungstreiber Kultur\" programme, the Produktionszentrum\n              Tanz + Performance launched its „Health Promotion for the Independent Dance and Performance Scene\" initiative in 2025:\n              five workshops with experts from dance medicine, sports science, nutrition and psychology, aimed at raising health\n              awareness and building a network. The initiative is now being anchored for the long term – including through a new\n              cooperation with ta.med. Members also receive regular one-on-one dance medicine consultations with an experienced\n              physician, as well as discounted access to the „Zertifikat Tanzmedizin\" training. An example of how independent\n              companies outside fixed institutional structures can build their own prevention infrastructure."
+      },
+      "linkHref": "https://www.produktionszentrum.de/gesundheitsfoerderung/",
+      "linkLabel": "produktionszentrum.de"
+    }
+  ],
+  "forschung": [
+    {
+      "kicker": {
+        "de": "Narrative Review · Journal of Dance Medicine & Science · Jan. 2026",
+        "en": "Narrative review · Journal of Dance Medicine & Science · Jan. 2026"
+      },
+      "headline": {
+        "de": "Injektionstherapien bei Tänzer*innen: ein Überblick für die Praxis",
+        "en": "Musculoskeletal injections in dancers: a practical overview"
+      },
+      "body": {
+        "de": "Eine im Januar 2026 im Journal of Dance Medicine & Science veröffentlichte Übersichtsarbeit von Pasculli, Sheng,\n              Davenport und Gleason (Emory University u. a.) ordnet gängige Injektionstherapien bei tanzbedingten Verletzungen ein:\n              von Kortisoninjektionen mit rascher, aber zeitlich begrenzter Entzündungshemmung über regenerative Verfahren wie\n              Hyaluronsäure, Prolotherapie, PRP (plättchenreiches Plasma) und mesenchymale Stromazelltherapien bis hin zu peripheren\n              Nervenhydrodissektionen und Injektionen an der Wirbelsäule. Regenerative Therapien gelten dabei besonders bei chronischen\n              Tendinopathien und leichter bis mittlerer Arthrose als vielversprechend. Bildgebende Verfahren wie Ultraschall und\n              Röntgendurchleuchtung erhöhen Treffsicherheit und Sicherheit. Für nicht-ärztliches Fachpersonal liefert die Arbeit damit\n              eine kompakte Orientierung, welche Verfahren bei welcher Diagnose infrage kommen – und wann eine Überweisung sinnvoll ist.",
+        "en": "A narrative review published in January 2026 in the Journal of Dance Medicine & Science by Pasculli, Sheng, Davenport\n              and Gleason (Emory University and others) maps out common injection therapies for dance-related injuries: from\n              corticosteroid injections offering rapid but time-limited anti-inflammatory relief, to regenerative approaches such as\n              hyaluronic acid, prolotherapy, PRP (platelet-rich plasma) and mesenchymal stromal cell therapies, through to peripheral\n              nerve hydrodissection and spinal injections. Regenerative therapies are considered particularly promising for chronic\n              tendinopathies and mild to moderate osteoarthritis. Imaging techniques such as ultrasound and fluoroscopy improve accuracy\n              and safety. For non-physician providers, the review offers a compact orientation on which procedures suit which diagnosis –\n              and when referral is appropriate."
+      },
+      "citation": "PMID 41592791 · PubMed · Jan. 2026",
+      "linkHref": "https://pubmed.ncbi.nlm.nih.gov/41592791/",
+      "linkLabel": "PubMed"
+    },
+    {
+      "kicker": {
+        "de": "Scoping Review (PRISMA-ScR) · Healthcare · März 2026",
+        "en": "Scoping review (PRISMA-ScR) · Healthcare · March 2026"
+      },
+      "headline": {
+        "de": "Manuelle Therapie, Core-Training und Pilates in der Tanzrehabilitation",
+        "en": "Manual therapy, core training and Pilates in dance rehabilitation"
+      },
+      "body": {
+        "de": "Eine im März 2026 in der Fachzeitschrift Healthcare veröffentlichte Scoping Review nach PRISMA-ScR-Standard wertet\n              16 Studien zu manueller Therapie, Core-Stabilitätstraining und der Pilates-Methode in der Rehabilitation erwachsener\n              Tänzer*innen aus. Ziel ist die Grundlage für standardisierte, evidenzbasierte klinische Protokolle, die eine sichere\n              Rückkehr zur vollen tänzerischen Leistungsfähigkeit unterstützen. Manuelle Therapie ist demnach nach wie vor der am\n              häufigsten dokumentierte Rehabilitationsansatz, während Core- und Pilates-basierte Interventionen zunehmend in der\n              klinischen Literatur auftauchen. Die Evidenzlage bleibt methodisch heterogen und stark von Fallberichten geprägt – ein\n              Übergang zu kontrollierten Studien ist jedoch im Gange. Für die Praxis unterstreicht die Arbeit, wie eng Rehabilitation\n              und ein strukturierter Return-to-Dance-Prozess (siehe Glossar-Begriff des Monats) zusammenhängen.",
+        "en": "A scoping review published in March 2026 in the journal Healthcare, conducted according to the PRISMA-ScR standard,\n              analyses 16 studies on manual therapy, core stability training and the Pilates Method in the rehabilitation of adult\n              dancers. The aim is to lay the groundwork for standardised, evidence-based clinical protocols that support a safe return\n              to full dance performance. Manual therapy remains the most frequently documented rehabilitation approach, while core-\n              and Pilates-based interventions are increasingly appearing in the clinical literature. The evidence base remains\n              methodologically heterogeneous and heavily reliant on case reports – though a shift toward controlled trials is under\n              way. For practice, the review underscores how closely rehabilitation is tied to a structured return-to-dance process\n              (see this month's glossary term)."
+      },
+      "citation": "Healthcare 2026, 14(7), 872 · DOI 10.3390/healthcare14070872 · März 2026",
+      "linkHref": "https://doi.org/10.3390/healthcare14070872",
+      "linkLabel": "MDPI"
+    }
+  ],
+  "glossarBegriff": {
+    "slug": "return-to-dance",
+    "title": {
+      "de": "Return-to-Dance",
+      "en": "Return-to-Dance"
+    },
+    "teaser": {
+      "de": "Return-to-Dance bezeichnet den stufenweisen, kriteriengeleiteten Prozess der Rückkehr zur vollen tänzerischen\n              Leistungsfähigkeit nach einer Verletzung – mit schrittweise gesteigerter Belastung statt eines abrupten Wiedereinstiegs.\n              Anders als im Mannschaftssport fehlen im Tanz bislang breit anerkannte, standardisierte Kriterien dafür, sodass sich\n              Tänzer*innen oft eher an Terminen wie einer Premiere als an objektiven Befunden orientieren.",
+      "en": "Return-to-dance describes the staged, criteria-based process of returning to full dance performance after an injury –\n              with gradually increasing load rather than an abrupt comeback. Unlike in team sports, dance still lacks broadly\n              recognised, standardised criteria for this, so dancers often orient themselves by dates such as an upcoming premiere\n              rather than objective findings."
+    }
+  },
+  "kalender": [
+    {
+      "day": "13",
+      "month": "Aug",
+      "name": "Tanz im August 2026",
+      "location": "Berlin (HAU) · bis 29. Aug.",
+      "linkHref": "https://www.tanzimaugust.de/",
+      "linkLabel": "tanzimaugust.de"
+    },
+    {
+      "day": "13",
+      "month": "Sep",
+      "name": "27. Mitgliederversammlung ta.med",
+      "location": "Online · 09:45–10:45 Uhr",
+      "linkHref": "https://tamed.eu/kalender/",
+      "linkLabel": "tamed.eu"
+    },
+    {
+      "day": "24–27",
+      "month": "Sep",
+      "name": "IADMS 36th Annual Conference",
+      "location": "Melbourne, Australien · Victorian College of the Arts",
+      "linkHref": "https://iadms.org/meetings-events/annual-conference-2026/",
+      "linkLabel": "iadms.org"
+    }
+  ],
+  "slug": "radar-august-2026",
+  "indexTeaser": {
+    "de": "VBG-Ausbildungsmodul zur Tanzprävention, Gesundheitsförderung im Produktionszentrum Stuttgart, IADMS-Konferenz Melbourne\n              sowie aktuelle Forschung zu Injektionstherapien und Rehabilitation im Tanz.",
+    "en": "VBG's dance-prevention training module, health promotion at Produktionszentrum Stuttgart, the IADMS conference in\n              Melbourne, and current research on injection therapies and rehabilitation in dance."
+  }
+}

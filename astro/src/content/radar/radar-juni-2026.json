@@ -1,0 +1,129 @@
+{
+  "monthLabel": "Juni 2026",
+  "title": {
+    "de": "Tanzmedizin im Blick",
+    "en": "Dance Medicine in Focus"
+  },
+  "subtitle": {
+    "de": "Kuratierte Einblicke in Forschung, Szene und Veranstaltungen – von CENIT e.V.",
+    "en": "Curated insights into research, events and developments in dance medicine – from CENIT e.V."
+  },
+  "highlight": {
+    "kicker": "★ Highlight · 19. Juni 2026 · Hamburg",
+    "title": {
+      "de": "2. Hamburger Tanzmedizin-Symposium",
+      "en": "2nd Hamburg Dance Medicine Symposium"
+    },
+    "body": {
+      "de": "Das interdisziplinäre Symposium findet erstmals im Rahmen der Tanztriennale Hamburg statt – in der Hamburgischen Staatsoper (09:00–16:00 Uhr).\n              Veranstaltet vom BG Klinikum Hamburg in Kooperation mit ta.med und dem Hamburg Ballett, bringt es Tanzschaffende, Mediziner, Forscher\n              und Vertreter der gesetzlichen Unfallversicherung zusammen. Im Mittelpunkt stehen Strukturen und Ressourcen in professionellen Kompanien,\n              praxisorientierte Trainingskonzepte sowie Tools für Prävention und Verletzungsmanagement.",
+      "en": "The interdisciplinary symposium takes place for the first time as part of the Tanztriennale Hamburg – at the Hamburg State Opera (09:00–16:00).\n              Organised by BG Klinikum Hamburg in cooperation with ta.med and Hamburg Ballet, it brings together dance professionals, medical experts,\n              researchers and representatives of statutory accident insurance. The focus is on structures in professional companies, practical training concepts\n              and tools for prevention and injury management."
+    },
+    "linkHref": "https://www.bg-kliniken.de/klinikum-hamburg/ueber-uns/bg-klinikum-hamburg/aktuelles/veranstaltungen/detail/1-hamburger-tanzmedizin-symposium/",
+    "linkLabel": {
+      "de": "Mehr erfahren",
+      "en": "Learn more"
+    }
+  },
+  "szeneKontext": [
+    {
+      "kicker": {
+        "de": "Tanztriennale Hamburg · 14.–21. Juni 2026",
+        "en": "Tanztriennale Hamburg · 14–21 June 2026"
+      },
+      "headline": {
+        "de": "Hamburg wird zum Zentrum des zeitgenössischen Tanzes",
+        "en": "Hamburg becomes a hub for contemporary dance"
+      },
+      "body": {
+        "de": "Die erste Tanztriennale – ein Leuchtturmprojekt der Kulturstiftung des Bundes – findet vom 14. bis 21. Juni in Hamburg statt.\n              Mit Vorstellungen, Panels und Workshops an verschiedenen Spielorten verbindet sie klassisches Ballett, zeitgenössischen Tanz und Urban Dance.\n              Das Tanzmedizin-Symposium ist in diesen Rahmen eingebettet: Gesundheit und Prävention werden damit sichtbarer Teil des öffentlichen Tanzgesprächs.",
+        "en": "The first Tanztriennale – a flagship project of the German Federal Cultural Foundation – takes place from 14 to 21 June in Hamburg.\n              With performances, panels and workshops at various venues, it connects classical ballet, contemporary dance and urban dance.\n              The dance medicine symposium is embedded in this framework: health and prevention thus become a more visible part of the public dance discourse."
+      },
+      "linkHref": "https://tanztriennale.de",
+      "linkLabel": "tanztriennale.de"
+    },
+    {
+      "kicker": {
+        "de": "",
+        "en": ""
+      },
+      "headline": {
+        "de": "Zertifikat Tanzphysiotherapie ab sofort buchbar",
+        "en": "Dance physiotherapy certificate now open for registration"
+      },
+      "body": {
+        "de": "ta.med hat die Anmeldung für den nächsten Durchlauf des Zertifikatsprogramms Tanzphysiotherapie geöffnet.\n              Das Programm richtet sich an Physiotherapeutinnen und -therapeuten mit Interesse an tanzspezifischer Prävention und Behandlung –\n              ein Weiterbildungsangebot, das die strukturelle Lücke zwischen Tanzwelt und Medizin schließen hilft.",
+        "en": "ta.med has opened registration for the next round of its dance physiotherapy certificate programme.\n              The programme is aimed at physiotherapists interested in dance-specific prevention and treatment –\n              a continuing education offering that helps close the structural gap between the dance world and medicine."
+      },
+      "linkHref": "https://tamed.eu/fortbildungen/zpt/",
+      "linkLabel": "tamed.eu"
+    }
+  ],
+  "forschung": [
+    {
+      "kicker": {
+        "de": "Systematischer Review · Journal of Dance Medicine & Science · Feb. 2025",
+        "en": "Systematic review · Journal of Dance Medicine & Science · Feb. 2025"
+      },
+      "headline": {
+        "de": "Was wirkt? Erste umfassende Übersicht zu Präventionsstrategien im Tanz",
+        "en": "What works? First comprehensive overview of prevention strategies in dance"
+      },
+      "body": {
+        "de": "Critchley et al. (Universität Calgary) haben erstmals tanzspezifische Präventionsstrategien quer über alle Stile und Altersgruppen\n              systematisch analysiert. Kernbefund: Kraft- und Konditionierungsprogramme zeigen erste positive Effekte, doch die Forschungsbasis\n              ist methodisch noch schmal. Der Review unterstreicht, wie dringend standardisierte Verletzungserfassung und vergleichbare Studiendesigns\n              gebraucht werden – und liefert damit zugleich ein starkes Argument für strukturierte tanzmedizinische Zentren.",
+        "en": "Critchley et al. (University of Calgary) have systematically analysed dance-specific prevention strategies across all styles and age groups\n              for the first time. Key finding: strength and conditioning programmes show initial positive effects, but the research base remains methodologically\n              thin. The review highlights the urgent need for standardised injury surveillance and comparable study designs."
+      },
+      "citation": "Critchley ML et al. · doi: 10.1177/1089313X251314987",
+      "linkHref": "https://pubmed.ncbi.nlm.nih.gov/39906979/",
+      "linkLabel": "PubMed"
+    },
+    {
+      "kicker": {
+        "de": "Evidence-based Review · Current Physical Medicine & Rehabilitation · Dez. 2025",
+        "en": "Evidence-based review · Current Physical Medicine & Rehabilitation · Dec. 2025"
+      },
+      "headline": {
+        "de": "Tanzverletzungen: Epidemiologie, Mechanismen und Prävention im Überblick",
+        "en": "Dance injuries: epidemiology, mechanisms and prevention overview"
+      },
+      "body": {
+        "de": "Lei, Wang & Tang (2025) legen eine aktuelle Gesamtschau vor, die Häufigkeit, Ursachen und Risikofaktoren von Tanzverletzungen\n              systematisch aufbereitet. Besonders relevant: Verletzungsmuster unterscheiden sich deutlich nach Geschlecht und Tanzstil –\n              was zielgruppenspezifische Präventionsansätze notwendig macht. Ein direktes Argument für das Konzept tanzmedizinischer Prävention, wie CENIT es verfolgt.",
+        "en": "Lei, Wang & Tang (2025) present a comprehensive overview systematically covering the frequency, causes and risk factors of dance injuries.\n              Particularly relevant: injury patterns differ significantly by gender and dance style, making targeted prevention approaches necessary."
+      },
+      "citation": "Lei Y et al. · doi: 10.1007/s40141-025-00523-4",
+      "linkHref": "https://link.springer.com/article/10.1007/s40141-025-00523-4",
+      "linkLabel": "Springer"
+    }
+  ],
+  "glossarBegriff": null,
+  "kalender": [
+    {
+      "day": "14–21",
+      "month": "Jun",
+      "name": "Tanztriennale Hamburg",
+      "location": "Hamburg · verschiedene Spielorte",
+      "linkHref": "https://tanztriennale.de",
+      "linkLabel": "tanztriennale.de"
+    },
+    {
+      "day": "19",
+      "month": "Jun",
+      "name": "2. Hamburger Tanzmedizin-Symposium",
+      "location": "Hamburgische Staatsoper · 09:00–16:00 Uhr",
+      "linkHref": "https://www.bg-kliniken.de/klinikum-hamburg",
+      "linkLabel": "bg-kliniken.de"
+    },
+    {
+      "day": "24–27",
+      "month": "Sep",
+      "name": "IADMS 36th Annual Conference",
+      "location": "Melbourne, Australien · Victorian College of the Arts",
+      "linkHref": "https://iadms.org/meetings-events/",
+      "linkLabel": "iadms.org"
+    }
+  ],
+  "slug": "radar-juni-2026",
+  "indexTeaser": {
+    "de": "Hamburger Tanzmedizin-Symposium, Tanztriennale, aktuelle Forschung zu Präventionsstrategien und psychischer Gesundheit im Tanz.",
+    "en": "Hamburg Dance Medicine Symposium, Tanztriennale, current research on prevention strategies and mental health in dance."
+  }
+}

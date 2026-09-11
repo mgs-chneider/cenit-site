@@ -1,0 +1,208 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import { localize } from "../i18n";
+
+interface Props {
+  locale: "de" | "en";
+}
+
+const { locale } = Astro.props;
+
+// Slugs are "radar-<german-month-name>-<year>" - sort chronologically by
+// year+month, not alphabetically (alphabetical would put "august" before
+// "juni" before "juli" before "september", which isn't calendar order).
+const GERMAN_MONTHS = [
+  "januar", "februar", "maerz", "april", "mai", "juni",
+  "juli", "august", "september", "oktober", "november", "dezember",
+];
+function radarSortKey(slug: string) {
+  const match = slug.match(/^radar-([a-z]+)-(\d{4})$/);
+  if (!match) return 0;
+  const [, monthName, year] = match;
+  const monthIndex = GERMAN_MONTHS.indexOf(monthName);
+  return Number(year) * 12 + monthIndex;
+}
+
+const radarIssues = (await getCollection("radar")).sort(
+  (a, b) => radarSortKey(b.data.slug) - radarSortKey(a.data.slug)
+);
+
+const title = locale === "de" ? "Einblicke & Entwicklungen – CENIT e.V." : "Insights & Developments – CENIT e.V.";
+const description =
+  locale === "de"
+    ? "Zentrale Entwicklungen unserer Arbeit: der monatliche CENIT Radar und Berichte aus der Vereinsarbeit."
+    : "Key developments in our work: the monthly CENIT Radar and reports from our association's activities.";
+const canonical = `https://cenit-ev.de${localize("/einblicke-entwicklungen/", locale)}`;
+
+const labels =
+  locale === "de"
+    ? {
+        heroTitle: "Einblicke & Entwicklungen",
+        heroLead:
+          "Auf dieser Seite dokumentieren wir zentrale Entwicklungen unserer Arbeit, ordnen Themen ein und machen Fortschritte sichtbar. Transparent, sachlich und im Kontext unseres gemeinnützigen Auftrags.",
+        radarTitle: "CENIT Radar",
+        radarLead: "Monatliche Einblicke in Forschung, Szene und Veranstaltungen der Tanzmedizin.",
+        radarTag: "CENIT Radar",
+        radarCta: "Zur Ausgabe →",
+        berichteTitle: "Berichte",
+        berichteLead: "Rückblicke und Dokumentationen aus unserer Vereinsarbeit.",
+        berichtTag: "Jahresbericht",
+        berichtTitle: "Jahresrückblick 2025",
+        berichtTeaser: "Gründung, Leitbild, Website, erste Vernetzungen – CENIT legt die Grundlagen für seine zukünftige Arbeit.",
+        berichtCta: "Zum Bericht →",
+      }
+    : {
+        heroTitle: "Insights & Developments",
+        heroLead:
+          "On this page, we document key developments in our work, provide context, and make progress visible. Transparent, factual, and aligned with our non-profit mission.",
+        radarTitle: "CENIT Radar",
+        radarLead: "Monthly insights into research, events and developments in dance medicine.",
+        radarTag: "CENIT Radar",
+        radarCta: "Read more →",
+        berichteTitle: "Reports",
+        berichteLead: "Reviews and documentation from our association's work.",
+        berichtTag: "Annual Review",
+        berichtTitle: "Year in Review 2025",
+        berichtTeaser: "Founding, mission statement, website, first connections – CENIT lays the foundations for its future work.",
+        berichtCta: "Read report →",
+      };
+---
+
+<Layout title={title} canonical={canonical} description={description} bodyClass="page-einblicke">
+  <section class="cenit-section page-einblicke-hero">
+    <div class="cenit-container">
+      <div class="cenit-heroimg reveal" style="--reveal-delay:0ms">
+        <img src="/assets/img/hero-tanzendefuesse.jpg" alt="Abstract dance movement in black and white" loading="eager">
+        <div class="cenit-heroimg-overlay">
+          <h1 class="cenit-heroimg-title reveal" style="--reveal-delay:140ms">{labels.heroTitle}</h1>
+          <p class="cenit-lead reveal" style="--reveal-delay:220ms; text-align:left; margin:0;">{labels.heroLead}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cenit-section">
+    <div class="cenit-container">
+      <h2 class="cenit-h2" style="text-align:left; margin-bottom:8px;">{labels.radarTitle}</h2>
+      <p class="cenit-text-body" style="margin-bottom:28px; color:var(--muted-foreground);">{labels.radarLead}</p>
+      <div class="cenit-einblicke-grid">
+        {radarIssues.map((issue, i) => (
+          <div class="cenit-einblicke-tile reveal" style={`--reveal-delay:${80 + i * 80}ms`}>
+            <div class="cenit-einblicke-tile-meta">
+              <span class="cenit-einblicke-tile-tag">{labels.radarTag}</span>
+              <span class="cenit-einblicke-tile-date">{issue.data.monthLabel}</span>
+            </div>
+            <h3 class="cenit-einblicke-tile-title">{issue.data.title[locale]}</h3>
+            <p class="cenit-einblicke-tile-teaser">{issue.data.indexTeaser[locale]}</p>
+            <a class="cenit-btn cenit-einblicke-tile-btn" href={localize(`/einblicke-entwicklungen/${issue.data.slug}/`, locale)}>{labels.radarCta}</a>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="cenit-h2" style="text-align:left; margin-top:56px; margin-bottom:8px;">{labels.berichteTitle}</h2>
+      <p class="cenit-text-body" style="margin-bottom:28px; color:var(--muted-foreground);">{labels.berichteLead}</p>
+      <div class="cenit-einblicke-grid">
+        <div class="cenit-einblicke-tile reveal" style="--reveal-delay:80ms">
+          <div class="cenit-einblicke-tile-meta">
+            <span class="cenit-einblicke-tile-tag">{labels.berichtTag}</span>
+            <span class="cenit-einblicke-tile-date">2025</span>
+          </div>
+          <h3 class="cenit-einblicke-tile-title">{labels.berichtTitle}</h3>
+          <p class="cenit-einblicke-tile-teaser">{labels.berichtTeaser}</p>
+          <a class="cenit-btn cenit-einblicke-tile-btn" href={localize("/einblicke-entwicklungen/jahresrueckblick-2025/", locale)}>{labels.berichtCta}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cenit-section">
+    <div class="cenit-container">
+      <div class="cenit-quote-band">
+        <div class="cenit-quote-band-inner">
+          <h2 class="cenit-quote-band-quote">{locale === "de" ? "„Movement is the visible form of intention.“" : "“Movement is the visible form of intention.”"}</h2>
+          <div class="cenit-gap-32"></div>
+          <div class="cenit-gold-divider" aria-hidden="true"></div>
+          <div class="cenit-gap-32"></div>
+          <p class="cenit-quote-band-author">Martha Graham</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .cenit-einblicke-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: var(--cenit-axis-950);
+    margin: 0 auto;
+  }
+  @media (max-width: 860px) {
+    .cenit-einblicke-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .cenit-einblicke-grid { grid-template-columns: 1fr; }
+  }
+  .cenit-einblicke-tile {
+    background: var(--cenit-surface);
+    border-radius: 18px;
+    box-shadow:
+      0 2px 6px rgba(25,25,60,0.04),
+      0 10px 28px rgba(25,25,60,0.07),
+      0 22px 48px rgba(25,25,60,0.05);
+    padding: 22px 22px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .cenit-einblicke-tile:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 4px 10px rgba(25,25,60,0.06),
+      0 16px 36px rgba(25,25,60,0.10),
+      0 28px 56px rgba(25,25,60,0.07);
+  }
+  .cenit-einblicke-tile-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .cenit-einblicke-tile-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cenit-purple);
+    background: var(--cenit-soft);
+    border-radius: 999px;
+    padding: 3px 10px;
+  }
+  .cenit-einblicke-tile-date {
+    font-size: 12px;
+    color: var(--muted-foreground);
+  }
+  .cenit-einblicke-tile-title {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.25;
+    color: var(--cenit-purple);
+    margin: 0;
+  }
+  .cenit-einblicke-tile-teaser {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted-foreground);
+    margin: 0;
+    flex: 1;
+  }
+  .cenit-einblicke-tile-btn {
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+</style>
