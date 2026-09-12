@@ -152,17 +152,5 @@ function autoLoadAllInfogramEmbeds() {
   });
 }
 
-// Falls beim Seitenaufruf bereits eine frühere Klaro-Einwilligung für
-// "infogram" vorliegt (wiederkehrender Besuch), Grafiken automatisch laden
-// statt den manuellen Klick zu verlangen. Läuft nach DOMContentLoaded, also
-// nachdem klaro.js (defer, weiter oben im Footer) bereits ausgeführt wurde.
-document.addEventListener("DOMContentLoaded", () => {
-  if (window.klaro && typeof window.klaro.getManager === "function") {
-    try {
-      const consents = window.klaro.getManager().consents;
-      if (consents && consents.infogram) {
-        autoLoadAllInfogramEmbeds();
-      }
-    } catch (e) {}
-  }
-});
+// Auto-Load bei bereits gespeicherter Einwilligung übernimmt consent.js
+// (siehe applyConsent() dort), das nach DOMContentLoaded ausgeführt wird.
