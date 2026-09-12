@@ -13,6 +13,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: astro/package-lock.json
+
+      - name: Install dependencies
+        working-directory: astro
+        run: npm ci
+
+      - name: Build site
+        working-directory: astro
+        run: npm run build
+
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1
         with:
@@ -21,7 +36,6 @@ jobs:
             --exclude-mail
             --exclude-private
             --exclude 'vbg.de/pmt'
-            --exclude-path './src/pages/zahlen-fakten/components/charts.html'
             --accept 200,204,301,302
-            './src/pages/**/*.html'
+            './astro/dist/**/*.html'
           fail: true
