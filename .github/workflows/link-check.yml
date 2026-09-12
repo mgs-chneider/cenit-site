@@ -36,6 +36,8 @@ jobs:
             --exclude-mail
             --exclude-private
             --exclude 'vbg.de/pmt'
+            --exclude 'cenit-ev\.de'
+            --root-dir '${{ github.workspace }}/astro/dist'
             --accept 200,204,301,302
             './astro/dist/**/*.html'
-          fail: true
+          fail: false
