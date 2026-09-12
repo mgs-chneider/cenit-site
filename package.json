@@ -1,9 +1,0 @@
-{
-  "name": "cenit-site",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "node build.mjs"
-  }
-}
-
