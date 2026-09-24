@@ -1,0 +1,16 @@
+{
+  "name": "tender-demo",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/copy-vendor.mjs",
+    "check": "node --check api/analyze.js && node --check api/pin.js && node --check public/app.js && node scripts/smoke-test.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "pdfjs-dist": "^4.10.38"
+  }
+}

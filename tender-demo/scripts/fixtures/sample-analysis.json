@@ -1,0 +1,89 @@
+{
+  "document": {
+    "title": "Étude de faisabilité et APD – Renforcement du système d'adduction d'eau potable de trois centres secondaires (Machbarkeitsstudie und Ausführungsplanung Trinkwasserversorgung)",
+    "reference": "AMI/ONEA/2026/014 (fiktives Beispiel)",
+    "document_type": "Termes de référence (Leistungsbeschreibung)",
+    "source_language": "Französisch"
+  },
+  "overview": {
+    "country": "Burkina Faso",
+    "contracting_authority": "Office National de l'Eau et de l'Assainissement (nationale Wasserbehörde)",
+    "funder": "Entwicklungsbank, Zuschuss (fiktiv)",
+    "sector": "Wasser und Abwasser",
+    "procurement_method": "Auswahl nach Qualität und Kosten (SFQC), Vorauswahl über Interessenbekundung",
+    "contract_type": "Pauschalvertrag mit Zeitkomponente",
+    "duration": "14 Monate",
+    "summary": "Machbarkeitsstudie, Vorentwurf und Ausführungsplanung für die Erweiterung der Trinkwasserversorgung in drei Kleinstädten, einschließlich Umwelt- und Sozialverträglichkeitsprüfung und Ausschreibungsunterlagen für die Bauleistungen."
+  },
+  "deadlines": [
+    { "label": "Abgabe der Angebote (technisch und finanziell)", "date": "2026-11-20", "time": "10:00 Uhr Ortszeit (GMT)", "original_text": "au plus tard le 20 novembre 2026 à 10 heures TU", "source_page": 2 },
+    { "label": "Letzte Frist für schriftliche Rückfragen", "date": "2026-11-06", "time": "", "original_text": "au plus tard quatorze (14) jours avant la date limite", "source_page": 3 },
+    { "label": "Ortsbesichtigung (freiwillig)", "date": "2026-10-28", "time": "09:00 Uhr", "original_text": "une visite de site facultative est prévue le 28 octobre 2026", "source_page": 3 },
+    { "label": "Bindefrist der Angebote", "date": "", "time": "", "original_text": "90 jours à compter de la date limite de dépôt", "source_page": 4 }
+  ],
+  "amounts": [
+    { "label": "Geschätztes Budget der Dienstleistung", "value": 850000000, "currency": "XOF", "original_text": "huit cent cinquante millions (850 000 000) de francs CFA HT", "source_page": 5 },
+    { "label": "Geschätzte Investitionskosten der späteren Bauleistungen", "value": 12500000000, "currency": "XOF", "original_text": "environ 12,5 milliards FCFA", "source_page": 1 },
+    { "label": "Angebotsbürgschaft", "value": 15000000, "currency": "XOF", "original_text": "garantie de soumission de quinze millions (15 000 000) FCFA", "source_page": 4 }
+  ],
+  "scope": [
+    "Bestandsaufnahme der bestehenden Anlagen und Bedarfsprognose bis 2045",
+    "Variantenstudie für Wassergewinnung (Tiefbrunnen vs. Oberflächenwasser) mit Kostenvergleich",
+    "Vorentwurf (APS) und Ausführungsplanung (APD) für Fassung, Aufbereitung, Speicher und rund 60 km Leitungsnetz",
+    "Umwelt- und Sozialverträglichkeitsprüfung nach Standards des Finanzierers",
+    "Erstellung der Ausschreibungsunterlagen (DAO) für die Bauleistungen"
+  ],
+  "key_experts": [
+    { "position": "Teamleitung, Wasserbauingenieur/in", "qualifications": "Min. 15 Jahre Erfahrung, 3 vergleichbare Projekte in Westafrika, Französisch fließend", "person_days": "220" },
+    { "position": "Hydrogeologe/in", "qualifications": "Min. 10 Jahre Erfahrung, Brunnenbau in Sahel-Region", "person_days": "90" },
+    { "position": "Umwelt- und Sozialexperte/in", "qualifications": "Erfahrung mit E&S-Standards multilateraler Finanzierer", "person_days": "70" }
+  ],
+  "eligibility": [
+    "Mindestens drei Referenzen vergleichbarer Studien in den letzten zehn Jahren",
+    "Durchschnittlicher Jahresumsatz der letzten drei Jahre mindestens 1,5 Mio. EUR",
+    "Bietergemeinschaften zulässig; Einbindung eines lokalen Partners wird positiv bewertet"
+  ],
+  "evaluation": {
+    "method": "Qualität und Kosten, Mindestpunktzahl technisch 75/100",
+    "technical_weight": "80 %",
+    "financial_weight": "20 %",
+    "criteria": [
+      "Methodik und Arbeitsplan (30 Punkte)",
+      "Qualifikation der Schlüsselexperten (50 Punkte)",
+      "Einbindung lokaler Fachkräfte (10 Punkte)",
+      "Erfahrung der Firma (10 Punkte)"
+    ]
+  },
+  "risks": [
+    { "risk": "Sicherheitslage in Teilen des Projektgebiets kann Feldarbeiten verzögern", "severity": "high" },
+    { "risk": "Knappe Frist für die Hydrogeologie vor Beginn der Regenzeit", "severity": "medium" },
+    { "risk": "Pauschalvertrag: Mehraufwand bei zusätzlichen Varianten wird nicht vergütet", "severity": "medium" },
+    { "risk": "Zahlungsbedingungen mit 30 % erst nach Abnahme der Ausführungsplanung", "severity": "low" }
+  ],
+  "open_questions": [
+    "Welche Daten zu bestehenden Brunnen stellt der Auftraggeber bereit?",
+    "Sind Sicherheitskosten (Begleitschutz) im Budget enthalten oder separat erstattungsfähig?",
+    "Werden Steuern (TVA) vom Finanzierer übernommen?"
+  ],
+  "glossary": [
+    { "source_term": "Maître d'ouvrage", "translation": "Bauherr / Auftraggeber", "explanation": "Die Stelle, die das Projekt verantwortet und den Vertrag vergibt." },
+    { "source_term": "APS / APD", "translation": "Vorentwurf / Ausführungsplanung", "explanation": "Avant-projet sommaire bzw. détaillé – aufeinanderfolgende Planungsstufen." },
+    { "source_term": "DAO", "translation": "Ausschreibungsunterlagen", "explanation": "Dossier d'appel d'offres für die spätere Bauvergabe." },
+    { "source_term": "Garantie de soumission", "translation": "Angebotsbürgschaft", "explanation": "Bankgarantie, die mit dem Angebot eingereicht werden muss." },
+    { "source_term": "SFQC", "translation": "Auswahl nach Qualität und Kosten", "explanation": "Sélection fondée sur la qualité et le coût – gewichtete Bewertung von Technik und Preis." }
+  ],
+  "assessment": {
+    "recommendation": "conditional",
+    "rationale": "Das Projekt passt fachlich sehr gut zum Profil im Bereich Wasser. Ein Angebot lohnt sich, wenn ein Teamleiter mit Sahel-Referenzen und ein lokaler Partner für Feldarbeiten gesichert werden können.",
+    "strengths": [
+      "Kernkompetenz Wasser- und Abwasserplanung",
+      "Hohe technische Gewichtung (80 %) begünstigt erfahrene Büros",
+      "Folgeauftrag Bauüberwachung wahrscheinlich"
+    ],
+    "concerns": [
+      "Sicherheitslage und Zugang zu den Standorten",
+      "Referenzanforderung Westafrika für die Teamleitung",
+      "Pauschalvertrag mit begrenztem Puffer"
+    ]
+  }
+}

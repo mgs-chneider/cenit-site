@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TenderBrief</title>
+  <meta name="description" content="Französische und spanische Ausschreibungen in einer Minute auf Deutsch oder Englisch erfassen.">
+  <meta name="theme-color" content="#0f2a3d">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="TenderBrief">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="/icons/icon.svg" alt="" width="28" height="28">
+      <span>TenderBrief</span>
+    </div>
+    <span class="badge-demo">Demo</span>
+  </header>
+
+  <main>
+    <!-- PIN -->
+    <section id="view-pin" class="view card narrow" hidden>
+      <h1>Zugang</h1>
+      <p class="muted">Bitte die Demo-PIN eingeben.</p>
+      <form id="pin-form" autocomplete="off">
+        <input id="pin-input" type="password" inputmode="numeric" placeholder="PIN" aria-label="PIN" required>
+        <button type="submit" class="btn primary">Weiter</button>
+      </form>
+      <p id="pin-error" class="error" role="alert" hidden></p>
+    </section>
+
+    <!-- Upload -->
+    <section id="view-upload" class="view" hidden>
+      <div class="intro">
+        <h1>Ausschreibung verstehen – in einer Minute</h1>
+        <p class="muted">PDF einer französischen oder spanischen Ausschreibung hochladen (Termes de référence, DAO, Términos de referencia …). Sie erhalten Eckdaten, Fristen, Beträge mit Quellenangabe, Risiken und eine erste Go/No-Go-Einschätzung.</p>
+      </div>
+
+      <label id="dropzone" class="dropzone" for="file-input">
+        <input id="file-input" type="file" accept="application/pdf,.pdf" hidden>
+        <svg viewBox="0 0 24 24" width="36" height="36" aria-hidden="true"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm-1 7V3.5L18.5 9zM8 13h8v2H8zm0 4h5v2H8z"/></svg>
+        <span id="dropzone-label"><strong>PDF auswählen</strong> oder hierher ziehen</span>
+        <span id="file-meta" class="muted small"></span>
+      </label>
+
+      <fieldset class="lang-toggle">
+        <legend>Sprache der Auswertung</legend>
+        <label><input type="radio" name="lang" value="de" checked> Deutsch</label>
+        <label><input type="radio" name="lang" value="en"> English</label>
+      </fieldset>
+
+      <button id="analyze-btn" class="btn primary wide" disabled>Analysieren</button>
+      <p id="upload-error" class="error" role="alert" hidden></p>
+      <p class="muted small note">Für die Demo bitte nur öffentliche Ausschreibungen verwenden. Dokumente werden zur Analyse an die Claude-API übertragen und von dieser Demo nicht gespeichert.</p>
+    </section>
+
+    <!-- Loading -->
+    <section id="view-loading" class="view card narrow center" hidden>
+      <div class="spinner" aria-hidden="true"></div>
+      <h2 id="loading-step">Dokument wird gelesen …</h2>
+      <p class="muted small">Das dauert je nach Umfang 30 Sekunden bis 2 Minuten.</p>
+    </section>
+
+    <!-- Result -->
+    <section id="view-result" class="view" hidden>
+      <div class="result-actions no-print">
+        <button id="new-btn" class="btn">Neue Analyse</button>
+        <button id="copy-btn" class="btn">Als Text kopieren</button>
+        <button id="print-btn" class="btn">Drucken / PDF</button>
+      </div>
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <footer class="footer no-print">
+    <span>Erste Einschätzung zur Unterstützung – ersetzt keine Prüfung der Originaldokumente.</span>
+  </footer>
+</body>
+</html>
