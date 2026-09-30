@@ -51,10 +51,10 @@
         "en": "After Melbourne: Hormone Health in Dance as a Dedicated Forum"
       },
       "body": {
-        "de": "Nach der 36. Jahreskonferenz in Melbourne verlagert sich der fachliche Austausch der IADMS wieder in ihre virtuellen Special Interest Groups (SIGs). Am 19. Oktober trifft sich die SIG „Dance Hormone Health Matters“, die aktuelle Entwicklungen rund um hormonelle Gesundheit im Tanz bespricht – ein Themenfeld, das Menstruationszyklus, Energieverfügbarkeit und Knochengesundheit eng miteinander verbindet. Bereits am Vortag reflektiert die SIG für Studierende und Berufseinsteiger*innen gemeinsam die Konferenz in Melbourne. Die Treffen stehen IADMS-Mitgliedern offen. Daneben bestehen weitere SIGs, etwa zu Kraft- und Konditionstraining, für Ärzt*innen oder zu Tanz in Asien. Die nächste Jahreskonferenz ist für Oktober 2027 in Calgary, Kanada, angekündigt.",
-        "en": "Following the 36th Annual Conference in Melbourne, IADMS's professional exchange moves back into its virtual Special Interest Groups (SIGs). On 19 October, the \"Dance Hormone Health Matters\" SIG meets to discuss current developments in hormonal health in dance – a field that closely links the menstrual cycle, energy availability and bone health. The day before, the SIG for students and early career professionals reflects together on the Melbourne conference. The meetings are open to IADMS members. Further SIGs cover topics such as strength and conditioning, physicians, and dance in Asia. The next Annual Conference has been announced for October 2027 in Calgary, Canada."
+        "de": "Nach der 36. Jahreskonferenz in Melbourne verlagert sich der fachliche Austausch der IADMS wieder in ihre virtuellen Special Interest Groups (SIGs). Am 19. Oktober trifft sich die SIG „Dance Hormone Health Matters“, die aktuelle Entwicklungen rund um hormonelle Gesundheit im Tanz bespricht – ein Themenfeld, das Menstruationszyklus, Energieverfügbarkeit und Knochengesundheit eng miteinander verbindet. Bereits am Vortag reflektiert die SIG für Studierende und Berufseinsteiger*innen gemeinsam die Konferenz in Melbourne. Die Teilnahme an den insgesamt 15 SIGs ist kostenlos und auch mit freiem Community-Zugang möglich; einzelne Sitzungen – laut Kalender auch das Hormon-Treffen am 19. Oktober – sind allerdings IADMS-Mitgliedern vorbehalten. Weitere SIGs widmen sich unter anderem Ernährung, Kraft- und Konditionstraining oder der Arbeit von Ärzt*innen. Die nächste Jahreskonferenz findet vom 21. bis 24. Oktober 2027 in Calgary, Kanada, statt.",
+        "en": "Following the 36th Annual Conference in Melbourne, IADMS's professional exchange moves back into its virtual Special Interest Groups (SIGs). On 19 October, the \"Dance Hormone Health Matters\" SIG meets to discuss current developments in hormonal health in dance – a field that closely links the menstrual cycle, energy availability and bone health. The day before, the SIG for students and early career professionals reflects together on the Melbourne conference. Joining any of the 15 SIGs is free and also possible with free community access; some sessions, however – according to the calendar including the hormone health meeting on 19 October – are reserved for IADMS members. Other SIGs focus on topics such as nutrition, strength and conditioning, or the work of physicians. The next Annual Conference takes place from 21 to 24 October 2027 in Calgary, Canada."
       },
-      "linkHref": "https://www.iadms.org/",
+      "linkHref": "https://www.iadms.org/sigs",
       "linkLabel": "iadms.org"
     }
   ],
@@ -111,7 +111,7 @@
       "month": "Okt",
       "name": "IADMS Student & Early Career SIG",
       "location": "Online · für IADMS-Mitglieder",
-      "linkHref": "https://www.iadms.org/",
+      "linkHref": "https://www.iadms.org/sigs",
       "linkLabel": "iadms.org"
     },
     {
@@ -119,7 +119,7 @@
       "month": "Okt",
       "name": "IADMS Dance Hormone Health Matters SIG",
       "location": "Online · 15:00 Uhr GMT · für IADMS-Mitglieder",
-      "linkHref": "https://www.iadms.org/",
+      "linkHref": "https://www.iadms.org/sigs",
       "linkLabel": "iadms.org"
     },
     {
