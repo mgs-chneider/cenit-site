@@ -1,5 +1,6 @@
 ---
 import { getLocale, getAltPath, localize } from "../i18n";
+import { getLatestRadar } from "../radar";
 
 const pathname = Astro.url.pathname;
 const locale = getLocale(pathname);
@@ -8,6 +9,11 @@ const dePath = locale === "de" ? pathname : altPath;
 const enPath = locale === "en" ? pathname : altPath;
 
 const l = (path: string) => localize(path, locale);
+
+const latestRadar = await getLatestRadar();
+const radarHref = latestRadar
+  ? l(`/einblicke-entwicklungen/${latestRadar.data.slug}/`)
+  : l("/einblicke-entwicklungen/");
 
 const labels =
   locale === "de"
@@ -18,6 +24,7 @@ const labels =
         about: "Über uns",
         expertise: "Expertise",
         contact: "Kontakt",
+        radar: "CENIT Radar",
         insights: "Einblicke & Entwicklungen",
         facts: "Zahlen & Fakten",
         glossary: "Glossar",
@@ -32,6 +39,7 @@ const labels =
         about: "About us",
         expertise: "Expertise",
         contact: "Contact",
+        radar: "CENIT Radar",
         insights: "Insights & Updates",
         facts: "Facts & Figures",
         glossary: "Glossary",
@@ -73,6 +81,7 @@ const labels =
 
     <div class="cenit-menu-divider" role="separator" aria-hidden="true"></div>
 
+    <a class="cenit-menu-item" href={radarHref}>{labels.radar}</a>
     <a class="cenit-menu-item" href={l("/einblicke-entwicklungen")}>{labels.insights}</a>
     <a class="cenit-menu-item" href={l("/zahlen-fakten")}>{labels.facts}</a>
     <a class="cenit-menu-item" href={l("/glossar")}>{labels.glossary}</a>
