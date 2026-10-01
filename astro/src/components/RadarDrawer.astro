@@ -1,0 +1,294 @@
+---
+/**
+ * Seitlicher Reiter "CENIT Radar" am rechten Rand, direkt unter der Topbar.
+ * Schiebt ein Panel mit der aktuellen Ausgabe herein (Muster von
+ * schneiderundcie.com übernommen). Inhalt kommt automatisch aus der
+ * neuesten Datei in src/content/radar/ – bei einer neuen Ausgabe ist
+ * hier nichts zu pflegen.
+ * Nur ab Desktop-Breite sichtbar; auf dem Handy steht der Punkt im Menü.
+ * Auf den Radar-Seiten selbst wird der Reiter nicht angezeigt.
+ */
+import { getLocale, localize } from "../i18n";
+import { getLatestRadar } from "../radar";
+
+const pathname = Astro.url.pathname;
+const locale = getLocale(pathname);
+const onRadarPage = pathname.includes("/einblicke-entwicklungen/radar-");
+
+const issue = await getLatestRadar();
+const d = issue?.data;
+
+const MONTHS_EN: Record<string, string> = {
+  Januar: "January", Februar: "February", "März": "March", April: "April",
+  Mai: "May", Juni: "June", Juli: "July", August: "August",
+  September: "September", Oktober: "October", November: "November", Dezember: "December",
+};
+const monthLabel = d
+  ? locale === "de"
+    ? d.monthLabel
+    : d.monthLabel.replace(/^\S+/, (m) => MONTHS_EN[m] ?? m)
+  : "";
+
+const t =
+  locale === "de"
+    ? {
+        tab: "CENIT Radar",
+        label: "Aktuelle Ausgabe",
+        close: "Schließen",
+        event: "Veranstaltung des Monats",
+        scene: "Szene & Kontext",
+        research: "Forschung",
+        term: "Begriff des Monats",
+        cta: "Zur Ausgabe →",
+        all: "Alle Ausgaben",
+      }
+    : {
+        tab: "CENIT Radar",
+        label: "Current issue",
+        close: "Close",
+        event: "Event of the month",
+        scene: "Scene & Context",
+        research: "Research",
+        term: "Term of the month",
+        cta: "Read the issue →",
+        all: "All issues",
+      };
+
+const issueHref = d ? localize(`/einblicke-entwicklungen/${d.slug}/`, locale) : "";
+const allHref = localize("/einblicke-entwicklungen/", locale);
+
+const items = d
+  ? [
+      d.highlight && { cat: t.event, title: d.highlight.title[locale] },
+      d.szeneKontext[0] && { cat: t.scene, title: d.szeneKontext[0].headline[locale] },
+      d.forschung[0] && { cat: t.research, title: d.forschung[0].headline[locale] },
+      d.glossarBegriff && { cat: t.term, title: d.glossarBegriff.title[locale] },
+    ].filter(Boolean) as { cat: string; title: string }[]
+  : [];
+---
+
+{d && !onRadarPage && (
+  <div class="cenit-radar-drawer-root">
+    <button
+      type="button"
+      class="cenit-radar-tab"
+      aria-expanded="false"
+      aria-controls="cenit-radar-drawer"
+    >
+      <span class="cenit-radar-tab-line" aria-hidden="true"></span>
+      <span class="cenit-radar-tab-text">{t.tab}</span>
+    </button>
+
+    <div class="cenit-radar-scrim" aria-hidden="true"></div>
+
+    <aside
+      id="cenit-radar-drawer"
+      class="cenit-radar-drawer"
+      role="dialog"
+      aria-label={`${t.tab} · ${monthLabel}`}
+      aria-hidden="true"
+      inert
+    >
+      <div class="cenit-radar-drawer-inner">
+        <div class="cenit-radar-drawer-top">
+          <span class="cenit-radar-drawer-label">{t.label} · {monthLabel}</span>
+          <button type="button" class="cenit-radar-close" aria-label={t.close}>✕</button>
+        </div>
+
+        <p class="cenit-radar-drawer-title">{d.title[locale]}</p>
+        <div class="cenit-radar-drawer-divider" aria-hidden="true"></div>
+
+        <ul class="cenit-radar-drawer-list">
+          {items.map((item) => (
+            <li>
+              <p class="cenit-radar-drawer-cat">{item.cat}</p>
+              <a href={issueHref} class="cenit-radar-drawer-link">{item.title}</a>
+            </li>
+          ))}
+        </ul>
+
+        <a href={issueHref} class="cenit-btn cenit-radar-drawer-cta">{t.cta}</a>
+        <a href={allHref} class="cenit-radar-drawer-all">{t.all}</a>
+      </div>
+    </aside>
+  </div>
+)}
+
+<script>
+  const root = document.querySelector<HTMLElement>(".cenit-radar-drawer-root");
+  if (root) {
+    const tab = root.querySelector<HTMLButtonElement>(".cenit-radar-tab")!;
+    const panel = root.querySelector<HTMLElement>(".cenit-radar-drawer")!;
+    const scrim = root.querySelector<HTMLElement>(".cenit-radar-scrim")!;
+    const close = root.querySelector<HTMLButtonElement>(".cenit-radar-close")!;
+
+    const setOpen = (open: boolean) => {
+      root.classList.toggle("is-open", open);
+      tab.setAttribute("aria-expanded", String(open));
+      panel.setAttribute("aria-hidden", String(!open));
+      panel.toggleAttribute("inert", !open);
+      if (open) close.focus();
+      else tab.focus({ preventScroll: true });
+    };
+
+    tab.addEventListener("click", () => setOpen(true));
+    close.addEventListener("click", () => setOpen(false));
+    scrim.addEventListener("click", () => setOpen(false));
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && root.classList.contains("is-open")) setOpen(false);
+    });
+  }
+</script>
+
+<style>
+  /* Nur ab Desktop-Breite; mobil übernimmt der Menüpunkt "CENIT Radar". */
+  .cenit-radar-drawer-root{ display: none; }
+  @media (min-width: 1024px){
+    .cenit-radar-drawer-root{ display: block; }
+  }
+
+  /* Reiter */
+  .cenit-radar-tab{
+    position: fixed;
+    right: 0;
+    top: calc(var(--cenit-topbar-height) + 40px);
+    z-index: 1300; /* unter Topbar (1400) und Menü (1500) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 10px;
+    border: 1px solid rgba(201,164,78,0.5);
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    background: var(--cenit-purple);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(107,20,184,0.22);
+    transition: transform 0.3s ease;
+  }
+  .cenit-radar-tab:hover{ transform: translateX(-4px); }
+  .cenit-radar-tab:focus-visible{ outline: 2px solid var(--cenit-gold); outline-offset: 3px; }
+  .is-open .cenit-radar-tab{ transform: translateX(100%); }
+  .cenit-radar-tab-line{
+    width: 1px;
+    height: 24px;
+    background: var(--cenit-gold);
+  }
+  .cenit-radar-tab-text{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+  }
+
+  /* Abdunkelung */
+  .cenit-radar-scrim{
+    position: fixed;
+    inset: 0;
+    z-index: 1300;
+    background: rgba(107,20,184,0.06);
+    backdrop-filter: blur(1px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .is-open .cenit-radar-scrim{ opacity: 1; pointer-events: auto; }
+
+  /* Panel */
+  .cenit-radar-drawer{
+    position: fixed;
+    right: 0;
+    top: var(--cenit-topbar-height);
+    bottom: 0;
+    z-index: 1350;
+    width: 380px;
+    overflow-y: auto;
+    background: #fafafa;
+    border-left: 1px solid rgba(0,0,0,0.06);
+    box-shadow: -12px 0 30px rgba(25,25,60,0.10);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+  }
+  .is-open .cenit-radar-drawer{ transform: translateX(0); }
+  @media (prefers-reduced-motion: reduce){
+    .cenit-radar-tab, .cenit-radar-scrim, .cenit-radar-drawer{ transition: none; }
+  }
+
+  .cenit-radar-drawer-inner{ padding: 40px 32px 48px; }
+  .cenit-radar-drawer-top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .cenit-radar-drawer-label{
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cenit-purple);
+  }
+  .cenit-radar-close{
+    margin-top: -4px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--muted-foreground);
+    cursor: pointer;
+  }
+  .cenit-radar-close:hover{ color: var(--cenit-purple); }
+  .cenit-radar-drawer-title{
+    margin: 10px 0 0;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--cenit-purple);
+  }
+  .cenit-radar-drawer-divider{
+    width: 48px;
+    height: 2px;
+    margin: 18px 0 26px;
+    background: var(--cenit-gold);
+  }
+  .cenit-radar-drawer-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .cenit-radar-drawer-list li{
+    padding: 0 0 20px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .cenit-radar-drawer-list li:last-child{ border-bottom: none; margin-bottom: 8px; }
+  .cenit-radar-drawer-cat{
+    margin: 0 0 6px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cenit-gold);
+  }
+  .cenit-radar-drawer-link{
+    display: block;
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--cenit-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .cenit-radar-drawer-link:hover{ color: var(--cenit-purple); }
+  .cenit-radar-drawer-cta{ display: inline-block; margin-top: 4px; }
+  .cenit-radar-drawer-all{
+    display: block;
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--muted-foreground);
+    text-decoration: none;
+  }
+  .cenit-radar-drawer-all:hover{ color: var(--cenit-purple); text-decoration: underline; }
+</style>

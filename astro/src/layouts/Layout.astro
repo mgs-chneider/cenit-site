@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import RadarDrawer from "../components/RadarDrawer.astro";
 import { getLocale, getAltPath } from "../i18n";
 
 interface Props {
@@ -58,6 +59,7 @@ const enHref = locale === "en" ? canonical : altHref;
 </head>
 <body class={bodyClass} data-title-de={bodyDataTitleDe} data-title-en={bodyDataTitleEn}>
   <Header />
+  <RadarDrawer />
 
   <slot />
 
