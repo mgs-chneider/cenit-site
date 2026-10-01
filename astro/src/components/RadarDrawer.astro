@@ -5,7 +5,9 @@
  * schneiderundcie.com übernommen). Inhalt kommt automatisch aus der
  * neuesten Datei in src/content/radar/ – bei einer neuen Ausgabe ist
  * hier nichts zu pflegen.
- * Nur ab Desktop-Breite sichtbar; auf dem Handy steht der Punkt im Menü.
+ * Ab Tablet-Breite (640px): seitlicher Reiter + Panel von rechts.
+ * Auf dem Handy: kompakte Pille unten links (erscheint nach dem Hero,
+ * wie der Scroll-to-top-Button) + Panel als Bottom-Sheet von unten.
  * Auf den Radar-Seiten selbst wird der Reiter nicht angezeigt.
  */
 import { getLocale, localize } from "../i18n";
@@ -28,6 +30,8 @@ const monthLabel = d
     ? d.monthLabel
     : d.monthLabel.replace(/^\S+/, (m) => MONTHS_EN[m] ?? m)
   : "";
+
+const monthName = monthLabel.split(" ")[0];
 
 const t =
   locale === "de"
@@ -79,6 +83,16 @@ const items = d
       <span class="cenit-radar-tab-text">{t.tab}</span>
     </button>
 
+    <button
+      type="button"
+      class="cenit-radar-pill"
+      aria-expanded="false"
+      aria-controls="cenit-radar-drawer"
+    >
+      <span class="cenit-radar-pill-dot" aria-hidden="true"></span>
+      {t.tab} · {monthName}
+    </button>
+
     <div class="cenit-radar-scrim" aria-hidden="true"></div>
 
     <aside
@@ -89,6 +103,7 @@ const items = d
       aria-hidden="true"
       inert
     >
+      <div class="cenit-radar-sheet-handle" aria-hidden="true"></div>
       <div class="cenit-radar-drawer-inner">
         <div class="cenit-radar-drawer-top">
           <span class="cenit-radar-drawer-label">{t.label} · {monthLabel}</span>
@@ -117,34 +132,50 @@ const items = d
 <script>
   const root = document.querySelector<HTMLElement>(".cenit-radar-drawer-root");
   if (root) {
-    const tab = root.querySelector<HTMLButtonElement>(".cenit-radar-tab")!;
+    const triggers = root.querySelectorAll<HTMLButtonElement>(".cenit-radar-tab, .cenit-radar-pill");
+    const pill = root.querySelector<HTMLButtonElement>(".cenit-radar-pill")!;
     const panel = root.querySelector<HTMLElement>(".cenit-radar-drawer")!;
     const scrim = root.querySelector<HTMLElement>(".cenit-radar-scrim")!;
     const close = root.querySelector<HTMLButtonElement>(".cenit-radar-close")!;
+    let lastTrigger: HTMLButtonElement | null = null;
 
     const setOpen = (open: boolean) => {
       root.classList.toggle("is-open", open);
-      tab.setAttribute("aria-expanded", String(open));
+      document.body.classList.toggle("cenit-radar-open", open);
+      triggers.forEach((b) => b.setAttribute("aria-expanded", String(open)));
       panel.setAttribute("aria-hidden", String(!open));
       panel.toggleAttribute("inert", !open);
       if (open) close.focus();
-      else tab.focus({ preventScroll: true });
+      else lastTrigger?.focus({ preventScroll: true });
     };
 
-    tab.addEventListener("click", () => setOpen(true));
+    triggers.forEach((b) =>
+      b.addEventListener("click", () => {
+        lastTrigger = b;
+        setOpen(true);
+      })
+    );
     close.addEventListener("click", () => setOpen(false));
     scrim.addEventListener("click", () => setOpen(false));
     window.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && root.classList.contains("is-open")) setOpen(false);
     });
+
+    // Handy: Pille erst einblenden, wenn der Hero überwiegend durchgescrollt ist,
+    // damit sie Claim und Vereinsnamen nicht überdeckt.
+    const onScroll = () =>
+      pill.classList.toggle("is-visible", window.scrollY > window.innerHeight * 0.6);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
   }
 </script>
 
 <style>
-  /* Nur ab Desktop-Breite; mobil übernimmt der Menüpunkt "CENIT Radar". */
-  .cenit-radar-drawer-root{ display: none; }
-  @media (min-width: 1024px){
-    .cenit-radar-drawer-root{ display: block; }
+  /* Reiter ab Tablet-Breite, Pille nur auf dem Handy */
+  .cenit-radar-pill{ display: none; }
+  @media (max-width: 639px){
+    .cenit-radar-tab{ display: none !important; }
+    .cenit-radar-pill{ display: inline-flex; }
   }
 
   /* Reiter */
@@ -204,7 +235,7 @@ const items = d
     top: var(--cenit-topbar-height);
     bottom: 0;
     z-index: 1350;
-    width: 380px;
+    width: min(380px, 88vw);
     overflow-y: auto;
     background: #fafafa;
     border-left: 1px solid rgba(0,0,0,0.06);
@@ -214,7 +245,7 @@ const items = d
   }
   .is-open .cenit-radar-drawer{ transform: translateX(0); }
   @media (prefers-reduced-motion: reduce){
-    .cenit-radar-tab, .cenit-radar-scrim, .cenit-radar-drawer{ transition: none; }
+    .cenit-radar-tab, .cenit-radar-pill, .cenit-radar-scrim, .cenit-radar-drawer{ transition: none; }
   }
 
   .cenit-radar-drawer-inner{ padding: 40px 32px 48px; }
@@ -291,4 +322,79 @@ const items = d
     text-decoration: none;
   }
   .cenit-radar-drawer-all:hover{ color: var(--cenit-purple); text-decoration: underline; }
+
+  .cenit-radar-sheet-handle{ display: none; }
+
+  /* Bei offenem Panel: Scroll-to-top-Button ausblenden, Hintergrund nicht mitscrollen */
+  :global(body.cenit-radar-open #scrollTopBtn){ opacity: 0 !important; pointer-events: none !important; }
+  @media (max-width: 1023px){
+    :global(body.cenit-radar-open){ overflow: hidden; }
+  }
+
+  /* ---------- Handy: Pille + Bottom-Sheet ---------- */
+  @media (max-width: 639px){
+    .cenit-radar-pill{
+      position: fixed;
+      left: 16px;
+      bottom: calc(20px + env(safe-area-inset-bottom));
+      z-index: 1300;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid rgba(201,164,78,0.5);
+      border-radius: 999px;
+      background: var(--cenit-purple);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      box-shadow: 0 6px 20px rgba(107,20,184,0.25);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(12px);
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .cenit-radar-pill.is-visible{
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .is-open .cenit-radar-pill{ opacity: 0; pointer-events: none; }
+    .cenit-radar-pill:focus-visible{ outline: 2px solid var(--cenit-gold); outline-offset: 3px; }
+    .cenit-radar-pill-dot{
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--cenit-gold);
+    }
+
+    .cenit-radar-drawer{
+      top: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: auto;
+      max-height: 82dvh;
+      border-left: none;
+      border-radius: 20px 20px 0 0;
+      box-shadow: 0 -12px 30px rgba(25,25,60,0.14);
+      transform: translateY(100%);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .is-open .cenit-radar-drawer{ transform: translateY(0); }
+    .cenit-radar-sheet-handle{
+      display: block;
+      width: 40px;
+      height: 4px;
+      margin: 10px auto 0;
+      border-radius: 2px;
+      background: rgba(0,0,0,0.12);
+    }
+    .cenit-radar-drawer-inner{ padding: 22px 22px 32px; }
+    .cenit-radar-drawer-title{ font-size: 23px; }
+    .cenit-radar-drawer-list li{ padding-bottom: 16px; margin-bottom: 16px; }
+    .cenit-radar-scrim{ background: rgba(25,25,60,0.18); }
+  }
 </style>
